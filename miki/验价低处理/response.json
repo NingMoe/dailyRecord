@@ -1,0 +1,215 @@
+{
+  "responseAuditInfo": {
+    "agentCode": "UJT001",
+    "responseID": 476055568,
+    "responseDateTime": 1504107494387,
+    "transactionID": "7fd826e8-57c5-4ff8-a1e3-3278a8564d45"
+  },
+  "availabilitySummary": {
+    "totalAvailable": 1,
+    "totalOnRequest": 0
+  },
+  "hotels": {
+    "hotel": [
+      {
+        "productCode": {
+          "value": "CAS817300"
+        },
+        "giataCode": "38218",
+        "currencyCode": "EUR",
+        "roomOptions": {
+          "roomOption": [
+            {
+              "rateIdentifier": "7fd826e8-57c5-4ff8-a1e3-3278a8564d45|ILPCrde3fbJ0BXas7J2BbjmxcnUaDVRl6XkktuwICn0RwSiIxskcNNiu6wKdn190JVVfJbNxlKapbJOp5FZkwWinj7CuGhZ3LQTUYGXTv1Pho0-5yoPMvURMJv4tYJnE3LR0W8NBYUd0ltunQ2gHh6LF65Nx86n-TtfEGLxt2YD2o8Ai6PpJaEyGtTtN4mUAF_lYW8D48rN6O-siukYvcLNET_67ZyXIKazVdiG9K2oodlTVf29qgwp27opmKyM9OtyEcHB7-CI",
+              "roomDescription": "Double room",
+              "roomTotalPrice": {
+                "price": {
+                  "value": 99.24
+                },
+                "priceType": 1
+              },
+              "availabilityStatus": 1,
+              "dates": {
+                "date": [
+                  {
+                    "dailyAvailabilityStatus": "1",
+                    "dailyPrice": {
+                      "price": {
+                        "value": 99.24
+                      },
+                      "priceType": 1
+                    },
+                    "mealBasis": {
+                      "includedMeals": {
+                        "includedMeal": [
+                          {
+                            "mealID": 35,
+                            "mealType": 1,
+                            "description": "American buffet breakfast at hotel"
+                          }
+                        ]
+                      },
+                      "mealBasisCode": "RB"
+                    },
+                    "serviceDate": 1505404800000
+                  }
+                ]
+              },
+              "cancellationPolicies": {
+                "cancellationPolicy": [
+                  {
+                    "appliesFrom": 1505343599000,
+                    "fullStay": true,
+                    "cancellationCharge": {
+                      "percentage": 100.0
+                    }
+                  }
+                ],
+                "refundable": 2
+              },
+              "supplierName": "Miki",
+              "roomRestrictions": {
+                "roomRestriction": [
+                  {
+                    "value": [
+                      {
+                        "value": "0",
+                        "id": 1
+                      },
+                      {
+                        "value": "1111111",
+                        "id": 3
+                      }
+                    ],
+                    "typeId": 4
+                  }
+                ]
+              },
+              "mealBasis": {
+                "includedMeals": {
+                  "includedMeal": [
+                    {
+                      "mealID": 35,
+                      "mealType": 1,
+                      "description": "American buffet breakfast at hotel"
+                    }
+                  ]
+                },
+                "mealBasisCode": "RB",
+                "multipleMealBasis": false
+              },
+              "roomNumbers": {
+                "roomNumber": [
+                  2,
+                  1
+                ]
+              },
+              "roomTypeCode": "01001",
+              "allowModifications": 2
+            },
+            {
+              "rateIdentifier": "7fd826e8-57c5-4ff8-a1e3-3278a8564d45|ILPCrde3fbJ0BXas7J2BbjmxcnUaDVRl6XkktuwICn0RwSiIxskcNNiu6wKdn190qtMAIzh8HZepbJOp5FZkwWinj7CuGhZ3LQTUYGXTv1Pho0-5yoPMvURMJv4tYJnE3LR0W8NBYUd0ltunQ2gHh6LF65Nx86n-TtfEGLxt2YD2o8Ai6PpJaEyGtTtN4mUAF_lYW8D48rN6O-siukYvcLNET_67ZyXIKazVdiG9K2oodlTVf29qgwp27opmKyM9OtyEcHB7-CI",
+              "roomDescription": "Twin room",
+              "roomTotalPrice": {
+                "price": {
+                  "value": 99.24
+                },
+                "priceType": 1
+              },
+              "availabilityStatus": 1,
+              "dates": {
+                "date": [
+                  {
+                    "dailyAvailabilityStatus": "1",
+                    "dailyPrice": {
+                      "price": {
+                        "value": 99.24
+                      },
+                      "priceType": 1
+                    },
+                    "mealBasis": {
+                      "includedMeals": {
+                        "includedMeal": [
+                          {
+                            "mealID": 35,
+                            "mealType": 1,
+                            "description": "American buffet breakfast at hotel"
+                          }
+                        ]
+                      },
+                      "mealBasisCode": "RB"
+                    },
+                    "serviceDate": 1505404800000
+                  }
+                ]
+              },
+              "cancellationPolicies": {
+                "cancellationPolicy": [
+                  {
+                    "appliesFrom": 1505343599000,
+                    "fullStay": true,
+                    "cancellationCharge": {
+                      "percentage": 100.0
+                    }
+                  }
+                ],
+                "refundable": 2
+              },
+              "supplierName": "Miki",
+              "roomRestrictions": {
+                "roomRestriction": [
+                  {
+                    "value": [
+                      {
+                        "value": "0",
+                        "id": 1
+                      },
+                      {
+                        "value": "1111111",
+                        "id": 3
+                      }
+                    ],
+                    "typeId": 4
+                  }
+                ]
+              },
+              "mealBasis": {
+                "includedMeals": {
+                  "includedMeal": [
+                    {
+                      "mealID": 35,
+                      "mealType": 1,
+                      "description": "American buffet breakfast at hotel"
+                    }
+                  ]
+                },
+                "mealBasisCode": "RB",
+                "multipleMealBasis": false
+              },
+              "roomNumbers": {
+                "roomNumber": [
+                  2,
+                  1
+                ]
+              },
+              "roomTypeCode": "00001",
+              "allowModifications": 2
+            }
+          ]
+        },
+        "hotelInfo": {
+          "hotelName": "RADISSON BLU SEASIDE (I)",
+          "category": "3",
+          "starRating": "4",
+          "cityName": "Helsinki"
+        }
+      }
+    ],
+    "stayPeriod": {
+      "checkinDate": 1505404800000,
+      "checkoutDate": 1505491200000,
+      "numberOfNights": 1
+    }
+  },
+  "versionNumber": "7.0"
+}

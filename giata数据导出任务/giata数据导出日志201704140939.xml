@@ -1,0 +1,632 @@
+[2017-04-13 20:44:28.154] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01
+[2017-04-13 20:44:28.231] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 20:44:44.115] INFO [main] 开始解析xml...
+[2017-04-13 20:44:44.999] INFO [main] 解析xml完成，共使用时间：16秒
+[2017-04-13 20:44:46.211] INFO [main] 解析出1000个hotel，使用1秒
+[2017-04-13 20:44:46.211] INFO [main] 将要进行数据插入
+[2017-04-13 20:44:46.211] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 20:44:59.171] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 20:44:59.171] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 20:45:12.775] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 20:45:17.379] INFO [main] 删除hotel，使用31秒
+[2017-04-13 20:45:38.498] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-13 20:45:38.499] INFO [main] 开始hotelMapping入库...
+[2017-04-13 20:59:51.913] INFO [main] 入库hotelMapping共:46919条，使用853秒
+[2017-04-13 20:59:51.914] INFO [main] 插入hotel，使用874秒
+[2017-04-13 20:59:51.914] INFO [main] 已处理0行，使用930秒
+[2017-04-13 20:59:51.914] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/1129
+[2017-04-13 20:59:51.988] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/1129 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 21:01:28.506] INFO [main] 开始解析xml...
+[2017-04-13 21:01:28.843] INFO [main] 解析xml完成，共使用时间：96秒
+[2017-04-13 21:01:29.449] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 21:01:29.449] INFO [main] 将要进行数据插入
+[2017-04-13 21:01:29.449] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 21:01:45.215] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 21:01:45.215] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 21:02:22.947] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 21:02:22.948] INFO [main] 删除hotel，使用53秒
+[2017-04-13 21:02:44.910] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-13 21:02:44.911] INFO [main] 开始hotelMapping入库...
+[2017-04-13 21:21:50.762] INFO [main] 入库hotelMapping共:57046条，使用1145秒
+[2017-04-13 21:21:50.763] INFO [main] 插入hotel，使用1167秒
+[2017-04-13 21:21:50.763] INFO [main] 已处理0行，使用2249秒
+[2017-04-13 21:21:50.763] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/2257
+[2017-04-13 21:21:50.891] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/2257 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 21:22:28.338] INFO [main] 开始解析xml...
+[2017-04-13 21:22:28.522] INFO [main] 解析xml完成，共使用时间：37秒
+[2017-04-13 21:22:28.778] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 21:22:28.778] INFO [main] 将要进行数据插入
+[2017-04-13 21:22:28.778] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 21:22:40.121] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 21:22:40.121] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 21:23:57.723] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 21:23:57.724] INFO [main] 删除hotel，使用88秒
+[2017-04-13 21:24:19.065] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-13 21:24:19.066] INFO [main] 开始hotelMapping入库...
+[2017-04-13 21:47:43.200] INFO [main] 入库hotelMapping共:62896条，使用1404秒
+[2017-04-13 21:47:43.201] INFO [main] 插入hotel，使用1425秒
+[2017-04-13 21:47:43.201] INFO [main] 已处理0行，使用3802秒
+[2017-04-13 21:47:43.201] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/3391
+[2017-04-13 21:47:43.294] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/3391 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 21:48:17.663] INFO [main] 开始解析xml...
+[2017-04-13 21:48:17.785] INFO [main] 解析xml完成，共使用时间：34秒
+[2017-04-13 21:48:18.104] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 21:48:18.104] INFO [main] 将要进行数据插入
+[2017-04-13 21:48:18.104] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 21:48:33.992] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 21:48:33.992] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 21:50:24.799] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 21:50:24.799] INFO [main] 删除hotel，使用126秒
+[2017-04-13 21:50:49.817] INFO [main] 入库hotel共:1000条，使用25秒
+[2017-04-13 21:50:49.818] INFO [main] 开始hotelMapping入库...
+[2017-04-13 22:13:59.142] INFO [main] 入库hotelMapping共:62732条，使用1389秒
+[2017-04-13 22:13:59.142] INFO [main] 插入hotel，使用1414秒
+[2017-04-13 22:13:59.142] INFO [main] 已处理0行，使用5377秒
+[2017-04-13 22:13:59.142] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/4537
+[2017-04-13 22:13:59.212] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/4537 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 22:17:09.019] INFO [main] 开始解析xml...
+[2017-04-13 22:17:09.115] INFO [main] 解析xml完成，共使用时间：189秒
+[2017-04-13 22:17:09.383] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 22:17:09.383] INFO [main] 将要进行数据插入
+[2017-04-13 22:17:09.383] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 22:17:22.694] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 22:17:22.694] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 22:20:11.173] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 22:20:11.173] INFO [main] 删除hotel，使用181秒
+[2017-04-13 22:20:35.162] INFO [main] 入库hotel共:1000条，使用23秒
+[2017-04-13 22:20:35.163] INFO [main] 开始hotelMapping入库...
+[2017-04-13 22:40:04.451] INFO [main] 入库hotelMapping共:56831条，使用1169秒
+[2017-04-13 22:40:04.451] INFO [main] 插入hotel，使用1193秒
+[2017-04-13 22:40:04.451] INFO [main] 已处理0行，使用6943秒
+[2017-04-13 22:40:04.451] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/6325
+[2017-04-13 22:40:04.531] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/6325 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 22:40:20.679] INFO [main] 开始解析xml...
+[2017-04-13 22:40:20.778] INFO [main] 解析xml完成，共使用时间：16秒
+[2017-04-13 22:40:20.974] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 22:40:20.974] INFO [main] 将要进行数据插入
+[2017-04-13 22:40:20.974] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 22:40:34.291] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 22:40:34.292] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 22:43:38.971] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 22:43:38.972] INFO [main] 删除hotel，使用197秒
+[2017-04-13 22:44:04.501] INFO [main] 入库hotel共:1000条，使用25秒
+[2017-04-13 22:44:04.501] INFO [main] 开始hotelMapping入库...
+[2017-04-13 22:59:44.418] INFO [main] 入库hotelMapping共:46119条，使用939秒
+[2017-04-13 22:59:44.418] INFO [main] 插入hotel，使用965秒
+[2017-04-13 22:59:44.418] INFO [main] 已处理0行，使用8123秒
+[2017-04-13 22:59:44.418] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/7673
+[2017-04-13 22:59:44.553] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/7673 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 23:00:56.865] INFO [main] 开始解析xml...
+[2017-04-13 23:00:56.944] INFO [main] 解析xml完成，共使用时间：72秒
+[2017-04-13 23:00:57.173] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 23:00:57.173] INFO [main] 将要进行数据插入
+[2017-04-13 23:00:57.173] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 23:01:11.169] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 23:01:11.169] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 23:04:35.013] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 23:04:35.013] INFO [main] 删除hotel，使用217秒
+[2017-04-13 23:05:00.059] INFO [main] 入库hotel共:1000条，使用25秒
+[2017-04-13 23:05:00.059] INFO [main] 开始hotelMapping入库...
+[2017-04-13 23:19:24.566] INFO [main] 入库hotelMapping共:48316条，使用864秒
+[2017-04-13 23:19:24.566] INFO [main] 插入hotel，使用889秒
+[2017-04-13 23:19:24.566] INFO [main] 已处理0行，使用9303秒
+[2017-04-13 23:19:24.566] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/8796
+[2017-04-13 23:19:24.668] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/8796 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 23:20:11.078] INFO [main] 开始解析xml...
+[2017-04-13 23:20:11.150] INFO [main] 解析xml完成，共使用时间：46秒
+[2017-04-13 23:20:11.332] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 23:20:11.332] INFO [main] 将要进行数据插入
+[2017-04-13 23:20:11.332] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 23:20:23.945] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 23:20:23.945] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 23:24:14.266] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 23:24:14.266] INFO [main] 删除hotel，使用242秒
+[2017-04-13 23:24:31.942] INFO [main] 入库hotel共:1000条，使用17秒
+[2017-04-13 23:24:31.943] INFO [main] 开始hotelMapping入库...
+[2017-04-13 23:38:30.840] INFO [main] 入库hotelMapping共:40476条，使用838秒
+[2017-04-13 23:38:30.841] INFO [main] 插入hotel，使用856秒
+[2017-04-13 23:38:30.841] INFO [main] 已处理0行，使用10449秒
+[2017-04-13 23:38:30.841] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/9927
+[2017-04-13 23:38:30.917] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/9927 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 23:38:46.262] INFO [main] 开始解析xml...
+[2017-04-13 23:38:46.348] INFO [main] 解析xml完成，共使用时间：15秒
+[2017-04-13 23:38:46.533] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 23:38:46.533] INFO [main] 将要进行数据插入
+[2017-04-13 23:38:46.533] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 23:38:58.652] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 23:38:58.653] INFO [main] 开始删除HotelMapping数据...
+[2017-04-13 23:43:14.463] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-13 23:43:14.463] INFO [main] 删除hotel，使用267秒
+[2017-04-13 23:43:35.587] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-13 23:43:35.588] INFO [main] 开始hotelMapping入库...
+[2017-04-13 23:57:48.644] INFO [main] 入库hotelMapping共:45359条，使用853秒
+[2017-04-13 23:57:48.644] INFO [main] 插入hotel，使用874秒
+[2017-04-13 23:57:48.644] INFO [main] 已处理0行，使用11607秒
+[2017-04-13 23:57:48.644] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/11083
+[2017-04-13 23:57:48.699] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/11083 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-13 23:58:02.442] INFO [main] 开始解析xml...
+[2017-04-13 23:58:02.520] INFO [main] 解析xml完成，共使用时间：13秒
+[2017-04-13 23:58:02.699] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-13 23:58:02.699] INFO [main] 将要进行数据插入
+[2017-04-13 23:58:02.699] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-13 23:58:15.985] INFO [main] 实际删除hotel数据0条;
+[2017-04-13 23:58:15.985] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 00:02:59.875] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 00:02:59.875] INFO [main] 删除hotel，使用297秒
+[2017-04-14 00:03:20.783] INFO [main] 入库hotel共:1000条，使用20秒
+[2017-04-14 00:03:20.783] INFO [main] 开始hotelMapping入库...
+[2017-04-14 00:18:27.721] INFO [main] 入库hotelMapping共:47374条，使用906秒
+[2017-04-14 00:18:27.721] INFO [main] 插入hotel，使用927秒
+[2017-04-14 00:18:27.721] INFO [main] 已处理0行，使用12846秒
+[2017-04-14 00:18:27.722] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/12200
+[2017-04-14 00:18:27.789] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/12200 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 00:18:42.432] INFO [main] 开始解析xml...
+[2017-04-14 00:18:42.499] INFO [main] 解析xml完成，共使用时间：14秒
+[2017-04-14 00:18:42.681] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 00:18:42.682] INFO [main] 将要进行数据插入
+[2017-04-14 00:18:42.682] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 00:18:55.497] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 00:18:55.497] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 00:23:57.478] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 00:23:57.478] INFO [main] 删除hotel，使用314秒
+[2017-04-14 00:24:18.862] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-14 00:24:18.862] INFO [main] 开始hotelMapping入库...
+[2017-04-14 00:34:37.371] INFO [main] 入库hotelMapping共:38000条，使用618秒
+[2017-04-14 00:34:37.371] INFO [main] 插入hotel，使用639秒
+[2017-04-14 00:34:37.371] INFO [main] 已处理0行，使用13816秒
+[2017-04-14 00:34:37.371] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/13312
+[2017-04-14 00:34:37.505] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/13312 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 00:36:15.696] INFO [main] 开始解析xml...
+[2017-04-14 00:36:15.825] INFO [main] 解析xml完成，共使用时间：98秒
+[2017-04-14 00:36:16.140] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 00:36:16.140] INFO [main] 将要进行数据插入
+[2017-04-14 00:36:16.140] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 00:36:29.343] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 00:36:29.343] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 00:41:43.019] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 00:41:43.020] INFO [main] 删除hotel，使用326秒
+[2017-04-14 00:42:05.955] INFO [main] 入库hotel共:1000条，使用22秒
+[2017-04-14 00:42:05.955] INFO [main] 开始hotelMapping入库...
+[2017-04-14 01:03:27.799] INFO [main] 入库hotelMapping共:61997条，使用1281秒
+[2017-04-14 01:03:27.799] INFO [main] 插入hotel，使用1304秒
+[2017-04-14 01:03:27.799] INFO [main] 已处理0行，使用15546秒
+[2017-04-14 01:03:27.799] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/14519
+[2017-04-14 01:03:27.883] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/14519 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 01:04:27.943] INFO [main] 开始解析xml...
+[2017-04-14 01:04:28.020] INFO [main] 解析xml完成，共使用时间：60秒
+[2017-04-14 01:04:28.231] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 01:04:28.231] INFO [main] 将要进行数据插入
+[2017-04-14 01:04:28.231] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 01:04:39.537] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 01:04:39.537] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 01:10:31.073] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 01:10:31.073] INFO [main] 删除hotel，使用362秒
+[2017-04-14 01:10:53.656] INFO [main] 入库hotel共:1000条，使用22秒
+[2017-04-14 01:10:53.657] INFO [main] 开始hotelMapping入库...
+[2017-04-14 01:24:05.178] INFO [main] 入库hotelMapping共:43038条，使用791秒
+[2017-04-14 01:24:05.178] INFO [main] 插入hotel，使用814秒
+[2017-04-14 01:24:05.178] INFO [main] 已处理0行，使用16784秒
+[2017-04-14 01:24:05.178] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/15694
+[2017-04-14 01:24:05.246] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/15694 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 01:24:17.492] INFO [main] 开始解析xml...
+[2017-04-14 01:24:17.586] INFO [main] 解析xml完成，共使用时间：12秒
+[2017-04-14 01:24:17.748] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 01:24:17.748] INFO [main] 将要进行数据插入
+[2017-04-14 01:24:17.748] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 01:24:32.163] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 01:24:32.164] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 01:30:45.375] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 01:30:45.375] INFO [main] 删除hotel，使用387秒
+[2017-04-14 01:31:02.401] INFO [main] 入库hotel共:1000条，使用17秒
+[2017-04-14 01:31:02.401] INFO [main] 开始hotelMapping入库...
+[2017-04-14 01:45:40.625] INFO [main] 入库hotelMapping共:43359条，使用878秒
+[2017-04-14 01:45:40.625] INFO [main] 插入hotel，使用895秒
+[2017-04-14 01:45:40.626] INFO [main] 已处理0行，使用18079秒
+[2017-04-14 01:45:40.626] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/16831
+[2017-04-14 01:45:40.702] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/16831 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 01:46:31.081] INFO [main] 开始解析xml...
+[2017-04-14 01:46:31.179] INFO [main] 解析xml完成，共使用时间：50秒
+[2017-04-14 01:46:31.406] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 01:46:31.406] INFO [main] 将要进行数据插入
+[2017-04-14 01:46:31.406] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 01:46:48.036] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 01:46:48.036] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 01:53:33.388] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 01:53:33.388] INFO [main] 删除hotel，使用421秒
+[2017-04-14 01:53:58.832] INFO [main] 入库hotel共:1000条，使用25秒
+[2017-04-14 01:53:58.833] INFO [main] 开始hotelMapping入库...
+[2017-04-14 02:08:40.305] INFO [main] 入库hotelMapping共:49794条，使用881秒
+[2017-04-14 02:08:40.305] INFO [main] 插入hotel，使用906秒
+[2017-04-14 02:08:40.305] INFO [main] 已处理0行，使用19459秒
+[2017-04-14 02:08:40.305] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/18006
+[2017-04-14 02:08:40.425] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/18006 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 02:08:57.314] INFO [main] 开始解析xml...
+[2017-04-14 02:08:57.396] INFO [main] 解析xml完成，共使用时间：16秒
+[2017-04-14 02:08:57.628] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 02:08:57.628] INFO [main] 将要进行数据插入
+[2017-04-14 02:08:57.628] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 02:09:09.878] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 02:09:09.878] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 02:16:18.503] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 02:16:18.504] INFO [main] 删除hotel，使用440秒
+[2017-04-14 02:16:49.691] INFO [main] 入库hotel共:1000条，使用31秒
+[2017-04-14 02:16:49.691] INFO [main] 开始hotelMapping入库...
+[2017-04-14 02:32:06.439] INFO [main] 入库hotelMapping共:49199条，使用916秒
+[2017-04-14 02:32:06.440] INFO [main] 插入hotel，使用947秒
+[2017-04-14 02:32:06.440] INFO [main] 已处理0行，使用20865秒
+[2017-04-14 02:32:06.440] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/19196
+[2017-04-14 02:32:06.508] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/19196 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 02:32:21.198] INFO [main] 开始解析xml...
+[2017-04-14 02:32:21.279] INFO [main] 解析xml完成，共使用时间：14秒
+[2017-04-14 02:32:21.541] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 02:32:21.541] INFO [main] 将要进行数据插入
+[2017-04-14 02:32:21.541] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 02:32:34.600] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 02:32:34.600] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 02:40:09.581] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 02:40:09.581] INFO [main] 删除hotel，使用468秒
+[2017-04-14 02:40:32.676] INFO [main] 入库hotel共:1000条，使用23秒
+[2017-04-14 02:40:32.676] INFO [main] 开始hotelMapping入库...
+[2017-04-14 03:00:04.893] INFO [main] 入库hotelMapping共:51325条，使用1172秒
+[2017-04-14 03:00:04.894] INFO [main] 插入hotel，使用1195秒
+[2017-04-14 03:00:04.894] INFO [main] 已处理0行，使用22543秒
+[2017-04-14 03:00:04.894] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/20384
+[2017-04-14 03:00:05.026] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/20384 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 03:00:20.350] INFO [main] 开始解析xml...
+[2017-04-14 03:00:20.438] INFO [main] 解析xml完成，共使用时间：15秒
+[2017-04-14 03:00:20.690] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 03:00:20.690] INFO [main] 将要进行数据插入
+[2017-04-14 03:00:20.690] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 03:00:35.984] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 03:00:35.985] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 03:08:42.847] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 03:08:42.848] INFO [main] 删除hotel，使用502秒
+[2017-04-14 03:09:05.079] INFO [main] 入库hotel共:1000条，使用22秒
+[2017-04-14 03:09:05.079] INFO [main] 开始hotelMapping入库...
+[2017-04-14 03:28:00.750] INFO [main] 入库hotelMapping共:52417条，使用1135秒
+[2017-04-14 03:28:00.750] INFO [main] 插入hotel，使用1157秒
+[2017-04-14 03:28:00.750] INFO [main] 已处理0行，使用24219秒
+[2017-04-14 03:28:00.750] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/21548
+[2017-04-14 03:28:00.863] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/21548 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 03:28:12.802] INFO [main] 开始解析xml...
+[2017-04-14 03:28:12.871] INFO [main] 解析xml完成，共使用时间：12秒
+[2017-04-14 03:28:13.099] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 03:28:13.099] INFO [main] 将要进行数据插入
+[2017-04-14 03:28:13.099] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 03:28:27.791] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 03:28:27.791] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 03:36:59.556] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 03:36:59.556] INFO [main] 删除hotel，使用526秒
+[2017-04-14 03:37:20.563] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-14 03:37:20.563] INFO [main] 开始hotelMapping入库...
+[2017-04-14 03:52:09.963] INFO [main] 入库hotelMapping共:49514条，使用889秒
+[2017-04-14 03:52:09.963] INFO [main] 插入hotel，使用910秒
+[2017-04-14 03:52:09.963] INFO [main] 已处理0行，使用25668秒
+[2017-04-14 03:52:09.963] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/22745
+[2017-04-14 03:52:10.034] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/22745 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 03:52:27.037] INFO [main] 开始解析xml...
+[2017-04-14 03:52:27.146] INFO [main] 解析xml完成，共使用时间：17秒
+[2017-04-14 03:52:27.406] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 03:52:27.406] INFO [main] 将要进行数据插入
+[2017-04-14 03:52:27.406] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 03:52:43.208] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 03:52:43.208] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 04:01:37.700] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 04:01:37.701] INFO [main] 删除hotel，使用550秒
+[2017-04-14 04:02:01.245] INFO [main] 入库hotel共:1000条，使用23秒
+[2017-04-14 04:02:01.245] INFO [main] 开始hotelMapping入库...
+[2017-04-14 04:20:55.439] INFO [main] 入库hotelMapping共:57366条，使用1134秒
+[2017-04-14 04:20:55.439] INFO [main] 插入hotel，使用1157秒
+[2017-04-14 04:20:55.439] INFO [main] 已处理0行，使用27394秒
+[2017-04-14 04:20:55.439] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/23906
+[2017-04-14 04:20:55.545] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/23906 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 04:21:05.541] INFO [main] 开始解析xml...
+[2017-04-14 04:21:05.607] INFO [main] 解析xml完成，共使用时间：10秒
+[2017-04-14 04:21:05.726] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 04:21:05.727] INFO [main] 将要进行数据插入
+[2017-04-14 04:21:05.727] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 04:21:21.154] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 04:21:21.154] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 04:30:45.451] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 04:30:45.451] INFO [main] 删除hotel，使用579秒
+[2017-04-14 04:31:07.428] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-14 04:31:07.428] INFO [main] 开始hotelMapping入库...
+[2017-04-14 04:41:45.788] INFO [main] 入库hotelMapping共:30768条，使用638秒
+[2017-04-14 04:41:45.788] INFO [main] 插入hotel，使用660秒
+[2017-04-14 04:41:45.788] INFO [main] 已处理0行，使用28644秒
+[2017-04-14 04:41:45.789] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/25118
+[2017-04-14 04:41:45.939] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/25118 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 04:41:51.044] INFO [main] 开始解析xml...
+[2017-04-14 04:41:51.082] INFO [main] 解析xml完成，共使用时间：5秒
+[2017-04-14 04:41:51.174] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 04:41:51.174] INFO [main] 将要进行数据插入
+[2017-04-14 04:41:51.174] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 04:42:07.654] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 04:42:07.654] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 04:51:52.676] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 04:51:52.677] INFO [main] 删除hotel，使用601秒
+[2017-04-14 04:52:13.767] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-14 04:52:13.767] INFO [main] 开始hotelMapping入库...
+[2017-04-14 04:59:10.702] INFO [main] 入库hotelMapping共:23675条，使用416秒
+[2017-04-14 04:59:10.702] INFO [main] 插入hotel，使用438秒
+[2017-04-14 04:59:10.702] INFO [main] 已处理0行，使用29689秒
+[2017-04-14 04:59:10.703] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/26363
+[2017-04-14 04:59:10.817] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/26363 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 04:59:22.167] INFO [main] 开始解析xml...
+[2017-04-14 04:59:22.242] INFO [main] 解析xml完成，共使用时间：11秒
+[2017-04-14 04:59:22.452] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 04:59:22.452] INFO [main] 将要进行数据插入
+[2017-04-14 04:59:22.452] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 04:59:35.852] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 04:59:35.852] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 05:09:33.882] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 05:09:33.883] INFO [main] 删除hotel，使用611秒
+[2017-04-14 05:09:55.739] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-14 05:09:55.739] INFO [main] 开始hotelMapping入库...
+[2017-04-14 05:24:26.387] INFO [main] 入库hotelMapping共:45670条，使用870秒
+[2017-04-14 05:24:26.387] INFO [main] 插入hotel，使用892秒
+[2017-04-14 05:24:26.387] INFO [main] 已处理0行，使用31205秒
+[2017-04-14 05:24:26.387] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/27651
+[2017-04-14 05:24:26.455] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/27651 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 05:24:36.733] INFO [main] 开始解析xml...
+[2017-04-14 05:24:36.796] INFO [main] 解析xml完成，共使用时间：10秒
+[2017-04-14 05:24:36.913] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 05:24:36.913] INFO [main] 将要进行数据插入
+[2017-04-14 05:24:36.913] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 05:24:48.296] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 05:24:48.296] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 05:35:11.677] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 05:35:11.677] INFO [main] 删除hotel，使用634秒
+[2017-04-14 05:35:31.263] INFO [main] 入库hotel共:1000条，使用19秒
+[2017-04-14 05:35:31.264] INFO [main] 开始hotelMapping入库...
+[2017-04-14 05:46:24.195] INFO [main] 入库hotelMapping共:30373条，使用652秒
+[2017-04-14 05:46:24.195] INFO [main] 插入hotel，使用672秒
+[2017-04-14 05:46:24.195] INFO [main] 已处理0行，使用32523秒
+[2017-04-14 05:46:24.195] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/28894
+[2017-04-14 05:46:24.533] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/28894 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 05:46:31.401] INFO [main] 开始解析xml...
+[2017-04-14 05:46:31.472] INFO [main] 解析xml完成，共使用时间：6秒
+[2017-04-14 05:46:31.609] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 05:46:31.610] INFO [main] 将要进行数据插入
+[2017-04-14 05:46:31.610] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 05:46:43.316] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 05:46:43.318] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 05:57:26.204] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 05:57:26.204] INFO [main] 删除hotel，使用654秒
+[2017-04-14 05:57:51.310] INFO [main] 入库hotel共:1000条，使用25秒
+[2017-04-14 05:57:51.311] INFO [main] 开始hotelMapping入库...
+[2017-04-14 06:09:22.036] INFO [main] 入库hotelMapping共:34993条，使用690秒
+[2017-04-14 06:09:22.036] INFO [main] 插入hotel，使用715秒
+[2017-04-14 06:09:22.037] INFO [main] 已处理0行，使用33900秒
+[2017-04-14 06:09:22.037] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/30158
+[2017-04-14 06:09:22.105] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/30158 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 06:09:30.765] INFO [main] 开始解析xml...
+[2017-04-14 06:09:30.834] INFO [main] 解析xml完成，共使用时间：8秒
+[2017-04-14 06:09:30.997] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 06:09:30.997] INFO [main] 将要进行数据插入
+[2017-04-14 06:09:30.997] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 06:09:43.386] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 06:09:43.386] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 06:20:58.280] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 06:20:58.281] INFO [main] 删除hotel，使用687秒
+[2017-04-14 06:21:19.026] INFO [main] 入库hotel共:1000条，使用20秒
+[2017-04-14 06:21:19.027] INFO [main] 开始hotelMapping入库...
+[2017-04-14 06:28:49.146] INFO [main] 入库hotelMapping共:29940条，使用450秒
+[2017-04-14 06:28:49.146] INFO [main] 插入hotel，使用470秒
+[2017-04-14 06:28:49.146] INFO [main] 已处理0行，使用35067秒
+[2017-04-14 06:28:49.146] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/31303
+[2017-04-14 06:28:49.211] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/31303 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 06:29:02.956] INFO [main] 开始解析xml...
+[2017-04-14 06:29:03.026] INFO [main] 解析xml完成，共使用时间：13秒
+[2017-04-14 06:29:03.190] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 06:29:03.190] INFO [main] 将要进行数据插入
+[2017-04-14 06:29:03.190] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 06:29:16.294] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 06:29:16.294] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 06:40:50.147] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 06:40:50.147] INFO [main] 删除hotel，使用706秒
+[2017-04-14 06:41:13.681] INFO [main] 入库hotel共:1000条，使用23秒
+[2017-04-14 06:41:13.681] INFO [main] 开始hotelMapping入库...
+[2017-04-14 06:51:53.631] INFO [main] 入库hotelMapping共:36792条，使用639秒
+[2017-04-14 06:51:53.631] INFO [main] 插入hotel，使用663秒
+[2017-04-14 06:51:53.631] INFO [main] 已处理0行，使用36452秒
+[2017-04-14 06:51:53.631] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/32508
+[2017-04-14 06:51:53.729] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/32508 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 06:52:02.976] INFO [main] 开始解析xml...
+[2017-04-14 06:52:03.034] INFO [main] 解析xml完成，共使用时间：9秒
+[2017-04-14 06:52:03.134] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 06:52:03.134] INFO [main] 将要进行数据插入
+[2017-04-14 06:52:03.134] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 06:52:17.046] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 06:52:17.046] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 07:05:47.760] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 07:05:47.760] INFO [main] 删除hotel，使用824秒
+[2017-04-14 07:06:11.362] INFO [main] 入库hotel共:1000条，使用23秒
+[2017-04-14 07:06:11.362] INFO [main] 开始hotelMapping入库...
+[2017-04-14 07:13:33.557] INFO [main] 入库hotelMapping共:26349条，使用442秒
+[2017-04-14 07:13:33.558] INFO [main] 插入hotel，使用465秒
+[2017-04-14 07:13:33.558] INFO [main] 已处理0行，使用37752秒
+[2017-04-14 07:13:33.558] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/33666
+[2017-04-14 07:13:33.633] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/33666 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 07:13:44.218] INFO [main] 开始解析xml...
+[2017-04-14 07:13:44.270] INFO [main] 解析xml完成，共使用时间：10秒
+[2017-04-14 07:13:44.391] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 07:13:44.391] INFO [main] 将要进行数据插入
+[2017-04-14 07:13:44.391] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 07:13:59.426] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 07:13:59.426] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 07:28:00.202] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 07:28:00.202] INFO [main] 删除hotel，使用855秒
+[2017-04-14 07:28:23.109] INFO [main] 入库hotel共:1000条，使用22秒
+[2017-04-14 07:28:23.109] INFO [main] 开始hotelMapping入库...
+[2017-04-14 07:35:40.671] INFO [main] 入库hotelMapping共:25543条，使用437秒
+[2017-04-14 07:35:40.671] INFO [main] 插入hotel，使用460秒
+[2017-04-14 07:35:40.671] INFO [main] 已处理0行，使用39079秒
+[2017-04-14 07:35:40.671] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/34782
+[2017-04-14 07:35:40.778] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/34782 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 07:36:33.346] INFO [main] 开始解析xml...
+[2017-04-14 07:36:33.393] INFO [main] 解析xml完成，共使用时间：52秒
+[2017-04-14 07:36:33.532] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 07:36:33.532] INFO [main] 将要进行数据插入
+[2017-04-14 07:36:33.532] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 07:36:45.234] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 07:36:45.234] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 07:51:12.412] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 07:51:12.412] INFO [main] 删除hotel，使用878秒
+[2017-04-14 07:51:34.610] INFO [main] 入库hotel共:1000条，使用22秒
+[2017-04-14 07:51:34.611] INFO [main] 开始hotelMapping入库...
+[2017-04-14 08:02:59.211] INFO [main] 入库hotelMapping共:31292条，使用684秒
+[2017-04-14 08:02:59.212] INFO [main] 插入hotel，使用706秒
+[2017-04-14 08:02:59.212] INFO [main] 已处理0行，使用40718秒
+[2017-04-14 08:02:59.212] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/36024
+[2017-04-14 08:02:59.297] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/36024 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 08:03:11.744] INFO [main] 开始解析xml...
+[2017-04-14 08:03:11.805] INFO [main] 解析xml完成，共使用时间：12秒
+[2017-04-14 08:03:11.956] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 08:03:11.956] INFO [main] 将要进行数据插入
+[2017-04-14 08:03:11.956] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 08:03:28.000] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 08:03:28.000] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 08:19:21.868] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 08:19:21.869] INFO [main] 删除hotel，使用969秒
+[2017-04-14 08:19:44.564] INFO [main] 入库hotel共:1000条，使用22秒
+[2017-04-14 08:19:44.564] INFO [main] 开始hotelMapping入库...
+[2017-04-14 08:31:03.594] INFO [main] 入库hotelMapping共:31797条，使用679秒
+[2017-04-14 08:31:03.594] INFO [main] 插入hotel，使用701秒
+[2017-04-14 08:31:03.594] INFO [main] 已处理0行，使用42402秒
+[2017-04-14 08:31:03.594] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/37211
+[2017-04-14 08:31:03.664] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/37211 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 08:31:14.796] INFO [main] 开始解析xml...
+[2017-04-14 08:31:14.868] INFO [main] 解析xml完成，共使用时间：11秒
+[2017-04-14 08:31:15.051] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 08:31:15.051] INFO [main] 将要进行数据插入
+[2017-04-14 08:31:15.051] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 08:31:28.528] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 08:31:28.528] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 08:48:15.901] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 08:48:15.901] INFO [main] 删除hotel，使用1020秒
+[2017-04-14 08:48:37.869] INFO [main] 入库hotel共:1000条，使用21秒
+[2017-04-14 08:48:37.869] INFO [main] 开始hotelMapping入库...
+[2017-04-14 09:01:15.875] INFO [main] 入库hotelMapping共:36639条，使用758秒
+[2017-04-14 09:01:15.876] INFO [main] 插入hotel，使用779秒
+[2017-04-14 09:01:15.876] INFO [main] 已处理0行，使用44214秒
+[2017-04-14 09:01:15.876] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/38384
+[2017-04-14 09:01:15.940] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/38384 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK
+[2017-04-14 09:01:34.219] INFO [main] 开始解析xml...
+[2017-04-14 09:01:34.298] INFO [main] 解析xml完成，共使用时间：18秒
+[2017-04-14 09:01:34.483] INFO [main] 解析出1000个hotel，使用0秒
+[2017-04-14 09:01:34.483] INFO [main] 将要进行数据插入
+[2017-04-14 09:01:34.483] INFO [main] 开始删除hotel数据,共有1000条...
+[2017-04-14 09:01:50.914] INFO [main] 实际删除hotel数据0条;
+[2017-04-14 09:01:50.914] INFO [main] 开始删除HotelMapping数据...
+[2017-04-14 09:19:07.382] INFO [main] 实际删除hotelMapping数据0条
+[2017-04-14 09:19:07.382] INFO [main] 删除hotel，使用1052秒
+[2017-04-14 09:19:40.660] INFO [main] 入库hotel共:1000条，使用33秒
+[2017-04-14 09:19:40.660] INFO [main] 开始hotelMapping入库...
+[2017-04-14 09:36:10.896] INFO [main] 入库hotelMapping共:40288条，使用990秒
+[2017-04-14 09:36:10.896] INFO [main] 插入hotel，使用1023秒
+[2017-04-14 09:36:10.896] INFO [main] 已处理0行，使用46309秒
+[2017-04-14 09:36:10.896] INFO [main] 开始流程，数据来源http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/39598
+[2017-04-14 09:36:10.988] INFO [main] 开始请求xml数据...
+Executing request GET http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/1990-01-01/offset/39598 HTTP/1.1
+----------------------------------------
+HTTP/1.1 200 OK

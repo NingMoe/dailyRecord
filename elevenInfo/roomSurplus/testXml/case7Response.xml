@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Service_SearchHotel>
+    <SearchHotel_Response>
+        <Hotel HotelId="WSMA0511000129" HotelName="Asia Airport" Rating="4" Currenc
+y="THB" Latitude ="13.96" Longitude="100.62" MarketName="Worldwide except Thai" dtCheckIn="2017-09-14" dtCheckOut="2017-09-17" CancelPolicyId="" InternalCode="CL005" avail="True">
+            <RoomCateg C
+ode="WSMA05110039" Name="STANDARD" NetPrice="1995.00" GrossPrice="1995.00" CommPrice="0.00" Price="1995.00" BFType="BBF">
+                <RoomType TypeName="Triple" NumRooms="1" TotalPrice="1995.00" avrNight
+Price="665.00" RTGrossPrice="1995.00" RTCommPrice="0.00" RTNetPrice="1995.00">
+                    <Rate offSet="0" NightPrice="665.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2=
+"" RoomPrice="665.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N"
+ NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement N
+ame="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice="665.00">
+                        <RoomRate>
+                            <RoomSeq No="1
+" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="665.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" Co
+mmissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" M
+SRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate off
+Set="2" NightPrice="665.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="665.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00"
+ PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAg
+e="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="
+NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+            <RoomCateg Code="WSMA02051639" Name="STANDARD SPECIAL" NetPrice="3135.00" GrossPrice="3135.00" CommPrice="0.00" Price="3135.0
+0" BFType="BBF">
+                <RoomType TypeName="Triple" NumRooms="1" TotalPrice="3135.00" avrNightPrice="1045.00" RTGrossPrice="3135.00" RTCommPrice="0.00" RTNetPrice="3135.00">
+                    <Rate offSet="0" NightPric
+e="1045.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1045.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPri
+ce="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0
+.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice="1045.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1045.00" MinstayPrice="0.00" Compul
+soryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRat
+e>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False"
+ PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2" NightPrice="1045.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" Child
+Age2="" RoomPrice="1045.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sC
+h2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supple
+ment Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+            <RoomCateg Code="WSMA02051639" N
+ame="STANDARD SPECIAL" NetPrice="3135.00" GrossPrice="3135.00" CommPrice="0.00" Price="3135.00" BFType="BBR">
+                <RoomType TypeName="Triple" NumRooms="1" TotalPrice="3135.00" avrNightPrice="1045.
+00" RTGrossPrice="3135.00" RTCommPrice="0.00" RTNetPrice="3135.00">
+                    <Rate offSet="0" NightPrice="1045.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPri
+ce="1045.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeN
+ame="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE
+"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice="1045.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultN
+um="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1045.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" Commissio
+nPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="
+0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2"
+ NightPrice="1045.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1045.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" Prom
+otionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0"
+ Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE"
+ EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+        </Hotel>
+        <Hotel HotelId="WSMA0608000030" HotelName="Novotel Suvarnabhumi Airport" Rating="4" Currency="THB" Latitude ="13.696778148
+3" Longitude="100.75056789" MarketName="All Market" dtCheckIn="2017-09-14" dtCheckOut="2017-09-17" CancelPolicyId="" InternalCode="CL005" avail="True">
+            <RoomCateg Code="WSMA05110012" Name="JUN
+IOR SUITE" NetPrice="2470.00" GrossPrice="2470.00" CommPrice="0.00" Price="2470.00" BFType="RO">
+                <RoomType TypeName="Triple" NumRooms="1" TotalPrice="2470.00" avrNightPrice="823.33" RTGrossPri
+ce="2470.00" RTCommPrice="0.00" RTNetPrice="2470.00">
+                    <Rate offSet="0" NightPrice="1140.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1140.00" M
+instayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" N
+ewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="1" MaxAge="10" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promo
+tion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice="1140.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" Ch
+ildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1140.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0
+.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="1" MaxAge="10" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00
+"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2" Nig
+htPrice="190.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="190.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionB
+FPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="1" MaxAge="10" Desc
+="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="FOC - Stay 3 Pay 2, Free night NOT includes breakfast (no additi
+onal surcharge)" Value="True" PromoCode="NIGHTSURS03P02M03"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+        </Hotel>
+        <Hotel HotelId="WSMA0511000323" Hotel
+Name="Sheraton Grande Sukhumvit" Rating="5" Currency="THB" Latitude ="13.737338455" Longitude="100.55939666" MarketName="All Market" dtCheckIn="2017-09-14" dtCheckOut="2017-09-17" CancelPolic
+yId="" InternalCode="CL005" avail="True">
+            <RoomCateg Code="WSMA05110034" Name="DELUXE" NetPrice="5101.50" GrossPrice="5101.50" CommPrice="0.00" Price="5101.50" BFType="RO">
+                <RoomType TypeName="
+Triple" NumRooms="1" TotalPrice="5101.50" avrNightPrice="1700.50" RTGrossPrice="5101.50" RTCommPrice="0.00" RTNetPrice="5101.50">
+                    <Rate offSet="0" NightPrice="1700.50">
+                        <RoomRate>
+                            <RoomSeq No="1
+" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1710.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="9.50" C
+ommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="12" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE"
+ MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="AMOUNT" EBRate="9.50"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate
+ offSet="1" NightPrice="1700.50">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1710.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice=
+"0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="9.50" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0"
+ MaxAge="12" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird E
+BType="AMOUNT" EBRate="9.50"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2" NightPrice="1700.50">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1710.00" Mi
+nstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="9.50" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" Ne
+wChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="12" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion 
+Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="AMOUNT" EBRate="9.50"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+            <RoomCateg Code="WSMA06040042" Name="GRANDE DELUXE" NetPric
+e="10459.50" GrossPrice="10459.50" CommPrice="0.00" Price="10459.50" BFType="ABF">
+                <RoomType TypeName="Triple" NumRooms="1" TotalPrice="10459.50" avrNightPrice="3486.50" RTGrossPrice="10459.50
+" RTCommPrice="0.00" RTNetPrice="10459.50">
+                    <Rate offSet="0" NightPrice="3486.50">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="3496.00" MinstayPric
+e="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="9.50" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr
+="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="12" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name=
+"NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="AMOUNT" EBRate="9.50"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice="3486.50">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="
+1" ChildAge1="6" ChildAge2="" RoomPrice="3496.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="9.50" CommissionPrice="0.00" sRo
+omType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="12" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Comp
+ulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="AMOUNT" EBRate="9.50"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2" NightPric
+e="3486.50">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="3496.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPri
+ce="0.00" EarlyBirdDiscount="9.50" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="12" Desc="NO
+NE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="AMOUNT" EB
+Rate="9.50"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+        </Hotel>
+        <Hotel HotelId="WSMA0511000113" HotelName="Amari Boulevard" Rating="4" Currency="THB" Latitude ="13.7420632511" Longitude="10
+0.554385277" MarketName="All Market" dtCheckIn="2017-09-14" dtCheckOut="2017-09-17" CancelPolicyId="" InternalCode="CL005" avail="True">
+            <RoomCateg Code="WSMA13080166" Name="(H)SEMI TWN SALE" 
+NetPrice="5472.00" GrossPrice="5472.00" CommPrice="0.00" Price="5472.00" BFType="BBF">
+                <RoomType TypeName="Triple" NumRooms="1" TotalPrice="5472.00" avrNightPrice="1824.00" RTGrossPrice="5472.
+00" RTCommPrice="0.00" RTNetPrice="5472.00">
+                    <Rate offSet="0" NightPrice="1824.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1824.00" MinstayPri
+ce="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNb
+r="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="11" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name
+="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice="1824.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1
+" ChildAge1="6" ChildAge2="" RoomPrice="1824.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoo
+mType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="11" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compu
+lsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2" NightPrice="
+1824.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="1824.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice=
+"0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="11" Desc="NONE"
+/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate=
+"0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+            <RoomCateg Code="WSMA05110034" Name="DELUXE" NetPrice="41222.40" GrossPrice="41222.40" CommPrice="0.00" Price="41222.40" BFType="BBF">
+                <Roo
+mType TypeName="Triple" NumRooms="1" TotalPrice="41222.40" avrNightPrice="13740.80" RTGrossPrice="41222.40" RTCommPrice="0.00" RTNetPrice="41222.40">
+                    <Rate offSet="0" NightPrice="13740.80">
+                        <Ro
+omRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="13740.80" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" Earl
+yBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="11" Desc="NONE"/>
+                            <Minstay 
+MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </R
+oomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice="13740.80">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="13740.80" MinstayPrice="0.00" CompulsoryPri
+ce="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <Room
+RateInfo>
+                            <Child MinAge="0" MaxAge="11" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" P
+romoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2" NightPrice="13740.80">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildA
+ge2="" RoomPrice="13740.80" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sC
+h2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="11" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <S
+upplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+            <Message>
+                <![CDATA[- All of 
+the rooms are NON-Smoking. <br>- Unlimited internet broadband and wireless access in all guest rooms and public areas.]]>
+            </Message>
+        </Hotel>
+        <Hotel HotelId="WSMA0511000127" HotelName="Arnoma" R
+ating="3" Currency="THB" Latitude ="13.7465524573" Longitude="100.541009905" MarketName="All Market" dtCheckIn="2017-09-14" dtCheckOut="2017-09-17" CancelPolicyId="" InternalCode="CL005" avai
+l="True">
+            <RoomCateg Code="WSMA05110034" Name="DELUXE" NetPrice="16530.00" GrossPrice="16530.00" CommPrice="0.00" Price="16530.00" BFType="ABF">
+                <RoomType TypeName="Triple" NumRooms="1" TotalPr
+ice="16530.00" avrNightPrice="5510.00" RTGrossPrice="16530.00" RTCommPrice="0.00" RTNetPrice="16530.00">
+                    <Rate offSet="0" NightPrice="5510.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="
+1" ChildAge1="6" ChildAge2="" RoomPrice="5510.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRo
+omType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="10" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Comp
+ulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice=
+"5510.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="5510.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice
+="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="10" Desc="NONE
+"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate
+="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2" NightPrice="5510.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="1" ChildAge1="6" ChildAge2="" RoomPrice="5510.00" MinstayPrice="0.00" Com
+pulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Triple" NewChildNbr="1"/>
+                        </Room
+Rate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="10" Desc="NONE"/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value
+="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomType>
+            </RoomCateg>
+        </Hotel>
+    </SearchHotel_Response>
+</Service_SearchHotel>

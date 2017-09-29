@@ -1,0 +1,32 @@
+requestXML=<?xml version="1.0" encoding="utf-8" ?>
+<Service_BookHotel>
+    <AgentLogin>
+        <AgentId>PTES</AgentId>
+        <LoginName>XMLTV3</LoginName>
+        <Password>XMLtestV3</Password>
+    </AgentLogin>
+    <BookHotel>
+        <RefRsvnNo></RefRsvnNo>
+        <OSRefNo>170619130033521179</OSRefNo>
+        <PaxPassport>MA05110001</PaxPassport>
+        <hasKey>10024101748110659191526967523</hasKey>
+        <FinishBook>Y</FinishBook>
+                <HotelList Seq="1" InternalCode="CL005" flagAvail="Y">
+            <HotelId>WSMA0511000155</HotelId>
+            <RequestDes></RequestDes>
+                        <RoomCatg CatgId="WSMA08061464" CatgName="DULUXE (TOWER WING)"
+                      checkIn="2017-07-25" checkOut="2017-07-28" BFType="ABF">
+                                <RoomType Seq="1" TypeName="Double" RQBedChild ="N" Price="13680">
+                    <AdultNum>2</AdultNum>
+                    <ChildAges>
+                        <ChildAge/>
+                    </ChildAges>
+                    <PaxInformation>
+                                                <PaxInfo Id="1">ZHAOPEN YANG,Mr.</PaxInfo>
+                                                <PaxInfo Id="2">SANG XU,Mr.</PaxInfo>
+                                            </PaxInformation>
+                </RoomType>
+                            </RoomCatg>
+                    </HotelList>
+            </BookHotel>
+</Service_BookHotel>

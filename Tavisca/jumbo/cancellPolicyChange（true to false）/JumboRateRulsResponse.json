@@ -1,0 +1,109 @@
+{
+    "hotelId": "397817",
+    "isRateAvailable": true,
+    "occupancies": [
+        {
+            "adults": 2,
+            "children": 1,
+            "refId": "318d08d3-84a1-44c6-bbfd-0789d03ad76d"
+        },
+        {
+            "adults": 2,
+            "children": 0,
+            "refId": "84ce03b5-06e5-46ae-b128-b62fb32e4ecd"
+        }
+    ],
+    "policies": [],
+    "roomOptions": [
+        {
+            "availableRooms": 0,
+            "bedDetails": [],
+            "code": "TRC",
+            "desc": "TRIPLE (2AD+1CH)",
+            "maxOccupancy": 0,
+            "name": "TRIPLE (2AD+1CH)",
+            "refId": "8bb1337f-56a1-4750-a059-bec979cad286",
+            "smokingPreference": "unknown"
+        },
+        {
+            "availableRooms": 0,
+            "bedDetails": [],
+            "code": "AN4",
+            "desc": "NON REFUNDABLE DOUBLE",
+            "maxOccupancy": 0,
+            "name": "NON REFUNDABLE DOUBLE",
+            "refId": "79bdb121-ea90-4d6f-b769-66e810f95c63",
+            "smokingPreference": "unknown"
+        }
+    ],
+    "roomRate": {
+        "perBookingRate": {
+            "additionalCharges": [],
+            "boardBasis": {
+                "amount": 0,
+                "type": "other"
+            },
+            "bookingRequirement": {
+                "allPaxRequired": true,
+                "depositRequired": false,
+                "guaranteeRequired": false
+            },
+            "cancellationPolicy": {
+                "penalties": [
+                    {
+                        "calculatedAmount": 0.0,
+                        "supplierValue": 87.7,
+                        "supplierValueType": "amount",
+                        "window": {
+                            "end": "2017-10-17T00:00",
+                            "start": "2015-01-22T00:00"
+                        }
+                    },
+                    {
+                        "calculatedAmount": 0.0,
+                        "supplierValue": 190.37,
+                        "supplierValueType": "amount",
+                        "window": {
+                            "end": "2017-10-17T00:00",
+                            "start": "2017-10-15T00:00"
+                        }
+                    }
+                ]
+            },
+            "code": "RO",
+            "currency": "EUR",
+            "desc": "RO",
+            "id": "ffbbd979-26d2-4f0c-a6a8-b6b1d9f9e291_1kwe8lv2vpc_397817_0##58386@@RO@|@190.37@@EUR@@-1@@false@|@MerchantPay@|@Hotel@|@TRC@@false||AN4@@true",
+            "inclusions": [],
+            "inventoryType": "postpaid",
+            "onRequest": false,
+            "onlineCancellable": false,
+            "packageSaving": 0,
+            "perRoomCancellable": false,
+            "policies": [
+                {
+                    "text": "ERRATA: \nCITY TAX: Hotel prices do not include room taxes established by local entities. These room taxes vary according to the city and hotel category and are charged directly by the hotel upon client’s arrival.",
+                    "type": "Disclaimer"
+                }
+            ],
+            "rackRate": 0.0,
+            "rateOccupancies": [
+                {
+                    "occupancyRefId": "318d08d3-84a1-44c6-bbfd-0789d03ad76d",
+                    "refId": "1#TRC@@1@@TRC@@TRIPLE (2AD+1CH)",
+                    "roomRefId": "8bb1337f-56a1-4750-a059-bec979cad286"
+                },
+                {
+                    "occupancyRefId": "84ce03b5-06e5-46ae-b128-b62fb32e4ecd",
+                    "refId": "2#AN4@@2@@AN4@@NON REFUNDABLE DOUBLE",
+                    "roomRefId": "79bdb121-ea90-4d6f-b769-66e810f95c63"
+                }
+            ],
+            "refundable": true,
+            "total": 190.37,
+            "type": "published"
+        }
+    },
+    "sessionId": "ffbbd979-26d2-4f0c-a6a8-b6b1d9f9e291",
+    "warnings": []
+}

@@ -1,0 +1,26 @@
+Search使用了库
+database.url=jdbc:mysql://101.200.211.58/mapping?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&connectTimeout=30000&socketTimeout=30000
+database.username=mapping
+database.password=pam@mogu
+
+==============================
+
+INSERT INTO `Supplier` ( `supplierId`, `type`, `name`, `forbidDay`, `status`, `remark`) VALUES ('travcov7', 'gds', 'travcov7', '0', 'valid', NULL);
+INSERT INTO `SupplierConfig` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'booking.request.timeout.connect', '20000', 'valid', NULL);
+INSERT INTO `SupplierConfig` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'supplier.user', '235DBF', 'valid', NULL);
+INSERT INTO `SupplierConfig` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ( 'travcov7', 'supplier.password', '060216BF5D', 'valid', 'test');
+INSERT INTO `SupplierConfig` ( `supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'supplier.requestLanguage', 'en-GB', 'valid', NULL);
+INSERT INTO `SupplierConfig` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'booking.request.timeout.read', '60000', 'valid', NULL);
+===================
+book使用了库
+database.url=jdbc:mysql://mogusitdb.cfp9fmbnxgi0.rds.cn-north-1.amazonaws.com.cn/bookingonly?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull
+database.username=sitdb
+database.password=JDklljdKLDJKLji
+------------------------
+INSERT INTO `bookingonly`.`supplier` (`supplierId`, `type`, `name`, `forbidDay`, `status`, `remark`) VALUES ( 'travcov7', 'gds', 'travcov7', '0', 'valid', NULL);
+INSERT INTO ``.`` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'supplier.user', '235DBF', 'valid', NULL);
+INSERT INTO ``.`` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'supplier.password', '060216BF5D', 'valid', 'test');
+INSERT INTO ``.`` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'supplier.requestLanguage', 'en-GB', 'valid', NULL);
+INSERT INTO ``.`` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'booking.request.timeout.read', '60000', 'valid', '');
+INSERT INTO ``.`` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'booking.request.timeout.connect', '20000', 'valid', NULL);
+INSERT INTO ``.`` (`supplierId`, `configName`, `configValue`, `status`, `remark`) VALUES ('travcov7', 'supplier.service.type', 'TEST', 'valid', 'test');

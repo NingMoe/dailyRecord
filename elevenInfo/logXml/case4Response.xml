@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BookingHotel>
+	<BookHotel_Response>
+		<hasKey>10024101748110659191526967523</hasKey>
+		<ResNo FinishBook="Y" OSRefNo="170619130033521179" PaxPassport="WSASTH" RPCurrency="THB" Status="CONF">PTESMA170627880</ResNo>
+		<CompleteService>
+			<HBookId CanAmend="Y" Id="HBMA1706000390" InternalCode="CL005" Status="CONF" VoucherDt="2017-06-19" VoucherNo="VBMA1706000713">
+				<HotelId HotelName="Dusit Thani Bangkok">WSMA0511000155</HotelId>
+				<Period FromDt="2017-07-25" ToDt="2017-07-28"/>
+				<RoomCatgInfo>
+					<RoomCatg Avail="Y" BFType="ABF" CatgId="WSMA08061464" CatgName="DULUXE (TOWER WING)" Market="All Market">
+						<Room>
+							<SeqRoom AdultNum="2" RoomType="Double" SeqNo="1" ServiceNo="MA1706000488">
+								<PriceInfomation>
+									<NightPrice Offset="0">
+										<Accom Price="4750.00"/>
+										<Child Info="" MaxAge="" MinAge=""/>
+										<Minstay MSDay="0.00" MSPrice="" MSRate="0.00" MSType="NONE"/>
+										<Compulsory Name="NONE" Price="0.00"/>
+										<Supplement Name="NONE" Price="0.00"/>
+										<Promotion BFPrice="0" Name="NONE" PromoCode="" Value="False"/>
+										<EarlyBird EBPrice="0.00" EBRate="0.00" EBType="NONE"/>
+										<Commission CommPrice="0.00" CommRate="0.00" CommType="NONE"/>
+									</NightPrice>
+									<NightPrice Offset="1">
+										<Accom Price="4750.00"/>
+										<Child Info="" MaxAge="" MinAge=""/>
+										<Minstay MSDay="0.00" MSPrice="" MSRate="0.00" MSType="NONE"/>
+										<Compulsory Name="NONE" Price="0.00"/>
+										<Supplement Name="NONE" Price="0.00"/>
+										<Promotion BFPrice="0" Name="NONE" PromoCode="" Value="False"/>
+										<EarlyBird EBPrice="0.00" EBRate="0.00" EBType="NONE"/>
+										<Commission CommPrice="0.00" CommRate="0.00" CommType="NONE"/>
+									</NightPrice>
+									<NightPrice Offset="2">
+										<Accom Price="4750.00"/>
+										<Child Info="" MaxAge="" MinAge=""/>
+										<Minstay MSDay="0.00" MSPrice="" MSRate="0.00" MSType="NONE"/>
+										<Compulsory Name="NONE" Price="0.00"/>
+										<Supplement Name="NONE" Price="0.00"/>
+										<Promotion BFPrice="0" Name="NONE" PromoCode="" Value="False"/>
+										<EarlyBird EBPrice="0.00" EBRate="0.00" EBType="NONE"/>
+										<Commission CommPrice="0.00" CommRate="0.00" CommType="NONE"/>
+									</NightPrice>
+								</PriceInfomation>
+								<TotalPrice>14250.00</TotalPrice>
+								<CommissionPrice>0.00</CommissionPrice>
+								<NetPrice>14250.00</NetPrice>
+								<PaxInformation>
+									<GuestName>ZHAOPEN YANG, Mr.</GuestName>
+									<GuestName>SANG XU, Mr.</GuestName>
+								</PaxInformation>
+							</SeqRoom>
+						</Room>
+					</RoomCatg>
+				</RoomCatgInfo>
+				<RequestDes><![CDATA[]]></RequestDes>
+				<Message><![CDATA[]]></Message>
+			</HBookId>
+		</CompleteService>
+		<UnCompleteService/>
+	</BookHotel_Response>
+</BookingHotel>

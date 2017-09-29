@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by Miki Travel Ltd (Miki Travel Ltd) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="modifyCommonTypes.xsd"/>
+	<xs:element name="hotelBookingModificationCostRequest">
+		<xs:annotation>
+			<xs:documentation>Request to get the cost of making the modification</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="requestAuditInfo" type="modifyRequestAuditInfoType"/>
+				<xs:element name="modifyItem">
+					<xs:annotation>
+						<xs:documentation>Specify the detail of the modification</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="hotelBookingModificationItemType">
+								<xs:sequence>
+									<xs:element name="immediateConfirmationRequired" type="xs:boolean">
+										<xs:annotation>
+											<xs:documentation>false=Booking can be made on request, true=Booking must be confirmed immediately</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="versionNumber" type="xs:string" use="required" fixed="7.0"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

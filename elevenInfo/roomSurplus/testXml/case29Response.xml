@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BookingHotel>
+    <BookHotel_Response>
+        <ResNo Status="CONF" PaxPassport="WSASCN" OSRefNo="170704133144541100" FinishBook="Y" RPCurrency="THB">PTESMA170728375</ResNo>
+        <CompleteService>
+            <HBookId CanAmend="Y" Id="HBMA1707000056" VoucherNo="VBMA1707000092" VoucherDt="2017-07-04" Status="CONF" InternalCode="CL005">
+                <HotelId HotelName="Amari Boulevard">WSMA0511000113</HotelId>
+                <Period FromDt="2017-09-14" ToDt="2017-09-17"/>
+                <RoomCatgInfo>
+                    <RoomCatg CatgId="WSMA09040029" CatgName="SUPREME" Market="All Market" Avail="Y" BFType="RO">
+                        <Room>
+                            <SeqRoom ServiceNo="MA1707000071" RoomType="Single" SeqNo="1" AdultNum="1" >
+                                <PriceInfomation>
+                                    <NightPrice Offset="0">
+                                        <Accom Price="760.00" />
+                                        <Child MinAge="" MaxAge="" Info=""/>
+                                        <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00" MSPrice="" />
+                                        <Compulsory Name="NONE" Price="0.00"/>
+                                        <Supplement Name="NONE" Price="0.00"/>
+                                        <Promotion Name="NONE" Value="False" BFPrice="0" PromoCode=""/>
+                                        <EarlyBird EBType="NONE" EBRate="0.00" EBPrice="0.00"/>
+                                        <Commission CommType="NONE" CommRate="0.00" CommPrice="0.00"/>
+                                    </NightPrice>
+                                    <NightPrice Offset="1">
+                                        <Accom Price="760.00" />
+                                        <Child MinAge="" MaxAge="" Info=""/>
+                                        <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00" MSPrice="" />
+                                        <Compulsory Name="NONE" Price="0.00"/>
+                                        <Supplement Name="NONE" Price="0.00"/>
+                                        <Promotion Name="NONE" Value="False" BFPrice="0" PromoCode=""/>
+                                        <EarlyBird EBType="NONE" EBRate="0.00" EBPrice="0.00"/>
+                                        <Commission CommType="NONE" CommRate="0.00" CommPrice="0.00"/>
+                                    </NightPrice>
+                                    <NightPrice Offset="2">
+                                        <Accom Price="760.00" />
+                                        <Child MinAge="" MaxAge="" Info=""/>
+                                        <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00" MSPrice="" />
+                                        <Compulsory Name="NONE" Price="0.00"/>
+                                        <Supplement Name="NONE" Price="0.00"/>
+                                        <Promotion Name="NONE" Value="False" BFPrice="0" PromoCode=""/>
+                                        <EarlyBird EBType="NONE" EBRate="0.00" EBPrice="0.00"/>
+                                        <Commission CommType="NONE" CommRate="0.00" CommPrice="0.00"/>
+                                    </NightPrice>
+                                </PriceInfomation>
+                                <TotalPrice>2280.00</TotalPrice>
+                                <CommissionPrice>0.00</CommissionPrice>
+                                <NetPrice>2280.00</NetPrice>
+                                <PaxInformation>
+                                    <GuestName>YI YANG, Mr.</GuestName>
+                                </PaxInformation>
+                            </SeqRoom>
+                            <SeqRoom ServiceNo="MA1707000072" RoomType="Twin" SeqNo="1" AdultNum="2"  >
+                                <PriceInfomation>
+                                    <NightPrice Offset="0">
+                                        <Accom Price="972.80" />
+                                        <Child MinAge="" MaxAge="" Info=""/>
+                                        <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00" MSPrice="" />
+                                        <Compulsory Name="NONE" Price="0.00"/>
+                                        <Supplement Name="NONE" Price="0.00"/>
+                                        <Promotion Name="NONE" Value="False" BFPrice="0" PromoCode=""/>
+                                        <EarlyBird EBType="NONE" EBRate="0.00" EBPrice="0.00"/>
+                                        <Commission CommType="NONE" CommRate="0.00" CommPrice="0.00"/>
+                                    </NightPrice>
+                                    <NightPrice Offset="1">
+                                        <Accom Price="972.80" />
+                                        <Child MinAge="" MaxAge="" Info=""/>
+                                        <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00" MSPrice="" />
+                                        <Compulsory Name="NONE" Price="0.00"/>
+                                        <Supplement Name="NONE" Price="0.00"/>
+                                        <Promotion Name="NONE" Value="False" BFPrice="0" PromoCode=""/>
+                                        <EarlyBird EBType="NONE" EBRate="0.00" EBPrice="0.00"/>
+                                        <Commission CommType="NONE" CommRate="0.00" CommPrice="0.00"/>
+                                    </NightPrice>
+                                    <NightPrice Offset="2">
+                                        <Accom Price="972.80" />
+                                        <Child MinAge="" MaxAge="" Info=""/>
+                                        <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00" MSPrice="" />
+                                        <Compulsory Name="NONE" Price="0.00"/>
+                                        <Supplement Name="NONE" Price="0.00"/>
+                                        <Promotion Name="NONE" Value="False" BFPrice="0" PromoCode=""/>
+                                        <EarlyBird EBType="NONE" EBRate="0.00" EBPrice="0.00"/>
+                                        <Commission CommType="NONE" CommRate="0.00" CommPrice="0.00"/>
+                                    </NightPrice>
+                                </PriceInfomation>
+                                <TotalPrice>2918.40</TotalPrice>
+                                <CommissionPrice>0.00</CommissionPrice>
+                                <NetPrice>2918.40</NetPrice>
+                                <PaxInformation>
+                                    <GuestName>ER YANG, Mr.</GuestName>
+                                    <GuestName>SAN YANG, Mr.</GuestName>
+                                </PaxInformation>
+                            </SeqRoom>
+                        </Room>
+                    </RoomCatg>
+                </RoomCatgInfo>
+                <RequestDes>
+                    <![CDATA[Non-smoking room,]]>
+                </RequestDes>
+                <Message>
+                    <![CDATA[- All of the rooms are NON-Smoking. <br>- Unlimited internet broadband and wireless access in all guest rooms and public areas.]]>
+                </Message>
+            </HBookId>
+        </CompleteService>
+        <UnCompleteService></UnCompleteService>
+    </BookHotel_Response>
+</BookingHotel>

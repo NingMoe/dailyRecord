@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2016 rel. 2 (x64) (http://www.altova.com) by Hitesh Arora (Dynamique Software) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes.xsd"/>
+	<xs:element name="referenceDataDownloadResponse">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="responseAuditInfo" type="responseAuditInfo"/>
+				<xs:choice>
+					<xs:element name="referenceData">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="roomCategories" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="category">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="id" use="required"/>
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="beddingConfigurations" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="bedding">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="id" use="required"/>
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="boardBasis" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="basis">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="id" use="required"/>
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="breakfasts" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="breakfast">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="id" use="required"/>
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="ruleTypes" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="ruleType">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="ruleText" type="xs:string"/>
+														<xs:element name="ruleTypeValues">
+															<xs:complexType>
+																<xs:sequence maxOccurs="unbounded">
+																	<xs:element name="ruleTypeValue">
+																		<xs:complexType>
+																			<xs:simpleContent>
+																				<xs:extension base="xs:string">
+																					<xs:attribute name="id" use="required"/>
+																				</xs:extension>
+																			</xs:simpleContent>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute name="id" use="required"/>
+													<xs:attribute name="ruleGroupID" use="required"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="ruleGroups" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence  maxOccurs="unbounded">
+											<xs:element name="ruleGroup">
+												<xs:complexType>
+													<xs:simpleContent>
+														<xs:extension base="xs:string">
+															<xs:attribute name="id" use="required"/>
+														</xs:extension>
+													</xs:simpleContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="errors" type="errors" minOccurs="1">
+						<xs:annotation>
+							<xs:documentation>Indicates the collections of error occurred in the processing of the request message.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:choice>
+				<xs:element name="warnings" type="warnings" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="versionNumber" type="xs:string" use="required" fixed="7.0"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,87 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+	<soap:Header/>
+	<soap:Body>
+		<hotelBookingRequest versionNumber="7.0">
+			<requestAuditInfo>
+				<agentCode>UJT001</agentCode>
+				<requestPassword>62F06X92F36E84R15L78</requestPassword>
+				<requestID>496370356</requestID>
+				<requestDateTime>2017-06-02T10:25:56</requestDateTime>
+			</requestAuditInfo>
+			<booking currencyCode="USD" languageCode="en" paxNationality="CN" priceChangeTolerance="0">
+				<clientRef mustBeUnique="true">170602102556501199</clientRef>
+				<items>
+					<item itemNumber="1">
+						<immediateConfirmationRequired>true</immediateConfirmationRequired>
+						<productCode>CAT627200</productCode>
+						<leadPaxName>
+							<title>Mr</title>
+							<firstName>LIFENG</firstName>
+							<lastName>TAO</lastName>
+						</leadPaxName>
+						<hotel>
+							<stayPeriod>
+								<checkinDate>2017-06-03</checkinDate>
+								<numberOfNights>1</numberOfNights>
+							</stayPeriod>
+							<rooms>
+								<room roomNo="1" roomTypeCode="01001">
+									<rateIdentifier>97366a9a-6559-4c63-940f-d323753b94a8|tXW9usWt5fGUCZqDperXueH-SfpWjaja_CbJL4pW3M2UNBKD4X8cCsR02meiDQTf0jx7r8iCz85HZeUc1gvd1xVKh-V7EtqPXwUT5O-CCSmkvAWoCfMx6PX3FQNlYoeO8mHrEJ0Ql1ACTXc3gJ7I1B8x5mRAvEt1m2qfCD6CTfAxixufd2yDbKMtGxUkKI259yNYW-lGUJgfJ181kCscu5tvaQNn6ohm0n6g427QeBI4o6Zsy1EpTuen_n3cSkqPiidT6rpzfnX0_n2g8pWiACLoqk4btibzwZ6_3fZlLODDC4ia28cr-0yGtTtN4mUAf8DEO7Kzhyy0NtpV4p4oaCAbbc8qztY-7vApv7V1bUfQkJcE14C4Nw</rateIdentifier>
+									<roomTotalPrice>101.49</roomTotalPrice>
+									<guests>
+										<guest>
+											<type>ADT</type>
+											<paxName>
+												<title>Mr</title>
+												<firstName>LIFENG</firstName>
+												<lastName>TAO</lastName>
+											</paxName>
+										</guest>
+										<guest>
+											<type>ADT</type>
+											<paxName>
+												<title>Mr</title>
+												<firstName>LIFENG</firstName>
+												<lastName>TAO</lastName>
+											</paxName>
+										</guest>
+									</guests>
+								</room>
+								<room roomNo="2" roomTypeCode="01001">
+									<rateIdentifier>97366a9a-6559-4c63-940f-d323753b94a8|tXW9usWt5fGUCZqDperXueH-SfpWjaja_CbJL4pW3M2UNBKD4X8cCsR02meiDQTf0jx7r8iCz85HZeUc1gvd1xVKh-V7EtqPXwUT5O-CCSmkvAWoCfMx6L4TrAQPGDldKqgReV5tGpQYeXR0kaDvKOyUovuu8aVetwu6Q1dJvn3Aqb0eMcxPEgdsZ4M_mEfb80vLAG_s6kYlVV8ls3GUpqlsk6nkVmTBaKePsK4aFnfh1BT0-TDOBeIjIuYT4Cgn6dq0bk6xaJfu8Cm_tXVtRyRYLBazp71CmeAcgXVoiGOzWdW7H_Pv-Oir5PGAbmlzI0CvMtmBLsXzEiv3BxICxuSrOH9lEBqOQ2Fxc0ZffbB6KlIM7lTr_nxs7BP49R1_DgKcp8IFCKw</rateIdentifier>
+									<roomTotalPrice>101.49</roomTotalPrice>
+									<guests>
+										<guest>
+											<type>ADT</type>
+											<paxName>
+												<title>Mr</title>
+												<firstName>QIBING</firstName>
+												<lastName>SHEN</lastName>
+											</paxName>
+										</guest>
+										<guest>
+											<type>ADT</type>
+											<paxName>
+												<title>Mr</title>
+												<firstName>QIBING</firstName>
+												<lastName>SHEN</lastName>
+											</paxName>
+										</guest>
+									</guests>
+								</room>
+							</rooms>
+							<preferences>
+								<roomPreferences>
+									<floor>0</floor>
+									<bathTub>true</bathTub>
+									<aircon>true</aircon>
+								</roomPreferences>
+								<paxPreferences/>
+							</preferences>
+						</hotel>
+					</item>
+				</items>
+			</booking>
+		</hotelBookingRequest>
+	</soap:Body>
+</soap:Envelope>

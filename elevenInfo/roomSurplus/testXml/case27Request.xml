@@ -1,0 +1,34 @@
+requestXML=<?xml version="1.0" encoding="utf-8" ?>
+<Service_BookHotel>
+    <AgentLogin>
+        <AgentId>PTES</AgentId>
+        <LoginName>XMLTV3</LoginName>
+        <Password>XMLtestV3</Password>
+    </AgentLogin>
+    <BookHotel>
+        <RefRsvnNo></RefRsvnNo>
+        <OSRefNo>170704130347951100</OSRefNo>
+        <PaxPassport>MA05110049</PaxPassport>
+        <FinishBook>Y</FinishBook>
+                <HotelList Seq="1" InternalCode="CL005" flagAvail="Y">
+            <HotelId>WSMA0608000030</HotelId>
+            <RequestDes></RequestDes>
+                        <RoomCatg CatgId="WSMA05110012" CatgName="JUNIOR SUITE"
+                      checkIn="2017-09-14" checkOut="2017-09-17" BFType="RO">
+                                <RoomType Seq="1" TypeName="Triple" RQBedChild ="Y" Price="2371.2">
+                    <AdultNum>2</AdultNum>
+                                            <ChildAges>
+                                                            <ChildAge>6</ChildAge>
+                                                            <ChildAge>2</ChildAge>
+                                                    </ChildAges>
+                                        <PaxInformation>
+                                                <PaxInfo Id="1">YI YANG,Mr.</PaxInfo>
+                                                <PaxInfo Id="2">ER YANG,Mr.</PaxInfo>
+                                                <PaxInfo Id="3">SAN YANG,Mr.</PaxInfo>
+                                                <PaxInfo Id="4">SI YANG,Mr.</PaxInfo>
+                                            </PaxInformation>
+                </RoomType>
+                            </RoomCatg>
+                    </HotelList>
+            </BookHotel>
+</Service_BookHotel>

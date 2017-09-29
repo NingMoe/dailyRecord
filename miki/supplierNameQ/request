@@ -1,0 +1,68 @@
+{
+  "requestAuditInfo": {
+    "agentCode": "UJT001",
+    "requestPassword": "94W00Y27G61M04J28P39",
+    "requestID": 496292460,
+    "requestDateTime": 1496321260416
+  },
+  "hotelSearchCriteria": {
+    "destination": {
+      "hotelRefs": {
+        "productCodes": {
+          "productCode": [
+            "CAN842800"
+          ]
+        }
+      }
+    },
+    "stayPeriod": {
+      "checkinDate": 1500825600000,
+      "numberOfNights": 3
+    },
+    "rooms": {
+      "room": [
+        {
+          "roomNo": 1,
+          "guests": {
+            "guest": [
+              {
+                "type": "ADT"
+              },
+              {
+                "type": "ADT"
+              }
+            ]
+          }
+        },
+        {
+          "roomNo": 2,
+          "guests": {
+            "guest": [
+              {
+                "type": "ADT"
+              },
+              {
+                "type": "ADT"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "availabilityCriteria": {
+      "availabilityIndicator": "2"
+    },
+    "priceCriteria": {
+      "returnBestPriceIndicator": false
+    },
+    "resultDetails": {
+      "returnDailyPrices": true,
+      "returnHotelInfo": 1,
+      "returnSpecialOfferDetails": 1
+    },
+    "languageCode": "en",
+    "currencyCode": "CNY",
+    "paxNationality": "CN"
+  },
+  "versionNumber": "7.0"
+}

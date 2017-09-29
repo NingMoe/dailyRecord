@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookingHotel>
+    <BookHotel_Response>
+        <Error>
+            <ErrorDescription>Please check your hasKey.</ErrorDescription>
+        </Error>
+    </BookHotel_Response>
+</BookingHotel>

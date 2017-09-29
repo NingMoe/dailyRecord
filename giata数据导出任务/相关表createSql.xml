@@ -1,0 +1,52 @@
+CREATE TABLE `giataHotel` (
+  `giataid` varchar(50) NOT NULL DEFAULT '',
+  `name` varchar(255) DEFAULT '',
+  `lastUpdate` varchar(50) DEFAULT NULL,
+  `cityID` varchar(100) DEFAULT '',
+  `destinationID` varchar(100) DEFAULT '',
+  `destindationName` varchar(255) DEFAULT '',
+  `country` varchar(255) DEFAULT '',
+  `alternativeNames` varchar(2000) DEFAULT '',
+  `category` varchar(255) DEFAULT '',
+  `ratings` varchar(255) DEFAULT '',
+  `parent` varchar(255) DEFAULT '',
+  `children` varchar(500) DEFAULT '',
+  `airports` varchar(255) DEFAULT '',
+  `addressLine` varchar(500) DEFAULT '',
+  `street` varchar(500) DEFAULT '',
+  `streetNumber` varchar(50) DEFAULT '',
+  `cityName` varchar(255) DEFAULT '',
+  `postalCode` varchar(50) DEFAULT '',
+  `stateProv` varchar(255) DEFAULT '',
+  `poBox` varchar(50) DEFAULT '',
+  `additionalAddressInformation` varchar(255) DEFAULT '',
+  `voicePhone` varchar(50) DEFAULT '',
+  `faxPhone` varchar(50) DEFAULT '',
+  `emails` varchar(500) DEFAULT '',
+  `urls` varchar(5000) DEFAULT '',
+  `GeoCodes` varchar(500) DEFAULT '',
+  `chains` varchar(255) DEFAULT '',
+  PRIMARY KEY (`giataid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+CREATE TABLE `giataHotelMapping` (
+  `id` varchar(200)  DEFAULT NULL,
+  `giataHotelCode` varchar(50)  DEFAULT NULL,
+  `supplierCode` varchar(255)  DEFAULT NULL,
+  `propertyCode` varchar(500)  DEFAULT NULL,
+  `countryCode` varchar(150)  DEFAULT NULL,
+  `cityCode` varchar(150)  DEFAULT NULL,
+  `hotelCode` varchar(200)  DEFAULT NULL,
+  `codeExceptionCount` varchar(50)  DEFAULT NULL,
+  `status` varchar(50)  DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+CREATE TABLE `giataHotelUpdate` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `startTime` varchar(50) DEFAULT '',
+  `affectRowCount` varchar(50) DEFAULT '',
+  `removeDuplicateRowCount` varchar(50) DEFAULT '',
+  `moreUrl` varchar(3000) DEFAULT '',
+  `endTime` varchar(50) DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8

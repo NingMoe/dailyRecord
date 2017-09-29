@@ -1,0 +1,2386 @@
+====================2017年10月02========================================
+周一：
+====================2017年9月30========================================
+周六：
+====================2017年9月29========================================
+周五：
+====================2017年9月28========================================
+周四：
+====================2017年9月27========================================
+周三：
+	1、继续agodasearch开发。
+	2、联系公积金中心、农行、售房中心，确认是否可以提前还款。
+	3、tavisca_alba
+		1）B2B后台正式地址及账号（用于客服在alba平台查询我们的API订单）：
+			www.albatravel.cn 
+			姓名：mogubjxml
+			公司：MOGUBJ
+			用户名：xmluser
+			密码：mogubjxml
+	4、
+====================2017年9月26========================================
+周二：
+	1、agoda开发search，关于儿童政策
+		不支持儿童搜索。
+	2、了解多线程forkjoin
+====================2017年9月25========================================
+周一：
+	1、测试alba接口
+		stage下，没有roomName返回。
+		live下，报错。
+			  "code": "125",
+                "message": "The supplier configuration is not available for the following supplierIds: 1npq1gc543k."
+            原因是，请求的url没有更换为product环境的。
+    2、开发agoda 的search 接口
+====================2017年9月23========================================
+周六：
+====================2017年9月22========================================
+周五：
+		1、giata数据配置，abreu、jumbo、asian、alba没有配置，进行数据整理。
+			asian的hotelCode与giata的hotelCode不一致。
+		2、miki取消测试。
+			miki优化，修改逻辑使取消时可记录返回的报文。
+			miki搜索，不允许日本国籍搜索日本酒店，修改rewrite。
+		3、tavisca_alba测试。
+			  未完成。
+		4、agoda配置开发。
+			  开发。
+====================2017年9月21========================================
+周四：
+	1、TODO：
+		 miki7取消功能，返回数据处理时，soupUtil可能出现数据转换错误而不报异常。
+		 对soupUtil添加异常日志功能。
+		 	注意，修改后需要修改xbooking对xcommon的引用，从1.7版本升级到1.8.
+		 修改miki7 booking相关代码，用以处理部分返回不会被日志记录的问题。
+	2、配置agoda静态数据的isocode。
+	   配置
+	3、
+====================2017年9月20========================================
+周三：
+	1、测试agoda接口
+	2、详细看agoda文档
+		搜索人数为总人数。
+			返回中描述了每间房的最大人数
+			房型匹配怎么做？人数匹配+库存验证 类似miki7
+
+			按照房价人数，自己匹配，同时控制库存是否足够?!
+				每次组合一个则处理一个。
+
+		selfServiceUrl 是怎么用的？
+		另外，下单的时候可以发送SpecialRequest，而还有一个单独的接口
+	3、计划agoda开发
+		写邮件说明昨天会议的内容。
+	4、miki7状态细化修改完善
+		使用了原miki的状态细化配置，将新发现的状态加到supplier_booking_status表中+
+	5、agoda静态数据下载
+		测试过程发现了一个空指针异常，导致系统退出。重新下载数据。
+====================2017年9月19========================================
+周二：
+	1、agado静态数据下载
+		数据接口：
+		http://xml.agoda.com/datafeeds/Feed.asmx/GetFeed?feed_id=3&apikey=065ac877-50b5-42b0-a4e0-15a6029f01c5
+
+		Site ID: 1788333
+		API Key: 065AC877-50B5-42B0-A4E0-15A6029F01C5
+
+	2、与Tavisca沟通进展
+		stage提出的问题正在处理中。
+		live环境的问题依然未答复，冠南哥又发了邮件确认。
+		alba数据完成，测试stage环境不可用，已提交tavisca检查
+
+	3、 讨论的异步下单涉及到的改动，我进行了简单描述，大家看下哪里可能还不合适。
+		 xagent修改
+		 	1、报价提示
+		 	2、下单后提示
+		 	3、agent端轮询Order订单查询接口，判断延时订单状态，有结果后通知用户。
+		 xOrder修改
+		 	1、增加新接口，可供agent查询order状态。
+		 	2、增加新接口，对异步下单的订单进行详情查询与状态更新，供xscheler调用。
+	 		   a.同步发起批量订单详情查询，调用x-booking的批量订单状态查询服务。
+	 		   		根据当前业务量，使用同步就可满足需求。
+	 		   		异步实现复杂，后续如果业务量大再考虑实现。	
+	 		   b.获取查询结果更新订单状态。
+		 xscheler修改
+		 	1、调用xOrder新接口进行bookingDelay状态订单处理。
+                     通过频繁调用，20-30秒调用一次，及时拿到确认状态的订单。
+		 XBooking修改
+		 	1、增加新接口，提供批量的订单详情查询，本次仅考虑适配Agoda。
+                        2、后续进行接口详细设计，完善批量详情查询规范。
+	4、agoda
+		 确认成人数、儿童数是否是单间房的要求？或者是总人数？
+
+
+====================2017年9月18========================================
+周一：
+	1、配置多个rewrite类。继承一下就好了。
+		 a.实现对各个小模块的处理。
+		 b.rewrite相关功能：城市信息修改、hotel信息修改、Nationality修改、
+		 c.rewriteRooms功能：
+    2、jumbo，stage环境下依然有问题，预定下单会出现错误。已提交tavisca处理。
+       asian的pending状态怎么处理？人工干预？
+       tavisca_asian: 搜索请求经常失败。
+====================2017年9月16========================================
+周六：
+	1、Tavisca未解决问题整理
+		jumbo接口不可用
+			返回的政策本身矛盾，不知如何解析。
+		asian重复的identical Id
+		abreu部分情况下会出现政策改变的状况，等待回复原因以及处理结果
+		abreu出现下单失败，已提交邮件等待回复。
+
+	2、Miki验价：
+	5287fcdc32245537b36fb32cee0f440e
+		未知原因失败，本地测试验价成功。
+	72a5ff61746f06ee1c0c79efa46b6b58
+	7233cd46ad30d91e1d20616f2d8aba40
+	73d2634bb8d8dfbb0de518011306b8e8
+	d704381c237e9dfefd4bd8f7aebf66ac
+	4d9ccb3bd8a054b1f34347965a9fc2ff
+		报价不存在
+	3、rewrit逻辑梳理
+		rewrite
+			用来进行请求的转换，将参数转为mapping中gds的数据。
+		rewriteRooms
+			room相似性rewrite：rewriteSimilarRoom
+			room组合：combineRooms
+			room合并：mergeRoom0、simplifyRoomList
+				在继承层次中，出现了两个merge方法，部分重叠。
+		separateRooms
+			可单独使用，用来将合并的room进行拆分
+		validateRooms
+			可单独使用，可覆盖。用来控制可搜索的入住天数、以及房间总数
+--------------------------------
+		rewriteSimilarRoom可以不实现逻辑。在需要的时候进行覆盖。
+		1、实现了rewriteSimilarRoom的子类。
+			 是不是只有部分gds需要进行similarRoom处理？
+		2、combineRooms  
+			必须实现了rewriteSimilarRoom然后调用combineRooms才有意义？
+
+
+
+====================2017年9月15========================================
+周五：
+	1、梳理rewrite流程。
+	2、Tavisca中Cancel流程处理失误，导致取消单成功时出现UNKnow状态。
+	3、tavisca_abreu在搜索1adult+1children时，是不会返回数据的。要求必须两个成人才能携带小孩。
+
+
+
+
+
+====================2017年9月14========================================
+周四：
+	1、abreu后台
+		url：www.abreuonline.com
+		Username: 14644046
+		Password: mogutripxml
+	2、tavisca中遇到的问题：
+		餐食中的other是什么意思，为什么一直是other。
+			待查。
+	    我们的referenceID怎么传过去，是不是bookingToken。并请确保传输给supplier。
+	    	我的错误。
+	    你们的api website 排版混乱。
+	    	更换了url http://docs.oski.io/one-connect/hotel/current/search/
+	3、处理Miki7下单的空指针异常。
+
+
+====================2017年9月13========================================
+周三：
+	1、晚上上线forever、miki7 roomrateid update、
+	2、处理prd下crontab 不执行问题。
+	3、梳理开发流程。
+		房型合并的情况的处理。
+			默认情况下是在rewriteRoom中根据roomType进行房型合并，roomIndex以逗号分隔 1,2,3
+			如果supplier接受房型合并请求，则不需要拆分处理。
+			如果supplier不接受房型合并请求，则需要拆分处理。
+			
+			有两种方式处理，一种是在合并前，覆盖roomCombineKey来实现。
+				crawler.supplier.base.HotelAvailabilityMultiRequestRewriter 
+					roomCombineKey();
+			使用方式见Tavisca
+				@Override
+				protected String roomCombineKey(Room room, int index) {
+				    return room.getRoomIndex();
+				}
+			另一种是在request中调用
+		    crawler.supplier.base.HotelAvailabilityRequestRewriter 中提供的separateRooms 进行房型拆分。
+		    使用方式见miki7 
+		    	List<Room> roomsOrigin = avRequest.getRooms();
+        		List<Room> roomList = HotelAvailabilityRequestRewriter.separateRooms(roomsOrigin);
+
+
+====================2017年9月12========================================
+周二：
+	1、prd下supplierRequestNum未按时运行。
+	2、查miki7验价率低的原因。
+		 验价失败主要是第三方酒店。比例
+		 第三方产品占比103/147=41.2%
+		 mealBasis/includedMeals/includedMeal/mealID  不一定返回，用于rrid不合适，更换为使用mealCode
+		 optionDay变化2017-09-11-->2017-09-12; rrid只判断refundable 是true或者false。
+	3、
+====================2017年9月11========================================
+周一：
+	1、
+====================2017年9月9========================================
+周六：
+	1、开会
+====================2017年9月8========================================
+周五：
+	1、修改request.log
+	2、bonotel 不返回数据，已提交tavisca。
+	3、处理eleveninfo_cbs。 修改supplierName 测试。 
+			supplier\supplierconfig\breakfastmap\nationalitymap
+	4、了解agoda
+====================2017年9月7========================================
+周四：
+	1、abreu带小孩搜索无房。
+	2、asian会在roomRates返回多个相同的idencal id 导致验价无效。
+	3、jumbo测试发现取消政策与refundable不一致问题。而且政策规则有些看不明白。
+====================2017年9月6========================================
+周三：
+	1、测试jumbo
+		配置jumbo。 获取jumbo的hotel。
+	2、跟踪miki7一次验价情况、二次验价情况。
+	3、今晚进行prd上线处理。
+			处理了prd的部分表，只有giatahotelmapping表没有重建。
+			完成
+    4、上线bonotel，发现多酒店搜索有问题，总是只出一个酒店。修改rewrite后明天重新上线。
+    		系统rewrite基类默认会对房价进行合并，合并依据是roomType，
+====================2017年9月5========================================
+周二：
+	1、查看miki验价失败的原因。
+		optionDate的时间发生变化。取日期来拼接，滤掉时间。
+		第三方库存，可退波动。
+			因为是第三方库存且checkIn时间在明天的而被过滤掉。为什么搜索会出来？？
+		identifierID变化。
+	2、查看giata数据是否已经完成。 如果一切没有问题。
+		更新prd数据库表结构，并且进行数据更新操作。
+		处理当TaviscaiD为空的时候，赋值hotelCode为null。
+		处理当gtacitycode为空的时候，赋值hotelCode为null。
+	3、准备tavisca_abreu上线工作。
+		supplier\supplierconfig\breakfast.
+	4、处理定时统计任务。
+		1、crontab设置
+		2、修改requestLog.sh文件
+			 date 获取时间 $ date --date="1 days ago" 获取前一天
+			 grep 可以从多个文件中搜索字符串。
+		3、测试。写一个sql，汇总
+			SELECT * FROM supplierRequestNumber;
+			SELECT requestSupplierId,requestUrl,sum(count),substr(updateTime,1,10) FROM supplierRequestNumber 
+where substr(updateTime,1,10)>'2017-09-07'	 GROUP BY requestSupplierId,requestUrl,substr(updateTime,1,10)
+ORDER BY substr(updateTime,1,10) DESC
+	5、测试asian\jumbo，明日提测。
+		询问tavisca关于参数onlineCancellable的含义。不知道什么问题，暂时不用处理这个字段。
+		完成了asian的测试。
+			配置问题：配置supplierconfig后，部分请求url混乱。
+					  配置supplierconfig后，supplierId没有修改正确。
+			jenkins发布：booking需要重新发布读取supplier。
+====================2017年9月4========================================
+周一：
+	1、tavisca_bonotel 重新处理 roomRateId
+		拼接code、refundable、boardBasisType
+		根据不同gds配置，实现不同验价方式。分别为支持列表页搜索和不支持列表页搜索。
+			暂时不做处理，遇到需要的gds再处理。处理方式有
+				1、search处理，不对这些supplier发key
+				2、crawler处理，rewrite时，判断是否要丢弃掉这些supplier。
+	2、giata定时执行任务监控。下午完成。
+		IP:
+		需要配置多个测试库和正式库。
+			本地dev
+			dev_mappingdb_bak:dev_mappingdb
+			dev_xbase:dev_mappingdb
+			prd_xbase:prd_mappingdb、prd1_mappingdb
+	3、tavisca定时任务监控，修改读取前一天的日志文件。app.log  下午完成。
+		59.110.40.228
+		59.110.27.45
+		59.110.27.221
+	4、测试asian\jumbo上线。
+		询问tavisca关于参数onlineCancellable的含义。
+	5、检查miki7验价失败率问题。
+		第三方且近两天库存，被过滤了。但是导致了验价失败。
+====================2017年9月2========================================
+周六：
+	1、验价有问题。
+		同样一个酒店，两间房有相同的refId但是价格不同，发现变价。 核对日志发现验价错误。 。
+			需要考虑请求回来的数据与验价数据中的id是不是能一致。
+====================2017年9月1========================================
+周五：
+	1、bonotel配置，中午上线。
+		1、延迟原因：本地bonotel hotelCode(tavisca_hotelCode+'|'+bonotelHotelCode) 与 giata中的bonotel 的hotelCode不一致。double check暂时跳过。
+		2、supplier、supplierConfig、breakfast配置
+		3、请求次数统计功能调整上线.需要对三个服务器处理。
+				59.110.40.228
+				59.110.27.45
+				59.110.27.221
+
+		4、上线问题：
+			We have some questions about Hotel Search Response.
+			About roomOptions/name  ,it contains "RF"  and "#Double" or "#Single",So I want to know
+				1、what's the mean of RF?
+				2、Is "#Double"  mean the number of persons that can contain in the room ？
+			About the boardBasis:
+				1、we  found all the boardBasis is "other", but we check the bonotel and the same room has the BroadBasis as BedAndBreakfast . That' why ?
+			
+	2、giata数据中增加逻辑，配置hotelCode对应关系。
+		线上环境运行，giata数据往prd1中插入数据。	
+		定时执行任务没问题。	
+	5、供应商完成了Jumbo的测试环境配置. 后续对asian、jumbo进行测试
+	We have enabled Jumbo on your staging acount.
+	Below is updated supplier list,
+	test Environment
+	SupplierName	  Supplier Id        supplierid
+	Bonotel	          1hwr1w5zvnk  		 tavisca_bonotel
+	Abreu			  1hwqyss5dkw		 tavisca_abreu
+	Asian Trails	  1i8knud8nwg		 tavisca_asian
+	Jumbo		 	  1kwe8lv2vpc		 tavisca_jumbo
+	alba              1lcy9ue2osg        tavisca_alba
+
+	formal Environment
+	SupplierName	  Supplier Id        supplierid
+	Bonotel	          1l56pe0xo1s  		 tavisca_bonotel
+	Abreu			  1l56ne3zeo0		 tavisca_abreu
+	Asian Trails	  		 			 tavisca_asian
+	Jumbo		 	  		 		 	 tavisca_jumbo
+	alba              1npq1gc543k        tavisca_alba
+
+	Live Oski tenantID: 1l4trsdz1mo
+
+
+	4、检查99tral无订单问题。
+		酒店少
+		发现roomName为空的酒店—— hotelid:253  hotelname:东京ANA 
+
+====================2017年8月31========================================
+周四：
+mark:bonotel
+	1、今天拿到Tavisca_bonotel上线api。正式接口
+		供应商延迟了。
+			Below are the details for Abreu and Bonotel
+ 
+			Live Oski tenantID: 1l4trsdz1mo
+
+			Abreu Supplier Id: 1l56ne3zeo0               
+			Bonotel Supplier Id: 1l56pe0xo1s
+
+			Base URL: https://public-usg.oski.io/api/hotels
+ 
+			Use the same oski-APIKey as that on stage for now. I will provide you a new one later.
+
+bonote网站及用户
+		With your current login (Account: lucia1; Psw: memIXr)you can access our existing site www.bonotel.com
+
+
+	2、测试crotab是否好用，写一个语句，每天执行一次sh文件。
+
+		判断crontab 是否在运行
+		service crond status
+
+		执行脚本任务，完成supplierRequestNumber的统计任务。上线流程
+			编辑crontab任务 
+			crontab -e  #复制以下代码到文件中
+			# 每天执行一次 完成supplierRequestNumber的统计任务
+			0 0 * * * /bin/sh /home/ec2-user/Xapp/x-search/xshell-0.1.0-SNAPSHOT/bin/requestLog.sh
+			记录存储在search环境下db数据库的supplierRequestNumber表中
+
+		执行脚本任务，开启giata拉取数据进程。
+			编辑crontab任务
+			1、确认giataHotel_data_pull.sh存在且正确。
+			2、crontab -e #复制以下代码到文件中
+				# 每天执行一次 拉取giata的hotelMapping数据
+				0 0 * * * /bin/sh /home/ec2-user/Xapp/x-data-update/xshell-1.0-SNAPSHOT/bin/giataHotel_data_pull.sh
+			3、dev环境数据库giatahotelmapping少一个插入时间字段。
+		#查看crontab执行日志。
+			tail -f /var/spool/mail/ec2-user 
+			
+
+
+	3、配置giata 的supplier数据，添加了对tavisca_bonotel、tavisca_asian、tavisca_abreu、totalstay的映射关系。
+	4、发邮件给11info，催促测试问题的沟通。
+
+====================2017年8月30========================================
+周三：
+	1、forever(99tral) 上线监控
+		需要添加amendment配置true，代表可以修改改名，但是日本统一处理不可改名，所以无效了。
+	2、bonotel测试，准备今晚上线。
+		Tavisca方面没有完成准备工作。
+	3、测试并修改对tavisca请求次数的统计工作，数据存放在表taviscaReqeustNumber中。
+		上线前修改脚本文件中对数据库的配置。
+	4、Tavisca配置amendment参数为false，设置不可修改改名。
+		 提供的修改改名政策不是结构化数据，而且由于各个supplier对修改改名的政策不一致，所以不会统一处理成结构化信息。
+
+====================2017年8月29========================================
+周二：
+	1、roomSurplus更换供应商
+		URL: https://meb.tripaffiliates.com/
+		Username: admin@mogutrip.cn
+		Password: 12345678
+	2、99trail已经拿到正式接口，可以考虑开始上线回测了。
+		正式地址：http://mg.99tral.com，
+		账号：mogu，
+		密码：mogu ，
+			1、处理breakfast
+			2、处理supplier、supplierConfig
+			3、今晚上线
+	4、Tavisca的取消费用问题
+			修改状态为MoguPending ，人工处理。
+			询问了关于Policies中的type是否有列表，回复没有。因为内容是由supplier动态添加的，所以不确定会有什么。
+	3、Tavisca的bonotel已经通知上线，计划明天可以上线回测。
+			今晚会给我们正式的配置。
+	4、Tavisca的AsianTrails验价接口还有问题，等待对方解决完。
+	5、Tavisca的Abreu测试基本通过，考虑上线。
+			修改tavisca_Abreu为tavisca_abreu,上线前将代码中的大写更换成小写。测试时暂时不更换。
+	6、elevenInfo应该也没有问题了，等待对方回复，近期考虑上线。
+
+====================2017年8月28========================================
+周一：
+	1、准备周二上线99trail。
+	1、准备周三上线bonotel。
+		  tavisca 增加了amend信息，但是只是在验价阶段rateRuels 添加了。
+		  "policies": [
+                {
+                    "type": "Amend",
+                    "text": "Room 1: Modify the stay period have a penalty of 1 night up to 96 hours prior to arrival. "
+                }
+	2、上线tavisca_Abreu。
+			不支持多房型搜索，与tavisca沟通中。已解决。
+			search、roomReate服务不稳定，测试结果时有时无。
+			不能确定验价条件。
+	3、上线AsianTrails。
+			不支持多房型搜索，与tavisca沟通中。已解决。
+			search、roomReate服务不稳定，测试结果时有时无。
+			现在Tavisca那边rateRules还有问题，正在checking。
+
+	1、
+====================2017年8月26========================================
+周六：
+		团建。。。我在家休息了。
+====================2017年8月25========================================
+周五：
+	1、对forever静态数据下载的测试出了问题。
+			在最后添加对M00000编写过滤代码后，并没有测试，导致上线出异常。
+			根本原因是，对架构理解不清楚。
+				类内变量要么采取注入的方式，要么采取new的方式，要么采取set的方式。
+				注入方式与new方式尽量不要混合使用，会导致逻辑混乱。
+	2、AsianTrails数据不稳定，常常搜索不到数据。
+					1i8knud8nwg
+					"lat":13.73996,
+            		"long": 100.51147
+    3、处理tavisca_Abreu的测试用mapping数据。测试系统。
+
+
+====================2017年8月24========================================
+周四：
+	1、配置bonotel及另外两个supplier配置。针对bonotel进行测试。
+		同时修改代码不去适配单独配置supplier。
+	2、与elevenInfo沟通确认政策问题的处理。并进行新政策的测试。
+====================2017年8月23========================================
+周三：
+	本地测试Asian Trails解析失败原因。
+	邮件11info进行测试。
+	邮件tavisca处理Abreu无数据问题。
+
+	请求是否报异常
+	是否有响应的mapping。
+	是否有一致的cacheKey。
+	当没有发现错误时，核对key是否一致，是找到问题的一个方式。
+	导致cacheKey错误的原因是因为countryCode，在新配置的cityMap中，countryCode被初始化了。
+	还是没找到原因，上面的原因都不是问题。
+
+	elevenInfo测试  政策问题需要确认下。
+		已确认，原来的理解没问题。
+====================2017年8月22========================================
+周二：
+	Tavisca问题查看测试。
+		测试是否可以在列表页进行下单。
+		TODO：二次验价没有覆盖roomCode这个字段，导致字段改变不能被检测到。后续Todo订单模块。
+		暂时将数据拼接在roomRateCode中。测试通过。
+		还需要测试各种情况下是否正常。
+		Tavisca 地区
+		配置tavisca_bonotel			1hwr1w5zvnk  迈阿密海滩
+ 							Miami Beach
+							25.780848	
+							-80.131354    US  
+			tavisca_Abreu	1hwqyss5dkw   
+				LONDON
+					51.50740051269531
+					-0.12763400375843048
+			tavisca_asian	    1i8knud8nwg	  曼谷
+					 "lat":13.73996,
+            		 "long": 100.51147
+            tavisca_jumbo:
+            	Pairs
+			    	"lat": 48.8313121,
+            		"long": 2.2823276
+				
+		TODO:
+			查看一起写上的supplier文档，了解abreu与asianTrails是否包含一个rateid与session相关。
+
+	elevenInfo测试保障。
+		完成测试。需要详细的上线回测。供应商测试特别简单。
+
+
+
+====================2017年8月21========================================
+周一：
+	没赶上火车，火车站待了一天。
+====================2017年8月19========================================
+周六：
+	请假回家
+====================2017年8月18========================================
+周五：
+	1、Tavisca问题没解决
+		  再次沟通，tavisca技术人员正在修复。 
+    2、Taviaca回复了关于abrue和Asian Trails 的问题，给了新的经纬度范围。
+    3、添加Tavisca重要信息policies的处理。√
+    4、考虑对接的流程化。可以考虑不断将相同部分进行封装处理。
+    	 1、有必须处理的对象
+    	 		roomRateId
+    	 		breakfast
+    	 			使用mappers.findBreakfast(supplierId, mealCode, "")处理
+    	 		cancelPolicy
+    	 			使用PolicyManager辅助
+    	 		message的处理
+    	 		其他需要的数据
+    	 2、不太好处理。
+    5、针对Tavisca的情况，考虑通过大数据量的核对，判断refId是否可靠。 
+    	写一个页面
+    		1、请求hotelSearch。
+    		2、请求roomRate 判断是否相等。反馈到页面中。
+====================2017年8月17========================================
+周四：
+	1、上午去建档。
+	2、Tavisca问题多多
+		a.依然不能对bonotel进行多房间不同人员查询。
+		b.Abrue与asia查询没有数据。
+			  Tavisca已确认，提供的经纬度附近没有酒店。
+		c.确认是否可以通过rateOccupancies/refId 标识区域查找与单酒店查找的一致性。
+			  在tavisca层面不保证可以。
+			  先检查bonotel本身接口是否提供相关的rateid，如果与refId能够一直，就可以保证系统可用。
+			  暂时推测refId的来源：tavisca封装了supplier相关的rate信息。所以，不同supplier提供
+		d.修改roomRateId后，下单处理一直报错误，说是人员信息没填全。
+			可能是roomId错误。需要使用rateRule中的roomid
+		
+	3、配置elevenInfo的CBS mapping数据，提供测试。
+		 花费了半个下午加一个晚上。
+
+====================2017年8月16========================================
+周三：
+	1、完成了对区域搜索到直接验价过程的测试。仅对bonotel可用
+	2、下午去医院拍了B超
+====================2017年8月15========================================
+周二：
+	1、下午4点到公司，去办理了准生证和母子健康档案。
+	2、继续Tavisca验价测试。
+		 a.问题：验价不写日志。
+		 b.总结对多gds对接经验，前期先浏览各个supplier接口，与对接服务商接口对比理解。
+		 c.因为创建账户时没有对tavisca_bonotel授信，所以导致一直下单失败，且没有日志。因为order在授信不足的情况下根本不会发起下单请求。
+		 d.因为城市搜索时，赋值roomRateId为空，在搜索一间房时不会出问题，但是搜索两间房就出问题。因为两间房时，系统会在过滤报价黑名单过程中，对roomRateId进行排序。一个房间就避免了排序，但是多个房间时会发生排序，导致出现空指针异常。
+====================2017年8月14========================================
+周一：
+	1、进行giata接口的修改测试。
+		发现batchUpdate更新速度慢，但是没有找到原因。
+		据说是和配置有关，但是我添加上配置后，系统是会报错的。
+		跟踪jdbcTemplate源代码，确实走了批量处理，但是处理过程的确很慢。
+		考虑如果自己实现批量处理，可能效率会更高的。
+	2、询问99tral是否开通正式接口。
+		 a.商务已介入进行后续工作。等待下一步进行技术处理。
+	3、询问Tavisca处理进程。
+		   下午处理完成。
+		   a.再次遭遇sit环境中没有加载所有的biz_hotel信息，导致无数据展示。
+		   b.开发过程中，发现perBooking中每个房间的id中，包含 “|” 字符，导致与我们的设置重复，扰乱了验价流程。重新设置了rateId与roomCode。
+	4、回顾11info配置，准备进行11info上线。
+====================2017年8月12========================================
+周六：
+	领导去开会。本周休息。
+====================2017年8月11========================================
+周五：
+	1、多线程测试，通过将断点设置为tread 即可在线程内调试。
+	2、Tavisca接口各种测不通。
+	3、Tavisca添加对supplier错误提示的处理。
+	4、处理giata程序，修改表，添加id 与time 
+		todo：
+			插入数据
+====================2017年8月10========================================
+周四：
+	1、99tral处理。
+	2、99tral 上线处理  mapping等
+	3、进行Tavisca_bonotel的测试。
+------------99tral收尾处理------------------------
+	超时时，处理为待确认。不需要，超时情况客服都会处理。√
+	最大可入住人数，可能有限制。 暂时没限制，如果gds通知有限制，再进行处理。
+	订单情况，多少人入住无限制。22天 8间  。与设置一致√
+	原则上，最好都传过去。已修改√
+	可定检查，有时系统返回请求的参数信息，没有套餐信息。这是系统套餐关闭导致的，表明不存在这个套餐。
+		根据上线后情况进行分析，后续可能还需要处理。
+
+====================2017年8月9========================================
+周三：
+	1、去医院看检查单，没什么问题。
+	2、99tral问题解决：
+		1、价格问题
+		2、房间的组织问题。
+	3、实现状态细化。
+	4、货币为什么默认是美元而不是人民币。根据用户签约货币显示。
+	5、有没有下单成功后，再次去验价一个新房价的时候，验价失败。
+	6、下单没有控制成人与儿童的区别，增加了对儿童的过滤，不会传儿童名到gds,另外，每间房只传输一个人名
+	7、处理在search时将儿童年龄统一到一间房内。按照最大儿童年龄。
+	8、处理book时，将儿童年龄加入请求参数中。
+	----todo--
+	完成了99tral对于成人的请求与预定流程。但是对于儿童的测试一直不通过。在儿童年龄的处理上不成功。
+====================2017年8月8========================================
+周二：
+	1、99tral 修改rewrite。
+	2、修改下单日志模块，统一进行细化处理。
+	3、价格显示的是单间房价格，修改为总价。
+	4、询问Tavisca后，依然没有回复。
+	5、99测试过程发现找不到hotelId，后面确认是因为sit环境只加载了巴黎的部分酒店，内存不够。修改了一个日本酒店的status为0 使x-bas加载。
+====================2017年8月7========================================
+周一：
+	1、开账号：forever、Tavisca_bonotel
+	2、根据Tavics中bonotel的返回，提示只能预定相同房型的问题，Tavisca_bonotel可能需要增加rewrite代码，等待Tavisca方面回复。
+	3、讨论Tavisca修改政策的处理，是否可以返回修改改名政策的内容。
+		等待回复。
+
+	tavisca已完成的supplier的mapping
+	SupplierName	SupplierId
+	Bonotel			1hwr1w5zvnk
+	Abreu			1hwqyss5dkw
+	Asian Trails	1i8knud8nwg
+
+For provided credentials Abreu does not support USD currency. You need to pass EUR as currency in supplierSpecificOptions in search request.
+Sample supplierSpecificOptions looks like –
+ 
+"supplierSpecificOptions": [{
+        "supplierId": "1hwqyss5dkw",
+        "currency": "EUR",
+    }
+]
+
+
+	Lattitude	Longitude
+	33.450135	-112.071297  美国  Phoenix 凤凰城
+	41.0353329	-85.2550479  美国  Fort Wayne韦恩堡
+	25.780848	-80.131354    US   Miami Beach
+====================2017年8月5========================================
+周六：
+	1、进行99dev环境下的搜索下单测试。
+		·配置mapping
+			从数据库表中拿到已知可以mapping数据列表。
+	2、进行Tavisca新环境下的测试。
+		·配置新mapping
+		·配置新suppler数据
+	3、Tavisca接口测试
+		supplier接口要求
+			Per the supplier restriction, you must have the same occupancy for all the rooms in a multi-room booking.
+			不同supplier可能不同，需要添加不同的rewrite过滤。可考虑在supplierConfig中进行配置。
+			那么，需要拿到所有可能需要rewrite的规则。
+			1、多房间要求相同人数。
+				如果确认这个问题，需要将rewrite进行修改。
+		释疑：
+			hotelCode要配置上supplier的id，主要原因是在出现问题时，我们可以方便的使用supplierCode到supplier网站中进行记录查找。如果只保存了Tavisca的hotelCode,我们就不能够直接到相关供应商处开展工作
+
+
+====================2017年8月4========================================
+周五：
+	1、完成99静态数据接口开发测试。
+====================2017年8月3========================================
+周四：
+	1、进行99静态数据接口开发。
+====================2017年8月2========================================
+周三：
+	1、99
+		不支持城市搜索，gds接口支撑不了那么大的数据请求量。后续可能再次打开。
+		开发静态数据接口，获取静态数据。
+		与其沟通获取日本酒店id与携程酒店id的mapping关系表。今天可能拿到gds反馈。
+====================2017年8月1========================================
+周二：
+	1、通过版本号控制，实现流畅的系统升级上线。
+		基础服务1.0版本，下线一个provider，2.0版本上线一个provider。
+		业务服务1.0版本下线一个consumer，2.0版本上线一个consumer。
+		基础服务1.0版本全部下线一个consumer，2.0版本全部上线consumer。
+		业务服务1.0版本全部下线consumer，2.0版本全部上线consumer
+	2、测试sit下roomSurplus是否可用
+		不再进行测试，等待拿到mapping数据后，sit线上测试。
+	3、Tavisca已恢复，但是杨悦、修正正在做x-base的调试，导致新加接口暂时不可用，也不能完整测试。
+		下午开始测试。
+		很烦人：
+			城市搜索验价，先执行单酒店搜索，需要从结果中找到城市搜索的那个报价，这要求有相同的roomRateId
+			系统返回的availableRoom，城市搜索与单酒店搜索返回数据不一定一致，导致roomRateId不好确定。
+	4、接手日本昭文社99接口的开发。
+		使用room_price是否等同于可定检查，1.0接口验价成功率是否比1.9版本高。
+			1.9是针对日元的接口，1.0是针对人民币的接口。
+		
+
+
+====================2017年7月31========================================
+周一：
+	1、tavisca 使用的roomRateId是gds返回的id，但是，仅在单酒店查询时返回。当城市搜索需要再次进行单酒店搜索锁定房间时，就导致房间匹配不上。
+		修改roomRateId为自己组合的id。包括房间名称、库存数量、房间床数、可退政策、餐食政策等信息。
+		因gds接口问题，导致不能测试。
+		一直返回Unable to call the content service due to a communication error.
+	2、修改Tavaisac改名政策，加上canChange过滤，实现外层的总逻辑。
+	3、修改11info改名政策，添加canchange逻辑。
+	4、修改travcov7重要信息，将specialMessage处理到重要信息中，一旦有政策相关信息，可在外层统一处理。
+====================2017年7月29========================================
+周六：
+====================2017年7月28========================================
+周五：
+	1、讲xml、json对象化，或者根据情况分解。
+	2、修改bug，roomRateCode不会被传递到book中，多个roomRateCode会被一个覆盖。
+		修改不同supplier下，下单失败。信息传输不全导致，添加了联系电话和地址。
+	   验价失败原因：
+	   		现在返回的房间数量库存只有1间，原来默认认为既然返回了，一般就是满足需求的，之前的测试也都没有问题。但是这次的测试数据变化了，程序中没有对库存进行检查，导致验价失败。
+	   下单失败原因：
+	   		因为验价时使用了roomRateCode，可以验价成功，但是在book下roomRateCode多间房情况，都被置为第一间房的id，这样下单的时候就失败了。
+	   			原因未确定。
+
+
+====================2017年7月27========================================
+周四：
+	1、roomSurplus 静态数据处理。
+	2、整理一个开发流程的代码，gds参数使用map代替。
+	3、分析 实现对xml、json解析的类模块 的可行性。
+	4、了解java自定义注解如何实现与使用。
+====================2017年7月26========================================
+周三：
+	1、改名政策统一处理为，optionday前可修改，过后不可修改。elevenInfo\Tavisca
+	2、询问Tavisca是否可处理修改与改名情况。可以到对方supplier网站上处理。
+	-------------------dubbo互相依赖时的发布---------------------------
+	1、相关内容：
+		maven包、发布的dubbo服务、引用的dubbo服务、dubbo服务的实现、服务提供方与使用方服务的上线流程
+		增加服务不需要升级版本号，删除服务必须修改版本号。
+====================2017年7月25========================================
+周二：
+	1、roomSurplus 静态数据处理。
+	2、开发了一个小js脚本到google place服务拉取机场中文名。
+	3、测试x-base服务是否正常。
+====================2017年7月24========================================
+周一：
+	1、增加x-base服务，根据cityid获取hotelCdoeList。
+		测试x-base是否可用，发布x-base。
+	2、完善Tavisca对多酒店请求的流程。
+		测试。
+	3、完善测试记录请求日志：gds、queryName（search、verify）、请求次数、时间。
+		    记录下来日志，写脚本统计日志数据，并整理到数据库中。\
+		    1、拿到一条数据就对数据库进行一次更新。
+		    2、一次性获取到符合条件的数据，并统计，一次性入库。*
+------------------------------
+		shell脚本变量赋值，变量与等号之间不能有空格。
+		maven:deploy发布了protocol后，只是发布了接口协议。
+		真正的服务，是通过jinkins发布的。
+		
+
+====================2017年7月22========================================
+周六：
+	1、讨论需求：
+		记录请求日志：gds、queryName（search、verify）、请求次数、时间。√
+	2、依据等差数列生成请求时间。√
+	3、考虑之前将json对象转换为java对象后，处理中遇到的问题。
+		  请求时，对象不容易处理为空，需要对无用的字段进行单独处理。？？
+
+
+====================2017年7月21========================================
+周五：
+	1、测试elevenInfo优惠信息展示。
+	2、确认测试结束，拿到roomSurplus账号，获取mapping数据。
+
+	3、按照测试用例测试Tavisca。
+		  referenceCode 还需要斟酌。保存唯一的总referenceId
+		  取消时，没有明确提出是否取消成功。有确认单号就是成功了。
+		  取消时，不知道怎么去计算费用。明天询问耿大哥
+	4、需求：
+		记录请求日志：gds、queryName（search、verify）、请求次数、时间。
+	    依据等差数列生成请求时间。
+====================2017年7月20========================================
+周四：
+	1、上午与Tavisca联系，对于perRoom的情况，search无政策，但是验价有政策的问题。
+	2、解决cancel参数传输问题。可能还有问题，referenceCode是用来展示给客户入住使用。
+		等于tavisca技术人员沟通后再确认。
+	3、取消政策具体加了几天，在search中实现，并且通过safeDay来控制。线上是2天。sit当前是12天。
+	-------------------------------------------------------------
+	1、咨询tavisca关于订单单号问题，以及取消订单费用展示问题。
+	2、回复elevenInfo关于测试后续问题。
+====================2017年7月19========================================
+周三：
+	1、完成Tavicsa验价系统测试。
+	2、完成book系统测试。（上线时，需要关闭信用卡模块功能，未来如果需要再添加）
+	3、解决在perBook与perRoom不同的request统一起来。不同导致在多间房验价时失败。
+	4、马虎问题：
+		   向map中存储数据时，set的key与get的key不一致，导致一直构建的对象错误。
+----------未来两周工作内容：到八月初-----------
+	1、Tavisca、11info接口开发提测。下周二前完成。
+	2、mapping数据处理：11info(CBS、roomSurplus)、Tavisca(5家数据) 根据supplier提供日期来处理。
+	3、在x-base中增加城市范围提供接口。
+	4、改名政策流程熟悉。（agent系统）
+	------------对Tavisca的静态数据的疑惑--------------------------
+	我们可以与Tavisca的静态数据进行mapping，这样就可以实现一次性mapping所有Tavisca后面的supplier，后续对接supplier就连mapping都省了。
+		问题：1、如果与Tavisca进行mapping，一旦Tavisca与supplier之间mapping错误，我们是发现不了的，对追责无能为力。
+			  2、Tavisca自己的静态数据信息是收费的。
+ 	---------------------服务器IP及用户配置--------------------------
+ 	dev
+ 		Search：101.200.211.58   
+ 				ec2-user
+ 				Maliao1980
+ 		Book:	101.200.180.242
+ 				yangzp
+ 				123456
+ 		agentApp:123.56.205.112
+ 				ec2-user
+====================2017年7月18========================================
+周二：
+	1、验价时，返回数据中supplierId为空？供应商返回特别数据。
+	2、*在处理组合房型时，如果单独进行new HotelRooms() 操作，应该使用new HotelRooms(roomList)构造函数。
+	否则，可能导致hotelRooms内部没有餐食与政策不组合。（和修正一起花费了两三个小时才够明白原因在这里）
+	3、mq与日志系统之间连接断了，导致没有验价日志，明天处理。
+	   agent系统日志打印服务失败，看不到验价日志。
+	   两个原因导致验价失败原因待查。
+
+	----------dev测试环境数据库配置注意事项-----------------
+	dev环境下，book的数据库配置，是在sit的bookingOnly库中存储的。配置需要响应调整。
+	dev环境下，search的日志数据库配置，是在sit的searchOnly库中存储的。
+		sit的数据库连接：
+			mogusitdb.cfp9fmbnxgi0.rds.cn-north-1.amazonaws.com.cn
+			sitdb 
+	dev环境下网站admin账户
+		123458
+		dev
+		123456
+	
+	------------mq配置页面----------
+	sit的mq管理
+	http://54.222.188.222:15672/#/ 
+	账号和密码都为admin
+
+
+	dev的mq管理
+	http://101.200.180.242:15672/
+	账号和密码都为admin
+
+
+	prd1
+	http://59.110.23.217:8000/
+	账号和密码都为admin
+====================2017年7月17========================================
+周一：
+		在dev完整测试Tavisca项目
+			修改dev hotelMap表中hotelCode长度，从15修改为255
+		测试过程中，发现数据库配置问题导致系统启动不起来。本地dev一直起不来。
+			从修正那学到，可以将dev的配置放置到可以启动的loc环境启动，发现启动起来了。
+			问题就来了，dev不能启动的原因就不是在数据库，而是在dubbo服务的配置上了。
+			dubbo服务是通过spring服务配置的，所以起不来。但是，在哪里配置的呢？
+				x-search\xshell\src\main\resources\spring\spring-dubbo-reference.xml
+				x-search\xshell\src\main\resources\spring\spring-dubbo-reference.xml
+		elevenInfo 提供在预定后查询政策信息。
+			暂时不处理。预定前预定后政策不一致的概率比较低，先不处理。后续如果出现问题再想办法。
+	--------------------------
+	数据库配置：
+		dev：
+			dubbo:http://101.200.218.20:8080/governance/services?keyword=*  
+					root  root
+		sit：
+		prd1:
+			内网(inner)：#database.url=jdbc:mysql://rm-2zehra4b3vu4i4x31i.mysql.rds.aliyuncs.com/mapping?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+			外网():rm-2zehra4b3vu4i4x31.mysql.rds.aliyuncs.com
+		prd2:
+====================2017年7月15========================================
+周六：
+		编写xbase下服务，输入cityid返回city中心点坐标以及周边半径。或者返回范围。
+		编写xbase服务，输入gdsName(11info、tavisca) + supplierId + sypplierHotelCode返回 gdsHotelCode。
+		
+====================2017年7月14========================================
+周五：
+	Tavisca：
+		测试rewrite是否需要修改。
+		完成book与cancel的基础测试。
+		测试不同情况下的Search、verify以及book、cancel
+			测试太不方便了。准备新系统上线后，在dev环境测试。
+====================2017年7月13========================================
+周四：
+	elevenInfo静态数据：
+		整理mealType等基础数据，看是否之前缺失什么数据。
+		整理hotel数据，进行mapping。
+	测试Tavisca：
+		需要再测perBookRate
+		-------------------
+		部分可变数据，在验价后需要带到下单模块。在查询验价使用同一个流程的情况下，可以将变化的字段放置在roomRateCode、roomRateKey等字段内，以便使用。同时，不影响验价使用的roomRateId.
+
+====================2017年7月12========================================
+周三：
+	查看dotw接口验价流程。
+		一次验价，不进行锁定检查。
+		二次验价，检查房间是否已经为我们锁定。锁定后才可预定。
+	与elevenInfo确认基础数据问题
+		是否区分不同gds的静态数据，如何区分？
+		是否有酒店经纬度？在哪里？
+	Tavisca
+		测试验价接口，perRoomRate没什么问题了。需要再测perBookRate。
+		测试发现问题：
+			在判断对象为null后，为对象赋值但没有初始化，导致空指针。
+			List对象是引用类型，需要克隆时，可通过新建一个list通过初始化，或者addall实现。
+
+
+
+====================2017年7月11========================================
+周二：
+	签约gds中都不使用信用卡绑定，那么测试接口中如何绕过信用卡的使用？
+	完成了预定取消的所有代码，但是没有测试。
+	卡在了验价的测试上，没有dev环境，sit环境也在测试中，暂时没有线上环境可用。
+		方案：通过研究验价的流程，确认用什么数据可以测试出来线上的效果。主要是了解search的verify流程。
+	
+-------------------------------------------------
+	最近又在关注外汇，希望能借此实现财务自由。但是，到现在的考察结果，应该是一个也很艰难的行业，但是有希望。
+		在足够的时间精力投入后，应该可以稳稳的让年收入翻倍。未来一段时间，主要攻克交易方面的书籍。3个月时间吧，到10月11日看完3本相关书籍。
+		一个月看一本，尽量少做单。
+
+====================2017年7月10========================================
+周一：
+	Tavisca：
+		完成验价接口
+
+		测试完成后，根据数据情况，考虑将bedDetils中的数据放置到roomName内部。
+
+====================2017年7月8========================================
+周六：
+	Tavisca特点：
+		1.区分为组合和非组合两种房型，需要分别解析，分别下单，分别取消。
+		2.如果使用区域搜索或者多酒店搜索，必须再进行一次单酒店查询，然后才能验价！
+	TODO:
+		1构建mapping数据，使用单酒店查询。实现对search的perRoomRate的测试。
+		2开发perBookRate测试
+		3
+====================2017年7月7========================================
+周五：
+	开发search中perRoomRate返回数据解析
+		不能区分携带婴儿与携带小孩的区别。
+		都没有取消政策，那么对单房间的退房政策在哪里呢？
+	开发perBookRate数据解析
+		返回的数据一般是数组，但文档中给的是个对象！！！！不确定会不会出现对象的情况。如果出现，
+		将导致json转对象失败。
+	在search批量酒店搜索中，返回数据是itineraries数组。在search单酒店查询中，返回数据是result对象。
+		已经处理，在返回对象中添加了result对象。
+
+	在sit环境的supplier与supplierConfig配置gds 100 的相关数据。
+	在sit环境的breakfastmap中配置100的相关数据
+
+====================2017年7月6========================================
+周四：
+	开发search请求接口
+		测试接口过程中遭遇异常：
+			Code 197：Unable to call the content service due to a communication error.
+			Code 110：zh-CN:Namespace not found for Demo.
+			原因是请求时，发送的http头中使用了zh-CN，对方只支持en
+	将json字符串转为java实体的方式
+		使用idea的GsonFormat插件很方便。
+
+	原来开发的tavcov7静态数据获取中的问题：
+		系统使用了address、postCode、latitude、longitude.
+		要求address是标准的格式
+		要求其他三个字段不能有准确数据外的其他格式，比如标识null的n/a等。
+		对Double.valueOf()需要进行控制，在转换失败时，手动赋值为标准0 或者null
+
+====================2017年7月5========================================
+周三：
+
+	Tavisca
+		接口返回数据有两种方式，一种是组合房价，一种是未组合房价。
+		组合房价中，occupancies标识了请求的房间内容，但是没有明确指明房型。
+		roomOptions描述整个book的房间信息，等级、库存、吸烟偏好等。
+
+		非组合房型中，roomOptions描述了请求人数对应的房型，但是，不提供房型名称。无法区分twin与double？
+		
+		逻辑：perRoomRates\perBookingRates--rateOccupancies整合了房间与人员信息的refID
+			==> roomOptions--refId 获取房间信息：床数        
+					代表人员信息
+			==> occupancies--refId 获取人员信息：adults、children 
+					代表价格信息
+
+
+
+	注意：json格式数据，每个字段都可能null。
+	1、在所有的返回数据中，都没有发现cancellationPolicy数据，应怎么样获取？
+			部分数据确实有这个字段，看到过了。
+	2、boardBasis不是一直有，而且是描述类型
+		Enum Values: Option	Type
+					RoomOnly	string
+					BedAndBreakfast	string
+					HalfBoard	string
+					FullBoard	string
+					AllInclusive	string
+					SelfCatering	string
+					Other
+		处理为字典
+	3、 roomCode-->roomOptions/refId
+		roomrateCode-->occupancies/refId
+			这两个数据都是会变的数据，是否没有必要保存？
+	5、roomRateId-->
+			在perRoomRates情况下，每个room都有一个id，用来进行验价。
+			在perBookingRates下，不能区分多个room？！！*
+				可以使用id+ 人员
+	6、roomOptions--name 描述了房间，但是不一定有床型。可以作为房间Name展示。
+	   roomOptions--Code：Unique identifier provided by the supplier to identify the room.
+	   		没什么用。。。
+	   roomOptions--availableRooms:是否必须大于请求的房间数？*
+	   			判断必须大于请求的数量，否则抛弃库存。
+	   perRoomRates\perBookingRates--Code: Code for the rate provided by the supplier.
+		在perRoomRates情况下
+			roomOptions--bedDetails有，且count为床位数，用以区分double、twin
+			roomOptions有多个元素
+			roomOptions--RoomTypeCode-->supplier提供，是否有字典表？
+		在perBookingRates下
+			roomOptions--bedDetails为空。
+			roomOptions仅有一个元素
+			不存在RoomTypeCode
+	7、RoomIndex，只能通过匹配人数、房型获取。
+			还需要看验价需要什么？！
+	8、totalRate、originalTotalRate、PriceBreakdowns都有
+			注意：originalTotalRate是原价，如果有优惠，totalRate是优惠后价。提示用户可提高转化率。
+	9、type 
+			Option	Type
+			Published	string   市场价
+			Negotiated	string   协议价
+			Opaque	string       打包价
+			Promotional	string   折扣价
+		inventoryType
+			Prepaid    预付费
+			Postpaid   后付费
+	10、验价perRoomRates
+		RoomOptions--refId --> 作为referenceId保存,下单使用。
+		perRoomRates--id  --> 下单使用
+	11、预定
+		询问使用什么card来进行预定
+
+====================2017年7月4========================================
+周二：
+	1、重要信息展示，必须将重要信息填写到room下的message才能显示出来。
+	2、elevenInfo
+		发现房价变价严重，上午在大几百上千泰铢的房间，下午就成了几十泰铢。
+			elevenInfo下的cbs与roomSurplus账户使用错了。roomSurplus房间价格便宜很多。
+			测试2.1版本使用的用户名密码错误，不确定是否影响最终测试结果。
+			最差的结果，需要重新测试一遍。也就是大半天就测试完了。
+		在搜索请求模板中，使用了request.hotelCode而实际上，应该使用request.hotelId。
+			这个问题导致请求单酒店时，hotelCode赋值失败，发起了城市搜索。
+		发现markup确实设置错了，导致价格错误。
+			原始markup设置了1.01但是还同时在泰国曼谷设置了5个点的优惠，所以markup就成了0.96.
+
+
+	-------------------------
+	elevenInfo:
+	上午两个小时内完成测试文档。
+	case15: 不太明白How many the type of meal can be found?是什么意思？
+	case22: 怎么测试？且Testing information中没有提供对应的hotel
+	case30: 不提供onRequest库存预定。
+	case31: 不提供不同级别房型的预定。
+	case32: 不提供多时段预定。
+	case33: 多酒店预定，不处理。
+	case34-44: 我们不允许修改、不处理bookingPolicy。
+	case47: 多时段取消，不处理
+	case52-53: 取消多个Categ下的预定、时段的预定。不处理。
+	case54: 多酒店取消，不处理。
+
+====================2017年7月3========================================
+周一：
+	Tavisca接口问题：
+		1、cancellationPolicy在正式请求返回的数据中不存在，换成了policy并且空。
+		2、refundable、boardBasis、
+	测试elevenInfo
+		1、搜索房间类型与人数对应，不会返回更大的房间。双人间默认返回twin不会返回double。
+		2、双人间请求加床，自动升级Triple，并且，返回数据标明成人3人以及儿童实际人数。
+		问题：
+		1、数据不全，搜索多个房间携带小孩的情况下，常常无数据。
+		2、测试请求双人间携带一个1岁小孩，也有可能返回Triple，并且返回数据中成人数量是3。导致没有办法将这个房间与request中的房间匹配，找不到roomIndex。测试多项带小孩不带小孩，均没有问题。
+
+	----elevenInfo问题总结---------------
+	对儿童加床搜索的支持不完善。
+		只有三人间才允许加床，而且儿童(3-18old)相当于是成人，因为只能在Triple中加床。
+	对多床型搜索不完善
+		不能够对单人搜索doubleRoom
+
+====================2017年7月1========================================
+周六：
+	1、异步请求数据
+		 发起请求后，需要多次请求数据。两个解决方案:
+		 	search对同一个gds发起多次异步请求，并携带请求变量。
+		 	在crawler内多次请求，一次性返回。（当前解决方案）
+		 	
+
+		 	当前流程：
+		 		search对每个gds发起一次性请求，获取数据保存到cache中。
+		 	需求：
+		 		serach对每个gds发起一次请求，crawler每抓取一次就更新一个cache，直到search通知crawler停止抓取。
+
+====================2017年6月30========================================
+周五：
+	1、优先进行印度接口开发，实现对城市id到经纬度的映射。
+		暂时考虑Expedia接口，实现对城市id到hotelId列表的映射。
+		如果在rewrite中通用代码实现，需要修改当前城市request实体，添加新数据字段以及标识字段。
+		或者不在rewrite中实现，只在request中添加一个标识请求类型的字段，然后在通用模块中实现通过城市id获取城市坐标以及hotelIdList方法？
+		这种情况下，如果未来要支持经纬度查询，只需要将经纬度来源修改为request中即可。
+		在前端没有明确指出使用哪种方式来进行区域查询(cityid,geo,hotelIds)的情况下，根据supplier的配置情况(cityCode|geo|hotelIds)来处理。如果request中指定了方式，则按照指定的方式(cityCode|geo|hotelIds)如果是geo方式，还要看request中已存在geo还是通过cityId到服务中取geo。
+		那么，
+
+====================2017年6月29========================================
+周四：
+	1、分析search的实现流程，考虑cityCode以及cityId的可替代性，从而找到如何设计实现对经纬度搜索的支持。
+			rewrite，实现我们的city对应到多个gds的city
+			city作为catche Key的一部分
+			判断catche中的数据，是否需要将数据中的city转换为我们的city？
+
+	2、search流程梳理
+		在request中新加latitude与longtitude以及redius标识城市位置。
+			添加了新字段后，并不影响原数据流程，只有新supplier才需要使用坐标，旧supplier依然可以正常运行，只需要对新supplier做一个自己的mapping。
+
+		获取在线supplier
+		调用rewrite以及每个supplier的rewriteRoom，实现对rqeust的rewrite。
+			使用getCityMapService获取city的mapping，但是，针对geo的supplier的mapping，
+			必须提供city的geoLocation以及redius。
+		根据国家城市入住离店时间以及hotel和supplier来生成一个cacheKey，作为缓存数据的key
+		计算重写后的请求数量
+		异步从redis读取profile数据
+		从redis读取酒店数据map
+		通过cacheKey到map中取数据，并将redis数据转为对象，依然Map形式保存
+		通知crawler抓取数据
+			内部使用geo与redius去请求数据。
+		统计过滤前数据数量
+			 每个key对应的value中的报价数量
+			 使用了cityCode判断黑名单，为空则不过滤。
+		数据过滤与转换
+		数据排序(根据request的sort，实现不同的排序方式)
+		统计过滤后数据数量
+		统计左侧边栏数据
+			按照五段分价格区间的方式,统计酒店价格区间信息
+		数据分页
+		汇率转换
+	3、新接口开发讨论
+		使用经纬度方式实现城市级别的数据搜索。
+			修改通用逻辑，使满足两种条件下的搜索。一种是支持以城市中心点并携带cityCode进行搜索的形式。一种是纯粹基于经纬度坐标点进行搜索的形式。两种方式的差别在是否存在hotel筛选逻辑。
+		后续使用hotelIds方式实现expedia数据搜索。
+
+	4、了解idea代码分析工具
+			On-the-fly 使用 intention actions 分析，idea 通过分析你键入的内容，实时的提示你修复问题。
+			代码检查 的目的是指出有关程序设计问题。
+			高亮层级允许你控制当前文件中所高亮的问题的范围。
+			依赖分析通过代码层次关系帮助你了解你的源代码的结构，探索你的项目的组成部分之间的关系，跟踪项目内的依赖关系和工作流程。
+			数据流分析可以帮助你进行代码研究。
+			逆向工程 。
+
+
+====================2017年6月28========================================
+周三：
+	expedia沟通
+		参与人员：程光曦、陈国锦、常贺
+		通过邮箱实现工单交流，邮件内不能显示敏感信息比如信用卡卡号全显示
+			support@ean.com
+		API抓取限制： call throttle limit 40/s  75000/h
+		账户信息：
+			SA+MOD CID 502914   PKG+MOD(CID 502915)
+			mogutrip  mogu123
+			Affiliate Center 获取key
+		预付、零售，兼容其他产品导致部分字段不好理解，
+				主要考虑一个标识为打包销售价格的节点。
+		作为预付客户，我们使用虚拟信用卡进行下单。
+		示范网站:TravelNow.com  
+		请求方式：
+			非下单都是get，下单必须使用SSL post方式
+			权限模块参考：http://developer.ean.com/docs/common
+			api-authentication实现、使用NTP时间实现生成authentication，
+				可参考http://developer.ean.com/docs/getting-started/api-authentication/
+		价格相关因素：语言、货币、终端IP、终端用户浏览介质，四个指标可确定价格。
+		全局ID：sessionID是从查询到下单的全局ID，可使用我们的queryID来实现。
+				搜索与验价的queryID可能是不同的，不过不影响系统运行，以及记录查询。
+		询价注意事项：
+				考虑使用区域搜索，匹配城市搜索，通过城市中心经纬度进行搜索，动态设定搜索范围。
+					可以根据城市矩形框对角线或者内切圆半径来确定一个城市中心点辐射范围的半径。
+					
+				使用合适的Expedia排序，使返回数据高质高效，一次请求，首页的数据量要足够大，还要足够快。
+					考虑使用champion方式：利润最大化、转化率最大
+				价格：
+					返回价格为零售价，需要调整markup为0，不加价销售。
+					强制展示：房费、附加费、税和服务费（销售税、物业费）、本站手续费
+					可通过字符串展示到页面，重要信息或者remark中都可以考虑。
+					或者添加新字段实现税费的展示
+					利润不是可以每单精确计算的，涉及到分级的推广费等，用最低标准计算，可能导致利润核算降低，财务计算不准确。
+					而且，我们现在是不能在crewler中处理零售价的，也不能设置利润空间？
+				加床另外付费，不特殊处理。
+				valueAdd  房费外的所有费用:餐食、wifi。不强制要求展示。
+					含早的情况，可能freefor 1 或者 free for 2
+					需要预处理所有的valueAdd情况，标识出含早的类型。
+				床型 bedType
+					一百多种
+					酒店详情页，如果有多个床型，需要展示给用户。
+					下单页，多床型时需要选择偏好，需要明确展示，进行床型选择提示。
+					是否无烟房以及偏好，设置应与床型一致。
+						添加新字段，可能要和前端同步修改。
+					*修改内容涉及到前后端两个模块。
+		单酒店查询
+			includeDetails = false默认false，建议明确写出来，以保证正确。
+		验价
+			includeDetails = true
+
+		取消政策
+			以checkin为最终节点，或者以checkin前某个时间点为第一个节点，在下单时间到第一个节点间只会有一个节点，在这个节点前，不收费或者部分收费，节点后，按照部分收费或者不退款。
+			取消金额，按照三种方式：金额、几晚、百分比，前两种可能组合出现。
+					金额可能会超过订单金额，按照订单总额全损。
+			
+-------------------
+			下单
+				需页面提示用户每个房间只能录入一个人的姓名，且必须以此人的身份入住。
+				提供错误errHandle的测试，主要是下单错误
+					参考：http://developer.ean.com/docs/error-handling/common-errors/reservation-errors
+					无论测试环境还是线上环境都不要测试不能取消的价格，因为可能导致问题。
+					测试的入住日期要设定在60天之后，以保证可取消
+					下单邮箱用自己的，因为测试系统取消时，报文是错误的，只会发邮件确认是否取消成功。
+				
+				订单状态处理：
+					CF(Confirm)、CX(cancelled)、ER，三种为终结状态。
+					PS为中间状态。
+					测试环境DT、UC终态
+				订单状态没有到达终态的情况下，只能复用affiliate confirmation ID进行下单。
+						流程：预定--失败---查询订单详情--无--预定--失败--查询订单详情
+														 有--查询订单详情
+
+				需要实现订单查询服务，用以查询订单是否成功，以及查找订单详情。
+				
+				*如果下单失败并返回EanWsError，并不代表下单失败，而是返回信息失败，需要调用订单详情接口判断是否预定成功，需要通过自己的订单号去Ean查看下单情况。
+
+				如果结果返回成功或者失败，则反馈到客户。如果订单不存在或者PS状态，则可再次发起预定，无论成功或者失败，都要去查询订单详情接口，来获取订单状态。成功也要查询的原因，是因为二次预定的返回是不完整的。如果二次查询订单详情依然不存在单号，那么就可以作为预定失败反馈。
+					*预定失败情况下，订单详情必须操作，并且保存每次的交互报文，以备后续使用。
+					*下单超时为90秒，如果两次查询后，依然没有对应订单的详情信息，则需要联系Expedia技术，这种情况下客服可能查不到。
+					*多次查询订单详情，导致Response花费更长时间，但是，订单不存在创建失败的情况还是比较少的，可以不考虑反馈时间问题。
+							
+				订单重复发送且预定成功：
+					existingItinerary会显示为true。内容只返回第一间房的信息，不返回全部房间信息。需要使用订单查询接口，查询订单详情。
+				订单取消
+					一次取消只能取消一间，如果第一间房取消失败，第二间取消成功，则重试，重试后依然失败，就联系客服。日志记录必须全。
+					
+				入住提示添加到重要信息中，特殊提示也加到重要信息中。
+				下单页修改右侧税费展示，展示具体的费用详情。
+				每间房只能填写一个leader，提示用户必须入住人到店办理入住手续，其他人不能去办理。
+				*到店费用（City/Mandatory tax values）必须展示到重要信息中。
+				上线后，需要商务设置，然后加入confirmationExtras 节点来获得利润信息。
+----------------------
+	异常处理
+		尽量按照说明来处理，以保证异常订单申诉成功。
+		异常处理流程图，验收时按照这个处理。
+
+	开发流程图，P79，
+------------
+	联系lean :设置系统周报邮箱
+
+
+
+=====================2017年6月27========================================
+周二：
+	1、开发印度接口
+		*搜索返回数据分为perBooking与perRoom两种结果，对应有两种验价方式和两种下单方式。
+		
+		考虑Search多次调用crewler来持续获取同一个supplier的数据。
+		考虑如何多supplier请求，但是，依然按照gds解析response。
+			当前，系统将多个supplier拆分，然后单独rewrite后，发起请求。现在考虑重构，将supplier进行分组来进行处理。在现有基础上，添加分组逻辑，例如，在supplier后的remark中标识其组名，
+			修改：城市酒店查询入口 方法模块
+			在rewrite之前，对supplier处理为一个group或者单独的supplier，实现多个gds对应一个技术提供商的问题。
+			
+
+			方案1：修改异步抓取返回值，返回List,每个元素都是group内的一个gds。修改太多了。
+			方案2：重载异步抓取方法，单独处理group情况。
+
+	--------------
+	2、解决miki7的一单失败，miki7内部系统异常导致。miki7无返回
+	-----------------------
+	3、expedia搜索
+	3.1、使用城市/省/自治区/直辖市/国家/地区搜索作为城市搜索
+		请求除了常规参数外，还可以支持过滤搜索，包括星级、房价、房型数量、支持排序。而且还能控制是否返回动态房价或者静态数据。另外，请求结果是分页返回的，过期则要重新搜索。过期时间15-30分钟。
+	3.2、默认城市搜索返回每家酒店的转化率最高的房型，建议在酒店详情页加载其他多种房型。
+		关于maxRatePlanCount的疑问，将其他客房保留用于在客房选择阶段进行展示中，客房选择阶段是什么阶段？
+	3.3、其他数据没有特殊情况，可直接解析。
+	4、使用 hotelId 列表做单酒店搜索
+
+
+	2、hotelMap获取问题
+	3、booking请求中perBooking与perRoom问题。
+	4、
+====================2017年6月26========================================
+周一：
+	搬家、回京
+====================2017年6月24========================================
+周六：
+	周例会
+====================2017年6月23========================================
+周五：
+	1、expedia按城市搜索中，可使用条件过滤（周边、星级、价格、）
+	2、expedia接口需关注点
+	交互方式是什么，webService(xml)、Soap(xml)、Rest(xml、json)
+	2.1、搜索
+	Request
+		请求的级别是什么，国家、地区、城市、hotel、经纬度
+		请求需要传输哪些参数，我们的参数包括country、city(hotel)、checkin、checkout、rooms、adults、age1、age2
+		判断是否需要rewriteRoom:一般的，如果有对请求room的要求，则需要rewrite，比如，限制房间人数、人数转换为房型、不能携带小孩、对携带儿童年龄有特殊限制，根据年龄不同修改roomType等
+	Response	
+		返回数据格式是什么，组合报价还是未组合报价？
+		我们需要的返回数据：
+			hotel、roomCateg、roomType、breakfast、roomIndex(与请求的要一致)、roomPrice、roomOriginPrice、currency、cancelPolicy、roomMessage、能够标识唯一room的元素组合
+			如果返回未组合报价，将所有room报价返回即可。
+			如果返回组合报价，或者部分组合报价，需要根据情况将报价组合
+			报价组合：Meal、currency、roomsPrice、roomsOriginPrice、roomsMessage、cancelPolicy		
+		返回数据中包含什么数据
+			*是否如此？根据RoomRateDetails判断，expedia返回的是组合好的房型，并且默认每个hotel只返回一个房型。只返回一种房型，stand、suprior
+			包含优惠信息，以及原价与优惠后价格。
+			包含rateKey，用以进行预订，并且，多次搜索时，rateKey会不断发生变化。验价rateKey是否与Search的rateKey一致？
+				只需要rateCode与roomTypeCode就可以唯一标定一个房间。
+	2.2验价
+	Request
+		 使用到了搜索中的基础数据以及以下search中返回的数据
+		 roomTypeCode、rateCode、supplierType、rateKey
+		 rateKey来自搜索
+	Response
+		返回rateKey，用以进行预订.与请求中返回的rateKey不一致。
+	2.3预订
+	Request
+		付款方面怎么处理？
+
+	3、Tavisca接口学习
+		针对不同supplier，我们处理为一个supplier合适，还是处理成多个supplier合适？
+	 	Initiate Hotel Search获取区域内酒店对应的sessionId
+	 	使用sessionId调用Get Hotel Search Results，获取区域搜索的酒店报价。
+	 	
+====================2017年6月22========================================
+周四：
+	1、volecity文件中的错误，会生成一个log文件，显示错误的详情。应该是之前配置好的。
+	2、elevenInfoV2.0抽疯，两个成人一个2岁小孩预定一个三人间，必须要求我们申请加床！
+		 发邮件沟通，因签约状态问题，没有回复这个问题。
+	3、可设置请求的来源：移动端、个人电脑、服务商。不同情况有可能在优惠上有不同。
+
+	方法 1：城市/省/自治区/直辖市/国家/地区搜索
+		XML/REST URL：	GET http://api.ean.com/ean-services/rs/hotel/v3/list?
+		
+		XML/REST URL：	GET http://api.ean.com/ean-services/rs/hotel/v3/avail?
+			&room[room number, starting with 1]=
+			[number of adults],
+			[comma-delimited list of children's ages] 
+			 &room1=1,5,12
+		XML 父元素：	<HotelRoomAvailabilityRequest>
+====================2017年6月21========================================
+周三：
+	search构建中的问题：
+	1、添加了对hotel报价的重要信息处理，用来显示优惠信息。之所以在重要信息中显示，是因为报文中没有提供优惠前的原始价格，没办法在orginalRate中体现。系统前端是可以展示优惠前后两个价格的。
+	2、了解到对用户的价格是通过markup来设置比例的。调整markup来调整利润。
+	3、
+====================2017年6月20========================================
+周二：
+	1、上午完成book测试，提测2.0版本。
+	2、**晚上要上线miki7优化的代码。√
+		 在预定miki7第三方的近一两天酒店时，失败率较高，主要原因是库存波动较剧烈，导致下单失败。
+		 针对这种情况，修改为预定近两天的酒店时，过滤掉第三方库存。
+	3、开始读Expedia接口文档
+		 通读（找关注的特殊点）
+		 分接口读（记录每个问题的解决方案，以及疑问）
+		 -----------------------------
+		 rest接口，返回数据中，无数据的节点不返回。
+		 默认返回xml，可以通过application/json请求json数据。
+
+
+====================2017年6月19========================================
+周一：
+	1、完成提测流程。
+	2、下线miki7的CAO694400、CAM655200两个酒店，原因是miki7到第三方mapping错误，预定总是失败的。
+	2、下周三  上午10:00  Expedia交流。
+
+	3、配置roomSurplus
+			supplier表
+			supplierConfig表
+			breakfastmap表
+    4、完成了对roomSurplus的search、policy测试。
+====================2017年6月17========================================
+周六：
+	1、周报，例会
+		1、关于验价失败率下单失败率过高问题的强调，系统可用性。
+		2、解决验价失败率、下单失败率，从内容过滤角度来考虑解决。通过一套数据清晰的过滤策略，保证我们有较高的产品提供给客户。
+	2、回家。
+====================2017年6月16========================================
+周五：
+	1、search中处理roomIndex时错误了，没有考虑到不同类型之间roomIndex需要递增。
+	2、第二条是错误的不完整的理解，roomIndex与search Request中的roomIndex要一致才可以。
+	3、得知elevenInfo作为服务商，对应了多个gds，服务版本分为2.0和3.1，根据情况，需要修改系统中对于gds的描述，以便实现一套代码对多gds的兼容。完成一部分
+	4、
+====================2017年6月15========================================
+周四：
+	1、修改rewriteRooms中的问题。
+	2、处理bookRequest拼接过程中的取值问题。改为从roomRateId中获取。
+	3、处理cancelBook中的问题，vm文件中拼写大小写错误。*
+	4、处理下单时，用户要求remark没有添加进去的问题。
+	5、处理policyCode过长导致order日志记录失败问题。	
+====================2017年6月14========================================
+周三：
+	1、sit环境下测试search接口。
+		mapping关系中，城市id错了？
+		mapping关系中，城市与hotel不对应，导致单酒店查询时，所有酒店被裁减。
+	2、判断政策是否准确。修改了三处空指针。
+	3、在验价时，发现在vm中写转义，双杠("\\|")不对，单杠("\|")才对。
+	2、trunk_2017.06.14
+====================2017年6月13========================================
+周二：
+	1、测试book代码，实现预定。遇到不断让重新submit问题，不确定什么问题，可能是orderId重复导致
+	线上测试再定位解决问题。
+====================2017年6月12========================================
+周一：
+	1、elevenInfo开发。沟通确认book接口可用。完成cancel代码编写。
+	2、根据elevenInfo要求，在预定前必须发起特定的请求，相当于有验价接口。开发接口调试。
+
+====================2017年6月10========================================
+周六：
+	1、进行book接口的测试。
+	2、
+====================2017年6月9========================================
+周五：
+	1、完成政策接口数据的测试。
+	2、进行book接口测试，一直不通。已发送邮件与agent确认是什么问题，等待回复。
+	3、miki7接口问题；
+		使用deadline作为roomrateId的一部分是有问题的。不可取消订单中，deadline因为精确到了秒级，在每次访问后都是会有变化，导致验价失败。新逻辑中，将deadline作为可取消订单一部分，将false作为不可取消订单的一部分。
+	4、完善接口解析部分内容。
+====================2017年6月8========================================
+周四：
+	1、11info中，不发送带小孩请求。
+	2、没找到预定结果status字典，需要邮件沟通。或者测试确认。
+====================2017年6月7========================================
+周三：
+	1、继续解决miki7中521err的问题，已处理完成并上线。
+====================2017年6月6========================================
+周二：
+	
+	2、miki7解析有问题，修改逻辑。
+		roomNumbers 中的房间，必须绑定销售。
+	--------------
+		问题描述：
+			gds返回数据中，以roomType与identifier描述了一个房型room，使用roomNumbers描述此房型与请求的房型的匹配情况。
+			在房型组合过程中，要求相同roomType下的room组合必须有相同的Identifier。但是，也允许不同房型的交叉组合。
+			例如：请求两件房roomIndex为1,2，每间房两个成人，那么我们可能得到以下返回房型
+					   房型   匹配的房间
+					A、 twin   1,2
+					B、 twin   1,2
+					C、Double  1,2
+					D、Double  1,2
+			不可以组合的房型为
+				A与B的交叉组合  A1B1、A1B2、A2B1、A2B2
+				C与D的交叉组合  
+			可以组合的房型
+				所有其他组合。A1A2、A1C2、A1D2   A2C1、A2D1等
+
+			当前系统架构下，暂时不能支持这种情况的房型组合。
+			我们考虑了多种方案解决这个问题
+				第一种是在特定gds解析时，将房型组合，按照组合房型在系统中处理。
+				第二种是在外部修改架构，来适应这种情况的房型组合。
+
+			第一种又分为两种情况，
+				一种方式是自己组合
+					1、在解析过程中判定哪些房型可组合到一起，哪些不可以组合。
+						首先我要去判断最终会有多少组合结果
+						其次考虑怎么去存储这些数据，其中涉及到多层的判断循环，或者使用递归才能实现。
+				另一种是
+					1、将房型拆分为不组合的结果。
+					2、调用组合模块进行随机组合。（一开始同时调用了房型过滤功能）。
+					3、过滤组合结果，抛弃不符合条件的组合。
+			第二种情况，考虑后感觉不能适配所有情况，没有后续深入分析。
+				不组合：room内没有标识combine
+				全部组合：hotelRooms下 room只能有相同的identifier。
+				部分组合：hotelRooms中的room可能存在多个roomType，每个roomType下不能有不同的identifier。
+		引申：
+			可能还会遇到其他的房型组合问题，比如A1只能和A2组合。情况可能会更复杂。但是，还是在gds解析过程中先组合再过滤更容易实现。
+
+====================2017年6月5========================================
+周一：
+	1、晚上八点，上线miki7 ！！！！！！！！！！！！！！！！！！！！！
+	2、完成booking逻辑。
+	3、
+====================2017年6月3========================================
+周六：
+	1、进行cancel接口开发。
+	2、进行book、cancel接口测试。
+	3、静态数据接口开发。
+====================2017年6月2========================================
+周五：
+	1、进行book接口开发。
+	2、开发政策接口，使用了一天时间 /(ㄒoㄒ)/~~
+		   请求返回的是政策的规则，根据我们的房间去适配规则，从而组合出政策信息。
+		   注意，因为规则是酒店工作人员人为设置的，考虑容易出现问题，需要在ExCancelDays相同情况下记录错误日志，并抛弃报价。
+	3、开一个蘑菇账户 蘑菇账号  密码
+		123458 yangzp yang@1987
+====================2017年6月1========================================
+周四：
+	1、开发政策接口。未进行
+	2、处理error情况。
+	2、完成search接口测试。
+		 确认elevenInfo接口返回组合好的房型，解析方式不同。需要重新构建内容。
+		 因gds登录问题，导致无法测试。
+	3、回复11info，
+		静态数据请求，如何获取全量数据。猜测是可通过静态数据页面获取。
+	4、miki7接口验价成功率低
+		supplierName不稳定问题
+		roomNumber显示数字的顺序问题。
+====================2017年5月31========================================
+周三：
+	1、完成elevenInfo  Search开发。
+	2、完成搜索模板的编写，测试使用。
+	2、开发政策接口。
+	-----------------------
+	测试发现，搜索儿童后，都没有儿童价格，需要确认gds不会收儿童价格吗？或者是已经将价格加在房间内了，但是没有单独显示。
+	搜索条件必须指定房型与人员数量信息，在不指定房型情况下，我们需要rewrite多个房型。
+	餐食字典数据、roomType字典等字典数据一直没找到，需要与客服确认。
+
+====================2017年5月27========================================
+周六：
+	1、开始elevenInfoSearch功能开发。
+====================2017年5月26========================================
+周五：
+	1、上吐下泻，请假一天。
+====================2017年5月25========================================
+周四：
+	1、在上午11点前后，travcov7连续出现6个验价失败，经查看，是同一家酒店KAL3失败，预计是酒店问题。
+	2、miki7验价失败发现两条3352错误，需要继续观察。
+	3、elevenInfo
+		<AgentId>PTES</AgentId>
+        <LoginName>XMLTV3</LoginName>
+        <Password>XMLtestV3</Password>
+		基于xml的开发流程
+		search：searchAvailability
+					——>doAvailability
+				searchSupplierAvailability
+					——>doSupplierAvailability
+		fstVerify:verifyAvailability
+				  getAvailability
+					 	——>getAvailability
+		secVerify:verifySupplierAvailability
+				  	——>getSupplierAvailability
+				  		——>doSupplierAvailability
+				  querySupplierAvailability
+						——>doSupplierAvailability
+				  
+====================2017年5月24========================================
+周三：
+	1、miki7验价失败
+		是否是第三方酒店判断错误:thrid parth 与 3rd party的差别
+		导致roomRateId拼写错误。
+	2、travcov7，OTA验价几乎全部失败。
+		与hotelName和roomTypeName有关。已经修改并提交代码。
+			后经与杨哥和南哥讨论，鉴于travcov7接口验价返回subhotel，hotelName不能与搜索返回内容一致，去除杨哥在OTA验价中对于hotelName的校验逻辑。最终，只需要将search与verify中的内容保持一致即可，因此，修改了roomName与breakfast相关内容。		
+			ratePlanDetails 中遇到一个描述Deluxe-Room Only-Asian Market excl Japan
+				需要考虑是否添加逻辑过滤japan？
+	3、安排11info开发
+		SerchHotel	http://xml.travflex.com/godzilla/csws/search.php
+		ViewCancelPolicy	http://xml.travflex.com/godzilla/csws/viewcancel.php
+		BookHotel	http://xml.travflex.com/godzilla/csws/booking.php
+		AcceptBooking	http://xml.travflex.com/11WS_SP2_1/ServicePHP/AcceptBooking.php
+		CancelReservation	http://xml.travflex.com/godzilla/csws/cancelbooking.php
+		GetCancelPolicy	http://xml.travflex.com/godzilla/csws/getcancelbooking.php
+
+		        <AgentId>PTES</AgentId>
+        <LoginName>XMLTV3</LoginName>
+        <Password>XMLtestV3</Password>
+====================2017年5月23========================================
+周二：
+	测试travcov7静态数据接口。
+		静态数据部署服务器
+			101.200.211.58  ec2-user Maliao1980
+			需要使用root用户解压缩执行脚本  sudo su
+
+	了解11info接口，准备开发。基于webService 但是没提供wsdl，以xmlElement实现解析。
+====================2017年5月22========================================
+周一：
+	完成travcov7静态数据下载接口
+
+====================2017年5月20========================================
+周六：
+	开始进行travcov7静态数据下载代码编写。
+	上线miki7 
+====================2017年5月19========================================
+周五：
+	1、在sit下部署正式miki7接口，进行测试。
+		在处理密码时，key末尾多了一个空格，导致一直找不到密码。
+		本地测试，可能是有白名单问题，导致访问失败。
+	2、miki静态数据sdk不完整，已与gds沟通，预计下周可用。
+	3、
+====================2017年5月18========================================
+周四：
+	1、部署dev下travcov7，给盖阔抓取数据使用。
+	2、了解到miki信息。
+		在sit部署miki正式环境测试。
+		修改代码中对url、password的读取，通过读取数据库配置实现。
+	3、编写获取miki静态数据代码（未开始）
+
+
+--------miki7接口疑问---------------
+	1、询问正式接口是否需要将小孩转成人。
+	2、询问正式接口是否每天更新密码。
+	3、询问正式接口是否有白名单。
+====================2017年5月17========================================
+周三：
+	1、测试为什么有的时候不能发出请求？
+	2、询问miki7客服，正式接口是否有白名单。
+	3、再次遇到，下单失败且没有下单记录情况
+		原因是miki7的identifier太长，超过了order中的字段长度。增加长度解决了问题。
+		biz_hotel_room   room_rate_id  从255修改为1024
+		biz_order_log    rate_id 从255修改为1024
+	4、遇到服务器时区不是原有时区，被修改了。杨悦修改回来后，下单失败问题解决。时区影响了在时间转换的功能。
+	5、从南哥那得知ratePlan概念
+		为了能够方便的管理房间资源，使用规则叠加方式实现对房价的控制。主要涉及到的规则为：房型、来源、时间段、政策等几大类。
+	6、引用类型，原子操作
+		https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.7
+
+====================2017年5月16========================================
+周二：
+	提测准备：
+	1、测试7次请求平均响应时间超过多少秒。
+	2、询问miki客服，文档How is the XML feed de-activated and re-activated (automatically/manually) 是什么意思。
+	3、测试遇到roomNo必须从1开始错误，修改了在book前的room存储，使用了treeMap排序。
+	4、测试感觉政策处理有问题，修改了改名修改政策，根据allowModifications统一处理改名与修改。
+TODO5、戴斯滑铁卢酒店/Days Hotel London Waterloo    查询6月15-16号房间失败
+		预测是mapping数据的问题，在其他酒店可以查询到。
+	6、
+
+	-------------------
+	查找文件中数据：
+	grep "2017-05-16 00:25:45.739" /webAppLog/booking/webApp.log | awk -F 'BookingHotelDto:' '/HotelBookingService/{print $2}'
+	grep "2017-05-16 10:41:43.853" stdout.log | awk -F 'SearchResponse:{"response":' 'print $2'
+
+
+	找到正式接口。
+
+
+====================2017年5月15========================================
+周一：
+	miki7测试
+		提示identifierid不对，修改了在booking参数，需要传输room的totalPrice。因为order中并没有提供room的totalPrice，所以使用了roomCode来运输了totalPrice，因为roomCode在这个流程中没有使用到，所以认为这样处理是安全的。
+		发现在取消时，使用的接口是booking的地址，但是取消成功了。还需要再验证一下到底怎么回事。
+		没有找到正式接口的地址。
+	miki提测需要提交两个文件。
+		需要提供请求响应的报文。
+
+	miki报文查找方式：
+		verify报文，在211.58日志中查找。正式上线时，去掉自己加的报文。
+		booking报文，在biz_booking_xml_log中查找
+------------------------------
+	关于HTTPS请求问题:
+		服务端为了保证数据安全，会与客户端达成安全协议，对交互数据进行加密。
+		有两种实现方式：
+			1、服务器端提供安全证书，客户端验证是否可信，可信则进行信息交互。
+			2、服务端提供安全证书，同时要求客户端提供证书，互相可信才可进行交互，主要应用在银行等金融服务领域。usbKey则是一种。
+		一般的，浏览器保存有自己的安全证书，用来验证服务器证书，如果证书不存在，则需要人为确认是否继续通信。在java服务器中，一般也有安全证书，如果证书不存在，则会报错sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+		可通过，跳过验证证书，或者在服务器中添加可信证书解决。
+		详细代码如下：
+		SSLContext sslcontext = SSLContext.getInstance("SSLv3");
+
+        // 实现一个X509TrustManager接口，用于绕过验证，不用修改里面的方法
+        X509TrustManager trustManager = new X509TrustManager() {
+            @Override
+            public void checkClientTrusted(
+                    java.security.cert.X509Certificate[] paramArrayOfX509Certificate,
+                    String paramString) throws CertificateException {
+            }
+            @Override
+            public void checkServerTrusted(
+                    java.security.cert.X509Certificate[] paramArrayOfX509Certificate,
+                    String paramString) throws CertificateException {
+            }
+
+            @Override
+            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                return null;
+            }
+        };
+        sslcontext.init(null, new TrustManager[] { trustManager }, null);
+
+        // 设置协议http和https对应的处理socket链接工厂的对象
+        Registry<ConnectionSocketFactory> socketFactoryRegistry = RegistryBuilder.<ConnectionSocketFactory>create()
+                .register("http", PlainConnectionSocketFactory.INSTANCE)
+                .register("https", new SSLConnectionSocketFactory(sslcontext))
+                .build();
+        PoolingHttpClientConnectionManager connManager = new PoolingHttpClientConnectionManager(socketFactoryRegistry);
+
+====================2017年5月13========================================
+周六：
+	1、miki测试流程
+		通过postman发送search，找到search数据，取其中一个，取其基础数据与rateIdList,进行check拼接，实现验价请求。获取验价数据，构建booking请求。构建cancel请求。
+	2、dev日志查询
+		101.200.180.242:22 (devbook101.200.180.242)
+		yangzp
+		yang@1987
+		/home/ec2-user/app/x-booking/xbshell-1.0-SNAPSHOT/log
+		/webAppLog/booking   这个下面是按天分的
+
+	-------dev配置环境-------------
+	book、search日志存放在sit下的searchonly库中。配置文件在dev库中。
+	<3>SIT
+		mogusitdb.cfp9fmbnxgi0.rds.cn-north-1.amazonaws.com.cn
+		DB: mapping
+		user: sitdb
+		newpwd: JDklljdKLDJKLji
+		searchonly
+	DEV
+		101.200.211.58
+		mapping
+	--------sit配置环境--------------------------
+
+====================2017年5月12========================================
+周五：
+	1、RoomRateCode使用了subhotelID与 priceCode两部分组成，在预定完成后的room填充核对时，使用了RoomRateCode与booking中的price对比，导致存储RoomReferenceCode失败。
+	2、roomType，用来展示房间类型 TWIN、Double等
+	3、miki7接口测试，book接口在自己构建的数据上总是不能正确实现。明天核对报文
+====================2017年5月11日========================================
+周四：
+	1、上线travcov7接口,发现问题调试解决。
+	   首先发现的是gds为我们赋予的权限不对，其次是状态细化部分发现问题，在处理状态细化过程中，对Order的理解不到位，在booking结束前，order要一直延续使用，不应该new。
+	
+====================2017年5月10日========================================
+周三：
+	1、调试miki7接口。
+	2、上线travcov7接口
+	----------miki7调试过程中遇到的问题--------
+	1、配置cityMap实现城市代码的对应
+		直接将原来miki数据复制为miki7，通过insert select 插入库中。
+	2、配置hotelMap 实现酒店mapping
+		直接将原来miki数据复制为miki7，通过insert select 插入库中。
+	3、配置BreakfastMap
+		处理对与餐食的解析。
+	4、reload静态数据，具体地址如下，注意ip与service类型
+
+
+	101.200.211.58:9015/cn.mogutrip.base.hotel.service.HotelMapService?application=HotelSearch-dev&dubbo=2.8.5&interface=cn.mogutrip.base.hotel.service.HotelMapService&methods=reload,findByCode,load,findById,findAll&pid=11792&protocol=dubbo&revision=1.0-20170526.033718-16&side=consumer&timestamp=1499160462232
+	----------------------
+	x-search reload操作
+	dev环境
+	http://101.200.211.58:8516/services/hotel/reload/BreakfastMap
+	sit环境
+	http://54.222.188.222:8516/services/hotel/reload/BreakfastMap
+	http://54.222.188.222:8516/services/hotel/reload/Supplier
+	new reload service:
+	http://54.222.188.222:8516/services/reloadManager/xsearch/reloadSupplier
+	http://54.222.188.222:8516/services/reloadManager/xbooking/reloadSupplier
+
+	prd环境
+	http://59.110.27.105:9016/services/hotel/reload/BreakfastMap
+	http://59.110.27.105:9016/services/hotel/reload/Supplier
+	new reload service:
+	http://59.110.27.105:9016/services/reloadManager/xsearch/reloadSupplier
+	http://59.110.27.105:9016/services/reloadManager/xbooking/reloadSupplier
+	
+	
+	---------
+	x-base reload操作
+
+	Dev环境： 
+	http://101.200.211.58:9016/services/manageService/reloadAll 
+	http://101.200.211.58:9016/services/hotelMapService/reload 
+
+	 Sit环境： 
+	http://54.222.188.222:9016/services/manageService/reloadAll 
+	http://54.222.188.222:9016/services/hotelMapService/reload 
+
+	 Prd1环境： 
+	http://59.110.40.18:9016/services/manageService/reloadAll 
+	http://59.110.27.105:9016/services/manageService/reloadAll
+
+
+
+	单独reload的URL(开发环境例子，需要修改ip)
+	http://101.200.211.58:9016/services/hotelMapService/reload
+	*****/services/cityLocationService/reload
+	*****/services/cityMapService/reload
+	*****/services/cityService/reload
+	*****/services/hotelMapService/reload
+	*****/services/hotelService/reload
+
+====================2017年5月9日========================================
+周二：
+	1、测试miki7接口测试。创建dev下miki7账户
+		登录：miki7 miki7    miki7mogu3321
+	2、梳理每个接口中重要的数据项。
+	3、解决idea中使用全局代理问题。
+	4、下可取消单，测试是否正常。
+		后续几天，观察验价、下单报文、验价成功率，处理异常情况。
+-----------------------全局代理-----------------------------------
+	idea在设置中有关于代理的设置, 但在使用中发现这里设置的代理只对idea有效, 对idea的插件无效
+
+	这里遇到在使用 idea.goxz.gq 激活 JRebel 插件时, 由于反向代理服务器在国外, 导致 JRebel 无法连接到服务器, 研究了下怎么全局使用代理, 具体方法为在 idea.exe.vmoptions 及 idea64.exe.vmoptions 中追加
+
+	-DproxySet=true
+	-Dhttp.proxyHost=127.0.0.1
+	-Dhttp.proxyPort=1080
+	127.0.0.1为HTTP代理服务器地址
+
+	1080为HTTP代理服务器端口
+
+	我这里电脑上有使用 ShadowsocksR , 这软件默认会给系统提供一个 sock4/sock5/http 代理, 端口默认为 1080, 如果你有使用 ShadowsocksR , 并且没有修改过默认端口, 则追加信息和我一样即可, 如果没有使用, 就需要自己去网上找 HTTP代理服务器并修改追加信息了.
+
+	注: 这个方法理论对 Java 的程序都有效.
+====================2017年5月8日========================================
+周一：
+	完成miki7新接口测试。
+
+====================2017年5月6日========================================
+周六：
+	1、测试booking、Cancel接口。
+	2、将giata数据获取服务启动起来。
+		考虑使用python实现数据解析。
+	-----------总结--------------
+	1、本周主要完成了Search的编码测试工作，以及booking、Cancel的编码工作。
+	2、收获：对系统处理的流程有了更清晰的认识，为了兼容多种gds接口，我们的接口设置了最全的数据项。只要在一个gds处理过程中，将Search、verify、booking、cancel中每一个流程的数据保持一致就没有问题。
+	3、在这个基础上，其实可以考虑接口通用化。通过配置来完成接口的解析，这样能够一定程度上减少编码量。
+	
+	解决方案：基于原始报文进行数据抓取与转换。
+		说到底，我们还是在处理报文之间的交互，通过在报文之上建立一个模型层，针对不同的gds拼接不同的报文格式，通过对报文解析，最终拼接实现数据转换传输。
+	难点：
+		roomRateId ——> roomId+RoomType
+		实现涉及面太广，对系统底层架构有巨大冲击。
+
+====================2017年5月5日========================================
+周五：
+	1、判断Search中如何实现验价。
+	2、完成miki7验价接口测试。
+	3、开发booking、Cancel接口。
+====================2017年5月4日========================================
+周四：
+	1、进行Search接口测试。
+	2、深入理解Search流程。
+	-------------------------
+	roomtype为空   系统中没有使用roomtype，使用了roomTypeCode
+====================2017年5月3日========================================
+周三：
+	1、完成miki7 Search功能开发。
+	2、开始Search测试。
+	3、明天请教修正Search的问题，
+		一个是policies的问题
+		一个是rooms与roomindex的问题
+	
+	-------------------
+	1、请求xml的格式转换问题。
+	2、返回xml的解析方式。
+	3、确认roomNumbers的意义
+	4、请求后，返回数据量过大，导致postman看起来一直在等待。两种解决方案。
+		1、通过控制hotelcode减少数据量
+		2、通过异步请求，设置limit 减少数据量
+	5、rm，通过判断它满足哪一个request的room，从而将rm分配到不同的roomtype中。
+		miki7中返回数据中，通过numbers告知了rm适应request中的哪个房间。
+		在response中如果没有指定满足哪个房间，一般通过房间人员数量来判断是否可以将rm放置到对应的roomTypes中。
+	6、policy中，amount中存放数值或者百分比，通过feeType指定应该怎么来计算费用
+====================2017年5月2日========================================
+周二： 
+	1、完成travcov7状态细化后接口测试。
+	2、travcov7测试问题解决
+		1、添加search的过滤，超过九个人就不进行查询。
+		2、修改agentText内容，将特殊要求部分移动到HotelRequest中。
+		3、去掉agentText中，关于traveller的内容，排查这部分内容是否需要保留？
+	3、miki查询接口开发工作。
+		 需要考虑，在将room拆分后，价格单算后，怎么样进行预订？
+
+====================2017年4月28日========================================
+周五： 
+	1、完成travcov7状态细化需求开发。
+	2、miki状态细化，需要注意，取消成功后，可能返回错误信息，提示：取消成功。
+	3、开发miki7接口。
+====================2017年4月27日========================================
+周四： 
+	1、travcov7状态细化需求了解。
+	2、travcov7功能测试。
+	3、miki7接口开发。
+		已经使用roomNumber进行了分组，只要进行组合然后计算总价就好。
+
+	-------------miki7验价逻辑实现思路-------------
+	一、查询后，通过多个字段唯一标定一个roomOption，重新查找一次roomOption。
+	思路1：
+		使用唯一标定字段，查出验价对象。
+	思路2：
+		查询出多个数据，使用多个唯一标定字段(productCode\roomTypeCode\roomNumber\identifier)过滤。
+
+	解析过程中，要将重要数据存储到结果中，以备一次验价、二次验价使用。
+	需要了解，哪些数据是会被保存到下次请求的。
+	二、miki分组，根据roomNumber重新组合。
+
+
+====================2017年4月26日========================================
+周三： 晴 热
+	1、测试miki7接口
+		rateIdentifier 是否和session相关。相关，需要考虑使用什么构成唯一标识预订
+	2、开发miki7接口 Search功能
+	3、学习使用jenkins发布sit环境系统，进行系统测试。
+	------------------------
+	less log  
+	shift+G 查看文件最后，
+	G 返回文件开始。
+	travco7  可搜索查看配置数据是否正确。
+	travco7 测试网站 sit.search.mogubang.cn:1080
+		conmpany : travcov7
+		user: travcov7
+		pwd: travcov7mogu3321
+
+		jdk 文档 密码020916YY9JF
+			Web Service Doc Ver 7 0 02_020916YY9JF.pdf
+			Supplementary Document Web Service Ver 7 0 02_020916YY9JF.pdf
+	配置访问jenkins 
+		host：
+		54.223.61.98 sit.search.mogubang.cn
+		54.223.42.142 sit.jenkins.mogubang.cn
+		地址：http://sit.jenkins.mogubang.cn:8080/jenkins/
+		yangzp   123456xX
+====================2017年4月25日========================================
+周二： 阴 微冷
+	1、归纳miki新接口变化。
+	2、汇报讨论接口变化问题。针对部分不确认变化，冠南哥已邮件miki询问。
+	-------------------------
+	应该在英语上多下点功夫，主要是读与写。
+
+====================2017年4月24日========================================
+周一： 晴
+	1、完成miki验价、政策、预定、取消接口的基础测试开发。
+	2、协助杨悦进行环境搭建与部署，准备测试travco的新接口。
+	3、
+------------体系---------------
+	1、Factory创建supplier Service.
+	2、调用服务，提供通用的基本查询、验价逻辑。service可单独实现其逻辑也可不处理，使用父类已经实现的逻辑。
+	3、如果供应商没有提供验价接口，默认我们使用Search接口实现验价。
+		一次验价与二次验价，如果供应商不区分，则实现不区分。
+		如果供应商区分，则区分实现。
+---------------Miki7------------------------------------
+	1、接口变化
+		整体变化较大，请求结构与返回结构都有很大变化。
+		但是，当前处理的数据，新接口中都是有的。相当于重新写一个新接口。
+	2、查询接口Request
+		当前处理字段：currency、getNationality、ProductType、BookingDate、ServiceDate、productCodes、CityNumbers、RoomNumber、NumberOfAdults、Children、SubProducts
+		不存在字段:ProductType、BookingDate、ServiceDate、PaxDomicile、SubProducts
+		新增字段:priceCriteria（可选）、starRating、roomTotalPrice、
+		Price: the price for the room
+		recommendedSellingPrice - If provided, gives the RSP for this room
+		nonOfferPrice - If provided gives the price before any Special Offer was applied
+		tax：This feature is not currently supported.
+		重点：
+			日价格，没有extrabed价格	
+			rooType没有对应的类型。获取房间人员数量不再需要这个逻辑。
+			roomIndex-->roomIdentifier 
+				Encrypted string that contains information required if a booking is to be made.
+
+	3、疑问：
+	agentMarkup不太理解什么意思。
+	考虑这四个数据怎样从Search到Book：
+		setRoomNo\setRateIdentifier\setRoomTypeCode\setRoomTotalPrice|setProductCode
+	考虑miki与travco分别是用什么来处理Search与Booking之间的关联的。
+		再searchResponse中，必须将重要信息塞进去，再Book的时候再取出来使用。从Booking来找就对了，去除人员信息、订单信息、其他就应该是从Search拿过来的。
+
+
+====================2017年4月22日========================================
+周六：
+	1、例会
+	2、读miki文档，完成查询接口
+====================2017年4月21日========================================
+周五：
+	1、测试问题：进展缓慢
+		使用postman发送请求，通过观察报文来确认服务是否正确。
+		好处是，可以了解更多程序的细节。
+	2、完成前4项基础测试，以及一项取消收费测试。
+		因为travco使用了mainhotelid与subHotelid，我们Mapping时，需要修改我们的hotelid对应到travco的mainhotelid。
+		进行环境测试。部署环境可在周一完成，周二测试，顺利的话周三可提测。
+	3、再看一遍search流程与booking流程。
+		Serach：
+			1、mapping在哪里？
+			2、rewrite在哪里？
+			3、哪些字段是特殊处理的？怎么处理的？
+			4、哪些数据是必须的？
+		Booking：
+			roomRateId标识了多个属性唯一确定一单
+			RoomRateCode用来标识唯一价格与subhotel。
+			referenceId用来标识已下订单，作为取消凭证。
+
+	4、了解miki新旧接口有什么不同。
+
+====================2017年4月20日========================================
+周四：
+	1、取消下单，根据orderid进行判断，如果此orderid下过多单，则返回所有相关单号的取消情况。
+	2、查询、验价后下单，总价降低了。原因是因为infant是不收费的，而child需要收费。
+	3、book下单时，会判断roomRateid是否有重复，相同roomRateid会被认为是相同的Quote(房型)将其中的人员情况合并。roomRateId一般指两个room有完全相同的属性：roomonly/breakfast/Double...在下单时，测试单，需要配置两个Double或者Twin有相同的roomRateid，这样才能保证下单成功。其中，rooms是指一个quote下有几个房间，本地使用，与gds无关。
+	4、
+====================2017年4月19日========================================
+周三：
+	1、数据库权限访问是在什么地方控制？
+	2、测试travcov7接口
+    3、下单关心五个返回值：price、currency、refenceCode、voucherRefenceCode、Status
+
+
+	-------travcov7接口测试要求---------
+	When you have completed your development, we will be asking you to supply us with a test site where we can test for the following:
+
+	a)A booking for a twin bedded room
+	b)A booking for a twin bedded room with an extra bed (child)
+	c)A twin bedded room with a extra bed and an infant.
+	d)A booking for a double, a single and a triple
+	e)A booking for 2 single rooms and 2 doubles, with a child in an extra bed in one of the double rooms and an infant in the other.
+
+	f)If you will be sending amendments via xml, we will be testing for an amendment to an arrival date, where cancellation charges are applied to the dates no longer required.
+	
+	g)If you will be sending cancellations via xml, we will be testing for a cancellation within a cancellation charge period.
+
+	h)If you will be making pending (on request) bookings, we will be testing for a pending booking.
+	i)We will be checking that you are sending a  Previous Booking Enquiry request before each cancellation, to pick up the latest details of the booking from the Travco server.
+	j)We will be checking that you do not send amendments for:
+         i. A pending booking (P status), which has been confirmed by Travco (BX status).
+         ii. Where the client is amending a confirmed booking to a date where there is no availability
+	
+	k)We will be checking that the cancellation charges displayed on your site for the Travco hotels are at least those of the Travco cancellation policies.
+=====================2017年4月18日========================================
+周二：
+	1、安装jrbel，在本地搭建运行环境。测试trovcov7接口，因白名单问题，暂缓。
+	2、配置本地测试环境
+		1、修改mapping库，配置travov7。详情查看文档1配置config。
+	3、搜索功能，代码逻辑梳理
+	4、看miki接口文档
+	-----------------------------------------------
+	  ？1、排序Rooms。为了满足，在搜索出不同房型后，前后顺序算作是两个房型问题。
+	  			还是不太理解。
+		2、判定是否满足Supplier要求：提前N天预订
+		---提供代理接口使用以下服务------
+		3、检测hotel与supplier为空的情况
+		4、获取supplerService、创建supplierRewriter
+	  	5、存duplicateKey到Redis，设定过期时间1分钟。
+	  		拦截重复请求
+		6、调用rewrite，avRequest重写为avRequests请求。
+		7、发起搜索请求。
+	-------------
+		Search
+			request：location(hotel\region)、period(in\out)、rooms(index\nPerson)、additionalData
+			response:hotel、nRoom、Price(price+taxPrice)、period、cancellationPolicies
+		Booking
+			request:hotel、period(in\out)、rooms(index\nPerson)、Price、
+			response:Price(total+details)、hotel、period、rooms
+	
+=====================2017年4月17日========================================
+周一：
+	1、解决在百万数据量时的快速删除问题。
+		将唯一ID与删除使用的字段分别建立索引，实现快速删除。
+		提升了百倍的效率
+		children字段长度短，导致程序异常退出。但是后续代码依然运行了，需要修改异常处理逻辑
+			修改方向：
+				出现异常时，一个是停止所有逻辑、一个是处理错误后，继续运行。当数据库出现异常情况，将异常数据记录入库，停止运行。
+		任务：添加任务执行giata数据拉取，每天0点运行一次。
+	2、通过梳理接口变化，记录接口的变化，开会讨论变化情况以及修改方向。
+		请求参数、返回数据
+		功能流程实现与接口功能对接
+			搜索（城市搜索、单酒店搜索）
+			验价
+			预定
+			取消
+	3、进行接口代码修改。
+	4、异常处理
+	5、计划周四完成travcov7的本地测试。
+		
+	
+
+=====================2017年4月15日========================================
+周六：
+	4分钟，1000条
+	1000000条数据，需要2.7天完成。
+	读文档：
+		1、sub Hotel是什么概念
+			With this new response Message, the avalilability information for
+		each sub hotel is returned in a seprate "SubHotelData" segment.
+		The sub hotels are returned in ascending price order.
+
+		--------------------------------------------
+		1、
+
+
+
+=====================2017年4月14日========================================
+周五：
+	1、booking接口变动
+		1、增加了MainHotelCode，描述了识别mainHotel的一个字符串。
+		2、增加了RatePlanDetails，描述了订单详细内容
+	2、email自动发送功能所在工程：209_x_schedule
+	3、booking业务流程
+		HotelBookingService-->Invoke
+				-->toSupplier-->doRequest-->fromSupplier
+	4、未进行任务：登录linux系统，使用cronTab执行定时任务。
+		==========================
+		//TODO:等这次任务执行完成后，再设置定时任务。
+	5、发布到服务器giataHotel数据拉取
+		101.200.211.58
+		ec2-user
+		Maliao1980
+		登录方式Xshell5
+	----------------------
+		
+		进入ec2-user目录
+		cd ec2-user
+		过滤文件
+		ps -ef | grep update
+		rm -rf xshell-1.0-SNAPSHOT/
+		查看文件最后一行
+		tail -f stdout.log
+		上传tz包  
+		rz
+		解压文件
+		tar -zxvf xshell-1.0-SNAPSHOT-assembly.tar.gz 
+		执行shell脚本
+		sh start.sh
+		修改打包文件start.sh格式fileformat。doc||unix
+		set ff=unix
+		查询fileformat
+		set ff
+
+		curl http://localhost:6617/services/data/updateGiataData
+
+		查看日志记录：
+		tail -f stdout.log
+=====================2017年4月13日========================================
+周四：
+	1、更换giataHotel数据库。
+		外网：rm-2zehra4b3vu4i4x31.mysql.rds.aliyuncs.com
+		内网：rm-2zehra4b3vu4i4x31i.mysql.rds.aliyuncs.com
+		库：maindatadb
+		账号：mg_maindata_prd1
+		密码：jdfJ*#9j3j20u0UEu0au
+	2、了解日志系统。
+	3、接口分析。请教肖修正。
+	-------------travo接口分析---------------------------------------
+	1、WebService
+		[{"latitude":"4.00811","accuracy":"address","longitude":"72.949376"}]
+=====================2017年4月12日========================================
+周三：
+	1、完成数据入库流程。
+	3、开始跑数据。
+	------------------------------
+	1、级联删除相同id hotel。
+	2、插入新数据。
+		时间类型处理：2017-04-04T03:13:06+02:00
+=====================2017年4月11日========================================
+周二：
+	1、完成开发任务并测试修正。
+	访问数据地址
+	 http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/since/2017-01-15
+	
+-----------------giata用户密码----------
+	User: xudong|mogutrip.cn
+	Your password is: tBGPKQec
+
+=====================2017年4月10日========================================
+周一：
+	1、请假。处理家中的事情。
+=====================2017年4月8日========================================
+周六：
+	1、开周例会，了解系统当前阶段以及面临的问题。
+	2、实现数据拉取导入数据库。
+		1、完成了请求部分、xml解析的一部分。
+		2、不考虑多线程，直接全部数据获取。
+		3、剩余工作：
+			创建两个实体对象。
+			解析xml实现实体的填充。
+			每次请求的一千条数据，一次性入库。
+				校验，如果有重复数据，则执行删除后插入策略。
+				校验完成后，入库。
+				
+				周一考虑这种方案：
+				1、入库临时表。
+				2、两表关联，取相同id，删除旧表数据。
+				3、从临时表导入旧表数据。
+				4、清空临时表。
+=====================2017年4月7日========================================
+周五
+1、熟悉search流程。
+2、了解请求前的细节。
+3、新需求，拉取giata数据
+	----------------------
+	1、开发为一个定时执行的服务。
+	2、执行完成将日志通知以邮件方式通知。邮件地址可配置。
+	3、并发获取增量数据，需要一个唯一id标识，实现重复的任务获取：
+		http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi
+			/country/DE/since/2016-07-15
+		使用Details of several properties within one request请求数据，限制每次最多1000 家hotel，超过后，提供后续的链接
+		<more xlink:href="http://multicodes.giatamedia.com/webservice/rest/1.latest/properties/multi/country/DE/since/2016-07-15/offset/1122"/>
+		使用HttpClient访问接口读取xml
+		Param:country、date。
+		增量请求则使用上次请求的date，需要将date存储。
+		记录每次获取数据的开始时间与当前时间，写入日志。再任务失败后，可重新执行这次任务，关键字段：本次请求标识id，本次请求url;
+		请求异常处理：404、401 unauthorized, 403 forbidden
+	5、实现xml到实体的解析类。
+		解析规则按照南哥要求。
+		创建两个实体，对应giataHotel\GiataHotelMapping，每次最多处理1000条Hotel数据。
+	6、数据存储
+		数据对比，将1000个giataHotelId对应数据条目从数据库中取出，可能不够1000条。
+			对比每一个字段，通过update、insert实现数据更新。
+			Mapping数据，根据giataid，全部delete后
+			具体实现难度，要考虑框架完善情况。事务、批量处理、异常处理、log记录。
+		如果异常，失败，则重试流程。
+	7、重复数据删除
+		http://multicodes.giatamedia.com/webservice/rest/1.0/properties/moved/
+		检测是否有giataid删除的情况，通常发生在重复数据删除的操作过程中。
+		giataId、movedTo、movedOn移动时间、xlink:href详情查看url
+		从我们的库中删除giataId对应的数据，以及相关的Mapping。
+	------------
+	库表设计：
+		dataRequestLog：requestID、requestUrl、requestCountry、requestDate、responseTime、responseCount
+		giataHotel：giataID、lastUpdate、name、cityID、destinationID、country、alternativeNames、ratings、addressLine、street、streetNumber、cityName、locality、postalCode、stateProv、additionalAddressInformation、country、phone、email、url、latitude、longitude、providerCode、providerType、value、chain
+		
+		GiataHotelMapping：	ID、GiataSupplierID、GiataPropertyCode、SupplierCode、Status
+
+	程序设计：
+		入口
+			获取所有country 2 letter code，并发访问Feture，检测Feture状态
+			每次发起两个线程，当其中一个结束后，再发起下一个。3小时
+		流程：
+			发起请求xml = getXmlData(url)   5小时  构建、测试
+				记录第一次发起的请求：id,country、date、updateHotelCount
+			获取xml-->解析xml-->生成entity  3小时  表、entity、dom解析
+									-->数据入库-->入库成功
+									           -->入库失败
+													失败数据记录hotelid OR mappingid
+									-->解析链接-->获取url，继续访问getXmlData(url)
+			所有Feture结束-->获取重复数据删除
+		模块设计：
+		giataHotelEntity(){
+			...
+			List<MappintHotelEntity> mappinglist;
+		}
+		main(){
+			new thread({
+				getXml((xml)->{
+					List<giataHotelEntity> giataHotellist = setEntity(xml);
+					
+					dataToDatabase(Entity);
+				});
+			});
+		}
+
+		dataToDatabase(List<giataHotelEntity> entityList){
+
+		}
+
+		难点：
+			httpClient请求、xml解析模块、入库模块异常处理
+
+
+
+=====================2017年4月6日========================================
+周四
+1、创建个人开发分支
+2、熟悉booking流程，了解架构。
+--------------project/module---------------
+使用基于IntelliJ的IDE，如phpstorm、android studio都会对project和module的关系比较糊涂。用简单的一句话来概括是：
+IntelliJ系中的Project相当于Eclipse系中的workspace。
+IntelliJ系中的Module相当于Eclipse系中的Project。
+IntelliJ中一个Project可以包括多个Module
+Eclipse中一个Workspace可以包括多个Project
+phpstorm中似乎在弱化Module的存在，把File菜单下的New Module菜单项目直接删除了。
+在Android studio中仍存在。
+Android studio中，一个Project代表一个完整的APP，Module表示APP中的一些依赖库或独立开发的模块。比如可以新建一个library做为module，然后在主APP上点右键 open module setting的Dependencies中添加一个模块依赖。然后主APP中就可以使用module中的类了。
+
+--------dubbo-----------------------
+1、配置文件
+2、Zookeeper  Server\Client
+3、Entity(DTO)的依赖？protocol依赖
+4、注册服务、发现服务
+5、Dubbo各主要功能
+	Zookeeper服务自动注册于发现
+	Dubbo Admin
+		透明化的远程方法调用
+		软负载均衡及容错机制
+	Dubbo monitor对Dubbo中调用的监控
+将服务部署在多个服务器上，通过简单配置实现服务的注册与调用，Dubbo内部则通过对服务的监控，动态优化服务的状态，实现服务的负载均衡。通过分布式部署与管理，实现了服务的水平扩展。
+-------业务-------------
+1、订单业务
+	客户请求:orderid,supplierId
+		|Invoke
+			|data To supplierData
+				|convert
+					--toSupplier  转换为接口数据
+			|httpRequest
+				--doRequest
+			|responseData To data
+				|convert
+					--fromSupplier 转换response数据为标准数据
+2、查询Gds详情	
+	queryGdsHotelInfo 
+----------创建个人分支------------------------
+--查看本地分支
+Administrator@USER-20160405FB MINGW64 /e/蘑菇旅行/project/204_x_booking (master)
+$ git branch
+* master
+--创建新分支
+Administrator@USER-20160405FB MINGW64 /e/蘑菇旅行/project/204_x_booking (master)
+$ git branch yangzp20170406
+--查看本地分支
+Administrator@USER-20160405FB MINGW64 /e/蘑菇旅行/project/204_x_booking (master)
+$ git branch
+* master
+  yangzp20170406
+--切换本地分支
+Administrator@USER-20160405FB MINGW64 /e/蘑菇旅行/project/204_x_booking (master)
+$ git checkout yangzp20170406
+Switched to branch 'yangzp20170406'
+--查看本地分支
+Administrator@USER-20160405FB MINGW64 /e/蘑菇旅行/project/204_x_booking (yangzp20170406)
+$ git branch
+  master
+* yangzp20170406
+--查看远程分支
+Administrator@USER-20160405FB MINGW64 /e/蘑菇旅行/project/204_x_booking (yangzp20170406)
+$ git branch -a
+  master
+* yangzp20170406
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/auto-test
+  remotes/origin/bugfix1.0
+  remotes/origin/develop
+  remotes/origin/develop1.1
+  remotes/origin/develop1.2
+  remotes/origin/develop1.3
+  remotes/origin/develop1.4
+  remotes/origin/develop1.5
+  remotes/origin/feature/Invode-GDS-Hotelspro
+  remotes/origin/feature/booking_interface_for_gta/jac
+  remotes/origin/feature/sujiaba
+  remotes/origin/feature/travcomiki
+  remotes/origin/fireline
+  remotes/origin/gartour_booking_merge_201702031653
+  remotes/origin/gta_travco
+  remotes/origin/master
+  remotes/origin/master_201702151617_merge
+  remotes/origin/master_chenzhen_201702201746
+  remotes/origin/mater_abreu_20170112
+--推送本地分支到远程
+Administrator@USER-20160405FB MINGW64 /e/蘑菇旅行/project/204_x_booking (yangzp20170406)
+$ git push origin yangzp20170406
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+Total 0 (delta 0), reused 0 (delta 0)
+To git@101.200.233.222:code/204_x_booking
+ * [new branch]      yangzp20170406 -> yangzp20170406
+--查看远程分支
+Administrator@USER-20160405FB MINGW64 /e/蘑菇旅行/project/204_x_booking (yangzp20170406)
+$ git branch -a
+  master
+* yangzp20170406
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/auto-test
+  remotes/origin/bugfix1.0
+  remotes/origin/develop
+  remotes/origin/develop1.1
+  remotes/origin/develop1.2
+  remotes/origin/develop1.3
+  remotes/origin/develop1.4
+  remotes/origin/develop1.5
+  remotes/origin/feature/Invode-GDS-Hotelspro
+  remotes/origin/feature/booking_interface_for_gta/jac
+  remotes/origin/feature/sujiaba
+  remotes/origin/feature/travcomiki
+  remotes/origin/fireline
+  remotes/origin/gartour_booking_merge_201702031653
+  remotes/origin/gta_travco
+  remotes/origin/master
+  remotes/origin/master_201702151617_merge
+  remotes/origin/master_chenzhen_201702201746
+  remotes/origin/mater_abreu_20170112
+  remotes/origin/yangzp20170406
+--进行开发完成后----------
+--将主系统版本merge到自己的版本
+
+
+====================2017年4月5日================================
+周三
+1、环境部署idea、maven、git
+2、邮箱密码：yangzp   Yang1987
+3、公钥名称 id_rsa_2048   密码123456
+4、服务器:yangzp  密码yang@1987
+5、公钥私钥的创建、tortorise终端配置、git用法（clone、update、gitSync、push、merge）、

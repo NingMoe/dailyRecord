@@ -1,0 +1,23 @@
+#!/bin/bash
+HOSTNAME="127.0.0.1"
+PORT="3306"
+USERNAME="mapping"
+PASSWORD="pam@mogu"
+DBNAME="mapping"
+TABLENAME="tmp_test"
+use_db_sql="use ${DBNAME}"
+
+
+
+
+
+
+
+mysql -h${HOSTNAME} -P${PORT} -u${USERNAME} -p${PASSWORD} -e "${use_db_sql}"
+insert_sql="insert into ${TABLENAME} values(7)"
+mysql -h${HOSTNAME} -P${PORT} -u${USERNAME} -p${PASSWORD} ${DBNAME} -e "${insert_sql}"
+
+ insert_sql="insert into ${TABLENAME) values(1,${supplierid},${serviceName},23,'2017-08-01')"
+        mysql -h${HOSTNAME} -P${PORT} -u${USERNAME} -p${PASSWORD} ${DBNAME} -e  "${insert_sql}"
+done
+~           

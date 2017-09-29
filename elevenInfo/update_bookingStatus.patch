@@ -1,0 +1,163 @@
+Index: x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/convert/miki7/MikiCancelConverter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/convert/miki7/MikiCancelConverter.java	(revision a925c065e047e100d7f034df44b5774079d6e687)
++++ x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/convert/miki7/MikiCancelConverter.java	(revision )
+@@ -5,7 +5,9 @@
+ import cn.mogutrip.core.common.exception.BusinessException;
+ import cn.mogutrip.hotel.booking.dto.*;
+ import cn.mogutrip.hotel.booking.supplier.convert.Converter;
++import cn.mogutrip.hotel.booking.supplier.convert.base.BaseCancelConverter;
+ import cn.mogutrip.hotel.booking.supplier.convert.base.BookingBaseResponse;
++import cn.mogutrip.hotel.booking.supplier.convert.base.SupplierApiType;
+ import cn.mogutrip.hotel.booking.supplier.convert.common.ResponseFactory;
+ import cn.mogutrip.hotel.booking.supplier.convert.miki7.entity.MikiErrorInfo;
+ import cn.mogutrip.hotel.booking.supplier.entity.GdsBookingInfo;
+@@ -28,46 +30,40 @@
+  * Created by yangyue on 16/4/25.
+  */
+ @Slf4j
+-public class MikiCancelConverter extends Converter<CancellationRequest,BookingBaseResponse> {
+-    public static String supplier_id = MIKI;
+-
+-    public MikiCancelConverter(Supplier supplier) {
+-        this.supplier = supplier;
+-    }
+-
++public class MikiCancelConverter extends BaseCancelConverter<CancellationRequest,BookingBaseResponse> {
+     public MikiCancelConverter(Supplier supplier, BookingStatusManager bookingStatusManager) {
++        super(supplier, bookingStatusManager);
+         this.supplier = supplier;
+         this.bookingStatusManager = bookingStatusManager;
+     }
+ 
+     @Override
+-    public CancellationRequest toSupplier(BaseDto dto) {
+-        if (dto!=null && dto instanceof CancelHotelDto){
++    public void setSupplierApiType() {
++        this.apiType = SupplierApiType.HTTP;
++
++    }
++
++    public static String supplier_id = MIKI;
++
++    @Override
++    public CancellationRequest convertToSupplier(CancelHotelDto dto) {
+             CancellationRequest cancellationRequest = new CancellationRequest();
+             cancellationRequest.setVersionNumber(MikiCommonConverter.getVersionNumber(supplier));
+             cancellationRequest.setRequestAuditInfo(MikiCommonConverter.createRequestAuditInfo(supplier));
+ //            cancellationRequest.setBookingReference(((CancelHotelDto)dto).getOrder().getBookingReferenceCode());
+             //TODO:测试取消失败的情况下处理是否正确
+-            cancellationRequest.setTourReference(((CancelHotelDto)dto).getOrder().getVoucherReferenceCode());
++            cancellationRequest.setTourReference(dto.getOrder().getVoucherReferenceCode());
+ //          cancellationRequest.setRequestType("cancellationRequest");
+ //          cancellationRequest.setTourReference(((CancelHotelDto) dto).getOrder().getReferenceCode());
+-            String request = StringUtil.classToXmlString(cancellationRequest);
+-            LogUtil.log(request);
++//            String request = StringUtil.classToXmlString(cancellationRequest);
++//            LogUtil.log(request);
+             return cancellationRequest;
+-        }
+-        throw new BusinessException(BookingErrorCode.INVALID_REQUEST.getMemo(),BookingErrorCode.INVALID_REQUEST.getErrorCode());
+     }
+ 
+     @Override
+-    public BaseDto fromSupplier(BookingBaseResponse bookingResponse) {
++    public BaseDto convertFromSupplier(BookingBaseResponse bookingResponse) {
+ 
+         GdsBookingInfo from = bookingResponse.getGdsBookingInfo();
+-        if (from == null) {
+-            return ResponseFactory.createCancelHotelRSDto(null);
+-        }
+-        if (!from.isHttpCorrect()) {
+-            return ResponseFactory.createErrorCancelHotelRSDto(from);
+-        }
+ 
+         CancelHotelRSDto cancelHotelRSDto = ResponseFactory.createCancelHotelRSDto(from.getQueryId(), from.getRequestXml(), from.getResponseXml());
+ //        Order order = cancelHotelRSDto.getOrder();
+@@ -76,6 +72,7 @@
+         String soap_1_2_body = SoapUtil.getSOAP_1_2_Body(responseStr);
+         if (StringUtil.isEmpty(soap_1_2_body)) {
+             //            bookingHotelRSDto.setBookingStatus(BookingStatus.CancelFailed);
++            setErrorInfo(responseStr,cancelHotelRSDto);
+             log.error("MikiCancelConvert | getSOAP_1_2_Body | ResponseXml:[{}] | Exception:", responseStr);
+             return cancelHotelRSDto;
+         }
+@@ -88,13 +85,7 @@
+         if (responseBean.getErrors()!=null){
+             List<MikiErrorInfo> errorInfos = MikiCommonConverter.convertErrorInfo(responseBean.getErrors().getError());
+             String errorMsg = JsonUtil.toJson(errorInfos);
+-            Msg2Status(cancelHotelRSDto,errorMsg);
+-//            for(MikiErrorInfo errorInfo:errorInfos){
+-//                //代表订单已取消
+-//                if(errorInfo.getErrorCode().equalsIgnoreCase("602")){
+-//                    cancelHotelRSDto.setBookingStatus(BookingStatus.Cancelled);
+-//                }
+-//            }
++            setErrorInfo(errorMsg,cancelHotelRSDto);
+         }
+ 
+         CancellationResponse.CancelledTours cancelledTours =responseBean.getCancelledTours();
+@@ -115,11 +106,4 @@
+         return cancelHotelRSDto;
+     }
+ 
+-    private void Msg2Status(CancelHotelRSDto cancelHotelRSDto,String errorMsg){
+-        Order order = cancelHotelRSDto.getOrder();
+-        MatchBookingStatus matchBookingStatus = bookingStatusManager.bookingMsg2Status(supplier_id, errorMsg);
+-        cancelHotelRSDto.setBookingStatus(matchBookingStatus.getBookingStatus());
+-        order.setBookingMatchMessage(matchBookingStatus.toString());
+-        order.setErrorInfo(errorMsg);
+-    }
+ }
+Index: x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/invoke/miki7/MikiBookingInvoker.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/invoke/miki7/MikiBookingInvoker.java	(revision a925c065e047e100d7f034df44b5774079d6e687)
++++ x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/invoke/miki7/MikiBookingInvoker.java	(revision )
+@@ -42,7 +42,6 @@
+         request = StringUtil.soapWrapper(request);
+ 
+         log.debug("{} | OrderId:[{}] | request:{}", logName, orderId, request);
+-        String reqUrl = supplier.getBookingUrl();
+         String action = "hotelBooking";
+         log.info("miki request xml : {}",request);
+ 
+Index: x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/invoke/miki7/MikiCancelInvoker.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/invoke/miki7/MikiCancelInvoker.java	(revision a925c065e047e100d7f034df44b5774079d6e687)
++++ x-hotel-booking/xbsupplier/src/main/java/cn/mogutrip/hotel/booking/supplier/invoke/miki7/MikiCancelInvoker.java	(revision )
+@@ -26,11 +26,6 @@
+ public class MikiCancelInvoker extends Invoker<CancellationRequest,BookingBaseResponse>{
+     public static final String supplier_id = MIKI;
+ 
+-    public MikiCancelInvoker(Supplier supplier){
+-        this.supplier = supplier;
+-        this.converter = new MikiCancelConverter(supplier);
+-    }
+-
+     public MikiCancelInvoker(Supplier supplier, BookingStatusManager bookingStatusManager) {
+         this.supplier = supplier;
+         this.converter = new MikiCancelConverter(supplier, bookingStatusManager);
+@@ -44,12 +39,12 @@
+         String request = StringUtil.classToXmlStringFragment(from);
+         request = StringUtil.soapWrapper(request);
+ 
+-        log.debug("{} | referenceCode:[{}] | request:{}",logName,reference, request);
++        log.info("{} | referenceCode:[{}] | request:{}",logName,reference, request);
+         String action = "cancellation";
+         GdsBookingInfo gdsBookingInfo = postSoap(action,request);
+ 
+         String responseStr = gdsBookingInfo.getResponseXml();
+-        log.debug("{} | referenceCode:[{}] | response:{}",logName,reference, responseStr);
++        log.info("{} | referenceCode:[{}] | response:{}",logName,reference, responseStr);
+ 
+         BookingBaseResponse bookingResponse = new BookingBaseResponse();
+         bookingResponse.setGdsBookingInfo(gdsBookingInfo);

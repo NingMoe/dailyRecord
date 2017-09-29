@@ -1,0 +1,8 @@
+Redis查询
+sit环境
+	与search在同一个机器。
+	cd /home/ec2-user/Xapp/codis/gopkg/src/github.com/CodisLabs/codis/extern/redis-2.8.21/src
+	./redis-cli
+	auth mogutrip123
+
+	hgetAll HA|TH|3011995|2017-10-14|2017-10-15|CN|1,,2,0,0

@@ -1,0 +1,49 @@
+{
+  "suppliers": [
+    "110",
+    "100"
+  ],
+  "criteria": {
+    "checkIn": "2017-09-10",
+    "checkOut": "2017-09-12",
+    "location": {
+      "bounds": {
+        "circle": {
+          "center": {
+            "lat": 39.90421,
+            "long": 116.4074
+          },
+          "radiusKm": 50.5
+        }
+      }
+    },
+    "occupancies": [
+      {
+        "numOfAdults": 3,
+        "childAges": []
+      },{
+        "numOfAdults": 2,
+        "childAges": []
+      }
+    ],
+    "options": {
+      "travelerNationality": "US",
+      "travelerCountryOfResidence": "US"
+    },
+    "filters": {
+      "allowHotelIds": [],
+      "allowNotAvailableHotels": true
+    },
+    "supplierSpecificOptions": [
+      {
+        "supplierId": "110",
+        "rateCodes": [],
+        "currency": "USD",
+        "rateTypes": "Published"
+      }
+    ]
+  },
+  "optionalFields": [
+    "all"
+  ]
+}

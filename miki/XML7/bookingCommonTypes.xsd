@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by Srineelesh Sudhakar (Miki Travel Ltd) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="hotelCommonTypes.xsd"/>
+	<xs:include schemaLocation="sightseeingCommonTypes.xsd"/>
+	<xs:include schemaLocation="transferCommonTypes.xsd"/>
+	<!-- Reservation Item -->
+	<xs:complexType name="bookingItemType">
+		<xs:annotation>
+			<xs:documentation>Booking details</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="immediateConfirmationRequired" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>false=Booking can be made on request, true=Booking must be confirmed immediately</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="productCode" type="productCodeType">
+					<xs:annotation>
+						<xs:documentation>Unique reference to product</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="giataCode" type="xs:string"/>
+			</xs:choice>
+			<xs:element name="leadPaxName" type="paxNameType"/>
+			<xs:element name="hotel" type="hotelReservationItemType"/>
+			<xs:element name="agentMarkup" type="agentMarkupType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Agent markup. Only for Miki internal use</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="specialRequest" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Specify the any special requests in text format.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="payNow" type="payNowType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Set the value as '1' for paying now, '0' for not paying for this booking item</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="itemNumber" type="xs:positiveInteger" use="required">
+			<xs:annotation>
+				<xs:documentation>Number to identify booking request item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- Reservation type -->
+	<xs:complexType name="reservationRequestType">
+		<xs:annotation>
+			<xs:documentation>One booking per request only</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="clientRef" type="clientReferenceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This field can be used to hold the client's reference for the booking</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="existingBookingReference" type="xs:string" nillable="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Provide existing booking reference, if this booking is to add items to an existing booking.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="departureDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Passenger departure date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="items">
+				<xs:annotation>
+					<xs:documentation>Main part of booking = booking details per item</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Multiple items are allowed</xs:documentation>
+						</xs:annotation>
+						<xs:element name="item" type="bookingItemType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="paymentCard" type="paymentRequestType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Details of the Creditcard/Debit card</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="priceQualifierType"/>
+		<xs:attribute name="languageCode" type="xs:language" use="optional">
+			<xs:annotation>
+				<xs:documentation>ISO language code for results (if not supported by Miki, en will be used)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="priceChangeTolerance" type="xs:decimal" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicates the amount of allowed price change between search and book. If difference is less than or equal to this value - create booking with latest price, otherwise - don't create booking.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="reservationResponseType">
+		<xs:annotation>
+			<xs:documentation>Confirmed booking per item requested.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bookingTotalPrice" type="priceWithTaxes">
+				<xs:annotation>
+					<xs:documentation>Total price for all items on the booking</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="items">
+				<xs:annotation>
+					<xs:documentation>Main part of the booking items</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Multiple items are allowed</xs:documentation>
+						</xs:annotation>
+						<xs:element name="item" type="bookingResponseItemType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="commission" type="priceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Total subagent dynamic markup price for the booking requested</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentInfo" type="paymentResponseType" minOccurs="0"/>
+			<xs:element name="departureDate" type="xs:date" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="reservationResponseAttributesType"/>
+	</xs:complexType>
+	<!-- Booking Item in Response -->
+	<xs:complexType name="bookingResponseItemType">
+		<xs:annotation>
+			<xs:documentation>Contains the details of the Confirmed Reservation item.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="productCode" type="productCodeType">
+				<xs:annotation>
+					<xs:documentation>Unique reference to product</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="giataCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="itemTotalPrice" type="priceWithTaxes">
+				<xs:annotation>
+					<xs:documentation>Total price for all items on the booking</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="leadPaxName" type="paxNameType"/>
+			<xs:element name="hotel" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="hotelReservationResponseItemType">
+							<xs:sequence>
+								<xs:element name="rooms" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>This will be added only when returnFullBookingDetail is true</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="6">
+											<xs:element name="room" type="bookingRoomOptionType"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="specialRequest" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Confirmation of the special request</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="alerts" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Collection of alert messages which are specific to this room</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="alert" type="alertType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="itemNumber" type="xs:positiveInteger">
+			<xs:annotation>
+				<xs:documentation>Number to identify booking request item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attributeGroup ref="allowModificationsAttribute"/>
+		<xs:attribute name="tourReference" type="tourReferenceType" use="required">
+			<xs:annotation>
+				<xs:documentation>This is a unique reservation number for this item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="status" type="bookingStatusType" use="required">
+			<xs:annotation>
+				<xs:documentation>Indicate the reservation status of this item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="paymentStatus" type="paymentStatusType" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicate the reservation status of this item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="supplierReservationReference" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Supplier reservation number for this booking</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="hotelReservationResponseItemType">
+		<xs:annotation>
+			<xs:documentation>Detail information of the hotel</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="stayPeriod" type="stayPeriodResponseType">
+				<xs:annotation>
+					<xs:documentation>Service Date Range </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="preferences" type="preferencesType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modifyItemType">
+		<xs:annotation>
+			<xs:documentation>Booking details</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="departureDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Passenger departure date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:annotation>
+					<xs:documentation>Only one product item can be modified per request</xs:documentation>
+				</xs:annotation>
+				<xs:element name="hotel" type="hotelReservationItemType" minOccurs="0"/>
+				<xs:element name="sightseeing" type="sightseeingReservationItemType" minOccurs="0"/>
+				<xs:element name="transfer" type="transferReservationItemType" minOccurs="0"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="ratePlanCode" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Specify the unique rateplan applied in the modification cost</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="quoteID" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Specify the unique reference of the modification cost</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="cancelItemType">
+		<xs:annotation>
+			<xs:documentation>Cancellation charge for each segments in the item</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="roomTotalCancellationCharge" type="xs:decimal">
+				<xs:annotation>
+					<xs:documentation>The charge details for this particular segment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cancellationPolicy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Cancellation Policy that is applied to calculate the cancellation charge</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cancellationPolicyRecordType">
+							<xs:sequence>
+								<xs:element name="appliesTo" type="xs:dateTime" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="roomTypeCode" type="subproductCodeType" use="required">
+			<xs:annotation>
+				<xs:documentation>The unique segment code</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="roomNo" type="xs:positiveInteger" use="required">
+			<xs:annotation>
+				<xs:documentation>The sequence number of the booked Room.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="payForBookingRequestType">
+		<xs:annotation>
+			<xs:documentation>Collection of booking which need to be paid.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="references">
+				<xs:annotation>
+					<xs:documentation>The details of the booking to be paid.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="bookingReference">
+							<xs:annotation>
+								<xs:documentation>The Unique booking Reference.</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="tourReferences">
+							<xs:annotation>
+								<xs:documentation>Collection of the tour References which need to be paid. The collection must be with in the same booking reference</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence minOccurs="1" maxOccurs="unbounded">
+									<xs:element name="tourReference">
+										<xs:annotation>
+											<xs:documentation>The Unique tour Reference.</xs:documentation>
+										</xs:annotation>
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:minLength value="1"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="paymentCard" type="paymentRequestType">
+				<xs:annotation>
+					<xs:documentation>Details of the Creditcard/Debit card</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="modifyResponseType">
+		<xs:annotation>
+			<xs:documentation>Detail of the modify item</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="item" type="bookingResponseItemType">
+				<xs:annotation>
+					<xs:documentation>Main part of the booking items</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="departureDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="charge" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="bookingcharge" type="priceType" minOccurs="0"/>
+						<xs:element name="additionalCharge" type="priceType" minOccurs="0"/>
+						<xs:element name="modificationCharge" type="priceType" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="commission" type="priceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Total subagent dynamic markup price for the booking requested</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="currencyCode" type="currencyCodeType" use="required">
+			<xs:annotation>
+				<xs:documentation>The client's reference for the booking</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="clientRef" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The client's reference for the booking</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="bookingReference" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Unique reservation number for all the items in the nooking request.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="paymentDueDate" type="xs:date" use="optional">
+			<xs:annotation>
+				<xs:documentation>Payment due date applicable to this booking.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="cancellationDeadlineType">
+		<xs:annotation>
+			<xs:documentation>Cancellation deadline details.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cancellationDeadline" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Cancellation deadline date</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tourReferenceDetailType">
+		<xs:annotation>
+			<xs:documentation>Unique tourreference of the tour.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="serviceDate" type="searchDatePeriodType">
+				<xs:annotation>
+					<xs:documentation>Service Date Range </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="totalPrice">
+				<xs:annotation>
+					<xs:documentation>Total price for all items on the booking</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:double">
+							<xs:attributeGroup ref="totalPriceType"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cancellationDeadline" type="cancellationDeadlineType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Cancellation deadline details.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="productDetail">
+				<xs:annotation>
+					<xs:documentation>Minimum product details.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="minProductInfoType">
+							<xs:sequence>
+								<xs:element name="description" type="xs:string" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="leadGuestInformation" type="nameType">
+				<xs:annotation>
+					<xs:documentation>The lead name that will be passed to the supplier</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentStatus" type="paymentStatusType">
+				<xs:annotation>
+					<xs:documentation>Status of the payment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="createBy">
+				<xs:annotation>
+					<xs:documentation>The booking creater details</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="userType">
+							<xs:attribute name="createDateTime" type="xs:date"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="lastModifyBy">
+				<xs:annotation>
+					<xs:documentation>The details of the Last modification. </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="userType">
+							<xs:attribute name="lastModifyDateTime" type="xs:date"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="alerts" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Indicates the collections alerts related to this booking.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="alert" type="alertType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="tourReference" type="tourReferenceType" use="required">
+			<xs:annotation>
+				<xs:documentation>Booking creation date.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="status" type="bookingStatusType" use="required">
+			<xs:annotation>
+				<xs:documentation>Status of this tour.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="bookingDateTime" type="xs:date" use="required">
+			<xs:annotation>
+				<xs:documentation>Booking creation date.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="clientReference" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Booking creation date.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="bookingDetailType">
+		<xs:annotation>
+			<xs:documentation>Collection of Booking details.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="totalPrice">
+				<xs:annotation>
+					<xs:documentation>Total price for all tour under this booking</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:double">
+							<xs:attributeGroup ref="totalPriceType"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cancellationDeadline" type="cancellationDeadlineType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Cancellation deadline details.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tourReferences">
+				<xs:annotation>
+					<xs:documentation>Collection of tour references under this booking.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="tourReference" type="tourReferenceDetailType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="createBy">
+				<xs:annotation>
+					<xs:documentation>The booking creater details</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="userType">
+							<xs:attribute name="createDateTime" type="xs:date"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="lastModifyBy">
+				<xs:annotation>
+					<xs:documentation>The details of the Last modification. </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="userType">
+							<xs:attribute name="lastModifyDateTime" type="xs:date"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="alerts" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Indicates the collections alerts related to this booking.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="alert" type="alertType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="bookingReference" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The Unique reservation reference number of the booking</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:attributeGroup name="reservationResponseAttributesType">
+		<xs:annotation>
+			<xs:documentation>Contains the list of attributes associated with reservation response</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="currencyCode" type="currencyCodeType" use="required">
+			<xs:annotation>
+				<xs:documentation>The client's reference for the booking</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="clientRef" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>The client's reference for the booking</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="bookingReference" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Unique reservation number for all the items in the nooking request.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="paymentDueDate" type="xs:date" use="optional">
+			<xs:annotation>
+				<xs:documentation>Payment due date applicable to this booking.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:complexType name="bookingSearchResponseItemType">
+		<xs:annotation>
+			<xs:documentation>The Detail of the booking item</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="productCode" type="productCodeType">
+				<xs:annotation>
+					<xs:documentation>Unique reference to product</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="giataCode" minOccurs="0"/>
+			<xs:element name="productType" type="responseProductType"/>
+			<xs:element name="itemTotalPrice" type="priceWithTaxes">
+				<xs:annotation>
+					<xs:documentation>Total price for all items on the booking</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="leadPaxName" type="paxNameType"/>
+			<xs:element name="serviceDate">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="startDate" type="xs:date"/>
+						<xs:element name="endDate" type="xs:date" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="commission" type="priceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Total subagent dynamic markup price for the booking requested</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentInfo" type="paymentResponseType" minOccurs="0"/>
+			<xs:element name="departureDate" type="xs:date" minOccurs="0"/>
+			<xs:element name="createdBy">
+				<xs:annotation>
+					<xs:documentation>The booking creater details</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="userType">
+							<xs:attribute name="createDateTime" type="xs:date"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="lastUpdated">
+				<xs:annotation>
+					<xs:documentation>The details of the Last modification. </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="userType">
+							<xs:attribute name="lastUpdatedDateTime" type="xs:date"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cancellationDetail" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="cancellationDate" type="xs:date"/>
+						<xs:element name="cancellationReference" type="xs:string"/>
+						<xs:element name="cancellationCharge" type="xs:decimal"/>
+						<xs:element name="cancellationChargeCurrency" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="hotel" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>This will be added only when returning full hotel booking details</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="hotelReservationResponseItemType">
+							<xs:sequence>
+								<xs:element name="rooms" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence maxOccurs="6">
+											<xs:element name="room" type="bookingRoomOptionType"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="specialRequest" type="xs:string" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Confirmation of the special request</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="alerts" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Collection of alert messages which are specific to this room</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="alert" type="alertType"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="tourReference" type="tourReferenceType" use="required">
+			<xs:annotation>
+				<xs:documentation>This is a unique reservation number for this item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="status" type="bookingStatusType" use="required">
+			<xs:annotation>
+				<xs:documentation>Indicate the reservation status of this item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attributeGroup ref="allowModificationsAttribute"/>
+		<xs:attribute name="paymentStatus" type="paymentStatusType" use="optional">
+			<xs:annotation>
+				<xs:documentation>Indicate the reservation status of this item.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="supplierReservationReference" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Supplier reservation number for this booking</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attributeGroup ref="reservationResponseAttributesType"/>
+	</xs:complexType>
+	<xs:complexType name="totalCancellationChargeType">
+		<xs:annotation>
+			<xs:documentation>Details of the Cancellation cost of this item if you cancelled the item now.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="priceType">
+				<xs:attribute name="applicableTo" type="xs:dateTime" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

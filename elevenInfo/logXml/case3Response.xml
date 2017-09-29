@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Service_ViewCancelPolicy>
+    <ViewCancelPolicy_Response>
+        <HotelId>WSMA0511000155</HotelId>
+        <HotelName>Dusit Thani Bangkok</HotelName>
+        <Policies>
+            <Policy FromDate="2013-11-01" ToDate="2017-12-30">
+                <RoomCatgCode BFType="RO" Name="SUPERIOR">WSMA05110035</RoomCatgCode>
+                <ExCancelDays>18</ExCancelDays>
+                <ChargeType>Amount</ChargeType>
+                <Currency>THB</Currency>
+                <ChargeRate>150</ChargeRate>
+                <Description/>
+            </Policy>
+            <Policy FromDate="2015-06-02" ToDate="2017-12-30">
+                <RoomCatgCode Name="SUPERIOR">WSMA05110035</RoomCatgCode>
+                <ExCancelDays>6</ExCancelDays>
+                <ChargeType>Amount</ChargeType>
+                <Currency>THB</Currency>
+                <ChargeRate>100</ChargeRate>
+                <Description/>
+            </Policy>
+            <Policy FromDate="2013-10-30" ToDate="2017-12-30">
+                <RoomCatgCode Name="DULUXE (TOWER WING)">WSMA08061464</RoomCatgCode>
+                <ExCancelDays>33</ExCancelDays>
+                <ChargeType>Percent</ChargeType>
+                <ChargeRate>50.00</ChargeRate>
+                <Description/>
+            </Policy>
+        </Policies>
+    </ViewCancelPolicy_Response>
+</Service_ViewCancelPolicy>

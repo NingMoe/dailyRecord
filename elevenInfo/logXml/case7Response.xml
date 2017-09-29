@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Service_CancelRSVN>
+	<CancelReservation_Response>
+		<ResNo>PTESMA170627880</ResNo>
+		<OSRefNo>170619130033521179</OSRefNo>
+		<Hbooking>HBMA1706000390</Hbooking>
+		<CancelHbooking>HCMA1706000113</CancelHbooking>
+		<CancelResult>True</CancelResult>
+		<Policies>
+			<RoomCatgCode BFType="NONE">WSMA08061464</RoomCatgCode>
+			<ExCancelDays>0</ExCancelDays>
+			<ChargeType>NONE</ChargeType>
+			<ChargeRate>0.00</ChargeRate>
+			<ChargePrice Currency="THB" Price="0.00"/>
+		</Policies>
+	</CancelReservation_Response>
+</Service_CancelRSVN>

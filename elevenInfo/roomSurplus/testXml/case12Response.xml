@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Service_SearchHotel>
+    <SearchHotel_Response>
+        <Hotel HotelId="WSMA0608000030" HotelName="Novotel Suvarnabhumi Airport" Ra
+ting="4" Currency="THB" Latitude ="13.6967781483" Longitude="100.75056789" MarketName="All Market" dtCheckIn="2017-09-14" dtCheckOut="2017-09-17" CancelPolicyId="" InternalCode="CL005" avail=
+"True">
+            <RoomCateg Code="WSMA05110035" Name="SUPERIOR" NetPrice="5700.00" GrossPrice="5700.00" CommPrice="0.00" Price="5700.00" BFType="RO">
+                <RoomType TypeName="Double" NumRooms="2" TotalPrice=
+"5700.00" avrNightPrice="1900.00" RTGrossPrice="5700.00" RTCommPrice="0.00" RTNetPrice="5700.00">
+                    <Rate offSet="0" NightPrice="1900.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="0" Chil
+dAge1="" ChildAge2="" RoomPrice="950.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N
+" sCh1="N" sCh2="N" NewTypeName="Double" NewChildNbr="0"/>
+                            <RoomSeq No="2" AdultNum="2" ChildNum="0" ChildAge1="" ChildAge2="" RoomPrice="950.00" MinstayPrice="0.00" CompulsoryPrice="0.00" Sup
+plementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Double" NewChildNbr="0"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Chi
+ld MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="1" NightPrice="1900.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="0" ChildAge1="" ChildAge2="" RoomPrice="95
+0.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Do
+uble" NewChildNbr="0"/>
+                            <RoomSeq No="2" AdultNum="2" ChildNum="0" ChildAge1="" ChildAge2="" RoomPrice="950.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPric
+e="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Double" NewChildNbr="0"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <
+Minstay MSDay="0.00" MSType="NONE" MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.
+00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                    <Rate offSet="2" NightPrice="1900.00">
+                        <RoomRate>
+                            <RoomSeq No="1" AdultNum="2" ChildNum="0" ChildAge1="" ChildAge2="" RoomPrice="950.00" MinstayPrice="0.00" Compulsor
+yPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" CommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Double" NewChildNbr="0"/>
+                            <RoomSeq No=
+"2" AdultNum="2" ChildNum="0" ChildAge1="" ChildAge2="" RoomPrice="950.00" MinstayPrice="0.00" CompulsoryPrice="0.00" SupplementPrice="0.00" PromotionBFPrice="0.00" EarlyBirdDiscount="0.00" C
+ommissionPrice="0.00" sRoomType="N" sCh1="N" sCh2="N" NewTypeName="Double" NewChildNbr="0"/>
+                        </RoomRate>
+                        <RoomRateInfo>
+                            <Child MinAge="0" MaxAge="0" Desc=""/>
+                            <Minstay MSDay="0.00" MSType="NONE" 
+MSRate="0.00"/>
+                            <Compulsory Name="NONE"/>
+                            <Supplement Name="NONE"/>
+                            <Promotion Name="NONE" Value="False" PromoCode="False"/>
+                            <EarlyBird EBType="NONE" EBRate="0.00"/>
+                        </RoomRateInfo>
+                    </Rate>
+                </RoomTy
+pe>
+            </RoomCateg>
+        </Hotel>
+    </SearchHotel_Response>
+</Service_SearchHotel>

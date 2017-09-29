@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp1 (x64) (http://www.altova.com) by Periasamy Subramaniyan (Miki Travel Ltd) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="hotelCommonTypes.xsd"/>
+	<xs:include schemaLocation="sightseeingCommonTypes.xsd"/>
+	<xs:include schemaLocation="transferCommonTypes.xsd"/>
+	<xs:include schemaLocation="bookingCommonTypes.xsd"/>
+	<xs:complexType name="cancellationTourType">
+		<xs:sequence>
+			<xs:element name="tourReference" type="tourReferenceType">
+				<xs:annotation>
+					<xs:documentation>The unique reservation reference of the item for which cancellation was requested</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bookingReference" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>bookingReference of this tour</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="currencyCode" type="currencyCodeType">
+				<xs:annotation>
+					<xs:documentation>Currency used for this tour. All amount related to this tour are based on this currency</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tourTotalCancellationCharge" type="xs:decimal"/>
+			<xs:element name="roomCancellationChargeDetails" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Full details and the cancellation charge along with the how the cancellation charge is calculated per Night.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Collection of segments under the cancelled item</xs:documentation>
+						</xs:annotation>
+						<xs:element name="roomCancellationChargeDetail" type="cancelItemType"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cancelledTourType">
+		<xs:complexContent>
+			<xs:extension base="cancellationTourType">
+				<xs:sequence>
+					<xs:element name="status" type="TransactionStatusType">
+						<xs:annotation>
+							<xs:documentation>Indicates the status of the transaction.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cancellationReference" type="xs:string" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Unique reference of the cancellation transaction, if the reservation has been cancelled.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="paymentInfo" type="paymentResponseType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Cancellation charge if cancelled after the cancellation deadline</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

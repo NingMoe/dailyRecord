@@ -1,0 +1,108 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+ <soap:Header/>
+ <soap:Body>
+  <hotelBookingResponse versionNumber="7.0">
+   <responseAuditInfo>
+    <agentCode>XXX</agentCode>
+    <responseID>714382431</responseID>
+    <responseDateTime>2016-06-15T11:38:32.575+01:00</responseDateTime>
+    <!--Audit ID : 2992374f-195b-4301-8f11-570df1ee8f53-->
+    <!--WS : MSI-->
+   </responseAuditInfo>
+   <booking bookingReference="2888773" clientRef="UHARDAHA" currencyCode="EUR">
+    <bookingTotalPrice>
+     <price>220.50</price>
+    </bookingTotalPrice>
+    <items>
+     <item allowModifications="0" itemNumber="1" status="30" tourReference="T00338053">
+      <productCode>CAF527700</productCode>
+      <itemTotalPrice>
+       <price>220.50</price>
+      </itemTotalPrice>
+      <leadPaxName>
+       <title/>
+       <firstName>André</firstName>
+       <lastName>T</lastName>
+      </leadPaxName>
+      <hotel>
+       <stayPeriod>
+        <checkinDate>2016-11-18</checkinDate>
+        <checkoutDate>2016-11-19</checkoutDate>
+        <numberOfNights>1</numberOfNights>
+       </stayPeriod>
+       <rooms>
+        <room roomNo="1" roomTypeCode="00001">
+         <rateIdentifier>6ht6hbdpTeNBpElHnshsLHOe-nNJqSzEXt6HpSJ-Qkek5HUb9rzQ5kPnji0ICQhvqlyHmmxHID2K299JyHHxlfxGqnamteDvJ68vpud412724K5tsdQRBZjuVdKERQb0km7SKmEsDCYW0b5ikP-xCb7IkghdV68aHqqjab7IN02Wra8cIWo_9vXz1BlF7mff1hWMa_IX0POn2umxnw3-nhWFCYEDnZv-gTWRjqRJb0jZnc1_IHNsro2bGoA5-j2FskYKqwlYp3ClvguXbnY3XQRxt1GXzcSmeKl6JsgkNMM</rateIdentifier>
+         <availabilityStatus>1</availabilityStatus>
+         <roomTotalPrice>
+          <price>220.50</price>
+         </roomTotalPrice>
+         <dates>
+          <date serviceDate="2016-11-18">
+           <dailyPrice priceType="1">
+            <price>220.50</price>
+           </dailyPrice>
+           <mealBasis mealBasisCode="RO">
+            <includedMeals>
+             <includedMeal>
+              <mealID>33</mealID>
+              <mealType>1</mealType>
+              <description>No breakfast service</description>
+             </includedMeal>
+            </includedMeals>
+           </mealBasis>
+          </date>
+         </dates>
+         <guests>
+          <guest>
+           <type>ADT</type>
+           <paxName>
+            <title/>
+            <firstName>André</firstName>
+            <lastName>T</lastName>
+           </paxName>
+          </guest>
+          <guest>
+           <type>ADT</type>
+           <paxName>
+            <title/>
+            <firstName>Vik</firstName>
+            <lastName>T</lastName>
+           </paxName>
+          </guest>
+         </guests>
+         <cancellationPolicies>
+          <cancellationPolicy>
+           <appliesFrom>2016-11-11T00:00:00.000+00:00</appliesFrom>
+           <fullStay>true</fullStay>
+           <cancellationCharge>
+            <percentage>50.00</percentage>
+           </cancellationCharge>
+          </cancellationPolicy>
+          <cancellationPolicy>
+           <appliesFrom>2016-11-15T00:00:00.000+00:00</appliesFrom>
+           <fullStay>true</fullStay>
+           <cancellationCharge>
+            <percentage>90.00</percentage>
+           </cancellationCharge>
+          </cancellationPolicy>
+          <cancellationPolicy>
+           <appliesFrom>2016-11-17T00:00:00.000+00:00</appliesFrom>
+           <fullStay>true</fullStay>
+           <cancellationCharge>
+            <percentage>100.00</percentage>
+           </cancellationCharge>
+          </cancellationPolicy>
+         </cancellationPolicies>
+         <roomDescription>Standard Twin</roomDescription>
+         <transactionID>8f3ed181-68aa-4a45-9f4d-7ba7a6db54c3</transactionID>
+        </room>
+       </rooms>
+      </hotel>
+     </item>
+    </items>
+    <departureDate>2016-11-18</departureDate>
+   </booking>
+  </hotelBookingResponse>
+ </soap:Body>
+</soap:Envelope>

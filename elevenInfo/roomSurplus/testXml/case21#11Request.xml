@@ -1,0 +1,23 @@
+requestXML=<?xml version="1.0" encoding="utf-8" ?>
+<Service_ViewCancelPolicy>
+    <AgentLogin>
+        <AgentId>PTES</AgentId>
+        <LoginName>XMLTV3</LoginName>
+        <Password>XMLtestV3</Password>
+    </AgentLogin>
+    <ViewCancelPolicy_Request>
+        <PaxPassport>MA05110049</PaxPassport>
+        <HotelId>WSMA0608000030</HotelId>
+        <InternalCode>CL005</InternalCode>
+        <dtCheckIn>2017-09-14</dtCheckIn>
+        <dtCheckOut>2017-09-17</dtCheckOut>
+                    <RoomInfo RQBedChild="N" RoomType="Double" SeqNo="1">
+                <AdultNum>2</AdultNum>
+                            </RoomInfo>
+                    <RoomInfo RQBedChild="N" RoomType="Double" SeqNo="2">
+                <AdultNum>2</AdultNum>
+                            </RoomInfo>
+                <CancelPolicyID></CancelPolicyID>
+        <flagAvail>True</flagAvail>
+    </ViewCancelPolicy_Request>
+</Service_ViewCancelPolicy>

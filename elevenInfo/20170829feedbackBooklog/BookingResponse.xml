@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BookingHotel>
+	<BookHotel_Response>
+		<hasKey>63188401708160839251515832156</hasKey>
+		<ResNo FinishBook="Y" OSRefNo="170825174338421179" PaxPassport="WSASCN" RPCurrency="THB" Status="CONF">PTESMA170830266</ResNo>
+		<CompleteService>
+			<HBookId CanAmend="Y" Id="HBMA1708001141" InternalCode="CL005" Status="CONF" VoucherDt="2017-08-25" VoucherNo="VBMA1708002347">
+				<HotelId HotelName="Amari Boulevard">WSASTHBKK000087</HotelId>
+				<Period FromDt="2017-09-15" ToDt="2017-09-16"/>
+				<RoomCatgInfo>
+					<RoomCatg Avail="Y" BFType="RO" CatgId="WSMA06030013" CatgName="DELUXE TERRACE" Market="All Market">
+						<Room>
+							<SeqRoom AdultNum="1" RoomType="Single" SeqNo="1" ServiceNo="MA1708001485">
+								<PriceInfomation>
+									<NightPrice Offset="0">
+										<Accom Price="1596.00"/>
+										<Child Info="" MaxAge="" MinAge=""/>
+										<Minstay MSDay="0" MSPrice="" MSRate="0.00" MSType="NONE"/>
+										<Compulsory Name="NONE" Price="0.00"/>
+										<Supplement Name="NONE" Price="0.00"/>
+										<Promotion BFPrice="0" Name="NONE" PromoCode="" Value="False"/>
+										<EarlyBird EBPrice="0.00" EBRate="0.00" EBType="NONE"/>
+										<Commission CommPrice="0.00" CommRate="0.00" CommType="NONE"/>
+									</NightPrice>
+								</PriceInfomation>
+								<TotalPrice>1596.00</TotalPrice>
+								<CommissionPrice>0.00</CommissionPrice>
+								<NetPrice>1596.00</NetPrice>
+								<PaxInformation>
+									<GuestName>TEST TEST, Mr.</GuestName>
+								</PaxInformation>
+							</SeqRoom>
+						</Room>
+					</RoomCatg>
+				</RoomCatgInfo>
+				<RequestDes/>
+				<Message>
+					<![CDATA[- All of the rooms are NON-Smoking. <br>- Unlimited internet broadband and wireless access in all guest rooms and public areas.]]>
+				</Message>
+			</HBookId>
+		</CompleteService>
+		<UnCompleteService/>
+	</BookHotel_Response>
+</BookingHotel>

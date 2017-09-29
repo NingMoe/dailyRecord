@@ -1,0 +1,19 @@
+requestXML=<?xml version="1.0" encoding="utf-8" ?>
+<Service_SearchHotel>
+    <AgentLogin>
+        <AgentId>PTES</AgentId>
+        <LoginName>XMLTV3</LoginName>
+        <Password>XMLtestV3</Password>
+    </AgentLogin>
+    <SearchHotel_Request>
+        <PaxPassport>MA05110049</PaxPassport>
+                <DestCountry>MA05110001</DestCountry>
+        <DestCity>MA05110041</DestCity>
+        <HotelId InternalCode=""></HotelId>
+                <Period CheckIn="2017-07-25" CheckOut="2017-07-28"/>
+                    <RoomInfo>
+                <AdultNum  RoomType="Double">2</AdultNum>
+            </RoomInfo>
+                <flagAvail>Y</flagAvail>
+    </SearchHotel_Request>
+</Service_SearchHotel>

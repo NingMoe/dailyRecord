@@ -1,0 +1,31 @@
+数据库配置测试用户
+Agent Code: 235DBF
+Password: 060216BF5D   
+
+请求地址
+http://localhost:8516/services/hotel/availabilitySync
+
+{
+  "hotelId": "",
+  "currency": "EUR",
+  "nationality": "CN",
+  "parent": null,
+  "queryId": "e883817770caaa73a86d71a9c42c9f78",
+  "countryId": "FR",
+  "supplierId": "travcov7",
+  "checkOut": "2017-04-23",
+  "language": "en",
+  "hotelCode": "",
+  "cityId": "BXL",
+  "rooms": [
+    {
+      "roomIndex": "1",
+      "roomType": "SINGLE",
+      "rooms": 1,
+      "adults": 3,
+      "children": 0,
+      "ages": null
+    }
+  ],
+  "checkIn": "2017-04-22"
+}

@@ -1,0 +1,27 @@
+{
+  "suppliers": [
+    "1i8knud8nwg"
+  ],
+  "criteria": {
+    "hotelId": "312304",
+     "checkIn": "2017-10-13",
+    "checkOut": "2017-10-16",
+    "occupancies": [
+      {
+        "numOfAdults": 2,
+        "childAges": []
+      }
+    ]
+  },
+  "requestOptions": {
+    "travelerNationality": "US",
+    "travelerCountryOfResidence": "US"
+  },
+  "supplierSpecificOptions": [{
+        "supplierId": "1i8knud8nwg",
+        "currency": "EUR"
+  }],
+  "optionalFields": [
+    "all"
+  ]
+}

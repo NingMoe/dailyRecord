@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp1 (x64) (http://www.altova.com) by Periasamy Subramaniyan (Miki Travel Ltd) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="bookingCommonTypes.xsd"/>
+	<xs:element name="hotelBookingResponse">
+		<xs:annotation>
+			<xs:documentation>Response to booking request</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="responseAuditInfo" type="responseAuditInfo">
+					<xs:annotation>
+						<xs:documentation>Standard audit information sent with responses</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="booking" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>If this element is present, the reservation is confirmed</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="reservationResponseType"/>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="warnings" type="warnings" minOccurs="0"/>
+				<xs:element name="errors" type="errors" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Collection of errors happen during the reservation of items.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="versionNumber" type="xs:string" use="required" fixed="7.0">
+				<xs:annotation>
+					<xs:documentation>Indicates the version of the request that is being used. </xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,13 @@
+SDK URL:
+https://sdk.mikinet.co.uk/store/?requestedPage=/store/site/pages/about.jag
+
+
+schema:
+	https://sdk.mikinet.co.uk/store/apis/documentation-7.0/XML7Schema
+error:
+	https://sdk.mikinet.co.uk/store/apis/documentation-7.0/error-handling 
+
+
+Client code: UJT001
+User ID: download
+Password: tuesday21

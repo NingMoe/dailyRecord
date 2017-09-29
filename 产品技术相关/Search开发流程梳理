@@ -1,0 +1,170 @@
+开发流程：
+search.service.HotelAvailabilityService：
+	searchAvailability
+	getRoomPolicy
+	getAvailability
+	verifyAvailability
+	verifySupplierAvailability
+
+	searchSupplierAvailability
+
+	getSupplierAvailability
+
+	querySupplierAvailability
+
+crawler.supplier.base.Api
+	getRoomList
+	setRoomList
+	getRoomNum
+	getInProfileLogList
+	setInProfileLogList
+	sameRoomRateIdList
+	filterSupplierHotelAvailabilities
+	
+	convert
+		--BeanConverter.toHotelAvailabilities(availabilities, mappers)
+	
+	hotelAvailabilityNullResponse
+
+	@Override(搜索入口)
+	searchAvailability
+		--searchSupplierAvailability
+			--doSupplierAvailability
+				  @Override
+				--buildSearchAvailabilityRequest
+				--gdsAvailability
+					  @Override
+					--doAvailability
+				--parseSupplierSearchAvailabilityResponse(response, availabilities)
+					  @Override
+					--parseSupplierSearchAvailabilityResponse(response, request, shaList)
+
+		--convert(主动缓存相关)
+
+	@Override(验价入口)
+	getSupplierAvailability
+		  @Override(如果有验价接口，需要覆盖)
+		--doGetSupplierAvailability
+			--doSupplierAvailability
+		--AvailabilitiesManager.pruneSupplierHotelAvailabilities
+
+
+	getAvailability
+	
+	@Override
+	getRoomPolicy
+		--doRoomPolicy
+			--doSupplierPolicy
+	
+	doRoomPolicy
+		--doSupplierPolicy
+	doRoomPolicyRetry
+	buildSupplierPolicyRequest
+	gdsPolicy
+	doPolicy
+	parseSupplierPolicyResponse
+
+	doSupplierPolicy
+
+	@Override
+	searchSupplierAvailability
+		--doSupplierAvailability
+
+	searchSupplierAvailabilityByHotel
+
+	@Override
+	querySupplierAvailability
+		--doSupplierAvailability
+		--filterSupplierHotelAvailabilities
+
+	@Important
+	doSupplierAvailability
+
+	@important
+	buildSearchAvailabilityRequest
+
+	gdsAvailability
+	
+	@important
+	doAvailability
+	
+	@important
+	parseSupplierSearchAvailabilityResponse
+	parseSupplierSearchAvailabilityResponse
+
+	buildHotelAvailabilitiesList
+	buildGetAvailabilitiesList
+	
+	
+
+	doGetSupplierAvailability
+		--doSupplierAvailability
+
+	confirmPricePassed
+	confirmPrice
+	parseSupplierConfirmPriceResponse
+	parseSupplierConfirmPriceResponse
+	buildConfirmPriceRequest
+	gdsConfirmPrice
+	doConfirmPrice
+	hotelRoomsCombined
+	setHttpConfig
+	setHttpConfig
+	getWsdlLocation
+	getWsdlLocation
+	doRequest
+	doRequest
+	doRequest
+	httpRequest
+	httpRequest
+	httpRequest
+	getRoomKey
+	getRoomKey
+	getRoomKeyBase
+	getRoomKeyPax
+	getAllRoomIndex
+	getRmIndexAllInOneList
+	getRoomIndexByIndex
+	getRoomIndexListByIndex
+	getRmIndexListByPax
+	getRmIndexListByPax
+	getRmIndexList
+	getRmIndexGreedList
+	getRmIndex
+	getRmIndexList
+	toProfileLog
+	toProfileLog
+	verifyWithoutSearch
+	doGetSupplierAvailabilityFromOTA
+	getHotelAvailabilityRequestRooms
+	canChange
+
+一、全部接口都需要实现
+	1、citySearch
+		request
+		response
+
+	2、hotelSearch
+		request
+		response
+
+	3、Verify
+		request
+		response
+
+	4、Policy
+		request
+		response
+		
+二、合并部分接口
+	1、Search
+		request
+		response
+
+	2、Verify
+		request
+		response
+		
+	3、Policy
+		request
+		response

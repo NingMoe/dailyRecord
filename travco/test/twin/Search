@@ -1,0 +1,2919 @@
+
+===================Search==================
+http://localhost:8516/services/hotel/availabilitySync
+-----------------Request--------------------
+{
+  "hotelId": "",
+  "currency": "EUR",
+  "nationality": "CN",
+  "parent": null,
+  "queryId": "e883817770caaa73a86d71a9c42c9f78",
+  "countryId": "UK",
+  "supplierId": "travcov7",
+  "checkOut": "2017-05-14",
+  "language": "en",
+  "hotelCode": "",
+  "cityId": "LON",
+  "rooms": [
+    {
+      "roomIndex": "1",
+      "roomType": "TWIN",
+      "rooms": 1,
+      "adults": 2,
+      "children": 0,
+      "ages": null
+    }
+  ],
+  "checkIn": "2017-05-12"
+}
+---------------Response----------------------
+{
+  "request": {
+    "countryId": "UK",
+    "cityId": "LON",
+    "checkIn": "2017-05-12",
+    "checkOut": "2017-05-14",
+    "rooms": [
+      {
+        "roomIndex": "1",
+        "rooms": 1,
+        "roomType": "TWIN",
+        "roomRateCode": null,
+        "adults": 2,
+        "children": 0,
+        "ages": null,
+        "infants": 0
+      }
+    ],
+    "hotelId": "",
+    "hotelCode": "",
+    "nationality": "CN",
+    "currency": "EUR",
+    "language": "en",
+    "queryId": "e883817770caaa73a86d71a9c42c9f78",
+    "supplierId": "travcov7",
+    "parent": null,
+    "referenceId": null,
+    "mode": 0,
+    "roomId": null
+  },
+  "availabilities": {
+    "travcov7": [
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "KYY",
+        "hotelName": "Kensington Court (Testing).",
+        "lowestRate": 140,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "KYY",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 140,
+            "request": null,
+            "totalOriginalRate": 140,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "KYYA|KYYA|LONDON|2|TWB",
+                  "roomRateCode": "KYYA|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 140,
+                  "totalOriginalRate": 140,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 70,
+                      "originalRate": 70,
+                      "adultRate": 70,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 70,
+                      "originalRate": 70,
+                      "adultRate": 70,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015966\",null,\"KYYA\"]",
+                  "allotment": null,
+                  "group": "KYYA",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "KYYA",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993099
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "KYY",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 140,
+            "request": null,
+            "totalOriginalRate": 140,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "KYYA|KYYA|LONDON|2|DWB",
+                  "roomRateCode": "KYYA|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 140,
+                  "totalOriginalRate": 140,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 70,
+                      "originalRate": 70,
+                      "adultRate": 70,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 70,
+                      "originalRate": 70,
+                      "adultRate": 70,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015967\",null,\"KYYA\"]",
+                  "allotment": null,
+                  "group": "KYYA",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "KYYA",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993099
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993101
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "YYP",
+        "hotelName": "Pembridge Palace (Testing)",
+        "lowestRate": 144,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYP",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 144,
+            "request": null,
+            "totalOriginalRate": 144,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYP|YYP|LONDON|2|TWB",
+                  "roomRateCode": "YYP|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 144,
+                  "totalOriginalRate": 144,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 72,
+                      "originalRate": 72,
+                      "adultRate": 72,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 72,
+                      "originalRate": 72,
+                      "adultRate": 72,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015542\",null,\"YYP\"]",
+                  "allotment": null,
+                  "group": "YYP",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYP",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993108
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYP",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 144,
+            "request": null,
+            "totalOriginalRate": 144,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYP|YYP|LONDON|2|DWB",
+                  "roomRateCode": "YYP|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 144,
+                  "totalOriginalRate": 144,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 72,
+                      "originalRate": 72,
+                      "adultRate": 72,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 72,
+                      "originalRate": 72,
+                      "adultRate": 72,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015543\",null,\"YYP\"]",
+                  "allotment": null,
+                  "group": "YYP",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYP",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993108
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993111
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "YY01",
+        "hotelName": "Gainsborough  (Testing)",
+        "lowestRate": 165,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YY01",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 165,
+            "request": null,
+            "totalOriginalRate": 165,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YY03|YY03|LONDON|2|TWB",
+                  "roomRateCode": "YY03|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 165,
+                  "totalOriginalRate": 165,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 77,
+                      "originalRate": 77,
+                      "adultRate": 77,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 88,
+                      "originalRate": 88,
+                      "adultRate": 88,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015978\",null,\"YY03\"]",
+                  "allotment": null,
+                  "group": "YY03",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YY03",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993119
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YY01",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 165,
+            "request": null,
+            "totalOriginalRate": 165,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YY03|YY03|LONDON|2|DWB",
+                  "roomRateCode": "YY03|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 165,
+                  "totalOriginalRate": 165,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 77,
+                      "originalRate": 77,
+                      "adultRate": 77,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 88,
+                      "originalRate": 88,
+                      "adultRate": 88,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015979\",null,\"YY03\"]",
+                  "allotment": null,
+                  "group": "YY03",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YY03",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993119
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YY01",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 188,
+            "request": null,
+            "totalOriginalRate": 188,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YY01|YY01|LONDON|2|TWB",
+                  "roomRateCode": "YY01|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 188,
+                  "totalOriginalRate": 188,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 94,
+                      "originalRate": 94,
+                      "adultRate": 94,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 94,
+                      "originalRate": 94,
+                      "adultRate": 94,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015561\",null,\"YY01\"]",
+                  "allotment": null,
+                  "group": "YY01",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YY01",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993119
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YY01",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 188,
+            "request": null,
+            "totalOriginalRate": 188,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YY01|YY01|LONDON|2|DWB",
+                  "roomRateCode": "YY01|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 188,
+                  "totalOriginalRate": 188,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 94,
+                      "originalRate": 94,
+                      "adultRate": 94,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 94,
+                      "originalRate": 94,
+                      "adultRate": 94,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015562\",null,\"YY01\"]",
+                  "allotment": null,
+                  "group": "YY01",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YY01",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993119
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993123
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "YYA",
+        "hotelName": "An-Nur(Testing)",
+        "lowestRate": 178,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYA",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 178,
+            "request": null,
+            "totalOriginalRate": 178,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "Room Only",
+                "breakfast": "",
+                "breakfastCode": "Room Only",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWO",
+                  "roomName": "Twin Room - Room Only",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYG3|YYG3|LONDON|2|TWO",
+                  "roomRateCode": "YYG3|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 178,
+                  "totalOriginalRate": 178,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "Room Only",
+                    "breakfast": "",
+                    "breakfastCode": "Room Only",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 89,
+                      "originalRate": 89,
+                      "adultRate": 89,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 89,
+                      "originalRate": 89,
+                      "adultRate": 89,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015514\",null,\"YYG3\"]",
+                  "allotment": null,
+                  "group": "YYG3",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYG3",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993129
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYA",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 178,
+            "request": null,
+            "totalOriginalRate": 178,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "Room Only",
+                "breakfast": "",
+                "breakfastCode": "Room Only",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWO",
+                  "roomName": "Double Room - Room Only",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYG3|YYG3|LONDON|2|DWO",
+                  "roomRateCode": "YYG3|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 178,
+                  "totalOriginalRate": 178,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "Room Only",
+                    "breakfast": "",
+                    "breakfastCode": "Room Only",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 89,
+                      "originalRate": 89,
+                      "adultRate": 89,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 89,
+                      "originalRate": 89,
+                      "adultRate": 89,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015515\",null,\"YYG3\"]",
+                  "allotment": null,
+                  "group": "YYG3",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYG3",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993129
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYA",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 200,
+            "request": null,
+            "totalOriginalRate": 200,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "Room Only",
+                "breakfast": "",
+                "breakfastCode": "Room Only",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWO",
+                  "roomName": "Twin Room - Room Only",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYG2|YYG2|LONDON|2|TWO",
+                  "roomRateCode": "YYG2|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 200,
+                  "totalOriginalRate": 200,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "Room Only",
+                    "breakfast": "",
+                    "breakfastCode": "Room Only",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 100,
+                      "originalRate": 100,
+                      "adultRate": 100,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 100,
+                      "originalRate": 100,
+                      "adultRate": 100,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015510\",null,\"YYG2\"]",
+                  "allotment": null,
+                  "group": "YYG2",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYG2",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993129
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYA",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 200,
+            "request": null,
+            "totalOriginalRate": 200,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "Room Only",
+                "breakfast": "",
+                "breakfastCode": "Room Only",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWO",
+                  "roomName": "Double Room - Room Only",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYG2|YYG2|LONDON|2|DWO",
+                  "roomRateCode": "YYG2|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 200,
+                  "totalOriginalRate": 200,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "Room Only",
+                    "breakfast": "",
+                    "breakfastCode": "Room Only",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 100,
+                      "originalRate": 100,
+                      "adultRate": 100,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 100,
+                      "originalRate": 100,
+                      "adultRate": 100,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015511\",null,\"YYG2\"]",
+                  "allotment": null,
+                  "group": "YYG2",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYG2",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993129
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYA",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 320,
+            "request": null,
+            "totalOriginalRate": 320,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYA|YYA|LONDON|2|TWB",
+                  "roomRateCode": "YYA|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 320,
+                  "totalOriginalRate": 320,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 160,
+                      "originalRate": 160,
+                      "adultRate": 160,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 160,
+                      "originalRate": 160,
+                      "adultRate": 160,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015518\",null,\"YYA\"]",
+                  "allotment": null,
+                  "group": "YYA",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYA",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993129
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYA",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 320,
+            "request": null,
+            "totalOriginalRate": 320,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYA|YYA|LONDON|2|DWB",
+                  "roomRateCode": "YYA|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 320,
+                  "totalOriginalRate": 320,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 160,
+                      "originalRate": 160,
+                      "adultRate": 160,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 160,
+                      "originalRate": 160,
+                      "adultRate": 160,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015519\",null,\"YYA\"]",
+                  "allotment": null,
+                  "group": "YYA",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYA",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993129
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993133
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "TYY",
+        "hotelName": "Garden View (Testing)",
+        "lowestRate": 178,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "TYY",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 178,
+            "request": null,
+            "totalOriginalRate": 178,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "TYY|TYY|LONDON|2|TWB",
+                  "roomRateCode": "TYY|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 178,
+                  "totalOriginalRate": 178,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 89,
+                      "originalRate": 89,
+                      "adultRate": 89,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 89,
+                      "originalRate": 89,
+                      "adultRate": 89,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015522\",null,\"TYY\"]",
+                  "allotment": null,
+                  "group": "TYY",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "TYY",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993142
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "TYY",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 178,
+            "request": null,
+            "totalOriginalRate": 178,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "TYY|TYY|LONDON|2|DWB",
+                  "roomRateCode": "TYY|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 178,
+                  "totalOriginalRate": 178,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 89,
+                      "originalRate": 89,
+                      "adultRate": 89,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 89,
+                      "originalRate": 89,
+                      "adultRate": 89,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015523\",null,\"TYY\"]",
+                  "allotment": null,
+                  "group": "TYY",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "TYY",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993142
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993144
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "YYS",
+        "hotelName": "Best Western The Cromwell (Testing)",
+        "lowestRate": 180,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYS",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 180,
+            "request": null,
+            "totalOriginalRate": 180,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "Room Only",
+                "breakfast": "",
+                "breakfastCode": "Room Only",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWO",
+                  "roomName": "Twin Room - Room Only",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYS|YYS|LONDON|2|TWO",
+                  "roomRateCode": "YYS|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 180,
+                  "totalOriginalRate": 180,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "Room Only",
+                    "breakfast": "",
+                    "breakfastCode": "Room Only",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 90,
+                      "originalRate": 90,
+                      "adultRate": 90,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 90,
+                      "originalRate": 90,
+                      "adultRate": 90,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"016219\",null,\"YYS\"]",
+                  "allotment": null,
+                  "group": "YYS",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYS",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993151
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYS",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 180,
+            "request": null,
+            "totalOriginalRate": 180,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "Room Only",
+                "breakfast": "",
+                "breakfastCode": "Room Only",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWO",
+                  "roomName": "Double Room - Room Only",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYS|YYS|LONDON|2|DWO",
+                  "roomRateCode": "YYS|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 180,
+                  "totalOriginalRate": 180,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "Room Only",
+                    "breakfast": "",
+                    "breakfastCode": "Room Only",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 90,
+                      "originalRate": 90,
+                      "adultRate": 90,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 90,
+                      "originalRate": 90,
+                      "adultRate": 90,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"016220\",null,\"YYS\"]",
+                  "allotment": null,
+                  "group": "YYS",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYS",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993151
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993154
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "YYM",
+        "hotelName": "Ambassadors London (Testing)",
+        "lowestRate": 206,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYM",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 206,
+            "request": null,
+            "totalOriginalRate": 206,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "Room Only",
+                "breakfast": "",
+                "breakfastCode": "Room Only",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWO",
+                  "roomName": "Twin Room - Room Only",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYM2|YYM2|LONDON|2|TWO",
+                  "roomRateCode": "YYM2|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 206,
+                  "totalOriginalRate": 206,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "Room Only",
+                    "breakfast": "",
+                    "breakfastCode": "Room Only",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 103,
+                      "originalRate": 103,
+                      "adultRate": 103,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 103,
+                      "originalRate": 103,
+                      "adultRate": 103,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015954\",null,\"YYM2\"]",
+                  "allotment": null,
+                  "group": "YYM2",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYM2",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993161
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYM",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 206,
+            "request": null,
+            "totalOriginalRate": 206,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "Room Only",
+                "breakfast": "",
+                "breakfastCode": "Room Only",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWO",
+                  "roomName": "Double Room - Room Only",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYM2|YYM2|LONDON|2|DWO",
+                  "roomRateCode": "YYM2|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 206,
+                  "totalOriginalRate": 206,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "Room Only",
+                    "breakfast": "",
+                    "breakfastCode": "Room Only",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 103,
+                      "originalRate": 103,
+                      "adultRate": 103,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 103,
+                      "originalRate": 103,
+                      "adultRate": 103,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015955\",null,\"YYM2\"]",
+                  "allotment": null,
+                  "group": "YYM2",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYM2",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993161
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYM",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 768,
+            "request": null,
+            "totalOriginalRate": 768,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYM|YYM|LONDON|2|TWB",
+                  "roomRateCode": "YYM|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 768,
+                  "totalOriginalRate": 768,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 384,
+                      "originalRate": 384,
+                      "adultRate": 384,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 384,
+                      "originalRate": 384,
+                      "adultRate": 384,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015531\",null,\"YYM\"]",
+                  "allotment": null,
+                  "group": "YYM",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYM",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993161
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYM",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 768,
+            "request": null,
+            "totalOriginalRate": 768,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYM|YYM|LONDON|2|DWB",
+                  "roomRateCode": "YYM|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 768,
+                  "totalOriginalRate": 768,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 384,
+                      "originalRate": 384,
+                      "adultRate": 384,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 384,
+                      "originalRate": 384,
+                      "adultRate": 384,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015532\",null,\"YYM\"]",
+                  "allotment": null,
+                  "group": "YYM",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYM",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993161
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993163
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "YYL",
+        "hotelName": "County London (Testing)",
+        "lowestRate": 312,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYL",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 312,
+            "request": null,
+            "totalOriginalRate": 312,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYL|YYL|LONDON|2|TWB",
+                  "roomRateCode": "YYL|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 312,
+                  "totalOriginalRate": 312,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 156,
+                      "originalRate": 156,
+                      "adultRate": 156,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 156,
+                      "originalRate": 156,
+                      "adultRate": 156,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015494\",null,\"YYL\"]",
+                  "allotment": null,
+                  "group": "YYL",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYL",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993172
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYL",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 312,
+            "request": null,
+            "totalOriginalRate": 312,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYL|YYL|LONDON|2|DWB",
+                  "roomRateCode": "YYL|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 312,
+                  "totalOriginalRate": 312,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 156,
+                      "originalRate": 156,
+                      "adultRate": 156,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 156,
+                      "originalRate": 156,
+                      "adultRate": 156,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015495\",null,\"YYL\"]",
+                  "allotment": null,
+                  "group": "YYL",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYL",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993172
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993175
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "WYY",
+        "hotelName": "Westbury (Testing)",
+        "lowestRate": 468,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "WYY",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 468,
+            "request": null,
+            "totalOriginalRate": 468,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "WYY|WYY|LONDON|2|TWB",
+                  "roomRateCode": "WYY|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 468,
+                  "totalOriginalRate": 468,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 234,
+                      "originalRate": 234,
+                      "adultRate": 234,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 234,
+                      "originalRate": 234,
+                      "adultRate": 234,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015526\",null,\"WYY\"]",
+                  "allotment": null,
+                  "group": "WYY",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "WYY",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993182
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "WYY",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 468,
+            "request": null,
+            "totalOriginalRate": 468,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "WYY|WYY|LONDON|2|DWB",
+                  "roomRateCode": "WYY|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 468,
+                  "totalOriginalRate": 468,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 234,
+                      "originalRate": 234,
+                      "adultRate": 234,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 234,
+                      "originalRate": 234,
+                      "adultRate": 234,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015527\",null,\"WYY\"]",
+                  "allotment": null,
+                  "group": "WYY",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "WYY",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993182
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993185
+      },
+      {
+        "cityCode": "LON",
+        "hotelId": "",
+        "hotelCode": "YYB",
+        "hotelName": "Brunel (Testing)",
+        "lowestRate": 654,
+        "availabilities": [
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYB",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 654,
+            "request": null,
+            "totalOriginalRate": 654,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYB|YYB|LONDON|2|TWB",
+                  "roomRateCode": "YYB|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 654,
+                  "totalOriginalRate": 654,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 327,
+                      "originalRate": 327,
+                      "adultRate": 327,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 327,
+                      "originalRate": 327,
+                      "adultRate": 327,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015545\",null,\"YYB\"]",
+                  "allotment": null,
+                  "group": "YYB",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYB",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993193
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYB",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 654,
+            "request": null,
+            "totalOriginalRate": 654,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "YYB|YYB|LONDON|2|DWB",
+                  "roomRateCode": "YYB|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 654,
+                  "totalOriginalRate": 654,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 327,
+                      "originalRate": 327,
+                      "adultRate": 327,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 327,
+                      "originalRate": 327,
+                      "adultRate": 327,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015546\",null,\"YYB\"]",
+                  "allotment": null,
+                  "group": "YYB",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "YYB",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993193
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYB",
+            "nationality": "CN",
+            "matched": "true",
+            "totalRate": 754,
+            "request": null,
+            "totalOriginalRate": 754,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "TWB",
+                  "roomName": "Twin Room - With Breakfast",
+                  "roomType": "TWIN",
+                  "roomTypeCode": "",
+                  "roomRateId": "1YB|1YB|LONDON|2|TWB",
+                  "roomRateCode": "1YB|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 754,
+                  "totalOriginalRate": 754,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 377,
+                      "originalRate": 377,
+                      "adultRate": 377,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 377,
+                      "originalRate": 377,
+                      "adultRate": 377,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015549\",null,\"1YB\"]",
+                  "allotment": null,
+                  "group": "1YB",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "1YB",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993193
+          },
+          {
+            "supplierId": "travcov7",
+            "currency": "GBP",
+            "checkIn": "2017-05-12",
+            "checkOut": "2017-05-14",
+            "countryId": "",
+            "countryCode": "UK",
+            "cityId": "",
+            "cityCode": "LON",
+            "hotelId": "",
+            "hotelCode": "YYB",
+            "nationality": "CN",
+            "matched": "false",
+            "totalRate": 754,
+            "request": null,
+            "totalOriginalRate": 754,
+            "hotelRooms": {
+              "currency": null,
+              "totalRate": null,
+              "totalOriginalRate": null,
+              "meal": {
+                "mealCode": "",
+                "mealDescription": "With Breakfast",
+                "breakfast": "",
+                "breakfastCode": "With Breakfast",
+                "breakfastDescription": ""
+              },
+              "thirdParty": "",
+              "policies": null,
+              "messages": null,
+              "rooms": [
+                {
+                  "referenceId": "",
+                  "roomIndex": "1",
+                  "roomCount": 1,
+                  "currency": "GBP",
+                  "roomCode": "DWB",
+                  "roomName": "Double Room - With Breakfast",
+                  "roomType": "DOUBLE",
+                  "roomTypeCode": "",
+                  "roomRateId": "1YB|1YB|LONDON|2|DWB",
+                  "roomRateCode": "1YB|LONDON",
+                  "roomRateKey": null,
+                  "sharingBedding": "",
+                  "thirdParty": "",
+                  "totalRate": 754,
+                  "totalOriginalRate": 754,
+                  "meal": {
+                    "mealCode": "",
+                    "mealDescription": "With Breakfast",
+                    "breakfast": "",
+                    "breakfastCode": "With Breakfast",
+                    "breakfastDescription": ""
+                  },
+                  "policies": null,
+                  "priceBreakdowns": [
+                    {
+                      "date": "2017-05-12",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 377,
+                      "originalRate": 377,
+                      "adultRate": 377,
+                      "childRates": null
+                    },
+                    {
+                      "date": "2017-05-13",
+                      "currency": "GBP",
+                      "rateCode": null,
+                      "rate": 377,
+                      "originalRate": 377,
+                      "adultRate": 377,
+                      "childRates": null
+                    }
+                  ],
+                  "messages": {},
+                  "cancellationPolicyCode": "[\"015550\",null,\"1YB\"]",
+                  "allotment": null,
+                  "group": "1YB",
+                  "occupancy": null,
+                  "status": null
+                }
+              ],
+              "group": "1YB",
+              "matched": false,
+              "indexRoomType": null
+            },
+            "reminder": "",
+            "promoOriginalRate": null,
+            "updateTime": 1492570993193
+          }
+        ],
+        "queryId": "e883817770caaa73a86d71a9c42c9f78",
+        "request": "{\"cid0\":\"UK\",\"cid\":\"LON\",\"ci\":\"2017-05-12\",\"co\":\"2017-05-14\",\"rs\":[{\"ri\":\"1\",\"r\":1,\"rt\":\"TWIN\",\"rrc\":null,\"a\":2,\"c\":0,\"as\":null,\"i\":0}],\"hid\":\"\",\"hc\":\"\",\"n\":\"CN\",\"c\":\"EUR\",\"l\":\"en\",\"qid\":\"e883817770caaa73a86d71a9c42c9f78\",\"sid\":\"travcov7\",\"p\":null,\"rid\":null,\"m\":0,\"rmid\":null}",
+        "updateTime": 1492570993197
+      }
+    ]
+  },
+  "profile": null
+}
+
+
+
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp1 (x64) (http://www.altova.com) by Periasamy Subramaniyan (Miki Travel Ltd) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="hotelCommonTypes.xsd"/>
+	<xs:element name="hotelSearchRequest">
+		<xs:annotation>
+			<xs:documentation>Request to returns information about hotel properties that meet the requested criteria, indicating whether the requested service, rate, room stay, etc. is available within the date(s) specified. The response message may include Warnings from business processing rules, or Errors if the request did not succeed.	</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="requestAuditInfo" type="requestAuditInfo">
+					<xs:annotation>
+						<xs:documentation>Point of sale information about the message initiator.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="hotelSearchCriteria">
+					<xs:annotation>
+						<xs:documentation>Search criteria to a bookable hotel, which is consist of rate plans, room types and can be used for specific guest in rooms.This request criteria is for specific data range and number of nights.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="hotelSearchCriteriaType"/>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="versionNumber" type="xs:string" use="required" fixed="7.0"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

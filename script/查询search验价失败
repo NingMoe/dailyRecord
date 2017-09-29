@@ -1,0 +1,36 @@
+查询search验价失败
+SELECT * FROM biz_profile_log WHERE supplierid = 'travcov7'
+  AND writer = 'X_CRAWLER'
+   AND queryId IN (SELECT verify_queryid FROM biz_hotel_verify_detail 
+WHERE supplierid = 'travcov7' #AND agentPage='qunar-ota' 
+AND verify_result = 'FAILED'
+  AND verify_date_time>'2017-05-24T20:04:39'
+  ) 
+ORDER BY logTime DESC;
+
+SELECT id,queryId,agentStep,writer,supplierId,requestXml,responseXml,invokestatus 
+FROM biz_profile_log WHERE supplierid = 'miki7'
+#  AND writer = 'X_CRAWLER'
+#AND agentStep='FirstVerify'
+#AND agentStep='SecondVerify'
+   AND queryId IN (SELECT verify_queryid FROM biz_hotel_verify_detail 
+WHERE supplierid = 'miki7' 
+#AND agentPage='qunar-ota' 
+AND verify_result = 'FAILED'
+  AND verify_date_time>'2017-05-24T20:50:00'
+  ) 
+ORDER BY logTime,writer DESC;
+
+SELECT * FROM biz_profile_log WHERE supplierId='miki7' 
+AND  invokestatus<>'SUCCESS'
+AND insert_time>'2017-05-24 18:00:00'
+ORDER BY logTime DESC;
+
+
+
+
+
+
+
+
+

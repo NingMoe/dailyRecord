@@ -1,0 +1,58 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+ <soap:Header/>
+ <soap:Body>
+  <hotelSearchRequest versionNumber="7.0">
+   <requestAuditInfo>
+    <agentCode>UJT001</agentCode>
+    <requestPassword>tuesday21</requestPassword>
+    <requestID>download</requestID>
+    <requestDateTime>2016-06-13T15:55:34</requestDateTime>
+   </requestAuditInfo>
+   <hotelSearchCriteria currencyCode="EUR" paxNationality="GB" languageCode="en">
+    <destination>
+     <!--You have a CHOICE of the next 2 items at this level-->
+     <hotelRefs>
+      <productCodes>
+       <productCode>CAJ282100</productCode>
+      </productCodes>
+     </hotelRefs>
+     <!--
+     <cityNumbers>
+      <cityNumber>20142</cityNumber>
+     </cityNumbers>-->
+    </destination>
+    <stayPeriod>
+     <checkinDate>2016-06-30</checkinDate>
+     <numberOfNights>1</numberOfNights>
+    </stayPeriod>
+    <rooms>
+     <!--1 or more repetitions:-->
+ 
+     <room>
+      <roomNo>1</roomNo>
+      <guests>
+       <guest>
+        <type>ADT</type>
+       </guest>
+       <guest>
+        <type>ADT</type>
+       </guest>
+      </guests>
+     </room>
+ 
+    </rooms>
+    <!--<availabilityCriteria>
+               <availabilityIndicator>2</availabilityIndicator>
+            </availabilityCriteria>-->
+    <resultDetails>
+     <!--Optional:-->
+     <returnDailyPrices>true</returnDailyPrices>
+     <!--Optional:-->
+     <returnHotelInfo>1</returnHotelInfo>
+     <!--Optional:-->
+     <returnSpecialOfferDetails>1</returnSpecialOfferDetails>
+    </resultDetails>
+   </hotelSearchCriteria>
+  </hotelSearchRequest>
+ </soap:Body>
+</soap:Envelope>

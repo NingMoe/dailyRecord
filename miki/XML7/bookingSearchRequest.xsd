@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp1 (x64) (http://www.altova.com) by Periasamy Subramaniyan (Miki Travel Ltd) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="commonTypes.xsd"/>
+	<xs:element name="bookingSearchRequest">
+		<xs:annotation>
+			<xs:documentation>Generic service to retrieve the collection of reservation item identified by search criteria.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="requestAuditInfo" type="requestAuditInfo">
+					<xs:annotation>
+						<xs:documentation>This holds the details about requestor and audit information.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SearchCriteria" type="SearchCriteriaType">
+					<xs:annotation>
+						<xs:documentation>Specify the details of the booking search criteria.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="versionNumber" type="xs:string" use="required" fixed="7.0"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="SearchCriteriaType">
+		<xs:annotation>
+			<xs:documentation>Specify the reservation search criteria</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bookingSearchCriteria">
+				<xs:annotation>
+					<xs:documentation>Specify the any one of the booking search criteria.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="basicCriteria">
+							<xs:annotation>
+								<xs:documentation>Specify the basic booking search criteria</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="leadPassengerName" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Specify the Name of the lead passenger detail</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="dateRange" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Specify the various date ranges of the booking to search.</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="bookingDate" type="searchDatePeriodType" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the booking date period.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="serviceDate" type="searchDatePeriodType" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the service date  period.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="cancellationDeadlineDate" type="searchDatePeriodType" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the cancellation deadline date range.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="cancelledDate" type="searchDatePeriodType" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the booking cancelled Date</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="lastUpdatedDate" type="searchDatePeriodType" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the date when booking was last updated</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="referencePoint" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Specify the various reference point to search for booking</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="bookingReference" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the unique bookingReference given during reservation.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="tourReference" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the unique tourReference give during reservation.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="cancellationReference" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the unique Cancellation Reference given during cancel.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="clientReference" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Specify the client given during reservation.</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="destination" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Specify the booking location details.</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="cityNumbers" type="cityNumbers"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="bookingStatus" type="bookingStatusType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Specify the booking status</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="paymentStatus" type="paymentStatusType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Specify the payment status</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="paymentOption" type="paymentOptionType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Specify the payment option.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="paymentMethod" type="paymentMethodType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Specify the payment method.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="clientSearchCriteria" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Specify the client information for which the reservation need to searched.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="clientCode" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Client code</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="3"/>
+									<xs:maxLength value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="branchCode" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Branch Code</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="3"/>
+									<xs:maxLength value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="userName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>User name of the client</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="productSearchCriteria" type="productSearchCriteriaType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Specify the client information for which the reservation need to searched.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

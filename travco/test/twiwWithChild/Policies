@@ -1,0 +1,88 @@
+====================Policies====================
+http://localhost:8516/services/hotel/policy
+--------------------Request--------------------
+{
+  "hotelId": "",
+  "policyCode":"[\"015573\",null,\"ZZV\"]",
+  "checkOut": "2017-05-14",
+  "hotelCode": "ZZV",
+  "checkIn": "2017-05-12",
+  "supplierId": "travcov7",
+  "queryId": "e883817770caaa73a86d71a9c42c9f78"
+}
+--------------------Response--------------------{
+  "request": {
+    "supplierId": "travcov7",
+    "hotelId": "",
+    "hotelCode": "ZZV",
+    "checkIn": "2017-05-12",
+    "checkOut": "2017-05-14",
+    "policyCode": "[\"015573\",null,\"ZZV\"]",
+    "queryId": "e883817770caaa73a86d71a9c42c9f78"
+  },
+  "policies": {
+    "refundable": "true",
+    "optionDate": "2017-05-08T14:29:59",
+    "safeDay": 0,
+    "safeOptionDate": "",
+    "amendable": "true",
+    "changeName": "true",
+    "policies": {
+      "amendment": [
+        {
+          "policyCode": "[\"015573\",null,\"ZZV\"]",
+          "policyType": "amendment",
+          "chargeable": "false",
+          "startDate": "2017-05-08T14:29:59",
+          "endDate": "",
+          "feeType": "FIXED_FEE",
+          "currency": "EUR",
+          "amount": 0,
+          "nights": 0,
+          "remark": ""
+        }
+      ],
+      "changename": [
+        {
+          "policyCode": "[\"015573\",null,\"ZZV\"]",
+          "policyType": "changename",
+          "chargeable": "false",
+          "startDate": "2017-05-12T00:00:00",
+          "endDate": "",
+          "feeType": "FIXED_FEE",
+          "currency": "EUR",
+          "amount": 0,
+          "nights": 0,
+          "remark": ""
+        }
+      ],
+      "cancellation": [
+        {
+          "policyCode": "[\"015573\",null,\"ZZV\"]",
+          "policyType": "cancellation",
+          "chargeable": "true",
+          "startDate": "2017-05-12T00:00:00",
+          "endDate": "2017-05-08T14:30:00",
+          "feeType": "PERCENTAGE_OF_NIGHTS",
+          "currency": "EUR",
+          "amount": 80,
+          "nights": 2,
+          "remark": ""
+        },
+        {
+          "policyCode": "[\"015573\",null,\"ZZV\"]",
+          "policyType": "cancellation",
+          "chargeable": "false",
+          "startDate": "2017-05-08T14:29:59",
+          "endDate": "",
+          "feeType": "PERCENTAGE_OF_NIGHTS",
+          "currency": "EUR",
+          "amount": 0,
+          "nights": 0,
+          "remark": ""
+        }
+      ]
+    }
+  },
+  "messages": null
+}
