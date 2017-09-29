@@ -1,0 +1,23 @@
+hotelRoomPolicy.setStartDate(startDate);
+
+int nights = PolicyManager.nights(amountPercentType2.getNmbrOfNights(), request);
+PolicyManager.setFullNights(hotelRoomPolicy, nights);
+
+hotelRoomPolicy.setPolicyType(cn.mogutrip.hotel.common.enums.HotelPolicyType.CANCELLATION);
+
+
+HotelRoomPolicies policies = new HotelRoomPolicies();
+//不可免费取消
+policies = PolicyManager.nonRefundablePolicies(checkIn);
+
+
+//合并多条政策，计算当前时间下的optionDate
+String optionDate = PolicyManager.combineHotelRoomPolicy(cancellationPolicies, roomPolicies, policyRequest);
+
+//根据需求，可根据各条政策的startDate排序
+policies.sort(HotelPolicyType.CANCELLATION);
+
+//取消政策后，处理修改和改名政策
+boolean canChange = canChange(PolicyManager.hotelMapperKey(supplier.getSupplierId(), "", policyRequest.getHotelCode()));
+
+PolicyManager.setOtherHotelRoomPolicy(policies, request.getCheckIn(), optionDate);

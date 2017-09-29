@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AvailabilityLongResponseV2 searchid="415132684974741067" status="200" xmlns="http://xml.agoda.com" xmlns:tns="http://xml.agoda.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Hotels>
+        <Hotel>
+            <Id>8809</Id>
+            <CheapestRoom exclusive="251.48" tax="24.88" fees="22.40" inclusive="298.76"/>
+            <PaxSettings submit="one" infantage="2" childage="2"/>
+            <Rooms>
+                <Room id="3022896" name="Peaceful Room" lineitemid="1" rateplan="B2B" ratetype="B2B" currency="EUR" model="Merchant" ratecategoryid="479205" blockid="f327e8bb-7fca-1e6d-3d3f-5fbc686ccc62">
+                    <StandardTranslation>Peaceful Room</StandardTranslation>
+                    <Benefits>
+                        <Benefit id="1">
+                            <Name>Breakfast</Name>
+                            <Translation>Breakfast</Translation>
+                        </Benefit>
+                    </Benefits>
+                    <ParentRoom id="3022896" name="Peaceful Room" translationname="Peaceful Room"/>
+                    <MaxRoomOccupancy normalbedding="3" extrabeds="0"/>
+                    <RemainingRooms>3</RemainingRooms>
+                    <RateInfo>
+                        <Rate exclusive="125.74" tax="12.44" fees="11.20" inclusive="149.38"/>
+                        <Included>Breakfast</Included>
+                        <Surcharges>
+                            <Surcharge id="108" method="PAPN" charge="Mandatory" margin="n">
+                                <Name>Bathing Tax</Name>
+                                <Rate exclusive="4.70" tax="0.40" fees="0.50" inclusive="5.60"/>
+                            </Surcharge>
+                        </Surcharges>
+                    </RateInfo>
+                    <Cancellation>
+                        <PolicyText language="en-us">Any cancellation received within 3 days prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+                        <PolicyTranslated language="en-us">Any cancellation received within 3 days prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+                        <PolicyParameters>
+                            <PolicyParameter days="3" charge="N">1</PolicyParameter>
+                            <PolicyParameter days="0" charge="N">1</PolicyParameter>
+                        </PolicyParameters>
+                        <PolicyDates>
+                            <PolicyDate before="2017-10-22">
+                                <Rate exclusive="0.00" tax="0.00" fees="0.00" inclusive="0.00"/>
+                            </PolicyDate>
+                            <PolicyDate before="2017-10-25">
+                                <Rate exclusive="251.48" tax="24.88" fees="22.40" inclusive="298.76"/>
+                            </PolicyDate>
+                            <PolicyDate after="2017-10-25">
+                                <Rate exclusive="251.48" tax="24.88" fees="22.40" inclusive="298.76"/>
+                            </PolicyDate>
+                        </PolicyDates>
+                    </Cancellation>
+                </Room>
+                <Room id="3022898" name="Twin Standard With Breakfast" lineitemid="2" rateplan="B2B" ratetype="B2B" currency="EUR" model="Merchant" ratecategoryid="479205" blockid="742a0a70-1b62-bec6-075b-a4be887cda05">
+                    <StandardTranslation>Twin Standard With Breakfast</StandardTranslation>
+                    <Benefits>
+                        <Benefit id="1">
+                            <Name>Breakfast</Name>
+                            <Translation>Breakfast</Translation>
+                        </Benefit>
+                    </Benefits>
+                    <ParentRoom id="3022898" name="Twin Standard With Breakfast" translationname="Twin Standard With Breakfast"/>
+                    <MaxRoomOccupancy normalbedding="3" extrabeds="0"/>
+                    <RemainingRooms>99</RemainingRooms>
+                    <RateInfo>
+                        <Rate exclusive="125.74" tax="12.44" fees="11.20" inclusive="149.38"/>
+                        <Included>Breakfast</Included>
+                        <Surcharges>
+                            <Surcharge id="108" method="PAPN" charge="Mandatory" margin="n">
+                                <Name>Bathing Tax</Name>
+                                <Rate exclusive="4.70" tax="0.40" fees="0.50" inclusive="5.60"/>
+                            </Surcharge>
+                        </Surcharges>
+                    </RateInfo>
+                    <Cancellation>
+                        <PolicyText language="en-us">Any cancellation received within 3 days prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+                        <PolicyTranslated language="en-us">Any cancellation received within 3 days prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+                        <PolicyParameters>
+                            <PolicyParameter days="3" charge="N">1</PolicyParameter>
+                            <PolicyParameter days="0" charge="N">1</PolicyParameter>
+                        </PolicyParameters>
+                        <PolicyDates>
+                            <PolicyDate before="2017-10-22">
+                                <Rate exclusive="0.00" tax="0.00" fees="0.00" inclusive="0.00"/>
+                            </PolicyDate>
+                            <PolicyDate before="2017-10-25">
+                                <Rate exclusive="251.48" tax="24.88" fees="22.40" inclusive="298.76"/>
+                            </PolicyDate>
+                            <PolicyDate after="2017-10-25">
+                                <Rate exclusive="251.48" tax="24.88" fees="22.40" inclusive="298.76"/>
+                            </PolicyDate>
+                        </PolicyDates>
+                    </Cancellation>
+                </Room>
+                <Room id="3135168" name="Standard Twin Smoking" lineitemid="3" rateplan="B2B" ratetype="B2B" currency="EUR" model="Merchant" ratecategoryid="479205" blockid="91f3d807-a467-4c3a-4118-df0b4bf4e769">
+                    <StandardTranslation>Standard Twin Smoking</StandardTranslation>
+                    <Benefits>
+                        <Benefit id="1">
+                            <Name>Breakfast</Name>
+                            <Translation>Breakfast</Translation>
+                        </Benefit>
+                    </Benefits>
+                    <ParentRoom id="3135168" name="Standard Twin Smoking" translationname="Standard Twin Smoking"/>
+                    <MaxRoomOccupancy normalbedding="3" extrabeds="0"/>
+                    <RemainingRooms>99</RemainingRooms>
+                    <RateInfo>
+                        <Rate exclusive="125.74" tax="12.44" fees="11.20" inclusive="149.38"/>
+                        <Included>Breakfast</Included>
+                        <Surcharges>
+                            <Surcharge id="108" method="PAPN" charge="Mandatory" margin="n">
+                                <Name>Bathing Tax</Name>
+                                <Rate exclusive="4.70" tax="0.40" fees="0.50" inclusive="5.60"/>
+                            </Surcharge>
+                        </Surcharges>
+                    </RateInfo>
+                    <Cancellation>
+                        <PolicyText language="en-us">Any cancellation received within 3 days prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+                        <PolicyTranslated language="en-us">Any cancellation received within 3 days prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+                        <PolicyParameters>
+                            <PolicyParameter days="3" charge="N">1</PolicyParameter>
+                            <PolicyParameter days="0" charge="N">1</PolicyParameter>
+                        </PolicyParameters>
+                        <PolicyDates>
+                            <PolicyDate before="2017-10-22">
+                                <Rate exclusive="0.00" tax="0.00" fees="0.00" inclusive="0.00"/>
+                            </PolicyDate>
+                            <PolicyDate before="2017-10-25">
+                                <Rate exclusive="251.48" tax="24.88" fees="22.40" inclusive="298.76"/>
+                            </PolicyDate>
+                            <PolicyDate after="2017-10-25">
+                                <Rate exclusive="251.48" tax="24.88" fees="22.40" inclusive="298.76"/>
+                            </PolicyDate>
+                        </PolicyDates>
+                    </Cancellation>
+                </Room>
+            </Rooms>
+        </Hotel>
+    </Hotels>
+</AvailabilityLongResponseV2>
