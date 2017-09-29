@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AvailabilityLongResponseV2 searchid="602112728707811067" status="200" xmlns="http://xml.agoda.com" xmlns:tns="http://xml.agoda.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Hotels>
+		<Hotel>
+			<Id>1197</Id>
+			<CheapestRoom exclusive="661.60" fees="0.00" inclusive="793.94" tax="132.34"/>
+			<PaxSettings childage="1" infantage="2" submit="one"/>
+			<Rooms>
+				<Room blockid="9bc836b3-a170-7c3e-6b46-a87d5b936748" currency="USD" id="3046831" lineitemid="1" model="Merchant" name="Standard Double or Twin" ratecategoryid="730545" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Standard Double or Twin</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3046831" name="Standard Double or Twin" translationname="Standard Double or Twin"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>35</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="330.80" fees="0.00" inclusive="396.97" tax="66.17"/>
+						<Included>Breakfast</Included>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-09-29">
+								<Rate exclusive="661.60" fees="0.00" inclusive="793.94" tax="132.34"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="ab27c777-7df1-0453-006d-bf8846881e59" currency="USD" id="3046831" lineitemid="2" model="Merchant" name="Standard Double or Twin" ratecategoryid="730546" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Standard Double or Twin</StandardTranslation>
+					<ParentRoom id="3046831" name="Standard Double or Twin" translationname="Standard Double or Twin"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>35</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="330.80" fees="0.00" inclusive="396.97" tax="66.17"/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="N" days="0">1</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-10-31">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-01">
+								<Rate exclusive="661.60" fees="0.00" inclusive="793.94" tax="132.34"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-01">
+								<Rate exclusive="661.60" fees="0.00" inclusive="793.94" tax="132.34"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="a79bcb27-4e34-2882-1aaa-1bb239c03f95" currency="USD" id="3046831" lineitemid="3" model="Merchant" name="Standard Double or Twin" ratecategoryid="730549" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Standard Double or Twin</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3046831" name="Standard Double or Twin" translationname="Standard Double or Twin"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>35</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="364.00" fees="0.00" inclusive="436.79" tax="72.79"/>
+						<Included>Breakfast</Included>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="N" days="0">1</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-10-31">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-01">
+								<Rate exclusive="728.00" fees="0.00" inclusive="873.58" tax="145.58"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-01">
+								<Rate exclusive="728.00" fees="0.00" inclusive="873.58" tax="145.58"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="75432c26-dd03-0f1a-eba2-c74b60d71c6f" currency="USD" id="3046803" lineitemid="4" model="Merchant" name="Deluxe King" ratecategoryid="730546" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Deluxe King</StandardTranslation>
+					<ParentRoom id="3046803" name="Deluxe King" translationname="Deluxe King"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>17</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="375.06" fees="0.00" inclusive="450.07" tax="75.01"/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="N" days="0">1</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-10-31">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-01">
+								<Rate exclusive="750.12" fees="0.00" inclusive="900.14" tax="150.02"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-01">
+								<Rate exclusive="750.12" fees="0.00" inclusive="900.14" tax="150.02"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="6ebccb56-d123-765b-ed11-bde6b1a800a2" currency="USD" id="3046803" lineitemid="5" model="Merchant" name="Deluxe King" ratecategoryid="730545" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Deluxe King</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3046803" name="Deluxe King" translationname="Deluxe King"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>17</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="375.06" fees="0.00" inclusive="450.07" tax="75.01"/>
+						<Included>Breakfast</Included>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-09-29">
+								<Rate exclusive="750.12" fees="0.00" inclusive="900.14" tax="150.02"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="7a0111ab-185d-c57a-3972-03965e3785ed" currency="USD" id="3046803" lineitemid="6" model="Merchant" name="Deluxe King" ratecategoryid="730549" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Deluxe King</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3046803" name="Deluxe King" translationname="Deluxe King"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>17</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="408.25" fees="0.00" inclusive="489.90" tax="81.65"/>
+						<Included>Breakfast</Included>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="N" days="0">1</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-10-31">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-01">
+								<Rate exclusive="816.50" fees="0.00" inclusive="979.80" tax="163.30"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-01">
+								<Rate exclusive="816.50" fees="0.00" inclusive="979.80" tax="163.30"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="2a960588-1378-b31f-4f27-c62431c8d4ec" currency="USD" id="3046801" lineitemid="7" model="Merchant" name="Business Class" ratecategoryid="730549" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Business Class</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3046801" name="Business Class" translationname="Business Class"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>13</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="414.89" fees="0.00" inclusive="497.87" tax="82.98"/>
+						<Included>Breakfast</Included>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="N" days="0">1</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-10-31">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-01">
+								<Rate exclusive="829.78" fees="0.00" inclusive="995.74" tax="165.96"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-01">
+								<Rate exclusive="829.78" fees="0.00" inclusive="995.74" tax="165.96"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="6ac70ab4-1fb5-68a1-ccae-5440beaad606" currency="USD" id="3046838" lineitemid="8" model="Merchant" name="Studio Suite" ratecategoryid="730546" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Studio Suite</StandardTranslation>
+					<ParentRoom id="3046838" name="Studio Suite" translationname="Studio Suite"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>2</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="469.10" fees="0.00" inclusive="562.92" tax="93.82"/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="N" days="0">1</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-10-31">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-01">
+								<Rate exclusive="938.20" fees="0.00" inclusive="1125.84" tax="187.64"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-01">
+								<Rate exclusive="938.20" fees="0.00" inclusive="1125.84" tax="187.64"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="661590db-4f36-6ca8-9271-a1c07fce85a7" currency="USD" id="3046838" lineitemid="9" model="Merchant" name="Studio Suite" ratecategoryid="730545" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Studio Suite</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3046838" name="Studio Suite" translationname="Studio Suite"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>2</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="469.10" fees="0.00" inclusive="562.92" tax="93.82"/>
+						<Included>Breakfast</Included>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-09-29">
+								<Rate exclusive="938.20" fees="0.00" inclusive="1125.84" tax="187.64"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="03713c3b-f2eb-ee03-abf5-35744a757395" currency="USD" id="3046838" lineitemid="10" model="Merchant" name="Studio Suite" ratecategoryid="730549" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Studio Suite</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3046838" name="Studio Suite" translationname="Studio Suite"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>2</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="502.29" fees="0.00" inclusive="602.75" tax="100.46"/>
+						<Included>Breakfast</Included>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. Failure to arrive at your hotel or property will be treated as a No-Show and will incur the first night's charge (Hotel policy).</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="N" days="0">1</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-10-31">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-01">
+								<Rate exclusive="1004.58" fees="0.00" inclusive="1205.50" tax="200.92"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-01">
+								<Rate exclusive="1004.58" fees="0.00" inclusive="1205.50" tax="200.92"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+			</Rooms>
+		</Hotel>
+	</Hotels>
+</AvailabilityLongResponseV2>
