@@ -2,6 +2,12 @@
 周一：
 ====================2017年9月30========================================
 周六：
+	可分解的Search工作分析
+		1、buildSearchAvailabilityRequest(HotelAvailabilityRequest avRequest){}
+			
+		2、doAvailability(Object request1) {}
+		3、parseSupplierSearchAvailabilityResponse(Object responseListO, HotelAvailabilityRequest request, List<SupplierHotelAvailability> shaList) {}
+
 ====================2017年9月29========================================
 周五：
 	https://www.getpostman.com/collections/0472f355fdec78402efd
