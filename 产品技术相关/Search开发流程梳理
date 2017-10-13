@@ -32,6 +32,11 @@ crawler.supplier.base.Api
 			--doSupplierAvailability
 				  @Override
 				--buildSearchAvailabilityRequest
+				(新增)
+					  @Override
+					  --combineParams
+					  @Override
+					  --buildTemplateFile
 				--gdsAvailability
 					  @Override
 					--doAvailability
