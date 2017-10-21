@@ -1,0 +1,14 @@
+{
+    "code": "55",
+    "info": [
+        {
+            "code": "174",
+            "message": "Each guest information for the rateId dab4f9bb-bd32-4702-986a-4bf3bdee62cc_1l56ne3zeo0_200027_0##23369@@RO@|@401.42@@EUR@@0@@false@|@MerchantPay@|@Hotel@|@18356128@@false||18356130@@false is required in the request."
+        },
+        {
+            "code": "174",
+            "message": "Each guest information for the rateId dab4f9bb-bd32-4702-986a-4bf3bdee62cc_1l56ne3zeo0_200027_0##23369@@RO@|@401.42@@EUR@@0@@false@|@MerchantPay@|@Hotel@|@18356128@@false||18356130@@false is required in the request."
+        }
+    ],
+    "message": "The following validation errors occurred: "
+}

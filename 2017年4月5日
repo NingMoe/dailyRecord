@@ -1,13 +1,73 @@
+====================2017年10月13========================================
+周六：
+	1、增加rewrite中对房间数量的控制。以及入住人数的控制。
+====================2017年10月13========================================
+周五：
+	1、开发agoda的booking功能。
+====================2017年10月13========================================
+周四：
+====================2017年10月13========================================
+周三：
+	1、Abreu问题：
+		{"code":"6","message":"Error del sistema: Requested value 'e301' was not found.","info":[]}
+		{"code":"48","message":"The connector call returned error. ","info":[{"code":"6","message":"Error del sistema: Requested value 'e301' was not found."}]}
+		{"code":"55","message":"The following validation errors occurred: ","info":[{"code":"174","message":"Each guest information for the rateId dab4f9bb-bd32-4702-986a-4bf3bdee62cc_1l56ne3zeo0_200027_0##23369@@RO@|@401.42@@EUR@@0@@false@|@MerchantPay@|@Hotel@|@18356128@@false||18356130@@false is required in the request."},{"code":"174","message":"Each guest information for the rateId dab4f9bb-bd32-4702-986a-4bf3bdee62cc_1l56ne3zeo0_200027_0##23369@@RO@|@401.42@@EUR@@0@@false@|@MerchantPay@|@Hotel@|@18356128@@false||18356130@@false is required in the request."}]}
+	2、
+====================2017年10月13========================================
+周二：处理家庭的事情
+====================2017年10月13========================================
+周一：处理家庭的事情
+====================2017年10月13========================================
+周五：
+	1、Tavisca jumbo 测试stage环境。
+	2、
+
+====================2017年10月12========================================
+周四：
+	1、dbl-1@@1@@7@@Garden view room, Guest room, Garden view, WIFI
+
+	2、cbs正式接口地址还是没给。
+	3、将agoda、elevenInfo代码从search中分到crawler中。
+	4、
+		从属性类+配置文件+xml-->程序解析-->对象
+		name
+		age
+		address
+		desc
+
+		1、读取配置文件到内存中，从xml中取值
+			字典形式，保存类的每个属性对应的计算方式，对于复杂的问题，比如政策与分解价格，采取穷举方式实现解析的匹配。
+		2、赋值到类中
+
+====================2017年10月10========================================
+周三：
+	1、梳理如何实现配置化的接口对接服务。
+		定义一个合理的Xpath 对象，解析流程主要来自当前返回的availability和Xpath对象。从而避免对原始xml进行任何处理。简化解析流程。
+	2、Tavisca测试，
+		1、在dev添加tavisca_asian、tavisca_alba、tavisca_jumbo、tavisca_bonotel
+		2、等杨悦过来后，新环境的部署。
+		3、测试发现alba、asian返回数据依然有问题，常常无数据返回。明天测试就先测试接口，接口完好再测试程序。
+====================2017年10月10========================================
+周二：
+	测试Tavisca问题
+		1、sit环境问题，简单测试后么有发现问题。直接线上测试？
+			观察返回数据，核对是否有特殊情况。如果没问题，上线测试。
+	开发agoda接口
+		1、search接口完成本地测试。
+
+
 ====================2017年10月02========================================
 周一：
 ====================2017年9月30========================================
 周六：
 	可分解的Search工作分析
 		1、buildSearchAvailabilityRequest(HotelAvailabilityRequest avRequest){}
-			
+
 		2、doAvailability(Object request1) {}
 		3、parseSupplierSearchAvailabilityResponse(Object responseListO, HotelAvailabilityRequest request, List<SupplierHotelAvailability> shaList) {}
-
+	待确认、待取消优化。
+		取消失败后的重试
+		
 ====================2017年9月29========================================
 周五：
 	https://www.getpostman.com/collections/0472f355fdec78402efd
@@ -358,7 +418,7 @@ ORDER BY substr(updateTime,1,10) DESC
 	SupplierName	  Supplier Id        supplierid
 	Bonotel	          1l56pe0xo1s  		 tavisca_bonotel
 	Abreu			  1l56ne3zeo0		 tavisca_abreu
-	Asian Trails	  		 			 tavisca_asian
+	Asian Trails	  1mliqhetr0g		 tavisca_asian
 	Jumbo		 	  		 		 	 tavisca_jumbo
 	alba              1npq1gc543k        tavisca_alba
 

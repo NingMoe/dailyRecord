@@ -1,0 +1,71 @@
+{
+    "bookingContact": {
+        "contactInfo": {
+            "addressInfo": {
+                "city": {
+                    "code": "BJ",
+                    "name": "Bei Jing"
+                },
+                "countryCode": "CN",
+                "line1": "sanyuanqiao",
+                "line2": "chaoyang region",
+                "postalCode": "100001",
+                "state": {
+                    "code": "",
+                    "name": ""
+                }
+            },
+            "email": "hotelservice@mogutrip.cn",
+            "phone": {
+                "countryCode": "CN",
+                "ext": "86",
+                "num": "4000437837",
+                "type": "Mobile"
+            }
+        },
+        "name": {
+            "first": "Mogu",
+            "last": "Trip",
+            "middle": "",
+            "suffix": "Jr",
+            "title": "Mr"
+        }
+    },
+    "bookingToken": "170927163410671175",
+    "card": null,
+    "hotelId": "965612",
+    "options": {
+        "specialRequest": ""
+    },
+    "rooms": [
+        {
+            "guests": [
+                {
+                    "age": 30,
+                    "name": {
+                        "first": "YANGWEI",
+                        "last": "ZHU",
+                        "middle": "",
+                        "suffix": "Mr.",
+                        "title": "Mr"
+                    },
+                    "type": "Adult"
+                },
+                {
+                    "age": 30,
+                    "name": {
+                        "first": "LINGZHEN",
+                        "last": "HU",
+                        "middle": "",
+                        "suffix": "Mr.",
+                        "title": "Mr"
+                    },
+                    "type": "Adult"
+                }
+            ],
+            "rateId": "e5b04022-e8b8-4eaa-abd5-61c0ad5289e3_1l56ne3zeo0_965612_0##651237@@RO@|@40.14@@EUR@@0@@false@|@MerchantPay@|@Hotel@|@11852780@@false",
+            "roomRefId": "37689b40-a4e7-4775-b1ed-fe099e5f4c48"
+        }
+    ],
+    "supplierId": "1l56ne3zeo0"
+}

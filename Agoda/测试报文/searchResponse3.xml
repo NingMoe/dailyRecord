@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AvailabilityLongResponseV2 searchid="627122933998341066" status="200" xmlns="http://xml.agoda.com" xmlns:tns="http://xml.agoda.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Hotels>
+		<Hotel>
+			<Id>785</Id>
+			<CheapestRoom exclusive="625.41" fees="0.00" inclusive="750.51" tax="125.10"/>
+			<PaxSettings childage="11" infantage="2" submit="one"/>
+			<Rooms>
+				<Room blockid="1a647a83-a9eb-eb10-24fc-3c0ff78c16c5" currency="USD" id="3171392" lineitemid="1" model="Merchant" name="Classic Room King bed" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Classic Room King bed</StandardTranslation>
+					<ParentRoom id="3171392" name="Classic Room King bed" translationname="Classic Room King bed"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="208.47" fees="0.00" inclusive="250.17" tax="41.70"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-10-20">
+								<Rate exclusive="625.41" fees="0.00" inclusive="750.51" tax="125.10"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="66c1477a-41c0-51e8-62fc-fd1268017ed0" currency="USD" id="3171393" lineitemid="2" model="Merchant" name="Superior King Room and Sofa" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Superior King Room and Sofa</StandardTranslation>
+					<ParentRoom id="3171393" name="Superior King Room and Sofa" translationname="Superior King Room and Sofa"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="236.27" fees="0.00" inclusive="283.52" tax="47.25"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-10-20">
+								<Rate exclusive="708.81" fees="0.00" inclusive="850.56" tax="141.75"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="7ab33a01-7480-487f-3f45-2a39a0b8540e" currency="USD" id="3171392" lineitemid="3" model="Merchant" name="Classic Room King bed" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Classic Room King bed</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3171392" name="Classic Room King bed" translationname="Classic Room King bed"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="243.82" fees="0.00" inclusive="292.59" tax="48.77"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-10-20">
+								<Rate exclusive="731.46" fees="0.00" inclusive="877.77" tax="146.31"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="64cd9903-7012-54f8-b914-419516f285ae" currency="USD" id="3171392" lineitemid="4" model="Merchant" name="Classic Room King bed" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Classic Room King bed</StandardTranslation>
+					<ParentRoom id="3171392" name="Classic Room King bed" translationname="Classic Room King bed"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="243.82" fees="0.00" inclusive="292.59" tax="48.77"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-11-11">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-12">
+								<Rate exclusive="731.46" fees="0.00" inclusive="877.77" tax="146.31"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-12">
+								<Rate exclusive="731.46" fees="0.00" inclusive="877.77" tax="146.31"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="058d10c8-2a39-0709-0319-0dafb6903174" currency="USD" id="2983632" lineitemid="5" model="Merchant" name="Deluxe King Bed" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Deluxe King Bed</StandardTranslation>
+					<ParentRoom id="2983632" name="Deluxe King Bed" translationname="Deluxe King Bed"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="254.80" fees="0.00" inclusive="305.76" tax="50.96"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-10-20">
+								<Rate exclusive="764.40" fees="0.00" inclusive="917.28" tax="152.88"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="e2e4e557-981e-f398-7bbd-d2d3baed8835" currency="USD" id="3171393" lineitemid="6" model="Merchant" name="Superior King Room and Sofa" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Superior King Room and Sofa</StandardTranslation>
+					<ParentRoom id="3171393" name="Superior King Room and Sofa" translationname="Superior King Room and Sofa"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="276.33" fees="0.00" inclusive="331.60" tax="55.27"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-11-11">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-12">
+								<Rate exclusive="828.99" fees="0.00" inclusive="994.80" tax="165.81"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-12">
+								<Rate exclusive="828.99" fees="0.00" inclusive="994.80" tax="165.81"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="545242b2-1852-6d04-0b1a-7152fd72e944" currency="USD" id="3171393" lineitemid="7" model="Merchant" name="Superior King Room and Sofa" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Superior King Room and Sofa</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3171393" name="Superior King Room and Sofa" translationname="Superior King Room and Sofa"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="276.33" fees="0.00" inclusive="331.60" tax="55.27"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-10-20">
+								<Rate exclusive="828.99" fees="0.00" inclusive="994.80" tax="165.81"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="04988b92-b99a-ff87-7670-43cbdd60997c" currency="USD" id="3171392" lineitemid="8" model="Merchant" name="Classic Room King bed" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Classic Room King bed</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3171392" name="Classic Room King bed" translationname="Classic Room King bed"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="278.50" fees="0.00" inclusive="334.20" tax="55.70"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-11-11">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-12">
+								<Rate exclusive="835.50" fees="0.00" inclusive="1002.60" tax="167.10"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-12">
+								<Rate exclusive="835.50" fees="0.00" inclusive="1002.60" tax="167.10"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="1c8db455-64fb-54b1-b6f5-70004e3b7cde" currency="USD" id="2983632" lineitemid="9" model="Merchant" name="Deluxe King Bed" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Deluxe King Bed</StandardTranslation>
+					<ParentRoom id="2983632" name="Deluxe King Bed" translationname="Deluxe King Bed"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="298.00" fees="0.00" inclusive="357.60" tax="59.60"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-11-11">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-12">
+								<Rate exclusive="894.00" fees="0.00" inclusive="1072.80" tax="178.80"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-12">
+								<Rate exclusive="894.00" fees="0.00" inclusive="1072.80" tax="178.80"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="7aae5fc8-44fa-f39b-1c58-db021df26153" currency="USD" id="2983632" lineitemid="10" model="Merchant" name="Deluxe King Bed" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Deluxe King Bed</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="2983632" name="Deluxe King Bed" translationname="Deluxe King Bed"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="298.00" fees="0.00" inclusive="357.60" tax="59.60"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">This booking is Non-Refundable and cannot be amended or modified. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="P" days="365">100</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate after="2017-10-20">
+								<Rate exclusive="894.00" fees="0.00" inclusive="1072.80" tax="178.80"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="823a8e2b-d905-b778-af6e-0c52beedfa5b" currency="USD" id="3171393" lineitemid="11" model="Merchant" name="Superior King Room and Sofa" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Superior King Room and Sofa</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="3171393" name="Superior King Room and Sofa" translationname="Superior King Room and Sofa"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="311.01" fees="0.00" inclusive="373.21" tax="62.20"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-11-11">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-12">
+								<Rate exclusive="933.03" fees="0.00" inclusive="1119.63" tax="186.60"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-12">
+								<Rate exclusive="933.03" fees="0.00" inclusive="1119.63" tax="186.60"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+				<Room blockid="75815611-01ae-82d3-a0f8-08bf881c1e31" currency="USD" id="2983632" lineitemid="12" model="Merchant" name="Deluxe King Bed" ratecategoryid="0" rateplan="B2B" ratetype="B2B">
+					<StandardTranslation>Deluxe King Bed</StandardTranslation>
+					<Benefits>
+						<Benefit id="1">
+							<Name>Breakfast</Name>
+							<Translation>Breakfast</Translation>
+						</Benefit>
+					</Benefits>
+					<ParentRoom id="2983632" name="Deluxe King Bed" translationname="Deluxe King Bed"/>
+					<MaxRoomOccupancy extrabeds="0" normalbedding="2"/>
+					<RemainingRooms>7</RemainingRooms>
+					<RateInfo>
+						<Rate exclusive="332.68" fees="0.00" inclusive="399.22" tax="66.54"/>
+						<Included/>
+						<Excluded/>
+					</RateInfo>
+					<Cancellation>
+						<PolicyText language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyText>
+						<PolicyTranslated language="en-us">Any cancellation received within 1 day prior to the arrival date will incur the first night's charge. If you fail to arrive or cancel the booking, no refund will be given.</PolicyTranslated>
+						<PolicyParameters>
+							<PolicyParameter charge="N" days="1">1</PolicyParameter>
+							<PolicyParameter charge="P" days="0">100</PolicyParameter>
+						</PolicyParameters>
+						<PolicyDates>
+							<PolicyDate before="2017-11-11">
+								<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>
+							</PolicyDate>
+							<PolicyDate before="2017-11-12">
+								<Rate exclusive="998.04" fees="0.00" inclusive="1197.66" tax="199.62"/>
+							</PolicyDate>
+							<PolicyDate after="2017-11-12">
+								<Rate exclusive="998.04" fees="0.00" inclusive="1197.66" tax="199.62"/>
+							</PolicyDate>
+						</PolicyDates>
+					</Cancellation>
+				</Room>
+			</Rooms>
+		</Hotel>
+	</Hotels>
+</AvailabilityLongResponseV2>

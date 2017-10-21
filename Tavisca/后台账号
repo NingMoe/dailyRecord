@@ -1,0 +1,60 @@
+后台账号
+tavisca_alba
+		1）B2B后台正式地址及账号（用于客服在alba平台查询我们的API订单）：
+			www.albatravel.cn 
+			姓名：mogubjxml
+			公司：MOGUBJ
+			用户名：xmluser
+			密码：mogubjxml
+bonote网站及用户
+		With your current login (Account: lucia1; Psw: memIXr)you can access our existing site www.bonotel.com
+abreu后台
+		url：www.abreuonline.com
+		Username: 14644046
+		Password: mogutripxml	
+asianTrail
+		用户名：Beijing
+		密码：Mogutrip
+		客服后台地址：
+		https://www.asiantrails.travel/admin/ 
+jumbo
+=======================================
+	We have enabled Jumbo on your staging acount.
+	Below is updated supplier list,
+	test Environment
+
+	SupplierName	  Supplier Id        supplierid
+	Bonotel	          1hwr1w5zvnk  		 tavisca_bonotel
+	Abreu			  1hwqyss5dkw		 tavisca_abreu
+	Asian Trails	  1i8knud8nwg		 tavisca_asian
+	Jumbo		 	  1kwe8lv2vpc		 tavisca_jumbo
+	alba              1lcy9ue2osg        tavisca_alba
+
+	formal Environment
+	SupplierName	  Supplier Id        supplierid
+	Bonotel	          1l56pe0xo1s  		 tavisca_bonotel
+	Abreu			  1l56ne3zeo0		 tavisca_abreu
+	Asian Trails	  1mliqhetr0g		 tavisca_asian
+	Jumbo		 	  		 		 	 tavisca_jumbo
+	alba              1npq1gc543k        tavisca_alba
+
+	Live Oski tenantID: 1l4trsdz1mo
+================================================
+配置tavisca_bonotel			1hwr1w5zvnk  迈阿密海滩
+ 							Miami Beach
+							25.780848	
+							-80.131354    US  
+tavisca_Abreu	1hwqyss5dkw				LONDON
+					51.50740051269531
+					-0.12763400375843048
+tavisca_asian	    1i8knud8nwg	  曼谷
+					 "lat":13.73996,
+            		 "long": 100.51147
+tavisca_jumbo:
+            	Pairs
+			    	"lat": 48.8313121,
+            		"long": 2.2823276
+tavisca_alba
+			Pairs
+			    	"lat": 48.8313121,
+            		"long": 2.2823276
