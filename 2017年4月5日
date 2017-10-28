@@ -1,3 +1,94 @@
+====================2017年10月24========================================
+周六：
+
+	1、convert
+		regionSearch（非必须）
+			requestConvert
+			invoker
+			responseConvert
+		hotelSearch（必须）
+			requestConvert
+			invoker
+			responseConvert
+		firstVerify（默认调用hotelSearch服务）
+			requestConvert
+			invoker
+			responseConvert
+		secVerify（默认调用firstVerify服务）
+			requestConvert
+			invoker
+			responseConvert
+		policyRequest（默认无此接口）
+			requestConvert
+			invoker
+			responseConvert
+
+
+		toSupplier
+
+		rewriteRequest To supplierRequest
+
+		fromSupplier
+
+	2、invoke
+
+
+	提前设定好supplier对应的解析政策
+	根据报文情况，确认每一步应该怎么处理。针对特殊情况设计。
+
+
+
+
+
+
+
+
+
+
+====================2017年10月24========================================
+周五：
+	1、测试agoda下单接口。
+	2、了解Order，确定order与booking接口规范
+	3、进行booking接口服务开发测试。
+			批量单状态查询。
+====================2017年10月24========================================
+周四：
+	1、测试agoda下单接口。
+	1、了解Order，确定order与booking接口规范
+		1、修改下单时，反馈DelayConfirm状态，并反馈到前端。
+		2、添加DelayConfirm状态的查询接口，供scheler使用。
+			   查看pending状态处理的接口，没看懂。
+		3、
+	2、进行booking接口服务开发测试。
+			批量单状态查询。
+====================2017年10月24========================================
+周三：
+	1、测试agoda的搜索与下单。
+		   1、城市搜索有数据展示，单酒店搜索没有数据。
+		   		因为，hotelMap配置的cityId与hotel的实际cityid不一致。
+		   		hoteMap中destinationtree存储的是上一层的城市，hotel本身所在的下层城市就不能与单酒店匹配上。
+		   2、必须设置breakFastCode，只有breakfastCode一样的房间才会组合到一起。
+	2、测试Tavisca jumbo接口，并发邮件申请正式环境授权。
+			批量单状态查询。
+	3、
+====================2017年10月24========================================
+周二：
+	1、测试Tavisca 的jumbo,stage环境稳定，后续进行prd测试。
+	
+	forever沟通：
+	99tral部分问题要进行优化，等待他们优化完成。
+	2、不同餐食类型，应将餐食名称拼到房型名称中。
+	3、优化优势酒店（区域化放开）。
+	4、增加酒店详情（套餐、附加门票、附加服务等）。
+	5、位置、类型、库存、价格、附加值，各级优化。
+	6、
+
+====================2017年10月23========================================
+周一：
+	1、agoda测试开发
+		完成bookign开发
+		完成cancel开发
+		default.request.url 		default.url
 ====================2017年10月13========================================
 周六：
 	1、增加rewrite中对房间数量的控制。以及入住人数的控制。
@@ -1826,6 +1917,7 @@ TODO5、戴斯滑铁卢酒店/Days Hotel London Waterloo    查询6月15-16号�
 	x-search reload操作
 	dev环境
 	http://101.200.211.58:8516/services/hotel/reload/BreakfastMap
+	http://101.200.211.58:8516/services/hotel/reload/Supplier
 	sit环境
 	http://54.222.188.222:8516/services/hotel/reload/BreakfastMap
 	http://54.222.188.222:8516/services/hotel/reload/Supplier
@@ -1837,8 +1929,9 @@ TODO5、戴斯滑铁卢酒店/Days Hotel London Waterloo    查询6月15-16号�
 	http://59.110.27.105:9016/services/hotel/reload/BreakfastMap
 	http://59.110.27.105:9016/services/hotel/reload/Supplier
 	new reload service:
-	http://59.110.27.105:9016/services/reloadManager/xsearch/reloadSupplier
+	--失效 http://59.110.27.105:9016/services/reloadManager/xsearch/reloadSupplier
 	http://59.110.27.105:9016/services/reloadManager/xbooking/reloadSupplier
+	http://59.110.27.105:9016/services/reloadManager/xcrawler/reloadSupplier
 	
 	
 	---------

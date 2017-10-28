@@ -1,0 +1,88 @@
+{
+    "bookingContact": {
+        "contactInfo": {
+            "addressInfo": {
+                "city": {
+                    "code": "BJ",
+                    "name": "Bei Jing"
+                },
+                "countryCode": "CN",
+                "line1": "sanyuanqiao",
+                "line2": "chaoyang region",
+                "postalCode": "100001",
+                "state": {
+                    "code": "",
+                    "name": ""
+                }
+            },
+            "email": "hotelservice@mogutrip.cn",
+            "phone": {
+                "countryCode": "CN",
+                "ext": "86",
+                "num": "4000437837",
+                "type": "Mobile"
+            }
+        },
+        "name": {
+            "first": "Mogu",
+            "last": "Trip",
+            "middle": "",
+            "suffix": "Jr",
+            "title": "Mr"
+        }
+    },
+    "bookingToken": "170926160937171175",
+    "card": null,
+    "hotelId": "200027",
+    "options": {
+        "specialRequest": ""
+    },
+    "rooms": [
+        {
+            "guests": [
+                {
+                    "age": 30,
+                    "name": {
+                        "first": "XINGCHEN",
+                        "last": "DONG",
+                        "middle": "",
+                        "suffix": "Mr.",
+                        "title": "Mr"
+                    },
+                    "type": "Adult"
+                },
+                {
+                    "age": 30,
+                    "name": {
+                        "first": "SHIJUN",
+                        "last": "WANG",
+                        "middle": "",
+                        "suffix": "Mr.",
+                        "title": "Mr"
+                    },
+                    "type": "Adult"
+                }
+            ],
+            "rateId": "dab4f9bb-bd32-4702-986a-4bf3bdee62cc_1l56ne3zeo0_200027_0##23369@@RO@|@401.42@@EUR@@0@@false@|@MerchantPay@|@Hotel@|@18356128@@false||18356130@@false",
+            "roomRefId": "8645b68a-0667-4f9c-b2f5-8d2f6cb97aa4"
+        },
+        {
+            "guests": [
+                {
+                    "age": 30,
+                    "name": {
+                        "first": "PINGYIN",
+                        "last": "ZHANG",
+                        "middle": "",
+                        "suffix": "Mr.",
+                        "title": "Mr"
+                    },
+                    "type": "Adult"
+                }
+            ],
+            "rateId": "dab4f9bb-bd32-4702-986a-4bf3bdee62cc_1l56ne3zeo0_200027_0##23369@@RO@|@401.42@@EUR@@0@@false@|@MerchantPay@|@Hotel@|@18356128@@false||18356130@@false",
+            "roomRefId": "a12cb0cb-3048-4bff-a5e6-f5e8f5f811d4"
+        }
+    ],
+    "supplierId": "1l56ne3zeo0"
+}

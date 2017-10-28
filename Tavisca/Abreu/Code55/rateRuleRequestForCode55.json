@@ -1,4 +1,6 @@
-"verifyRequest": {
+{
+    "sessionId": "dab4f9bb-bd32-4702-986a-4bf3bdee62cc",
+    "verifyRequest": {
         "hotelId": "200027",
         "rates": [
             {
@@ -6,4 +8,5 @@
             }
         ],
         "supplierId": "1l56ne3zeo0"
+    }
 }
