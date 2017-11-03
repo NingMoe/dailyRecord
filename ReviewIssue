@@ -1,3 +1,5 @@
 1、必须设置breakFastCode，只有breakfastCode一样的房间才会组合到一起。
 2、下单流程中的searchprice、bookingnetprice，分别来自不同的order，简单的用请求中的order覆盖最终返回的order，
    本不应该用，如果要使用请求order中的数据，需要重新创建一个新的order来存储。不能直接复制对象。
+3、测试是否正常：
+		通过数据库找到曾经查询到的酒店，找出酒店信息进行测试。

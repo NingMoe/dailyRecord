@@ -164,13 +164,13 @@ Override(验价入口)
 	getAvailability
 		//一次验价
 		getSupplierAvailability
-			有验价接口：
+			1、有验价接口：
 				（必须重写）
 				doGetSupplierAvailability
 					confirmPrice
 				（必须重写）
 				doConfirmPrice
-			无验价接口：
+			2、无验价接口：
 			@Override(如果有验价接口，需要覆盖)
 			--doGetSupplierAvailability
 				--doSupplierAvailability

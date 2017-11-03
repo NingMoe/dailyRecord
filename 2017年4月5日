@@ -1,49 +1,91 @@
+====================2017年11月3========================================
+周五：
+	1、gta上线，下单失败，联系lucia确认是否gds厂商问题。
+			*布拉格可下单
+	2、agoda需要与耿大哥确认，安排小京哥的时间才能进行开发。
+			与杨哥、小京哥沟通确认开发情况，
+			*需要增加一个多单查询接口，接口确定后，给小京哥提供。
+	3、sujaba已上线，估计是昨晚查询的酒店不对所以不出。今早通过历史记录，找到了曾经有过查询的城市。
+			*上海可下单
+			下午四点中又发生一起登录失败导致的下单失败。
+	4、roomsurplus移植到x-crawler下，并在dev进行测试。
+			已完成。
+		roomsurplus处理booking问题，并在book进行测试。
+			分支develop.roomsurplus
+	5、移植search下的test项目到crawler的master分支下
+	6、本地postman内容被删除了，需要找到账户下载云端记录。或者修复linux系统，拿到文件。
+			和盖阔共同租用了个服务器。
+			本地的postman文件丢了。。。最好还是修复好linux
+	7、
+====================2017年10月31========================================
+周四：
+	1、agoda的Order部分处理。
+		1、下单成功后的状态查询处理
+		2、查询状态的处理：
+				DelayConfirm：继续查询
+				BookingConfrim：下单成功
+				BookingFailied：下单失败
+				MoguPending：需客服确认
+		3、agent能否更新订单状态。
+		4、scheler定时调用supplier，进行状态轮询。
+	2、agoda的Voucher提供给对方。
+
+====================2017年10月31========================================
+周三：
+	1、agoda测试，尽快完成。
+		bookingUrl  下单接口
+		queryBookingUrl  详情接口Detail
+		cancelBookingUrl	取消接口
+		payBookingUrl  确认取消接口
+	2、agoda的Voucher尽快确认并完成。
+
+====================2017年10月31========================================
+周二：
+	1、统计了miki7下单情况。
+	2、架构设计
+		    在下一个agoda完成后搭建架构。
+	3、学习python开发
+			今晚的时间学习。
+	4、出去采购、收拾家。
+====================2017年10月30========================================
+周一：
+	1、统计miki7，第三方下单失败情况，占所有失败单的比例。统计第三方不同城市失败率情况，
+		统计第三方酒店在同一城市下的失败率。
+		1、总下单量（4927）、总下单失败数量(379)	成功率92.30%
+		2、自有资源下单成功率 96.67%
+		3、第三方总单量(2010)、第三方失败数量(282)  成功率85.97%
+		4、第三方各地区总单量、失败数量、失败单占比
+			Chongqing	   	40	17	0.425
+			Munich			39	14	0.358974359
+			Qingdao			46	10	0.217391304
+			Hong Kong		69	14	0.202898551
+			Guangzhou		71	12	0.169014085
+			Beijing		   	95	15	0.157894737
+			Unknown 	  	147	18	0.12244898
+			Shanghai	  	268	29	0.108208955
+			
+
+	2、search、verify、booking的架构设计。
+
+	3、agoda的开发测试。
+		  agent 调用Order查看状态。
+		  xscheler调用Order
+		  Order调用book查看
+		  	   查询确认后，修改Order状态！！请小京哥来写。
+		  agentVoucher修改
+		  		createPdfHtmlFile方法内，根据需要修改代码。
+			1、Subject to hotel availability.抵达后方能得知酒店能否满足特殊要求。
+			2、增加agoda的logo图片（需要冠南哥决定用哪个图片，放在什么位置）
+			3、重要信息中添加两句话
+				-Please present this prepaid voucher and refer to Agoda booking ID upon check in
+                -This booking is booked and payable by Agoda.com
+            4、booking ID要注明是agoda的ID(可针对supplier在agent做特殊处理)
+    4、
+
+
+
 ====================2017年10月24========================================
 周六：
-
-	1、convert
-		regionSearch（非必须）
-			requestConvert
-			invoker
-			responseConvert
-		hotelSearch（必须）
-			requestConvert
-			invoker
-			responseConvert
-		firstVerify（默认调用hotelSearch服务）
-			requestConvert
-			invoker
-			responseConvert
-		secVerify（默认调用firstVerify服务）
-			requestConvert
-			invoker
-			responseConvert
-		policyRequest（默认无此接口）
-			requestConvert
-			invoker
-			responseConvert
-
-
-		toSupplier
-
-		rewriteRequest To supplierRequest
-
-		fromSupplier
-
-	2、invoke
-
-
-	提前设定好supplier对应的解析政策
-	根据报文情况，确认每一步应该怎么处理。针对特殊情况设计。
-
-
-
-
-
-
-
-
-
 
 ====================2017年10月24========================================
 周五：

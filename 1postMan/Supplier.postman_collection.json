@@ -1,0 +1,1035 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Supplier",
+		"_postman_id": "cb9373ac-92b9-29ae-a5c3-0ddb99eb09f0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USG",
+			"description": "",
+			"item": [
+				{
+					"name": "search init",
+					"request": {
+						"url": "https://public-usg.oski.io/api/hotels/search/init",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "oski-tenantId",
+								"value": "Demo",
+								"description": ""
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"suppliers\": [\n    \"110\",\n    \"100\"\n  ],\n  \"criteria\": {\n    \"checkIn\": \"2017-06-04\",\n    \"checkOut\": \"2017-06-19\",\n    \"location\": {\n      \"bounds\": {\n        \"polygon\": {\n          \"coordinates\": [\n            {\n              \"lat\": 40.751809,\n              \"long\": -74.054546\n            },\n            {\n              \"lat\": 40.741014,\n              \"long\": -74.033947\n            },\n            {\n              \"lat\": 40.720071,\n              \"long\": -74.048882\n            },\n            {\n              \"lat\": 40.716428,\n              \"long\": -74.080982\n            },\n            {\n              \"lat\": 40.729308,\n              \"long\": -74.089222\n            },\n            {\n              \"lat\": 40.743355,\n              \"long\": -74.087334\n            },\n            {\n              \"lat\": 40.749988,\n              \"long\": -74.069481\n            },\n            {\n              \"lat\": 40.751809,\n              \"long\": -74.054546\n            }\n          ]\n        }\n      }\n    },\n    \"occupancies\": [\n      {\n        \"numOfAdults\": 1,\n        \"childAges\": []\n      }\n    ],\n    \"options\": {\n      \"travelerNationality\": \"US\",\n      \"travelerCountryOfResidence\": \"US\"\n    },\n    \"filters\": {\n      \"allowHotelIds\": [],\n      \"allowNotAvailableHotels\": true\n    },\n    \"supplierSpecificOptions\": [\n      {\n        \"supplierId\": \"110\",\n        \"rateCodes\": [],\n        \"currency\": \"USD\",\n        \"rateTypes\": \"published\"\n      }\n    ]\n  },\n  \"optionalFields\": [\n    \"all\"\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hotelspro2",
+			"description": "",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"url": {
+							"raw": "http://api-proxy-seoul.hotelspro.com/api/v2/search/?pax=2&checkin=2017-11-27&checkout=2017-11-28&destination_code=161cf&client_nationality=CN&currency=EUR&format=json",
+							"protocol": "http",
+							"host": [
+								"api-proxy-seoul",
+								"hotelspro",
+								"com"
+							],
+							"path": [
+								"api",
+								"v2",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "pax",
+									"value": "2",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "checkin",
+									"value": "2017-11-27",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "checkout",
+									"value": "2017-11-28",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "destination_code",
+									"value": "161cf",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "client_nationality",
+									"value": "CN",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "currency",
+									"value": "EUR",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "format",
+									"value": "json",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic QmVpamluZ01vZ3V0cmlwSW50ZXJuYXRpb25hbFRyOnBSVGpQWThxdVpjaDBzUUg=",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jltour",
+			"description": "",
+			"item": [
+				{
+					"name": "citysearch",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{'Usercd':'{{username}}','Authno':'{{password}}','QueryType':'hotelpriceall','hotelIds':'76','roomtypeids':'','checkInDate':'2017-09-22','checkOutDate':'2017-09-24','pricingType':12}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "hotel search",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{'Usercd':'{{username}}','Authno':'{{password}}','QueryType':'hotelpriceall','hotelIds':'38182','roomtypeids':'','checkInDate':'2017-09-23','checkOutDate':'2017-09-25','pricingType':12}"
+						},
+						"description": "hotelpriceall申请+即时确认\rhotelpricecomfirm只要即时确认"
+					},
+					"response": []
+				},
+				{
+					"name": "checkprice",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{'Usercd':'{{username}}','Authno':'{{password}}','QueryType':'checkprice','roomTypeId':'24679','checkInDate':'2017-09-23','checkOutDate':'2017-09-25','pricingType':12,'roomNum':1,\n'rateType':'1'\n}"
+						},
+						"description": "'supplierid' // 捷旅价格的供应商ID,如不传值，字段节点也不要传"
+					},
+					"response": []
+				},
+				{
+					"name": "checkprice copy",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{'Usercd':'{{username}}','Authno':'{{password}}','QueryType':'checkprice','roomTypeId':'430','checkInDate':'2017-09-22','checkOutDate':'2017-09-24','pricingType':12,'roomNum':1,'rateType':''\n}"
+						},
+						"description": "'supplierid' // 捷旅价格的供应商ID,如不传值，字段节点也不要传"
+					},
+					"response": []
+				},
+				{
+					"name": "hotel search 连住两晚",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{'Usercd':'{{username}}','Authno':'{{password}}','QueryType':'hotelpricecomfirm','hotelIds':'45437','roomtypeids':'','checkInDate':'2017-09-23','checkOutDate':'2017-09-24','pricingType':12}"
+						},
+						"description": "45437 连住两晚\rhotelpriceall申请+即时确认\rhotelpricecomfirm只要即时确认"
+					},
+					"response": []
+				},
+				{
+					"name": "hotel search 限2017-05-24至:2017-09-28抢购",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{'Usercd':'{{username}}','Authno':'{{password}}','QueryType':'hotelpricecomfirm','hotelIds':'40356','roomtypeids':'','checkInDate':'2017-10-18','checkOutDate':'2017-10-19','pricingType':12}"
+						},
+						"description": "45437 连住两晚\rhotelpriceall申请+即时确认\rhotelpricecomfirm只要即时确认"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "loh",
+			"description": "",
+			"item": [
+				{
+					"name": "citySearch",
+					"request": {
+						"url": "http://{{host}}//webservice/jp/operations/availtransactions.asmx",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"description": ""
+							},
+							{
+								"key": "SOAPAction",
+								"value": "http://www.juniper.es/webservice/2007/HotelAvail",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"><soap:Body><ns2:HotelAvail xmlns:ns2=\"http://www.juniper.es/webservice/2007/\"><ns2:HotelAvailRQ Version=\"{{version}}\" Language=\"en\"><ns2:Login Password=\"{{password}}\" Email=\"{{username}}\"/><ns2:Paxes><ns2:Pax IdPax=\"1\"/></ns2:Paxes><ns2:HotelRequest><ns2:SearchSegmentsHotels xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ns2:JP_SearchSegmentsHotelFutureRates\"><ns2:SearchSegmentHotels Start=\"2017-05-22\" End=\"2017-05-23\" DestinationZone=\"13308\"/><ns2:CountryOfResidence>CN</ns2:CountryOfResidence></ns2:SearchSegmentsHotels><ns2:RelPaxesDist><ns2:RelPaxDist><ns2:RelPaxes><ns2:RelPax IdPax=\"1\"/></ns2:RelPaxes></ns2:RelPaxDist></ns2:RelPaxesDist></ns2:HotelRequest><ns2:AdvancedOptions><ns2:ShowBreakdownPrice>true</ns2:ShowBreakdownPrice><ns2:ShowHotelInfo>true</ns2:ShowHotelInfo><ns2:ShowOnlyAvailable>true</ns2:ShowOnlyAvailable></ns2:AdvancedOptions></ns2:HotelAvailRQ></ns2:HotelAvail></soap:Body></soap:Envelope>"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "iVector",
+			"description": "",
+			"item": [
+				{
+					"name": "demo",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Data",
+									"value": "<LoginDetails>\n<Login>{{username}}</Login>\n<Password>{{password}}</Password>\n<CurrencyID>2</CurrencyID>\n<Locale></Locale>\n<AgentReference></AgentReference>\n</LoginDetails>",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "SearchRequest – Multi Resort",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Data",
+									"value": "<SearchRequest>\n    <LoginDetails>\n        <Login>{{username}}</Login>\n        <Password>{{password}}</Password>\n    </LoginDetails>\n    <SearchDetails>\n        <ArrivalDate>2017-09-20</ArrivalDate>\n        <Duration>2</Duration>\n        <Resorts>\n            <Resort>\n                <ResortID>698</ResortID>\n            </Resort>\n            <Resort>\n                <ResortID>700</ResortID>\n            </Resort>\n            <Resort>\n                <ResortID>702</ResortID>\n            </Resort>\n        </Resorts>\n        <MealBasisID>0</MealBasisID>\n        <MinStarRating>0</MinStarRating>\n        <RoomRequests>\n            <RoomRequest>\n                <Adults>2</Adults>\n                <Children>0</Children>\n                <Infants>0</Infants>\n            </RoomRequest>\n           <RoomRequest>\n                <Adults>2</Adults>\n                <Children>0</Children>\n                <Infants>0</Infants>\n            </RoomRequest>\n        </RoomRequests>\n    </SearchDetails>\n</SearchRequest>",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "SearchRequest – Single Region – 1 Room",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Data",
+									"value": "<SearchRequest>\n    <LoginDetails>\n        <Login>{{username}}</Login>\n        <Password>{{password}}</Password>\n    </LoginDetails>\n    <SearchDetails>\n        <ArrivalDate>2017-12-01</ArrivalDate>\n        <Duration>5</Duration>\n        <RegionID>279</RegionID>\n        <MealBasisID>0</MealBasisID>\n        <MinStarRating>0</MinStarRating>\n        <RoomRequests>\n            <RoomRequest>\n                <Adults>2</Adults>\n                <Children>0</Children>\n                <Infants>0</Infants>\n            </RoomRequest>\n<RoomRequest>\n                <Adults>1</Adults>\n                <Children>0</Children>\n                <Infants>0</Infants>\n            </RoomRequest>\n        </RoomRequests>\n    </SearchDetails>\n</SearchRequest>",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "SearchRequest – Single Region – 1 Room copy",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Data",
+									"value": "<SearchRequest>\n    <LoginDetails>\n        <Login>{{username}}</Login>\n        <Password>{{password}}</Password>\n    </LoginDetails>\n    <SearchDetails>\n        <ArrivalDate>2017-09-29</ArrivalDate>\n        <Duration>1</Duration>\n        <RegionID>137</RegionID>\n        <MealBasisID>0</MealBasisID>\n        <MinStarRating>0</MinStarRating>\n        <RoomRequests>\n            <RoomRequest>\n                <Adults>2</Adults>\n                <Children>0</Children>\n                <Infants>0</Infants>\n            </RoomRequest>\n        </RoomRequests>\n    </SearchDetails>\n</SearchRequest>",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PreBookRequest – Third Party",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Data",
+									"value": "<PreBookRequest>\n  <LoginDetails>\n    <Login>{{username}}</Login>\n    <Password>{{password}}</Password>\n  </LoginDetails>\n  <BookingDetails>\n    <PropertyID>1061046</PropertyID>\n    <ArrivalDate>2017-09-21</ArrivalDate>\n    <Duration>7</Duration>\n    <RoomBookings>\n      <RoomBooking>\n        <BookingToken>35178_Breakfast###5###313.00###Twin/double Room</BookingToken>\n        <MealBasisID>3</MealBasisID>\n        <Adults>2</Adults>\n      </RoomBooking>\n    </RoomBookings>\n  </BookingDetails>\n</PreBookRequest>",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PreBookRequest – Direct Contract",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Data",
+									"value": "<PreBookRequest>\n  <LoginDetails>\n    <Login>{{username}}</Login>\n    <Password>{{password}}</Password>\n  </LoginDetails>\n  <BookingDetails>\n    <PropertyID>2394</PropertyID>\n    <ArrivalDate>2017-09-28</ArrivalDate>\n    <Duration>7</Duration>\n    <RoomBookings>\n      <RoomBooking>\n        <PropertyRoomTypeID>15316</PropertyRoomTypeID>\n        <MealBasisID>3</MealBasisID>\n        <Adults>2</Adults>\n      </RoomBooking>\n    </RoomBookings>\n  </BookingDetails>\n</PreBookRequest>",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "BookRequest - Direct Contract",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Data",
+									"value": "<BookRequest>\n  <LoginDetails>\n    <Login>{{username}}</Login>\n    <Password>{{password}}</Password>\n  </LoginDetails>\n  <BookingDetails>\n    <PropertyID>5336</PropertyID>\n    <PreBookingToken>25899360</PreBookingToken>\n    <ArrivalDate>2017-09-28</ArrivalDate>\n    <Duration>1</Duration>\n    <LeadGuestTitle>Mr</LeadGuestTitle>\n    <LeadGuestFirstName>Total</LeadGuestFirstName>\n    <LeadGuestLastName>Stay</LeadGuestLastName>\n    <LeadGuestAddress1 />\n    <LeadGuestPostcode />\n    <LeadGuestBookingCountryID>0</LeadGuestBookingCountryID>\n    <LeadGuestPhone></LeadGuestPhone>\n    <LeadGuestEmail></LeadGuestEmail>\n    <ContractSpecialOfferID>0</ContractSpecialOfferID>\n    <ContractArrangementID>0</ContractArrangementID>\n    <TradeReference>1234567</TradeReference>\n    <Request>Room with air conditioning</Request>\n    <CCCardTypeID>0</CCCardTypeID>\n    <CCIssueNumber>0</CCIssueNumber>\n    <CCAmount>0</CCAmount>\n    <RoomBookings>\n      <RoomBooking>\n        <PropertyRoomTypeID>46882</PropertyRoomTypeID>\n        <MealBasisID>8</MealBasisID>\n        <Adults>1</Adults>\n        <Children>0</Children>\n        <Infants>0</Infants>\n        <Guests>\n          <Guest>\n            <Type>Adult</Type>\n            <Title>Mr</Title>\n            <FirstName>Total</FirstName>\n            <LastName>Stay</LastName>\n            <Age>0</Age>\n            <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>\n            <Nationality />\n          </Guest>\n        </Guests>\n        <OptionalSupplements />\n      </RoomBooking>\n      <RoomBooking>\n        <PropertyRoomTypeID>46882</PropertyRoomTypeID>\n        <MealBasisID>8</MealBasisID>\n        <Adults>1</Adults>\n        <Children>0</Children>\n        <Infants>0</Infants>\n        <Guests>\n          <Guest>\n            <Type>Adult</Type>\n            <Title>Mrs</Title>\n            <FirstName>Exclusively</FirstName>\n            <LastName>Hotels</LastName>\n            <Age>0</Age>\n            <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>\n            <Nationality />\n          </Guest>\n        </Guests>\n        <OptionalSupplements />\n      </RoomBooking>\n    </RoomBookings>\n  </BookingDetails>\n</BookRequest>",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "BookRequest – Third Party",
+					"request": {
+						"url": "{{url}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Data",
+									"value": "<BookRequest>\n  <LoginDetails>\n    <Login>{{username}}</Login>\n    <Password>{{password}}</Password>\n  </LoginDetails>\n  <BookingDetails>\n    <PropertyID>1346518</PropertyID>\n    <PreBookingToken>26252699</PreBookingToken>\n    <ArrivalDate>2017-09-03T00:00:00</ArrivalDate>\n    <Duration>3</Duration>\n    <LeadGuestTitle>Mr</LeadGuestTitle>\n    <LeadGuestFirstName>Total</LeadGuestFirstName>\n    <LeadGuestLastName>Stay</LeadGuestLastName>\n    <LeadGuestBookingCountryID>0</LeadGuestBookingCountryID>\n    <ContractSpecialOfferID>0</ContractSpecialOfferID>\n    <ContractArrangementID>0</ContractArrangementID>\n    <ArrangementArrivalDate>0001-01-01T00:00:00</ArrangementArrivalDate>\n    <TradeReference>1234567</TradeReference>\n    <Request>High floor only</Request>\n    <CCCardTypeID>0</CCCardTypeID>\n    <CCIssueNumber>0</CCIssueNumber>\n    <CCAmount>0</CCAmount>\n    <RoomBookings>\n      <RoomBooking>\n        <PropertyRoomTypeID>0</PropertyRoomTypeID>\n        <BookingToken>GF7l/ce7UfJcMhmrCncNQAY2/CMlTBKvBD2L5jbF5JkzwycPQKBYyxRvN0zHvUX9bBXZgvPWUsboEPb bk95+tSQRh2B3TNNUu41E4/uE6y0=</BookingToken>\n        <MealBasisID>1</MealBasisID>\n        <Adults>2</Adults>\n        <Children>0</Children>\n        <Infants>0</Infants>\n        <Guests>\n          <Guest>\n            <Type>Adult</Type>\n            <Title>Mr</Title>\n            <FirstName>Total</FirstName>\n            <LastName>Stay</LastName>\n            <Age>0</Age>\n            <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>\n          </Guest>\n          <Guest>\n            <Type>Adult</Type>\n            <Title>Mrs</Title>\n            <FirstName>Exclusively</FirstName>\n            <LastName>Hotels</LastName>\n            <Age>0</Age>\n            <DateOfBirth>0001-01-01T00:00:00</DateOfBirth>\n          </Guest>\n        </Guests>\n        <OptionalSupplements />\n      </RoomBooking>\n    </RoomBookings>\n  </BookingDetails>\n</BookRequest>",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "veturis",
+			"description": "",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"url": "http://{{host}}//xmlWebServices.php",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "user={{username}}&password={{password}}&xmlRQ=<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SearchAvailabilityRQ version=\"2.0\" language=\"ENG\">\n<Request>\n    <Destination>7582</Destination>\n    <DestinationID>Z_7582</DestinationID>\n            <HotelList>53852</HotelList>\n        <Check_in_date>2017-09-17</Check_in_date>\n    <Check_out_date>2017-09-18</Check_out_date>\n    <CountryCode>CHN</CountryCode>\n            <Occupancy>\n\t            <Rooms>1</Rooms>\n\t            <Adults>2</Adults>\n\t            <Children>0</Children>\n            </Occupancy>\n            <Occupancy>\n\t            <Rooms>1</Rooms>\n\t            <Adults>1</Adults>\n\t            <Children>0</Children>\n            </Occupancy>\n            <Occupancy>\n\t            <Rooms>1</Rooms>\n\t            <Adults>2</Adults>\n\t            <Children>0</Children>\n            </Occupancy>\n    </Request>\n</SearchAvailabilityRQ>"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "search copy",
+					"request": {
+						"url": "http://{{host}}//xmlWebServices.php",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "user={{username}}&password={{password}}&xmlRQ=<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SearchAvailabilityRQ version=\"2.0\" language=\"ENG\">\n<Request>\n    <Destination>7582</Destination>\n    <DestinationID>Z_7582</DestinationID>\n            <HotelList>53852</HotelList>\n        <Check_in_date>2017-09-17</Check_in_date>\n    <Check_out_date>2017-09-18</Check_out_date>\n    <CountryCode>CHN</CountryCode>\n            <Occupancy>\n\t            <Rooms>1</Rooms>\n\t            <Adults>2</Adults>\n\t            <Children>0</Children>\n            </Occupancy>\n            <Occupancy>\n\t            <Rooms>1</Rooms>\n\t            <Adults>1</Adults>\n\t            <Children>0</Children>\n            </Occupancy>\n            <Occupancy>\n\t            <Rooms>1</Rooms>\n\t            <Adults>2</Adults>\n\t            <Children>0</Children>\n            </Occupancy>\n    </Request>\n</SearchAvailabilityRQ>"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "search 26061",
+					"request": {
+						"url": "http://{{host}}//xmlWebServices.php",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "user={{username}}&password={{password}}&xmlRQ=<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<SearchAvailabilityRQ version=\"2.0\" language=\"ENG\">\n<Request>\n    <Destination>2102</Destination>\n    <DestinationID>Z_2102</DestinationID>\n            <HotelList>26061</HotelList>\n        <Check_in_date>2017-09-24</Check_in_date>\n    <Check_out_date>2017-09-25</Check_out_date>\n    <CountryCode>CHN</CountryCode>\n            <Occupancy>\n\t            <Rooms>1</Rooms>\n\t            <Adults>2</Adults>\n\t            <Children>0</Children>\n            </Occupancy>\n           \n    </Request>\n</SearchAvailabilityRQ>"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "验价",
+					"request": {
+						"url": "http://{{host}}//xmlWebServices.php",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "user={{username}}&password={{password}}&xmlRQ=user={{username}}&password={{password}}&xmlRQ=<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<AdditionalInformationRQ version=\"2.0\" language=\"ENG\">\n    <Request>\n                    <obj>14292.118464663</obj>\n            <DATOS>53852H1_70-503/1_/H1</DATOS>\n            </Request>\n</AdditionalInformationRQ>"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "验价 copy",
+					"request": {
+						"url": "http://{{host}}//xmlWebServices.php",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "user={{username}}&password={{password}}&xmlRQ=user={{username}}&password={{password}}&xmlRQ=<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<AdditionalInformationRQ version=\"2.0\" language=\"ENG\">\n    <Request>\n                    <obj>14292.128641612</obj>\n            <DATOS>26061H41_180H2</DATOS>\n            </Request>\n</AdditionalInformationRQ>"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roomsurplus",
+			"description": "",
+			"item": [
+				{
+					"name": "GetHotels",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotels",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=1,0&room2=2,0\",\n  \"roomBedFormat\": \"room1=1,0&room2=2,0\",\n  \"Adults\": 3,\n  \"Childs\": 0,\n  \"Rooms\": 2,\n  \"Currency\": \"SGD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"364949\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": null,\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotels 2",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotels",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-27\",\n  \"CheckOut\": \"2017-10-28\",\n  \"RoomFormat\": \"room1=1,0&room2=2,0\",\n  \"roomBedFormat\": \"room1=1,0&room2=2,0\",\n  \"Adults\": 3,\n  \"Childs\": 0,\n  \"Rooms\": 2,\n  \"Currency\": \"USD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": null,\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotels 1",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotels",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=1,0\",\n  \"roomBedFormat\": \"room1=1,0\",\n  \"Adults\": 1,\n  \"Childs\": 0,\n  \"Rooms\": 1,\n  \"Currency\": \"SGD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": null,\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotels copy",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotels",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=2,0\",\n  \"roomBedFormat\": \"room1=2,0\",\n  \"Adults\": 2,\n  \"Childs\": 0,\n  \"Rooms\": 1,\n  \"Currency\": \"USD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"80851\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": null,\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotels simple",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotels",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=2,0\",\n  \"Adults\": 2,\n  \"Childs\": 0,\n  \"Rooms\": 1,\n  \"Currency\": \"SGD\",\n  \"CityID\": 5047\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotels whole",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotels",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=2,0\",\n  \"Adults\": 2,\n  \"Childs\": 0,\n  \"Rooms\": 1,\n  \"Currency\": \"SGD\",\n  \"Destination\": null,\n  \"HotelId\": null,\n  \"Provider\": null,\n  \"ApplicationType\": \"B2B\",\n  \"ChildsAgeFormat\": \";\",\n  \"Keywordsearch\": null,\n  \"MinStar\": 0,\n  \"MaxStar\": 0,\n  \"StarRange\": null,\n  \"StarCount\": null,\n  \"Amenities\": null,\n  \"ChainCodesIncludes\": null,\n  \"ChainCodesExcludes\": null,\n  \"HotelCode\": null,\n  \"HotelName\": null,\n  \"PageNo\": null,\n  \"PageSize\": null,\n  \"SortBy\": null,\n  \"DisplayOrder\": null,\n  \"_IsStatus\": false,\n  \"roomBedFormat\": \"room1=2,0\",\n  \"RequestID\": 0,\n  \"CityID\": 5047,\n  \"MaxPrice\": 0.0,\n  \"pricerange\": null,\n  \"SearchHotelProviders\": {\n    \"orbitz\": true,\n    \"hstravel\": true,\n    \"expedia\": true,\n    \"hpn\": true,\n    \"SearchHPNCorporateCodes\": {\n      \"SearchHPNCo rporateCode\": \"\"\n    },\n    \"hotelbeds\": true,\n    \"travellanda\": true,\n    \"westminster\": true,\n    \"zyberhubs\": true,\n    \"jactravel\": true,\n    \"itank\": true,\n    \"fitruums\": true\n  },\n  \"strpricerange\": null,\n  \"TotalAvalibleHotels\": 0,\n  \"Area\": null,\n  \"Supplier\": null,\n  \"MinPrice\": 0.0,\n  \"Isfirst\": true\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetPolledHotelsList",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotels",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=2,0\",\n  \"roomBedFormat\": \"room1=2,0\",\n  \"Adults\": 2,\n  \"Childs\": 0,\n  \"Rooms\": 1,\n  \"Currency\": \"SGD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"0\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": null,\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotelDetails",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotelDetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=1,0&room2=2,0\",\n  \"roomBedFormat\": \"room1=1,0&room2=2,0\",\n  \"Adults\": 3,\n  \"Childs\": 0,\n  \"Rooms\": 2,\n  \"Currency\": \"SGD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"80190\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": \"UeBInXuGQbRr6yojh08r\",\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotelDetails 2rooms",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotelDetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=1,0&room2=2,0\",\n  \"roomBedFormat\": \"room1=1,0&room2=2,0\",\n  \"Adults\": 3,\n  \"Childs\": 0,\n  \"Rooms\": 2,\n  \"Currency\": \"SGD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"119813\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": \"GBf0kc0g1aGgCPaqS6wa\",\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotelDetails 2rooms copy",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotelDetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=1,0&room2=2,0\",\n  \"roomBedFormat\": \"room1=1,0&room2=2,0\",\n  \"Adults\": 3,\n  \"Childs\": 0,\n  \"Rooms\": 2,\n  \"Currency\": \"SGD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"91941\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": \"GBf0kc0g1aGgCPaqS6wa\",\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotelDetails copy",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotelDetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"RoomFormat\": \"room1=2,0\",\n  \"roomBedFormat\": \"room1=2,0\",\n  \"Adults\": 2,\n  \"Childs\": 0,\n  \"Rooms\": 1,\n  \"Currency\": \"SGD\",\n  \"Destination\": \"\",\n  \"HotelId\": \"80851\",\n  \"CityID\": 5047,\n  \"PageNo\": 1,\n  \"availToken\": \"auyTLKO3nhN6ETgE3NvP\",\n  \"Isfirst\": false,\n  \"ApplicationType\": \"B2B\",\n  \"RequestID\": 0\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetHotelDetails 1",
+					"request": {
+						"url": "{{url}}/api/MSFGetHotelDetails",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"HotelId\" : \"80851\",\n  \"RequestID\" : 0,\n  \"Rooms\" : 1,\n  \"Isfirst\" : false,\n  \"CityID\" : 5047,\n  \"ApplicationType\" : \"B2B\",\n  \"CheckOut\" : \"2017-10-29\",\n  \"roomBedFormat\" : \"room1=1,0\",\n  \"Childs\" : 0,\n  \"availToken\" : \"xQ17n8jSJKFgnVuSpl2V\",\n  \"RoomFormat\" : \"room1=1,0\",\n  \"PageNo\" : 1,\n  \"Currency\" : \"USD\",\n  \"Destination\" : \"\",\n  \"CheckIn\" : \"2017-10-28\",\n  \"Adults\" : 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetRateRules",
+					"request": {
+						"url": "{{url}}/api/MSFGetRateRules",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"cityID\": 5047,\n  \"roomBedFormat\": \"room1=2,0\",\n  \"currency\": \"SGD\",\n  \"HotelId\": \"80851\",\n  \"roomLinks\": [\n    \"1VUQeiTe3WQHTvwbKIyRkg96:GS-BAR COMMISSI:322:RO-SG1:SP:TWN-SG1\"\n  ],\n  \"roomCodes\": [\n    null\n  ],\n  \"roomKeys\": [\n    \"1VUQeiTe3WQHTvwbKIyRkg96:GS-BAR COMMISSI:322:RO-SG1:SP:TWN-SG1\"\n  ],\n  \"BookingType\": \"Hotel\",\n  \"availToken\": \"ErrQoO7MsIQDcvRlZo57\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetRateRules 2",
+					"request": {
+						"url": "{{url}}/api/MSFGetRateRules",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"cityID\": 5047,\n  \"roomBedFormat\": \"room1=1,0&room2=2,0\",\n  \"currency\": \"SGD\",\n  \"HotelId\": \"119813\",\n  \"roomLinks\": [\n    \"433833845918-3833845918-1-0-2017-10-24\",\n    \"433833845918-3833845918-2-0-2017-10-24\"\n  ],\n  \n  \"roomKeys\": [\n    \"433833845918-3833845918-1-0-2017-10-24\",\n    \"433833845918-3833845918-2-0-2017-10-24\"\n  ],\n  \"BookingType\": \"Hotel\",\n  \"availToken\": \"9W7Blds79SDCmlAGlbzu\",\n  \"cacheKeyValue\":\"TA-150642846432427\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetRateRules 2 copy",
+					"request": {
+						"url": "{{url}}/api/MSFGetRateRules",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"cityID\": 5047,\n  \"roomBedFormat\": \"room1=1,0&room2=2,0\",\n  \"currency\": \"SGD\",\n  \"HotelId\": \"91941\",\n  \"roomLinks\": [\n     \"464240433170-4240433170-2-0-2017-10-24\",\n     \"464240433170-4240433170-1-0-2017-10-24\"\n  ],\n  \n  \"roomKeys\": [\n    \"464240433170-4240433170-2-0-2017-10-24\",\n     \"464240433170-4240433170-1-0-2017-10-24\"\n  ],\n  \"BookingType\": \"Hotel\",\n  \"availToken\":  \"bvFRNWR4JeEUoZV35KY9\",\n  \"cacheKeyValue\": \"TA-150658155823686\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetRateRules 2 copy copy",
+					"request": {
+						"url": "{{url}}/api/MSFGetRateRules",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"CheckIn\": \"2017-10-24\",\n  \"CheckOut\": \"2017-10-26\",\n  \"cityID\": 5047,\n  \"roomBedFormat\": \"room1=1,0&room2=2,0\",\n  \"currency\": \"SGD\",\n  \"HotelId\": \"91941\",\n  \"roomLinks\": [\n     \"1T7TcHzt341Lg2xxbN4SSQ8A:GS-BAR COMMISSI:322:RO-SG1:ST:DBL-SG1\",\n     \"1T7TcHzt341Lg2xxbN4SSQ8A:GS-BAR COMMISSI:322:RO-SG1:ST:DBL-SG1\"\n  ],\n  \n  \"roomKeys\": [\n    \"1T7TcHzt341Lg2xxbN4SSQ8A:GS-BAR COMMISSI:322:RO-SG1:ST:DBL-SG1\",\n     \"1T7TcHzt341Lg2xxbN4SSQ8A:GS-BAR COMMISSI:322:RO-SG1:ST:DBL-SG1\"\n  ],\n  \"BookingType\": \"Hotel\",\n  \"availToken\":  \"bvFRNWR4JeEUoZV35KY9\",\n  \"cacheKeyValue\": null\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Booking",
+					"request": {
+						"url": "{{url}}/api/MSFBooking",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Booking\": {\n    \"BookingStatus\": \"Pending\",\n    \"IpAddress\": \"203.118.42.200\",\n    \"Currency\": \"SGD\",\n    \"TotalAmount\": 306.74,\n    \"TzMemberId\": \"2313\",\n    \"Checkin\": \"2017-10-24T00:00:00\",\n    \"Checkout\": \"2017-10-26T00:00:00\",\n    \"Destination\": \"Singapore, Singapore\",\n    \"Adults\": 2,\n    \"Childs\": 0,\n    \"Child2\": 0,\n    \"Senior\": 0,\n    \"Youth\": 0,\n    \"Rooms\": 1,\n    \"RoomFormat\": \"room1=2,0\"\n  },\n  \"Travellers\": [\n    {\n      \"Index\": 1,\n      \"FirstName\": \"Hoang\",\n      \"LastName\": \"Thanh\",\n      \"Email\": \"hoang.dinh.thanh@miyatsu.vn\",\n      \"CountryCode\": null,\n      \"Phone\": \"+ 84\",\n      \"PhoneNumber\": \"123456789\",\n      \"TravellerType\": \"Adult\",\n      \"Salutation\": null\n    },\n    {\n      \"Index\": 2,\n      \"FirstName\": \"TBA\",\n      \"LastName\": \"TBA\",\n      \"Email\": \"helpdesk@tripanzee.com\",\n      \"CountryCode\": null,\n      \"Phone\": \"+ 84\",\n      \"PhoneNumber\": \"123456789\",\n      \"TravellerType\": \"Adult\",\n      \"Salutation\": null\n    }\n  ],\n  \"BillingAddressDetails\": {\n    \"BillingLine1\": \"1001 Doi Can\",\n    \"BillingLine2\": \"\",\n    \"BillingCity\": \"Ba Dinh\",\n    \"BillingState\": \"Ha Noi\",\n    \"BillingCountry\": null,\n    \"BillingZipCode\": \"100000\"\n  },\n  \"ProductDetails\": [\n    {\n      \"Booksource\": \"qtVo4PqzfZMAMY35uwnX\",\n      \"ProductId\": \"2831170\",\n      \"ProductType\": \"hotel\",\n      \"ProductName\": \"Village Hotel Bugis\",\n      \"Currency\": \"SGD\",\n      \"TotalCost\": 306.74,\n      \"RoomsArrangement\": [\n        {\n          \"RoomNo\": 0,\n          \"Key\": \"413023515713-3023515713-1-0-2017-08-24\",\n          \"Link\": \"413023515713-3023515713-1-0-2017-08-24\",\n          \"TravellerIndex\": 0,\n          \"Currency\": \"SGD\",\n          \"TotalCost\": 306.74,\n          \"Taxes\": 0.0,\n          \"TaxesFee\": 0.0,\n          \"CheckoutFee\": 0.0,\n          \"TotalCostInclusive\": 306.74,\n          \"DistributorFee\": 0.0,\n          \"HotelFee\": 0.0,\n          \"TotalCostCurrency\": \"SGD\",\n          \"TaxesCurrency\": \"SGD\",\n          \"TaxesFeeCurrency\": \"SGD\",\n          \"CheckoutFeeCurrency\": null,\n          \"TotalCostInclusiveCurrency\": \"SGD\",\n          \"DistributorFeeCurrency\": \"SGD\",\n          \"HotelFeeCurrency\": null,\n          \"RoomCode\": \"413023515713\",\n          \"RoomDesc\": \"Superior Room\",\n          \"CancellationPolicy\": {\n            \"Description\": \"This rate is non-refundable and cannot be changed or cancelled if you do choose to change or cancel this booking you will not be refunded any of the payment.\",\n            \"OrbitzPenalty\": \"\",\n            \"HotelPenalty\": \"214.5\",\n            \"PenaltyTypeCode\": \"NONREFUNDABLE\",\n            \"PenaltyType\": \"This rate is non-refundable and cannot be changed or cancelled if you do choose to change or cancel this booking you will not be refunded any of the payment.\",\n            \"AsOfDate\": \"5/8/2017 6:08:28 PM\"\n          },\n          \"PackageHotelId\": 0,\n          \"PackageHotelName\": null,\n          \"Commission\": null,\n          \"bed_type\": null,\n          \"isbreakfast\": false,\n          \"bf_type\": null,\n          \"RoomCategory\": null,\n          \"RoomAccessCode\": \"413023515713-3023515713-1-0-2017-08-24\",\n          \"SmokingPreferences\": \"\",\n          \"adult\": 0,\n          \"child\": 0,\n          \"adultIDs\": null,\n          \"childIDs\": []\n        }\n      ]\n    }\n  ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Booking copy",
+					"request": {
+						"url": "{{url}}/api/MSFBooking",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"bookingRequest\": {\n    \"Booking\": {\n      \"BookingStatus\": \"Pending\",\n      \"IpAddress\": \"101.101.101.101\",\n      \"Currency\": \"USD\",\n      \"TotalAmount\": \"51.3777264\",\n      \"TzMemberId\": \"111\",\n      \"Checkin\": \"2017-10-28T00:00:00\",\n      \"Checkout\": \"2017-10-29T00:00:00\",\n      \"Adults\": 1,\n      \"Childs\": 0,\n      \"Child2\": 0,\n      \"Senior\": 0,\n      \"Youth\": 0,\n      \"Rooms\": 1\n    },\n    \"Travellers\": [\n      {\n        \"Index\": 1,\n        \"FirstName\": \"ZHE\",\n        \"LastName\": \"XIAO\",\n        \"TravellerType\": \"Adult\"\n      }\n    ],\n    \"ProductDetails\": [\n      {\n        \"Booksource\": \"sXXlOeLvlrshmFjjOrdM\",\n        \"ProductType\": \"hotel\",\n        \"ProductName\": \"Hotel 81 - Princess\",\n        \"Currency\": \"USD\",\n        \"TotalCost\": \"51.3777264\",\n        \"RoomsArrangement\": [\n          {\n            \"RoomNo\": 1,\n            \"Key\": \"FIT-1507695136950-62644-3-10514880-1-10514880-2017-10-28\",\n            \"Link\": \"FIT-1507695136950-62644-3-10514880-1-10514880-2017-10-28\",\n            \"TravellerIndex\": 0,\n            \"Currency\": \"USD\",\n            \"TotalCost\": \"51.3777264\",\n            \"Taxes\": \"0.0\",\n            \"TaxesFee\": \"0.0\",\n            \"CheckoutFee\": \"0.0\",\n            \"TotalCostInclusive\": \"51.3777264\",\n            \"DistributorFee\": \"0.0\",\n            \"HotelFee\": \"0\",\n            \"TotalCostCurrency\": \"USD\",\n            \"TaxesCurrency\": \"USD\",\n            \"TaxesFeeCurrency\": \"USD\",\n            \"TotalCostInclusiveCurrency\": \"USD\",\n            \"DistributorFeeCurrency\": \"USD\",\n            \"HotelFeeCurrency\": \"USD\",\n            \"RoomCode\": \"FIT-1507695136950-62644-3-10514880-1\",\n            \"RoomDesc\": \"Single room - Superior\",\n            \"CancellationPolicy\": {\n              \n            },\n            \"PackageHotelId\": 0,\n            \"isbreakfast\": false,\n            \"RoomAccessCode\": \"\",\n            \"adult\": 0,\n            \"child\": 0\n          }\n        ]\n      }\n    ]\n  },\n  \"orderId\": \"171011121344231117\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dotw",
+			"description": "",
+			"item": [
+				{
+					"name": "search hotel - getrooms",
+					"request": {
+						"url": "{{host}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<customer>\n  <username>{{username}}</username>\n  <password>{{password}}</password>\n  <id>{{company}}</id>\n  <source>1</source>\n  <product>hotel</product>\n  <request command=\"getrooms\">\n    <bookingDetails>\n      <fromDate>2017-10-16</fromDate>\n      <toDate>2017-10-17</toDate>\n      <currency>520</currency>\n      <rooms no=\"1\">\n        <room runno=\"0\">\n          <adultsCode>2</adultsCode>\n          <children no=\"0\">\n          </children>\n          <rateBasis>-1</rateBasis>\n          <passengerNationality>168</passengerNationality>\n          <passengerCountryOfResidence>168</passengerCountryOfResidence>\n        </room>\n      </rooms>\n      <productId>963105</productId>\n    </bookingDetails>\n  </request>\n</customer>"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "verify - getrooms with",
+					"request": {
+						"url": "{{host}}",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<customer>\n  <username>{{username}}</username>\n  <password>{{password}}</password>\n  <id>{{company}}</id>\n  <source>1</source>\n  <product>hotel</product>\n  <request command=\"getrooms\">\n    <bookingDetails>\n      <fromDate>2017-10-16</fromDate>\n      <toDate>2017-10-17</toDate>\n      <currency>520</currency>\n      <rooms no=\"1\">\n        <room runno=\"0\">\n          <adultsCode>2</adultsCode>\n          <children no=\"0\">\n          </children>\n          <rateBasis>-1</rateBasis>\n          <passengerNationality>168</passengerNationality>\n          <passengerCountryOfResidence>168</passengerCountryOfResidence>\n          <roomTypeSelected>\n            <code>48820825</code>\n            <selectedRateBasis>0</selectedRateBasis>\n            <allocationDetails>1505895272000714B1007B1</allocationDetails>\n          </roomTypeSelected>\n        </room>\n      </rooms>\n      <productId>963105</productId>\n    </bookingDetails>\n  </request>\n</customer>"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hotelpass",
+			"description": "",
+			"item": []
+		}
+	]
+}
