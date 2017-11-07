@@ -9,14 +9,14 @@ http://api-dev.travelprologue.com/api/MSFBooking
         "TzMemberId": "2313",
         "Checkin": "2017-12-30T00:00:00",
         "Checkout": "2017-12-31T00:00:00",
-        "Destination": "Singapore, Singapore",
+*        "Destination": "Singapore, Singapore",
         "Adults": 2,
         "Childs": 0,
         "Child2": 0,
         "Senior": 0,
         "Youth": 0,
         "Rooms": 1,
-        "RoomFormat": "room1=2,0"
+*        "RoomFormat": "room1=2,0"
     },
     "Travellers": [{
         "Index": 1,
@@ -49,7 +49,7 @@ http://api-dev.travelprologue.com/api/MSFBooking
     },
     "ProductDetails": [{
         "Booksource": "aK6bdw2ll1juTaFSVqTf",
-        "ProductId": "80187",
+*        "ProductId": "80187",
         "ProductType": "hotel",
         "ProductName": "Fragrance Hotel - Crystal",
         "Currency": "SGD",

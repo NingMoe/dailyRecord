@@ -1,0 +1,38 @@
+Reload相关：
+dev环境
+	http://101.200.211.58:9016/services/reloadManager/xbooking/reloadSupplier
+	http://101.200.211.58:9016/services/reloadManager/xcrawler/reloadSupplier
+sit环境
+	http://54.222.188.222:8516/services/hotel/reload/BreakfastMap
+	http://54.222.188.222:8516/services/hotel/reload/Supplier
+	new reload service:
+	http://54.222.188.222:8516/services/reloadManager/xcrawler/reloadSupplier
+	http://54.222.188.222:8516/services/reloadManager/xbooking/reloadSupplier
+prd环境
+	http://59.110.27.105:9016/services/reloadManager/xbooking/reloadSupplier
+	http://59.110.27.105:9016/services/reloadManager/xcrawler/reloadSupplier
+
+
+x-base reload操作
+
+	Dev环境： 
+	http://101.200.211.58:9016/services/manageService/reloadAll 
+	http://101.200.211.58:9016/services/hotelMapService/reload 
+
+	 Sit环境： 
+	http://54.222.188.222:9016/services/manageService/reloadAll 
+	http://54.222.188.222:9016/services/hotelMapService/reload 
+
+	 Prd1环境： 
+	http://59.110.40.18:9016/services/manageService/reloadAll 
+	http://59.110.27.105:9016/services/manageService/reloadAll
+
+
+
+	单独reload的URL(开发环境例子，需要修改ip)
+	http://101.200.211.58:9016/services/hotelMapService/reload
+	*****/services/cityLocationService/reload
+	*****/services/cityMapService/reload
+	*****/services/cityService/reload
+	*****/services/hotelMapService/reload
+	*****/services/hotelService/reload
