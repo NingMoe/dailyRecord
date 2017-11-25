@@ -1,0 +1,8 @@
+sit环境访问地址
+内网地址
+admin ：http://192.168.1.83:4180/login
+agent ：http://192.168.1.36:4080/index
+
+外网地址
+admin ：http://218.249.4.100:4180/login
+agent ：http://218.249.4.100:4080/index

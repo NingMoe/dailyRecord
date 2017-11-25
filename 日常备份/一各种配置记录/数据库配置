@@ -17,3 +17,10 @@ dev_mappingdb
 外网：rds45w45e8bjv242a6i2o.mysql.rds.aliyuncs.com
 mg_mapping_dev
 JDKj2oj3f3oj5fj6^&*^*7j7dfs8
+
+==================================Sit===========================
+sit本地库地址：
+ip: 192.168.1.252
+biz_user: mogu_local_sit
+biz_passwd: MoGuSitDb7891427_
+================================================================

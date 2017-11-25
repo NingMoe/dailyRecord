@@ -1,0 +1,11 @@
+=================================totaystay===========================================
+----------区分2c与2b的配置-----
+url :http://totalstayxml.ivector.co.uk/xml/book.aspx
+user:MoguB2C
+password: 4c2uEhBZ8X
+search.forbid.hours 12
+--------原始配置----
+url :http://totalstayxml.ivector.co.uk/xml/book.aspx
+user:MoguFTP
+password: CMNKmPvQ5x
+search.forbid.hours 12

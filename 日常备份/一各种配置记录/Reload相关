@@ -20,13 +20,12 @@ x-base reload操作
 	http://101.200.211.58:9016/services/hotelMapService/reload 
 
 	 Sit环境： 
-	http://54.222.188.222:9016/services/manageService/reloadAll 
-	http://54.222.188.222:9016/services/hotelMapService/reload 
+	http://192.168.1.36:9016/services/manageService/reloadAll 
+	http://192.168.1.36:9016/services/hotelMapService/reload 
 
 	 Prd1环境： 
-	http://59.110.40.18:9016/services/manageService/reloadAll 
-	http://59.110.27.105:9016/services/manageService/reloadAll
-
+	http://59.110.27.105:9016/services/hotelMapService/reload
+	http://59.110.27.105:9016/services/cityMapService/reload
 
 
 	单独reload的URL(开发环境例子，需要修改ip)

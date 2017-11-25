@@ -1,0 +1,89 @@
+http://api-dev.travelprologue.com/api/MSFGetRateRules
+
+{
+"CheckIn":"2017-12-30",
+"CheckOut":"2017-12-31",
+"cityID":5047,
+"roomBedFormat":"room1=2,0",
+"currency":"SGD",
+"HotelId":"119813",
+"roomLinks":["1fjRIhYQcdcekx/+KbzXHQ5a:OFF-NRF1-Q4@:322:RO-SG1:SP:DBT-SG1"],
+"roomCodes":[null],
+"roomKeys":["1fjRIhYQcdcekx/+KbzXHQ5a:OFF-NRF1-Q4@:322:RO-SG1:SP:DBT-SG1"],
+"BookingType":"Hotel",
+"availToken":"aK6bdw2ll1juTaFSVqTf"
+}
+
+
+
+[
+    {
+        "HotelName": "Fragrance Hotel - Sunflower",
+        "HotelImage": "http://api-dev.travelprologue.com/Images/HotelImage.png",
+        "StarRating": "0",
+        "Chaincode": "",
+        "HotelId": "119813",
+        "ReviewScore": "0",
+        "ReviewCount": "0",
+        "RecommendationCount": "0",
+        "City": "",
+        "State": "",
+        "Country": "",
+        "Postalcode": "",
+        "bf_type": null,
+        "PriceBreakDown": [
+            {
+                "key": "322+H+1",
+                "HotelId": "119813",
+                "RoomType": "Double or Twin SUPERIOR",
+                "RoomDescription": "Double or Twin SUPERIOR",
+                "RoomCode": "322+H+1",
+                "RoomCategory": "",
+                "RateCode": "322+H+1",
+                "RateAccessCode": "322+H+1",
+                "TotalCost": 63.41,
+                "TotalCostCurrecy": "SGD",
+                "Taxes": 0,
+                "TaxesCurrency": "SGD",
+                "TaxesAndFees": 63.41,
+                "TaxesAndFeesCurrency": "SGD",
+                "DistributorFee": 0,
+                "DistributorFeeCurrency": "SGD",
+                "CheckoutFee": 0,
+                "CheckoutFeeCurrency": null,
+                "TotalCostInclusive": 63.41,
+                "TotalCostInclusiveCurrency": "SGD",
+                "TotalStrikeRate": 0,
+                "TotalStrikeRateCurrency": "SGD",
+                "ListHotelFees": null,
+                "Listpromotions": null,
+                "CancellationPolicy": {
+                    "Description": "Fragrance Hotel - Sunflower will impose a charge if changes or cancellation are made after 20 Nov 2017 23:59. Date and time is calculated based on local time at destination. ",
+                    "OrbitzPenalty": "0SGD",
+                    "HotelPenalty": "63.41SGD",
+                    "PenaltyTypeCode": null,
+                    "PenaltyType": "",
+                    "AsOfDate": "2017-11-20 23:59"
+                },
+                "bed_type": null,
+                "isbreakfast": false,
+                "bf_type": null,
+                "commentContract": "Car park YES (without additional debit notes). Check-in hour 15:00 - 00:00. Deposit on arrival. Early departure. Identification card at arrival.",
+                "adultIDs": [
+                    "1",
+                    "2"
+                ],
+                "childIDs": [],
+                "isBreakfastIncluded": 0,
+                "breakfastIncludedForNoOfAdults": null,
+                "breakfastIncludedForNoOfChildren": null,
+                "BreakfastChargesPerExtraAdult": 0,
+                "BreakfastTotalCost": null,
+                "mealPlan": null,
+                "ActualTotalCostInclusive": 63.41
+            }
+        ],
+        "purchaseToken": "O1127223814",
+        "agencyReference": "163007"
+    }
+]
