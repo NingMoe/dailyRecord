@@ -1,0 +1,237 @@
+{
+    "Adults": 2,
+    "CachekeyValue": "",
+    "CheckIn": "2018-01-04",
+    "CheckInTime": "2018-01-04",
+    "CheckOut": "2018-01-05",
+    "CheckOutTime": "2018-01-05",
+    "Childs": 0,
+    "Country": null,
+    "Currency": "USD",
+    "Description": "<p><b>Property Location</b> <br />With a stay at Hotel 81 Geylang in Singapore (Geylang), you'll be close to Singapore Sports Hub and Singapore Flyer.  This hotel is within close proximity of Singapore National Stadium and Kallang Wave Mall.</p><p><b>Rooms</b> <br />Make yourself at home in one of the 85 air-conditioned guestrooms. Complimentary wireless Internet access keeps you connected, and cable programming is available for your entertainment. Private bathrooms with showers feature complimentary toiletries and hair dryers. Conveniences include coffee/tea makers, as well as phones with free local calls.</p><p><b>Amenities</b> <br />Make use of convenient amenities, which include complimentary wireless Internet access and gift shops/newsstands.</p><p><b>Business, Other Amenities</b> <br />Featured amenities include express check-in, express check-out, and dry cleaning/laundry services. Free self parking is available onsite.</p>",
+    "Destination": "Singapore, Singapore",
+    "HotelCode": null,
+    "HotelID": "80852",
+    "HotelName": "Hotel 81 - Geylang",
+    "LstHotelImages": [
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_11_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_20_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_3_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_4_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_6_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_7_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_8_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_12_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_14_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_15_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_17_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_18_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_22_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_23_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_9_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_13_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_19_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_24_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_10_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_2_b.jpg"
+        },
+        {
+            "Title": null,
+            "URL": "http://media.expedia.com/hotels/3000000/2810000/2806500/2806435/2806435_16_b.jpg"
+        }
+    ],
+    "LstRooms": [
+        {
+            "LstRoomDetails": [
+                {
+                    "Amount": 0.0,
+                    "AverageNightlyRate": 39.893293439999994,
+                    "AverageNightlyStrikeRate": 0.0,
+                    "Board": "",
+                    "BookingFee": 0.0,
+                    "CachekeyValue": null,
+                    "CancellUpto": "31 Dec 2017 23:59",
+                    "ChargeablesText": null,
+                    "CheckoutFee": 0.0,
+                    "Description": "DOUBLE STANDARD",
+                    "DistributorFee": 0.0,
+                    "Fee": 0.0,
+                    "FreeCancellable": true,
+                    "HasFreeInternet": false,
+                    "HotelCode": null,
+                    "HotelID": "80852",
+                    "Id": null,
+                    "Key": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS-BAR:322:RO-SG1:ST:DBL-SG1",
+                    "Link": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS-BAR:322:RO-SG1:ST:DBL-SG1",
+                    "Location": null,
+                    "PromoCode": "",
+                    "PromotionText": "",
+                    "ProviderCode": "UFy01VyQI6QiPZc0EWYs",
+                    "RateType": "",
+                    "RequestCode": null,
+                    "RoomCode": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS-BAR:322:RO-SG1:ST:DBL-SG1",
+                    "RoomNo": 1,
+                    "Taxes": 0.0,
+                    "TotalCost": 39.893293439999994,
+                    "TotalCostInclusive": 39.893293439999994,
+                    "TotalStrikeRate": 0.0,
+                    "TypeCode": "DBL-SG1",
+                    "TypeValue": "DOUBLE STANDARD",
+                    "availToken": "UFy01VyQI6QiPZc0EWYs",
+                    "breakfast_type": null,
+                    "isbreakfast": false
+                },
+                {
+                    "Amount": 0.0,
+                    "AverageNightlyRate": 39.893293439999994,
+                    "AverageNightlyStrikeRate": 0.0,
+                    "Board": "",
+                    "BookingFee": 0.0,
+                    "CachekeyValue": null,
+                    "CancellUpto": "31 Dec 2017 23:59",
+                    "ChargeablesText": null,
+                    "CheckoutFee": 0.0,
+                    "Description": "TWIN STANDARD",
+                    "DistributorFee": 0.0,
+                    "Fee": 0.0,
+                    "FreeCancellable": true,
+                    "HasFreeInternet": false,
+                    "HotelCode": null,
+                    "HotelID": "80852",
+                    "Id": null,
+                    "Key": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS-BAR:322:RO-SG1:ST:TWN-SG1",
+                    "Link": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS-BAR:322:RO-SG1:ST:TWN-SG1",
+                    "Location": null,
+                    "PromoCode": "",
+                    "PromotionText": "",
+                    "ProviderCode": "UFy01VyQI6QiPZc0EWYs",
+                    "RateType": "",
+                    "RequestCode": null,
+                    "RoomCode": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS-BAR:322:RO-SG1:ST:TWN-SG1",
+                    "RoomNo": 1,
+                    "Taxes": 0.0,
+                    "TotalCost": 39.893293439999994,
+                    "TotalCostInclusive": 39.893293439999994,
+                    "TotalStrikeRate": 0.0,
+                    "TypeCode": "TWN-SG1",
+                    "TypeValue": "TWIN STANDARD",
+                    "availToken": "UFy01VyQI6QiPZc0EWYs",
+                    "breakfast_type": null,
+                    "isbreakfast": false
+                },
+                {
+                    "Amount": 0.0,
+                    "AverageNightlyRate": 44.048844839999994,
+                    "AverageNightlyStrikeRate": 0.0,
+                    "Board": "",
+                    "BookingFee": 0.0,
+                    "CachekeyValue": null,
+                    "CancellUpto": "31 Dec 2017 23:59",
+                    "ChargeablesText": null,
+                    "CheckoutFee": 0.0,
+                    "Description": "Double or Twin RUN OF HOUSE",
+                    "DistributorFee": 0.0,
+                    "Fee": 0.0,
+                    "FreeCancellable": true,
+                    "HasFreeInternet": false,
+                    "HotelCode": null,
+                    "HotelID": "80852",
+                    "Id": null,
+                    "Key": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS - ALL:322:RO-SG1:RO:DBT-SG1",
+                    "Link": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS - ALL:322:RO-SG1:RO:DBT-SG1",
+                    "Location": null,
+                    "PromoCode": "",
+                    "PromotionText": "",
+                    "ProviderCode": "UFy01VyQI6QiPZc0EWYs",
+                    "RateType": "",
+                    "RequestCode": null,
+                    "RoomCode": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS - ALL:322:RO-SG1:RO:DBT-SG1",
+                    "RoomNo": 1,
+                    "Taxes": 0.0,
+                    "TotalCost": 44.048844839999994,
+                    "TotalCostInclusive": 44.048844839999994,
+                    "TotalStrikeRate": 0.0,
+                    "TypeCode": "DBT-SG1",
+                    "TypeValue": "Double or Twin RUN OF HOUSE",
+                    "availToken": "UFy01VyQI6QiPZc0EWYs",
+                    "breakfast_type": null,
+                    "isbreakfast": false
+                }
+            ]
+        }
+    ],
+    "NoOfNights": 1,
+    "Provider": "",
+    "RecommendationCount": "",
+    "ReviewCount": "",
+    "ReviewScores": "",
+    "RoomFormat": "room1=2,0",
+    "Rooms": 1,
+    "StarRating": "2",
+    "TotalCost": 0.0,
+    "TotalCostInclusive": 39.893293439999994,
+    "city": "Singapore",
+    "latitude": 1.31181,
+    "longitude": 103.87983,
+    "postalCode": null,
+    "street1": "20 Lorong 16 Geylang,Singapore,398863"
+}

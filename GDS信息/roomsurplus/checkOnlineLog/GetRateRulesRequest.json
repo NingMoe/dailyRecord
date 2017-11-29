@@ -1,0 +1,20 @@
+{
+    "BookingType": "Hotel",
+    "CheckIn": "2018-01-04",
+    "CheckOut": "2018-01-05",
+    "HotelId": "80852",
+    "availToken": "UFy01VyQI6QiPZc0EWYs",
+    "cacheKeyValue": "1NOmTnTEhaKGWpqZBJdE2Aaf:GS - ALL:322:RO-SG1:RO:DBT-SG1",
+    "cityID": 5047,
+    "currency": "USD",
+    "roomBedFormat": "room1=2,0",
+    "roomCodes": [
+        "1NOmTnTEhaKGWpqZBJdE2Aaf:GS - ALL:322:RO-SG1:RO:DBT-SG1"
+    ],
+    "roomKeys": [
+        "1NOmTnTEhaKGWpqZBJdE2Aaf:GS - ALL:322:RO-SG1:RO:DBT-SG1"
+    ],
+    "roomLinks": [
+        "1NOmTnTEhaKGWpqZBJdE2Aaf:GS - ALL:322:RO-SG1:RO:DBT-SG1"
+    ]
+}
