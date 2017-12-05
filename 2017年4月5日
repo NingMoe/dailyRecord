@@ -1,10 +1,144 @@
+ ====================2017年12月05========================================
+周二：
+	1、测试发现假期对接。
+		*先下载静态数据
+	3、Tavisca：
+		remark没有被传输到supplier的website。
+			询问未回复
+		*alba异步获取政策开发。
+	2、roomsurplus
+		 测试MSFGetPolledHotelsList
+		 修改验价后对key的赋值
+	-----待处理---
+	1、agoda
+		1. 下周五看是否可上线。
+		2. 静态数据中房型数据展示。
+			和杨哥讨论在床型匹配中处理。
+	2、增加hotelbeds新账号，只提供给B端客户
+			等待新账号到了后处理。
+	3、jltour等待对方更新接口即可上线。
+	4、Tavisca：
+			alba异步获取政策开发。
+			*等待alba的国籍提示政策出来后上线。
+			*asian 返回报价少，等待商务沟通结果。上线
+			下单状态错误情况的处理。supplier_booking_status.
+ ====================2017年12月04========================================
+周一：
+	
+	2、roomsurplus
+		 *测试hotelid。
+	3、Tavisca：
+		remark没有被传输到supplier的website。
+			询问未回复
+		*alba异步获取政策开发。
+	4、修复hotelspro2详解接口问题。
+		增加了针对Get的Https请求。
+		*需要order传输travellerList过来。
+	5、上线
+			ptchub remark。
+			hotelspro detials接口错误。已测试。
+-----待处理---
+	1、查看remark是否处理正确了
+		hotelbeds：有（已处理上线）
+		ptclub：有（已处理上线）
+	2、agoda
+		1. 下周五看是否可上线。
+		2. 静态数据中房型数据展示。
+			和杨哥讨论在床型匹配中处理。
+	4、增加hotelbeds新账号，只提供给B端客户
+			等待新账号到了后处理。
+	2、jltour等待对方更新接口即可上线。
+	3、Tavisca：
+			alba异步获取政策开发。
+			*等待alba的国籍提示政策出来后上线。
+			*asian 返回报价少，等待商务沟通结果。上线
+			下单状态错误情况的处理。supplier_booking_status.
+ ====================2017年12月02========================================
+周六：
+	下线了ptclub，周一上线。
+	1、测试发现假期对接。
+		先下载静态数据
+	2、roomsurplus
+		 测试hotelid。
+	5、Tavisca：
+			remark没有被传输到supplier的website。
+				询问未回复
+			alba异步获取政策开发。
+	6、e Miki  t Miki2 c 3rd Party
+			已处理。接口返回中有针对改名的政策。 
+			如果不能修改不能改名，前端默认不显示。
+			可以改名，则显示。
+	5、修复hotelspro2详解接口问题。
+		增加了针对Get的Https请求。
+ -----待处理---
+	1、查看remark是否处理正确了
+		hotelbeds：有（已处理上线）
+		ptclub：有（已处理上线）
+	2、agoda
+		1. 下周五看是否可上线。
+		2. 静态数据中房型数据展示。
+			和杨哥讨论在床型匹配中处理。
+	4、增加hotelbeds新账号，只提供给B端客户
+			等待新账号到了后处理。
+	2、jltour等待对方更新接口即可上线。
+	3、Tavisca：
+			alba异步获取政策开发。
+			*等待alba的国籍提示政策出来后上线。
+			*asian 返回报价少，等待商务沟通结果。上线
+			下单状态错误情况的处理。supplier_booking_status.
+====================2017年12月01========================================
+周五：
+	1、测试发现假期对接。
+		先下载静态数据
+	2、roomsurplus
+		a.我们已有的hotelCode不是roomsurplus的，需要向travelprologue要基础数据。
+			必须：国家代码、国家名称、城市代码、酒店ID、酒店名称、酒店地址、经纬度
+			可选：酒店邮箱、酒店电话、
+		如果不能提供roomsurplus的基础数据，则提供给我们travelprologue与roomsurplus的tphotelid与hotelid的对应关系。
+	3、agoda
+		a.等待耿大哥测试通过后上线。
+		b.提测正式接口。
+	4、增加hotelbeds新账号，只提供给B端客户
+			等待新账号到了后处理。
+	5、Tavisca：
+			remark没有被传输到supplier的website。
+				询问说今天处理
+	6、查看了不支持remark的gds。
+		未来接口不支持备注的情况，告诉冠南哥一下。
+		dotw：结构化的remark信息，不好处理。
+		hotelbeds：有（已处理上线）
+		sujaba：没有接口
+		ptclub：有（已处理上线）
+		restel：没有remark接口
+		travellanda：没有接口
+		roomsurplus：没有接口
+
+	 -----待处理---
+	2、jltour等待对方更新接口即可上线。
+	3、Tavisca：
+			alba异步获取政策开发。
+			*等待alba的国籍提示政策出来后上线。
+			*asian 返回报价少，等待商务沟通结果。上线
+			下单状态错误情况的处理。supplier_booking_status.
+	4、agoda
+		1. 下周五看是否可上线。
+		2. 静态数据中房型数据展示。
+			和杨哥讨论在床型匹配中处理。
+	5、实现平滑上线系统
+			1、从dubbo上停用节点。
+			2、等待节点无访问后，上线系统。
+			3、从dubbo上加载。
 ====================2017年11月30========================================
 周四：
 	1、测试发现假期对接。
-	1、roomsurplus
-		a.带小孩无房
-		b.修改时间格式为配置型，以防出现特殊的格式。
-	2、agoda
+		先下载静态数据
+	2、roomsurplus
+		a.带小孩无房,请求参数中的roomFormat与roombedFormat不是完全一致的。
+		b.我们已有的hotelCode不是roomsurplus的，需要向travelprologue要基础数据。
+			必须：国家代码、国家名称、城市代码、酒店ID、酒店名称、酒店地址、经纬度
+			可选：酒店邮箱、酒店电话、
+		如果不能提供roomsurplus的基础数据，则提供给我们travelprologue与roomsurplus的tphotelid与hotelid的对应关系。
+	3、agoda
 		a.等待耿大哥测试通过后上线。
 		b.斟酌agoda流程是否会有问题，逻辑还是有点复杂的。
 	4、增加hotelbeds新账号，只提供给B端客户
@@ -12,6 +146,16 @@
 	5、Tavisca：
 			remark没有被传输到supplier的website。
 				询问说今天处理
+	6、查看了不支持remark的gds。
+		未来接口不支持备注的情况，告诉冠南哥一下。
+		dotw：结构化的remark信息，不好处理。
+		hotelbeds：有
+		sujaba：没有接口
+		ptclub：有
+		restel：没有remark接口
+		travellanda：没有接口
+		roomsurplus：没有接口
+
 	 -----待处理---
 	
 	2、jltour等待对方更新接口即可上线。
