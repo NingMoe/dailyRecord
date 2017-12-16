@@ -1,0 +1,18 @@
+{
+    "Adults": 4,
+    "ApplicationType": "B2B",
+    "CheckIn": "2018-01-03",
+    "CheckOut": "2018-01-04",
+    "Childs": 0,
+    "CityID": 5047,
+    "Currency": "USD",
+    "Destination": "",
+    "HotelId": "91941",
+    "Isfirst": false,
+    "PageNo": 1,
+    "RequestID": 0,
+    "RoomFormat": "room1=2,0&room2=2,0",
+    "Rooms": 2,
+    "availToken": "awgWYB6d8qIlTiHuza68",
+    "roomBedFormat": "room1=2,0&room2=2,0"
+}

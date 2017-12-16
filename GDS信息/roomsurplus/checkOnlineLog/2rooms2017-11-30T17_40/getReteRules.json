@@ -1,0 +1,23 @@
+{
+    "BookingType": "Hotel",
+    "CheckIn": "2018-01-03",
+    "CheckOut": "2018-01-04",
+    "HotelId": "91941",
+    "availToken": "DQKDtQXkFbsJ9Je2L55W",
+    "cacheKeyValue": "17fB26xeXgZAvFpEFWndJQam:GS-BAR COMMISSI:322:RO-SG1:ST:TWN-SG1",
+    "cityID": 5047,
+    "currency": "USD",
+    "roomBedFormat": "room1=2,0&room2=2,0",
+    "roomCodes": [
+        "17fB26xeXgZAvFpEFWndJQam:GS-BAR COMMISSI:322:RO-SG1:ST:TWN-SG1",
+        "17fB26xeXgZAvFpEFWndJQam:GS-BAR COMMISSI:322:RO-SG1:ST:TWN-SG1"
+    ],
+    "roomKeys": [
+        "17fB26xeXgZAvFpEFWndJQam:GS-BAR COMMISSI:322:RO-SG1:ST:TWN-SG1",
+        "17fB26xeXgZAvFpEFWndJQam:GS-BAR COMMISSI:322:RO-SG1:ST:TWN-SG1"
+    ],
+    "roomLinks": [
+        "17fB26xeXgZAvFpEFWndJQam:GS-BAR COMMISSI:322:RO-SG1:ST:TWN-SG1",
+        "17fB26xeXgZAvFpEFWndJQam:GS-BAR COMMISSI:322:RO-SG1:ST:TWN-SG1"
+    ]
+}

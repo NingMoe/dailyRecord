@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="decimal-or-empty">
+    <xs:union memberTypes="xs:decimal empty-string" />
+  </xs:simpleType>
+  <xs:simpleType name="int-or-empty">
+    <xs:union memberTypes="xs:unsignedInt empty-string" />
+  </xs:simpleType>
+  <xs:simpleType name="empty-string">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="feed-boolean">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="True"/>
+      <xs:enumeration value="False"/>
+      <xs:enumeration value="true"/>
+      <xs:enumeration value="false"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Hotel_feed_full">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="hotels">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="hotel">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="hotel_id" type="xs:unsignedInt" />
+                    <xs:element name="hotel_name" type="xs:string" />
+                    <xs:element name="hotel_formerly_name" type="xs:string" />
+                    <xs:element name="translated_name" type="xs:string" />
+                    <xs:element name="star_rating" type="xs:decimal" />
+                    <xs:element name="continent_id" type="xs:unsignedInt" />
+                    <xs:element name="country_id" type="xs:unsignedInt" />
+                    <xs:element name="city_id" type="xs:unsignedInt" />
+                    <xs:element name="area_id" type="xs:unsignedInt" />
+                    <xs:element name="longitude" type="xs:decimal" />
+                    <xs:element name="latitude" type="xs:decimal" />
+                    <xs:element name="hotel_url" type="xs:string" />
+                    <xs:element name="rates_from" type="decimal-or-empty" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="rates_from_exclusive" type="decimal-or-empty" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="rates_currency" type="xs:string" />
+                    <xs:element name="popularity_score" type="xs:unsignedInt" />
+                    <xs:element name="phone_no" type="xs:string" minOccurs="0" maxOccurs="1" />
+                    <xs:element name="remark" type="xs:string" />
+                    <xs:element name="number_of_reviews" type="xs:unsignedInt" />
+                    <xs:element name="rating_average" type="xs:decimal" />
+                    <xs:element name="has_opaque" type="xs:boolean" />
+                    <xs:element name="child_and_extra_bed_policy" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="infant_age" type="int-or-empty" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="children_age_from" type="int-or-empty" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="children_age_to" type="int-or-empty" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="children_stay_free" type="xs:string" minOccurs="0" maxOccurs="1" />
+                          <xs:element name="min_guest_age" type="int-or-empty" minOccurs="0" maxOccurs="1" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="accommodation_type" type="xs:string" />
+                    <xs:element name="nationality_restrictions" type="xs:string" />
+                    <xs:element name="external_hotel_code" type="xs:string" minOccurs="0" />
+                    <xs:element name="rate_channel" type="xs:string" minOccurs="0" />
+                    <xs:element name="gps_flag" type="feed-boolean" minOccurs="0" />
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="addresses">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="hotel_id" type="xs:unsignedInt" />
+                    <xs:element name="address_type" type="xs:string" />
+                    <xs:element name="address_line_1" type="xs:string" />
+                    <xs:element name="address_line_2" type="xs:string" />
+                    <xs:element name="postal_code" type="xs:string" />
+                    <xs:element name="state" type="xs:string" />
+                    <xs:element name="city" type="xs:string" />
+                    <xs:element name="country" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="hotel_descriptions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="hotel_description">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="hotel_id" type="xs:unsignedInt" />
+                    <xs:element name="overview" type="xs:string" />
+                    <xs:element name="snippet" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="facilities">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="facility">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="hotel_id" type="xs:unsignedInt" />
+                    <xs:element name="property_group_description" type="xs:string" />
+                    <xs:element name="property_id" type="xs:unsignedInt" />
+                    <xs:element name="property_name" type="xs:string" />
+                    <xs:element name="property_translated_name" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pictures">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="picture">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="hotel_id" type="xs:unsignedInt" />
+                    <xs:element name="picture_type_name" type="xs:string" minOccurs="0" />
+                    <xs:element name="picture_id" type="xs:unsignedInt" minOccurs="0" />
+                    <xs:element name="picture_caption_title" type="xs:string" />
+                    <xs:element name="caption" type="xs:string" />
+                    <xs:element name="caption_translated" type="xs:string" />
+                    <xs:element name="URL" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="roomtypes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="roomtype">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="hotel_id" type="xs:unsignedInt" />
+                    <xs:element name="hotel_room_type_id" type="xs:unsignedInt" />
+                    <xs:element name="hotel_room_type_name" type="xs:string" />
+                    <xs:element name="standard_caption" type="xs:string" />
+                    <xs:element name="standard_caption_translated" type="xs:string" />
+                    <xs:element name="hotel_room_type_description" type="xs:string" />
+                    <xs:element name="max_occupancy_per_room" type="xs:unsignedInt" />
+                    <xs:element name="no_of_room" type="xs:unsignedInt" />
+                    <xs:element name="size_of_room" type="xs:unsignedInt" />
+                    <xs:element name="room_size_incl_terrace" type="feed-boolean" />
+                    <xs:element name="views" type="xs:string" />
+                    <xs:element name="max_extrabeds" type="xs:unsignedInt" />
+                    <xs:element name="extrabed_child_age" type="xs:unsignedInt" />
+                    <xs:element name="max_infant_in_room" type="xs:unsignedInt" />
+                    <xs:element name="max_children_in_room" type="xs:unsignedInt" />
+                    <xs:element name="is_dayuse_room" type="feed-boolean" />
+                    <xs:element name="breakfast_included" type="feed-boolean" />
+                    <xs:element name="hotel_room_type_picture" type="xs:string" minOccurs="0" />
+                    <xs:element name="bed_type" type="xs:string" minOccurs="0" />
+                    <xs:element name="hotel_master_room_type_id" type="xs:string" minOccurs="0" />
+                    <xs:element name="bed_type_structured" type="xs:string" minOccurs="0" />
+                    <xs:element name="hotel_bcom_room_type_id" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
