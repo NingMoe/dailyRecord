@@ -1,0 +1,77 @@
+1、完成房间信息的修改优化。
+		城市：优先使用redis缓存，其次使用数据库（默认仅第一次访问会加载）。
+		单酒店：判断key的剩余生存时间，默认10天
+					剩余生存时间少于9天或key不存在，则拉取数据
+					否则不动态拉取，直接读取redis
+
+		a.读取redis。（统一入口）
+			城市： key-->data:null -->b
+			单酒店：livetime < 9-->c
+		b.读取数据库,key-->data:null -->c
+			城市：调用很少了
+			单酒店：多次调用，每个酒店每天只调用一次
+		c.from network key-->data:null. -->d
+		d.insert-->redis(expire:10day) + database
+	2、酒店房间信息缓存设计（ean完成后进行完成，具体的字段表在南哥那）
+		gdsCrawler调用方式使用指南：
+				basicHotelData = null;
+				//InHotel  单酒店搜时初始化
+				basicHotelData = BasicHotelData(supplierId,hotelId,gdsDataCrawlerServiceImpl);
+				//InCity	城市酒店搜索初始化
+				basicHotelData = BasicHotelData(supplierId,gdsDataCrawlerServiceImpl);
+				
+				processor = BaseDataProcessorService(basicHotelData,hotelId,roomId);
+				processor.getRoomName();
+				processor.getRoomSize();
+		接口设计：
+			1、通用接口，提供crawler调用
+			BaseDataProcessorService接口 
+			public BaseDataProcessorService(basicHotelData,hotelId,roomId);
+				
+				//在room解析时调用
+				roomInfoEntity = roomInfoMap.get(gdsDataCrawlerServiceImpl.generateKey(hotelId,roomId));
+
+				getRoomNameCn()
+					roomInfoEntity.getRoomNameCn();
+				getRoomNameEn(roomId);
+				getRoomSize(roomId);
+				isAvailibityChild(age);
+
+			2、基础服务接口 
+			BasicHotelData(supplierId,hotelId,gdsDataCrawlerServiceImpl)
+				//在hotel解析时调用
+				Map<String,RoomInfoEntity> roomInfoMap = null;
+				
+				//Inhotel
+				readData()
+					if(StringUtils.isEmpty(hotelId))
+						return null;
+					readData(hotelId);
+				//InCity
+				readData(hotelId)
+					if(hotelId)
+						data = readFromRedis(supplierId,hotelId);
+						if data==null
+							data = readFromD(supplierId,hotelId)
+					
+					if data==null
+						data = gdsDataCrawlerServiceImpl.pullGdsData(hotelId);
+					return EntityToMap(data);
+
+				private readFromRedis(supplierId,hotelId);
+				private readFromD(supplierId,hotelId)
+				private insertDataToRedisAndDB(supplierId,data)
+				private Map<String,RoomInfoEntity> EntityToMap(List<RoomInfoEntity>);
+	                if (roomInfo != null)
+	                    #重复hotelCode覆盖
+	                    roomMap.put(gdsDataCrawlerServiceImpl.generateKey(roomInfo.getHotelCode,roomInfo.getRoomId), roomInfo);
+
+	                	return roomMap;
+
+			
+		
+			//3、每个gds需要实现的功能
+			GdsDataCrawlerService接口
+				pullGdsData(hotelId);
+				generateKey(hotelCode,roomid)
+					hotelCode+"|"+roomid

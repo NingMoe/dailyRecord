@@ -1,0 +1,25 @@
+Sit环境基本部署完成，
+1.agentApp的访问路径：
+http://192.168.1.36:4080/index 
+
+2.adminApp的访问路径：
+http://192.168.1.83:4080/login 
+
+3.dubboAdmin的访问路径：
+http://192.168.1.36:7080 
+用户名：root 密码：root
+
+4.rabbitMq管理控制台：
+http://192.168.1.36:8000 
+
+5. Solr控制台：
+http://192.168.1.36:6080/solr/#/ 
+Suggestion数据（城市&酒店）还未导入，需要盖阔处理一下。
+sit本地库地址：
+ip: 192.168.1.252
+biz_user: mogu_local_sit
+biz_passwd: MoGuSitDb7891427_
+
+jenkins的相关地址
+http://192.168.1.36:8080/jenkins/
+

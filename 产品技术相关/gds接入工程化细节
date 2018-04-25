@@ -1,0 +1,327 @@
+crawler基础接口 ：
+CrawlerService扩展了接口：HotelAvailabilityService
+所有的搜索验价都实现了接口：HotelAvailabilityService
+
+开发流程：
+==========================HotelAvailabilityService========================================
+接口定义：
+	//当前调用的搜索接口
+	searchSupplierAvailability  //搜索接口
+	querySupplierAvailability   //单酒店搜索接口
+
+	//当前使用的验价接口
+	getSupplierAvailability  //一次验价接口
+	verifySupplierAvailability //二次验价接口(默认调用一次验价)
+	  	dotw、tourico重写了，处理为不进行二次验价，直接返回原报价。
+
+	getRoomPolicy	//获取政策
+
+	//仅通过Proxy接口调用
+	searchAvailability  //搜索接口(老接口)
+	
+	//被CrawlerServiceImpl覆盖,仅用于Proxy接口调用
+	getAvailability  //一次验价接口 
+	verifyAvailability //二次验价(默认调用一次验价)
+
+===================================crawler服务：=======================================
+CrawlerServicesImpl:
+	deduplicate //判断是否重复请求
+	-----Search------------------------
+	doSearchAvailability  //来源CrawlerService
+		//城市酒店搜索方法(单供应商)
+		HotelAvailabilityService.searchSupplierAvailability
+	
+	doQueryAvailability  //来源CrawlerService
+		//ReWriter后，单酒店查询(多线程并发)。
+		HotelAvailabilityService.querySupplierAvailability
+
+	queryAvailability  //来源CrawlerService
+		HotelAvailabilityService.querySupplierAvailability
+		//提供同步单酒店调用 availability/synchronous/query的访问，仅缓存使用
+
+	searchAvailability  //来源HotelAvailabilityService 仅Proxy接口在用
+		HotelAvailabilityService.searchAvailability
+	-----验价-----------------------------------------------
+	getAvailability  //来源HotelAvailabilityService 
+		HotelAvailabilityService.getSupplierAvailability //一次验价
+		HotelAvailabilityService.verifySupplierAvailability  //二次验价
+		
+	getSupplierAvailability  //一次验价 只是用来调用HotelAvailabilityService服务
+		getSupplierAvailability
+	
+	verifySupplierAvailability  //二次验价 只是用来调用HotelAvailabilityService服务
+		verifySupplierAvailability
+
+	verifyAvailability //来源HotelAvailabilityService，仅同步验价接口调用
+		getAvailability 
+	----------政策---------------------------
+	getRoomPolicy  //政策获取
+		HotelAvailabilityService.getRoomPolicy
+	----------辅助方法---------------------------
+	//获取有效的supplier
+	getOnlineGdsSet
+	@Override
+	reload()
+	//读取redis缓存中的数据availability/storage/read服务
+	@Override
+	readAvailability
+	readProfile
+	getSupplierRewriterKeys
+
+===============接口实现(一)HotelAvailabilityXMLService================================
+crawler.service.impl.HotelAvailabilityXMLService  基于模板化实现
+	--------Proxy调用----------------
+	1、searchAvailability：xml接口
+		doAvailability
+			buildRequest(纯配置实现搜索请求)
+			sendRequest(仅支持http请求)
+			SupplierHotelAvailabilityBuilder.build
+				@Override
+				SupplierHotelAvailabilityXMLBuilder.build
+					//need to Override
+					parseStatus
+					//need to Override
+					parseHotelAvailabilities
+
+				//主动缓存，目前不剪裁检索结果。涉及OTA，仅部分supplier实现了。
+				HotelAvailabilityBuilder.buildAll
+	2、getAvailability:  //验价入口	
+		doAvailability 
+		(验价接口转搜索接口实现)获取验价相关url与template ?
+	--------search调用----------------
+	3、searchSupplierAvailability:  //城市酒店搜索方法
+		doSupplierAvailability
+			buildRequest  模板化
+			sendRequest(仅支持http请求)
+			build 
+	
+	4、querySupplierAvailability:  //单酒店搜索入口
+		doSupplierAvailability
+			buildRequest 模板化
+			sendRequest(仅支持http请求)
+			build 
+
+	5、验价  默认二次验价也会转到这个方法
+		getSupplierAvailability   //会被覆盖，并调用父类以下方法
+			doSupplierAvailability
+				buildRequest 模板化
+				sendRequest
+				build 
+		pruneSupplierHotelAvailabilitiesByRoomType（FromOTA）
+		pruneSupplierHotelAvailabilities
+	
+	6、getRoomPolicy: //政策接口  有接口是需要被覆盖，并调用
+		doSupplierPolicy 
+			buildRequest 模板化
+			sendRequest	
+			build //需要覆盖
+		//使用方式可查看Veturis
+		特例，restel直接调用的逻辑
+		getRoomPolicy
+			doSupplierMessage  获取重要信息
+				buildRequest
+				sendRequest
+				build
+	-----build的实现--------
+	cn.mogutrip.hotel.crawler.service.SupplierHotelAvailabilityBuilder 实现对xml的默认解析
+		parseHotelAvailabilities  //需要被覆盖
+		parseStatus		//需要被覆盖
+	
+===============接口实现（二）crawler.supplier.base.Api------------------------
+crawler.supplier.base.Api：
+	--------Proxy调用----------------
+	1、searchAvailability：xml接口
+		 searchSupplierAvailability
+	2、getAvailability:  //验价入口	
+		 getSupplierAvailability 
+	
+	--------search调用----------------
+	//城市酒店搜索方法(单供应商)
+	searchSupplierAvailability
+			--doSupplierAvailability
+				  @Override
+				buildSearchAvailabilityRequest
+				gdsAvailability
+				    @Override
+					doAvailability
+				parseSupplierSearchAvailabilityResponse(response, availabilities)
+					  @Override
+					  parseSupplierSearchAvailabilityResponse(response, request, shaList)
+	
+	//单酒店搜索方法
+	querySupplierAvailability
+        request.setHotelCode(hotelCode);
+		doSupplierAvailability
+		filterSupplierHotelAvailabilities
+	
+	//OTA单酒店搜索逻辑 (hotelbeds\hotelspro2\sujiaba)
+	doGetSupplierAvailabilityFromOTA
+		searchSupplierAvailabilityByHotel
+		convert
+		confirmPrice
+
+	getSupplierAvailability //一次验价
+		1、无验价接口： //默认调用搜索接口			
+			doGetSupplierAvailability
+				doSupplierAvailability //搜索接口			
+						buildSearchAvailabilityRequest
+						gdsAvailability
+							doConfirmPrice
+						parseSupplierSearchAvailabilityResponse
+		2、有验价接口：
+			//重写
+			doGetSupplierAvailability
+				并调用
+				confirmPrice  //启动验价流程
+
+			//重写以下三个方法
+			buildConfirmPriceRequest
+			gdsConfirmPrice
+				doConfirmPrice //重写
+			parseSupplierConfirmPriceResponse
+		
+			重写doGetSupplierAvailability的目的是为了启动验价流程，可作为配置处理，不用每次都重复同样的工作。
+		
+		3、特殊流程
+			先搜索再验价：hotelspro2、hotelbeds(当前直接验价，但支持配置实现验价前搜索)
+						  sujiaba、tavisca
+
+
+	@Override 
+	getRoomPolicy
+		--doRoomPolicy //sujiaba重写了这个逻辑  loh验价调用了这个逻辑
+			--doSupplierPolicy
+				//有政策接口时，需要重写
+				buildSupplierPolicyRequest  
+				gdsPolicy 不重写
+					doPolicy
+				parseSupplierPolicyResponse	
+		doRoomPolicyRetry
+		//仅travellanda使用了这个逻辑, 看起来没有存在的意义
+		//可以直接调用doRoomPolicy 
+
+		特殊调用：
+			totalstay 通过验价接口获取政策。
+=========搜索报文的解析===================================================
+	1、request 报文生成。
+		较为简单
+	2、response报文解析，主要涉及以下内容：
+
+	1、hotelRoom基础数据设置
+		必须处理的字段
+			roomName  //用以在前端展现
+			roomType 
+			roomTypeInfo  //以上两个数据来源于以下
+				//RoomTypeMapDetail roomTypeMapDetail = mappers.findRoomTypeMapDetail(request.getSupplierId(), "", roomName, beds, 0);
+			roomIndex  //合适的匹配房间,在后文处理
+			roomCount  // 一般为1 ，组合房型的话，可能会有不同取值。
+			roomRateKey //唯一标识房间
+			roomRateId //唯一标识报价=roomRateKey+index
+			totalRate,totalOriginRate,totalRspRate //各种报价填充，totalRspRate没有可不填
+			
+			priceBreakdowns //分解报价，来源gds，或通过总价拆分
+			meal  //餐食 breakfast、breakfastCode、breakfastDescription、mealCode
+				//来源：breakfast = mappers.findBreakfast(request.getSupplierId(), mealCode, "");
+			policies //使用下文的模块处理
+
+		可不处理的字段
+			group //分组依据，非组合房型，如果有组合限制(例如：不支持多房型)，必填
+				  //部分gds不依据酒店分组报价，但多酒店不组合下单，需要使用hotelCode作为group
+			referenceId // 组合房型的统一信息。在booking中使用时，在mikireferenceId取值
+			roomCode //无确定意义，一般设置为roomName
+			roomRateCode //无确定意义，偶尔用来携带数据到下单
+		必须用的辅助方法
+			 mappers.findBreakfast(supplierId, breakfastCode, "");
+			 findRoomTypeMapDetail(supplierId, roomTypeCode,roomName,adults,children);
+	
+	3、设置roomIndex。判断hotelRoom可匹配的请求room，目的是填充roomIndex
+		处理逻辑：
+			1、根据可入住成人数、儿童数、床位等确定匹配的房型。
+		处理方式
+			1、复写方法getRoomKey()，默认组合了rooms、adults、children、ageList，标识房间是否匹配，此方法也有多个实现。
+			2、调用
+				getRmIndexList(key);
+				或者 getRmIndexListByPax(key); 
+				确认roomIndex。		
+			3、特殊情况
+				reqeust时，设置了房间的roomNumber，返回room携带了roomNumber，根据roomNumber确认roomIndex。
+
+	4、获取政策：
+	    1、报文返回有政策，解析出deadline、policyType、feeType、amount、currency，并放入list中即可。
+			List<HotelRoomPolicy> hotelRoomPolicyList			
+
+		2、搜索无政策但是有政策接口
+			设置政策接口需要的参数
+			hotelRoom.setCancellationPolicyCode(policyCodeBeanStr);
+			实现政策接口调用
+			doRoomPolicy
+				doSupplierPolicy
+					buildSupplierPolicyRequest
+					doPolicy
+					parseSupplierPolicyResponse
+
+		3、两种方式最终都要，将政策报文解析到List中，通过辅助类实现整合。
+			parsePolicyList(bAmendable ,bChangeName ,hotelRoomPolicyList, request);
+			//只有sujiaba在使用 
+			PolicyManager.mergePolicyList(policiesList); 
+			//以上两种方式可合并优化，保留一种
+
+	5、获取每日报价
+		List<HotelRoomPriceBreakdown> roomPriceBreakdowns = new ArrayList<>();
+
+	6、房间组合处理
+		1、返回报文为组合房型
+			构建HotelRooms
+			必须设置：
+		 	supplierHotelAvailability.status(SupplierHotelAvailability.STATUS_COMBINED);
+		2、返回报文为非组合房型
+			如果有库存量，需要设置到hotelRoom.setAllotment(). 同时必填roomRateKey.
+			必须将hotelRoom分组放置，调用：
+			AvailabilitiesManager.groupHotelRoomsByRoomIndex(roomIndexList, rm, roomTypes, roomRateKey)
+
+
+	getRoomNum 只有sujiaba在用
+
+	getInProfileLogList travelanda在用，
+	setInProfileLogList 没有地方使用，怀疑get方法实际上无效
+
+	sameRoomRateIdList 判断组合的报价是否与请求的报价一致
+		当前涉及到hotelbeds、sujiaba、tavisca、hotelspro2等四个在使用，先搜后验使用
+
+	filterSupplierHotelAvailabilities 单酒店查询后，用来过滤其他酒店。
+		Api逻辑
+
+	hotelRoomsCombined
+
+
+
+	setHttpConfig
+	setHttpConfig
+	getWsdlLocation
+	getWsdlLocation
+	doRequest
+	doRequest
+	doRequest
+	httpRequest
+	httpRequest
+	httpRequest
+	getRoomKey
+	
+	getRoomKeyBase
+	getRoomKeyPax
+	getAllRoomIndex
+	getRmIndexAllInOneList
+	getRoomIndexByIndex
+	getRoomIndexListByIndex
+	getRmIndexListByPax
+	getRmIndexListByPax
+	getRmIndexList
+	getRmIndexGreedList
+	getRmIndex
+	getRmIndexList
+	toProfileLog
+	toProfileLog
+	verifyWithoutSearch
+	doGetSupplierAvailabilityFromOTA
+	getHotelAvailabilityRequestRooms
+	canChang

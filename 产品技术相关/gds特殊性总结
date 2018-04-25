@@ -1,0 +1,89 @@
+1、只是将对接部分暴露，一次配置全部使用
+       配置supplier的rewriter
+       配置supplier的Impl
+       配置supplier的
+2、主要功能
+    实现对gds的监控、诊断
+        流量监控、稳定性监控：返回报价数量、调用时长
+        连续多个请求无报价返回，则关闭
+        连续多个下单失败，则关闭
+    方便对gds接口的测试
+        增加页面测试接口：
+        postman发送gds请求测试
+            search、verify、book、cancel
+        postman发送请求到crawler
+
+
+    仅仅增加一套面向gds的实体，并将其映射到现有实体上。
+        接入的核心接口不变。
+        Request、Invoke、Response方式不变？
+            存储
+
+3、工程化步骤
+    1、总结当前接入流程
+    2、划定工程化边界
+        仅构建与接入相关部分，其他部分都不修改。
+        移植出来日志部分、过滤部分代码
+    3、确定架构设计
+        请求统一使用数据实体配合简单模板。
+        解析统一使用XmlReader的Xpath。
+        json使用gson生成对象处理解析。
+
+    4、计划开发详情
+
+
+
+
+
+
+
+
+1、gds请求方式
+    checkIn + roomType + adults + children
+        elevenInfo、hanatour、hotelpass、travcov7、jac、
+        jltour、ptclub(支持房型查，但是没使用)
+
+    checkin + adults + children 不支持房型组合
+       多间房内部组合(合适的处理方式): cnbooking、roomsurplus、
+       借助外部组合：agoda、
+       zhiyuanxing(支持roomCount，接口版本可更新)
+       
+    checkin + roomCount + adults + children
+        expedia(返回组合报价)、99tral(不支持多房型)、hikari、sujiaba、tourico
+        travellanda、restel、veturis、gta、gartour、dotw、hotelbeds、hotelspro2(没看懂怎么处理的，多间房看起来会被覆盖)、tavisca、tacenter、miki7、
+
+2、搜索类型
+    city+hotel搜索：sujaba、tourico、travellanda、ptclub、loh(支持多酒店搜索)
+    hotelList+hotel搜索：agoda
+    仅hotel搜索：roomsurplus、
+    支持multi city搜索：tourico、travellanda
+
+3、是否有国籍、货币转换
+    国籍：totalstay、
+    货币：travellanda、restel    
+4、儿童是否区分婴儿、儿童、青年等类型
+    是：totalstay、
+
+5、有RSP价格
+    tourico、hotelbeds、
+6、是否有最长入住时间\房间数上限\人数上限\儿童年龄
+    有：travcov7(5,9,,)、restel(15,,,12)、nextel(,3,,)、loh(,3,,)
+7、国籍限制、可入住人数、儿童政策在room静态数据中
+    agoda、jltour、cnbooking
+
+2、各个gds特殊性总结
+cnbooking线上测试酒店是hotelCode：209968 
+    一般只有当月的库存。下单后需跟踪取消
+hanatour
+    search
+    1.每个房间最多只能有2个儿童
+    2.一次最多搜索五间房
+
+    hotelbeds、jac、travcov7、
+
+3、解析内容
+    支持多hotelCode、destinantionid搜索
+
+
+4、没看明白的rewrite
+    hanatour、hotelpass、

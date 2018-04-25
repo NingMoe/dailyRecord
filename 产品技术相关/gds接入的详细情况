@@ -1,0 +1,229 @@
+gds接入的详细情况
+		接入gds的过程是一个数据转换的过程。将我们的请求转换为gds的请求，将gds的返回报文转换为我们的报价。搜索与验价的逻辑都是这个过程，部分gds在返回报文中不包含政策，需要单独调用政策接口。
+
+		接入流程：
+			开发gds匹配的rewriter，将rooms进行过滤和转换。
+			组合gds请求报文，根据gds要求组织请求报文。
+			调用gds接口
+			解析gds报文
+
+		通用逻辑：搜索（城市、单酒店）、验价（一次、二次）、政策抓取。
+		
+		搜索验价特殊性：
+			部分gds搜索与验价使用相同的接口，没有单独的验价接口。
+			部分gds验价时先搜再验（来自OTA先搜再验，来自agent直接验）
+			部分gds验价与搜索返回数据不一致，需要从search取部分数据
+				confirmRequest.getCurrentHotelAvailability()
+			部分gds二次验价不验，直接返回验价通过
+				AvailabilitiesManager.confirmPricePassed(confirmRequest)
+
+		系统问题：
+			接口方法命名意义模糊。
+			多层继承，调用关系复杂。
+			字段意义不明确，没有强制规则。
+
+	gds接入多样性：
+	1、rewrite多样性总结。
+		目的：将我们请求的rooms格式，转换成更匹配gds请求需要的格式。
+		<1>request 转换
+			cityid转cityCode
+			cityid转多个hotelCode
+			cityid拆分为多个hotelCode，并再次拆分为多个request
+			hotelId转hotelCode
+		<2>validate验证：
+			入住间夜数：最多、最少入住几晚
+			房间数量：请求房间数量不得超过5间
+			成人数量：一间房最多入住几成人
+			儿童总数：一间房最多入住几个儿童
+			总人数：一间房最多入住几人
+			儿童年龄：入住儿童年龄低于、高于几岁
+		<3>room 转换			
+			room 儿童转成人
+			room 人数转房型
+		<4>rooms处理
+			相同房型合并 X2
+			相同请求去重
+
+			合并room的必要性（容易带来roomindex不一致问题）
+				gds不支持多房型，可以考虑合并room。
+				gds返回合并的room，可以考虑合并Room。
+
+
+	2、crawler多样性总结。
+		目的：将gds返回的报价，格式化成我们的报价。
+		难点：将正确的数据赋值到对应的位置。
+		Request的多样性
+			使用volicity模板构造请求报文。
+			使用gds提供的对象构造webservice请求对象。
+			currency解析
+				request中的默认currency是我们与用户的签约货币，一般为CNY.
+				部分gds支持多种currency，可随意传。也可能有限定的字符表示。
+				部分gds仅支持签约currency。
+				部分gds不需要传currency，返回报文固定为签约货币。
+		invoke的多样性
+			http
+			https
+			webService
+		Response解析的多样性
+			1、报价类型解析
+				<一>gds返回组合报价：所有报价固定组合在一起，不可随意组合。
+						loh、tacenta、hanatour、sujaba、roomsurplus
+						设置STATUS_COMBINED
+						roomIndex:getUnusedRoomIndexs(key,UsedIndexs);
+						可能有报价唯一标识id，一般存储在referenceId中
+
+					特例：不支持组合房型下单
+						jltour、hotelpass、agoda、99tral					
+						rewrite时，将房间合并
+						解析时，使用roomxN的方式
+						roomIndex 使用“,”分隔
+						roomCount为请求总房间数。
+
+
+				<二>gds返回非组合报价，所有房间是随意的，公共逻辑处理时组合出总报价
+					totalStay、hotlebeds、hikari
+					组合规则：餐食（breakfastcode不能包含早餐数，否则1份早餐与2份早餐无法组合）、政策、供应来源是否第三方和group（其他额外条件，比如：供应商名等）一致才能组合。 一种房型合并为*n时，注意价格明细、取消政策、重要信息等合并。
+
+					注意：
+						如果是可以组合的情况，需要考虑多个房间不同房型是否可以全部下单成功。如果可能出现部分下单成功，部分失败，需要注意不可退报价怎么处理？是否支持不可退报价的组合房型下单？
+
+				<三>部分组合(miki7)，在crawler内部根据gds规则自己组合报价
+					1,2 | 1,2 | 
+					3 | 3 | 
+					1,2,3
+					
+				不同的类型，影响roomCount、报价status(SupplierHotelAvailability.STATUS_COMBINED)、以及hotelRoomList中room组合规则。
+
+			2、room基础信息解析
+				roomName：
+					前端展示用，部分gds会拼接额外服务(agoda)
+				roomIndex
+					与request一一对应，不一定是从1开始连续数值；
+					根据房型、人数、最大人数、index和早餐数（zhiyuanxing 2份早餐）计算 <代码 getAllRoomIndex>
+					roomIndexGds某些GDS下单是有序的
+
+					组合报价
+						为了确保在一个报价中roomIndex不出现重复，比如gds返回错误。
+						应该按照request中的roomIndex 一个个来匹配报文中每个报价的房间。
+						如果没有全部匹配到合适的roomIndex，则抛弃整个报价。
+
+					非组合报价
+						找到room可匹配的所有roomIndex，不同roomIndex生成多个room。
+						*外层组合时，只需要互相组合即可，不需要自己和自己组合。
+
+				roomCount
+					不支持组合房型的gds中，roomCount
+				referenceId
+					一般用于GDS已组合房型，存储验价、下单需要的gds参数
+				roomRateCode
+					一般用于存储验价或者下单需要的gds参数
+				roomCode
+					没有特定意义
+				currency解析
+					GdsCurrencyConverter.convertCurrency(supplier.getSupplierId(), "currencyName")
+				房型解析
+					roomType、roomTypeInfo 	
+
+				roomRateKey
+					目的是唯一标定一个房间，需要根据gds报文情况拼接一个搜索验价不会改变的值。
+					例如：房间名称+房间类型+餐食代码+可退标识。
+				roomRateId
+					目的是唯一标定一个报价，在搜索与验价过程中，不会改变.
+					组织方式：
+						roomRateKey+roomIndex
+						gds提供的唯一标识：hotelpass
+				政策解析
+					我们的政策逻辑
+						xxxx年xx月xx日，取消费xx元。
+
+					gds政策逻辑
+						1.提供某日期之前政策(与我们的不一致agoda)
+							xxxx年xx月xx日前，取消费xx元。看后文中示例。
+
+						  提供某日期之后政策(与我们的一致)
+							xxxx年xx月xx日后，取消费xx元。
+
+						2.gds提供政策规则。
+							自己解析获取。elevenInfo 未上线
+					政策来源：
+						报价接口返回policies
+						存在单独的政策接口，使用cancellationPolicyCode传递参数
+				注意：
+					调统一接口（如香港不能改名、修改等）[ZengTao] 参考PolicyManager.java
+					已组合报价 cancelPolicyCode 填相同的即可（BUG policyCode相同可能是因为一个报价也可能因为房型一样 ）
+
+					agoda举例：
+					<PolicyDates>
+						<PolicyDate before="2018-01-19">
+							<Rate exclusive="0.00" fees="0.00" inclusive="0.00" tax="0.00"/>  
+							//这个日期之后是收费的，收费金额为下一条的inclusive
+						</PolicyDate>
+						<PolicyDate before="2018-02-04">
+							<Rate exclusive="1587.24" fees="154.36" inclusive="1885.64" tax="144.04"/>
+						</PolicyDate>
+						<PolicyDate before="2018-02-18">
+							<Rate exclusive="3174.49" fees="308.72" inclusive="3771.29" tax="288.08"/>
+						</PolicyDate>
+						<PolicyDate after="2018-02-18">
+							<Rate exclusive="3174.49" fees="308.72" inclusive="3771.29" tax="288.08"/>
+						</PolicyDate>
+					</PolicyDates>
+
+
+
+
+				餐食解析
+					mealCode、mealDesc、mealDescription、breakfastCode、breakfast、breakfastDescription
+					breakfast 使用了"true","false"来确认是否含早餐
+					breakfastcode、breakfastDescription ? 必填不能为空字符
+						agent下单页验证餐食描述
+					使用breakfastmap表匹配餐食
+					考虑是否确定一个字段，用来标准化餐食结构
+						含早、午餐、晚餐、全食、早晚餐、中晚餐、夜宵、不含餐
+					注意：
+						如果餐食含有类似：含一人餐、双人餐等字样，需要着重考虑餐食的处理方式。
+				总价解析
+					totalRate
+					totalOriginalRate
+					totalRspRate
+					如果有优惠数额，将totalOriginalRate=totalRate+优惠数额
+					价格明细不一定与总价一致，防止用价格明细之和赋值给总价。
+				价格分解解析
+					pricebreakdown
+						totalRate
+						totalOriginalRate
+						totalRspRate
+					0、300、300 ／ 300、300、0 把原价改为300、300、300
+
+				allotment与roomRateKey设置
+					某些GDS返回剩余房间数，组合出来的报价相同roomRateKey的数量必须小于它对应的allotment
+				thirdParty、delayConfirm设置
+				group设置
+					作为组合依据
+				重要信息解析
+					国籍限制、儿童政策、额外服务(门票、税等)、					费用不含在总价、到店付情况、
+					可选服务、必选服务展示
+					有些需要在voucher显示。（餐食、政策、国籍不一致）
+				报价过滤情况
+					根据报文或者静态数据，对不满足条件的报价过滤，可能会依赖以下情况
+					国籍、提前N天预定、指定日期前订、连住晚数（至少要住多少晚）、指定时间段能订、限住（只能住多少晚）、团房、儿童政策
+
+				当前架构下，非组合房型生成hotelRooms时，需要将内部的信息合并，可以
+				调用父类中的hotelRoomsCombined(List<HotelRoom> rooms)实现组合。
+				此种情况下，新架构需考虑。
+
+	3、booking的多样性
+		
+		目的：向gds下单、取消、查看订单详情接口。
+		统一流程：
+				toSupplier
+				Invoker
+				fromSupplier
+		接口类型：
+				booking()
+				cancel()
+				detail()
+				MultiDetail(批量订单详情查询)
+
+				下单人员，必须设置成人为leader。
+

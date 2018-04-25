@@ -5,4 +5,12 @@ sit环境
 	./redis-cli
 	auth mogutrip123
 
+Dev环境
+	sudo su Maliao1980
+	cd yangyue/GO/gopkg/src/github.com/CodisLabs/codis/extern/redis-2.8.21/src/
+	./redis-cli
+	auth mogutrip123
+
 	hgetAll HA|TH|3011995|2017-10-14|2017-10-15|CN|1,,2,0,0
+
+prd  

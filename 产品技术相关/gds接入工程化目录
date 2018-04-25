@@ -1,0 +1,36 @@
+工作目标：
+gds规范化接入
+    1、需要明确的问题
+        流程的规范化
+            根据gds情况，确定使用什么流程处理。
+        实体的规范化
+            哪些数据必须存在？存在的意义？
+        辅助类的规范化
+            哪些已封装功能可以继续使用并规范化？
+    2、如何达成？
+        了解所有可能的功能流程（搜索、验价）
+        了解实体中需要填充的数据
+        总结已有的辅助方法辅助类
+-----基于以上考虑，需要整理crawler流程、booking流程、hotelRoom实体------------
+crawler主流程：
+    1、通过rewriteService获取key。
+        我们使用了多级继承实现了对多种rewrite功能的调用。
+        问题：各个方法可能多次被覆盖，导致每次写rewrite需要梳理具体功能。
+    2、调用crawlerService抓取key对应的数据。
+        核心接口HotelAvailabilityService
+        基于此接口实现了两条接入流程
+            1、HotelAvailabilityXMLService
+            2、crawler.supplier.base.Api
+        两条主流程中，区分搜索与验价流程
+            搜索：区分了城市搜索与单酒店搜索，只是重新赋值了hotelCode
+            验价：如果没有验价接口，默认调用了search接口。
+
+
+上次修正整理的内容：
+    1、对gds接口的调查。
+    2、对gds的xml、webservice、json的预处理以及调试方法。
+    3、x-crawler模块中每个gds接入的特殊性。
+    4、系统内hotelRoom实体的来源以及对接入的要求描述。
+    5、rewrite、HotelAvailabilityService的简单描述。
+    6、x-booking的架构介绍。
+    7、gds接入后的上线要求。

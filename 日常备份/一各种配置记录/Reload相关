@@ -1,24 +1,23 @@
 Reload相关：
 dev环境
-	http://101.200.211.58:9016/services/reloadManager/xbooking/reloadSupplier
-	http://101.200.211.58:9016/services/reloadManager/xcrawler/reloadSupplier
+	http://123.57.204.233:9016/services/reloadManager/xbooking/reloadSupplier
+	http://123.57.204.233:9016/services/reloadManager/xcrawler/reloadSupplier
 sit环境
-	http://54.222.188.222:8516/services/hotel/reload/BreakfastMap
-	http://54.222.188.222:8516/services/hotel/reload/Supplier
-	new reload service:
-	http://54.222.188.222:8516/services/reloadManager/xcrawler/reloadSupplier
-	http://54.222.188.222:8516/services/reloadManager/xbooking/reloadSupplier
+	http://192.168.1.36:9016/services/reloadManager/xcrawler/reloadSupplier
+	http://192.168.1.36:9016/services/reloadManager/xbooking/reloadSupplier
 prd环境
 	http://59.110.27.105:9016/services/reloadManager/xbooking/reloadSupplier
 	http://59.110.27.105:9016/services/reloadManager/xcrawler/reloadSupplier
-
+Breakfast:
+	http://123.57.204.233:9016/services/reloadManager/xsearch/reloadBreakfastMap
 
 x-base reload操作
 
 	Dev环境： 
-	http://101.200.211.58:9016/services/manageService/reloadAll 
-	http://101.200.211.58:9016/services/hotelMapService/reload 
-
+	http://123.57.204.233:9016/services/reloadManager/xbase/reloadHotelMap
+	http://123.57.204.233:9016/services/reloadManager/xbase/reloadCityMap
+	http://123.57.204.233:9016/services/reloadManager/xbase/reloadHotel
+	
 	 Sit环境： 
 	http://192.168.1.36:9016/services/manageService/reloadAll 
 	http://192.168.1.36:9016/services/hotelMapService/reload 
@@ -35,3 +34,21 @@ x-base reload操作
 	*****/services/cityService/reload
 	*****/services/hotelMapService/reload
 	*****/services/hotelService/reload
+
+	
+======lin发来的20180327======
+<1>reload search(crawler) supplier
+http://123.57.204.233:9016/services/reloadManager/xcrawler/reloadSupplier
+<2>reload hotel
+http://123.57.204.233:9016/services/reloadManager/xbase/reloadHotel
+<2>reload hotelmap
+http://123.57.204.233:9016/services/reloadManager/xbase/reloadHotelMap
+<3>reload citymap
+http://123.57.204.233:9016/services/reloadManager/xbase/reloadCityMap
+<4>删除hotelmap中某条mapping
+http://123.57.204.233:9016/services/reloadManager/xbase/removeHotelMapByCodeKey?additionalParam=gta|NUSA|COU
+如果supplier不是gta，则citycode填空 如： dotw||2044185 gta|NUSA|COU
+<5>reload booking supplier
+http://123.57.204.233:9016/services/reloadManager/xbooking/reloadSupplier
+<6>reload search BreakfastMap
+http://123.57.204.233:9016/services/reloadManager/xsearch/reloadBreakfastMap
